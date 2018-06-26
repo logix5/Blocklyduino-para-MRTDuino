@@ -54,7 +54,7 @@ Blockly.Blocks['inout_digital_read'] = {
     this.setColour(30);
     this.appendDummyInput()
 	      .appendField(Blockly.Msg.INOUT_DIG_READ)
-	      .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
+	      .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN");
     this.setOutput(true, 'Number');
     this.setTooltip('Reads the value from a specified digital pin, either HIGH or LOW');
   }
