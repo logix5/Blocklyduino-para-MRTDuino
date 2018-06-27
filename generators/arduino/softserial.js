@@ -8,6 +8,7 @@ Blockly.Arduino['soft_init'] = function(block) {
   
   Blockly.Arduino.definitions_['define_ss'] = '#include <SoftwareSerial.h>\nSoftwareSerial mySerial('+dropdown_pin1+','+dropdown_pin2+');\n';
   //Blockly.Arduino.setups_['setup_input_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
+  Blockly.Arduino.setups_['setup_sserial'] = 'mySerial.begin(9600);\n';
   var code = '';
   return code;
 };
