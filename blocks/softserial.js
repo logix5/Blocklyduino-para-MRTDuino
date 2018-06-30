@@ -40,14 +40,29 @@ Blockly.Blocks['soft_init'] = {
     this.appendDummyInput()
 	.appendField(Blockly.Msg.SSERIAL_Init)
     .appendField(Blockly.Msg.SSERIAL_TX)
-	.appendField(new Blockly.FieldDropdown([['2', '2'],['3', '3'],['4', '4'],['5', '5'],['6', '6'],['7', '7'],['8', '8'],['9', '9'],['10', '10'],['11', '11'],['12', '12'],['13', '13']]), "PIN1");
+	.appendField(new Blockly.FieldDropdown([['Port2', '15'],['Port3', '16'],['Port4', '14'],['Port10', '9'],['Port11', '11']]), "PIN1");
     this.appendDummyInput()
     .appendField(Blockly.Msg.SSERIAL_RX)
-	.appendField(new Blockly.FieldDropdown([['2', '2'],['3', '3'],['4', '4'],['5', '5'],['6', '6'],['7', '7'],['8', '8'],['9', '9'],['10', '10'],['11', '11'],['12', '12'],['13', '13']]), "PIN2");
+	.appendField(new Blockly.FieldDropdown([['Port2', '15'],['Port3', '16'],['Port4', '14'],['Port10', '9'],['Port11', '11']]), "PIN2");
+	 this.appendDummyInput()
+    .appendField(Blockly.Msg.SSERIAL_BAUD)
+	.appendField(new Blockly.FieldDropdown([['1200', '1200'],['2400', '2400'],['4800', '4800'],['9600', '9600'],['19200', '19200'],['38400', '38400'],['57600', '57600'],['115200', '115200']]), "PINBAUDIOS");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('A call to SoftwareSerial(rxPin, txPin) creates a new SoftwareSerial object');
+  }
+};
+
+Blockly.Blocks['soft_available'] = {
+	helpUrl: '',
+  init: function() {
+    this.setColour(50);
+	this.appendDummyInput("")
+	    .appendTitle(Blockly.Msg.SSERIAL_Avai);
+    this.setInputsInline(true);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip('');
   }
 };
 
@@ -87,16 +102,6 @@ Blockly.Blocks['soft_write'] = {
   }
 };
 
-Blockly.Blocks['soft_available'] = {
-	helpUrl: '',
-  init: function() {
-    this.setColour(50);
-	this.appendDummyInput("")
-	    .appendTitle(Blockly.Msg.SSERIAL_Avai);
-    this.setInputsInline(true);
-    this.setOutput(true, 'Boolean');
-    this.setTooltip('');
-  }
-};
+
 
 

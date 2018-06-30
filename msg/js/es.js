@@ -423,30 +423,22 @@ Blockly.Msg.Serial_Print_ForOct="octal";
  Blockly.Msg.Serial_flush="Flujo Serial"; 
 
 
-
-
 //SOFTWARE SERIAL
-Blockly.Msg.SSERIAL_Init="INIT";
- Blockly.Msg.SSERIAL_TX="TX#";
-Blockly.Msg.SSERIAL_RX="RX#";
- Blockly.Msg.SSERIAL_Read="Lectura SoftwareSerial";
- Blockly.Msg.SSERIAL_Print="Imprime SoftwareSerial";
-
-
- Blockly.Msg.SSERIAL_Write="Escribe SoftwareSerial";
-Blockly.Msg.SSERIAL_Avai="Disponible SoftwareSerial?";
-
-
-
+Blockly.Msg.SSERIAL_Init="Inicialización SoftwareSerial";
+Blockly.Msg.SSERIAL_TX="Puerto TX#";
+Blockly.Msg.SSERIAL_RX="Puerto RX#";
+Blockly.Msg.SSERIAL_BAUD="Baudios";
+Blockly.Msg.SSERIAL_Read="SoftwareSerial.Leer del puerto Serie";
+Blockly.Msg.SSERIAL_Print="SoftwareSerial.Escribir con salto de línea";
+Blockly.Msg.SSERIAL_Write="SoftwareSerial.Escribir sin salto de línea";
+Blockly.Msg.SSERIAL_Avai="SoftwareSerial.¿Datos Recibidos?";
 
 //SERVO
  Blockly.Msg.SERVO_Servo="Servo";
-Blockly.Msg.PIN="PIN#";
+ Blockly.Msg.PIN="PIN#";
  Blockly.Msg.Degree="Grados (0~180)";
  Blockly.Msg.Delay="Esperar";
  Blockly.Msg.SERVO_ReadDegree="Lee Grados";
-
-
  Blockly.Msg.SERVO_Attached="Servo Conectado?";
  Blockly.Msg.SERVO_Detach="Desconecta Servo PIN#";
 

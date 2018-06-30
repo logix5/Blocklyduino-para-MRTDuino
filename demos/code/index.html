@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="google" value="notranslate">
-        <title>BlocklyDuino Enhanced</title>
+        <title>BlocklyDuino Mrtduino</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="common.css">
 
@@ -149,6 +149,8 @@
                 </block>
             </category>
         </category>
+		
+	 <category id="catSerialAll" colour="30">
         <category id="catSerial" colour="30">
             <block type="serial_printfor" x="13" y="38">
                 <field name="TYPE">DEC</field>
@@ -190,6 +192,7 @@
             </block>
             <block type="serial_flush"></block>
         </category>
+	
         <category id="catSoftSerial" colour="50">
             <block type="soft_init"></block>
             <block type="soft_read"></block>
@@ -197,6 +200,7 @@
             <block type="soft_write"></block>
             <block type="soft_available"></block>  
         </category>
+		 </category>
         <category id="catServo" colour="80">        
             <block type="servo_move" x="63" y="38">
                 <field name="PIN">0</field>
