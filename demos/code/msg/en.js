@@ -1,5 +1,5 @@
 var MSG = {
-  catInOut:"IN/OUT",
+  catInOut:"In/Out",
   catDigital:"Digital",
   catAnalog:"Analog",
   catSerialAll:"Serial",

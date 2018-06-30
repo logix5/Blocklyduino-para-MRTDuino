@@ -194,10 +194,26 @@
         </category>
 	
         <category id="catSoftSerial" colour="50">
-            <block type="soft_init"></block>
+            <block type="soft_init">
+			 <field name="PIN1">Port10</field>
+			 <field name="PIN2">Port11</field>
+			  <field name="PINBAUDIOS">115200</field>
+			</block>
             <block type="soft_read"></block>
-            <block type="soft_print"></block>
-            <block type="soft_write"></block>
+            <block type="soft_print">
+			    <value name="CONTENT">
+                    <block type="text">
+                        <field name="TEXT">text</field>
+                    </block>
+                </value>
+			</block>
+            <block type="soft_write">
+			 <value name="CONTENT">
+                    <block type="text">
+                        <field name="TEXT">text</field>
+                    </block>
+                </value>
+			</block>
             <block type="soft_available"></block>  
         </category>
 		 </category>
