@@ -79,6 +79,21 @@ Blockly.Blocks['serial1_read'] = {
   }
 };
 
+Blockly.Blocks['serial1_println'] = {
+  helpUrl: 'http://www.arduino.cc/en/Serial/Print',
+  init: function() {
+    this.setColour(20);
+	this.appendDummyInput()
+	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
+    this.appendValueInput("CONTENT", 'String')
+        .appendField(Blockly.Msg.SERIAL1_Println);
+	this.setInputsInline(true);	
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+  }
+};
+
 Blockly.Blocks['serial1_print'] = {
   helpUrl: 'http://www.arduino.cc/en/Serial/Print',
   init: function() {
@@ -95,17 +110,17 @@ Blockly.Blocks['serial1_print'] = {
 };
 
 Blockly.Blocks['serial1_write'] = {
-  helpUrl: 'http://www.arduino.cc/en/Serial/Print',
+  helpUrl: '',
   init: function() {
     this.setColour(20);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
-    this.appendValueInput("CONTENT", 'String')
-        .appendField(Blockly.Msg.SERIAL1_Write);
-	this.setInputsInline(true);	
+    this.appendValueInput("CONTENT", String)
+        .appendTitle(Blockly.Msg.SERIAL1_Write);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('');
+	this.setInputsInline(true);
+    this.setTooltip('Writes binary data to the serial port. This data is sent as a byte or series of bytes to send the characters representing the digits of a number use the print() function instead. ');
   }
 };
 
@@ -123,7 +138,5 @@ Blockly.Blocks['serial1_flush'] = {
     this.setTooltip('Waits for the transmission of outgoing serial data to complete.');
   }
 };
-
-
 
 

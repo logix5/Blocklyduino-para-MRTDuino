@@ -170,21 +170,21 @@
             <block type="serial_print" x="13" y="13">
                 <value name="CONTENT">
                     <block type="text">
-                        <field name="TEXT"></field>
+                        <field name="TEXT">text</field>
                     </block>
                 </value>
             </block>
             <block type="serial_printL" x="13" y="38">
                 <value name="CONTENT">
                     <block type="text">
-                        <field name="TEXT"></field>
+                        <field name="TEXT">text</field>
                     </block>
                 </value>
             </block>
             <block type="serial_write" x="38" y="38">
                 <value name="CONTENT">
                     <block type="text">
-                        <field name="TEXT"></field>
+                        <field name="TEXT">A</field>
                     </block>
                 </value>
             </block>
@@ -197,6 +197,7 @@
 			 <field name="PIN2">Port11</field>
 			  <field name="PINBAUDIOS">115200</field>
 			</block>
+			<block type="serial1_available"></block> 
             <block type="serial1_read"></block>
             <block type="serial1_print">
 			    <value name="CONTENT">
@@ -205,14 +206,21 @@
                     </block>
                 </value>
 			</block>
-            <block type="serial1_write">
+            <block type="serial1_println">
 			 <value name="CONTENT">
                     <block type="text">
                         <field name="TEXT">text</field>
                     </block>
                 </value>
 			</block>
-            <block type="serial1_available"></block>  
+			<block type="serial1_write" x="38" y="38">
+                <value name="CONTENT">
+                    <block type="text">
+                        <field name="TEXT">A</field>
+                    </block>
+                </value>
+            </block>
+            
 			<block type="serial1_flush"></block>
         </category>
 	
@@ -222,6 +230,7 @@
 			 <field name="PIN2">Port11</field>
 			  <field name="PINBAUDIOS">115200</field>
 			</block>
+			<block type="soft_available"></block>  
             <block type="soft_read"></block>
             <block type="soft_print">
 			    <value name="CONTENT">
@@ -230,14 +239,21 @@
                     </block>
                 </value>
 			</block>
-            <block type="soft_write">
+            <block type="soft_println">
 			 <value name="CONTENT">
                     <block type="text">
                         <field name="TEXT">text</field>
                     </block>
                 </value>
 			</block>
-            <block type="soft_available"></block>  
+			<block type="soft_write" x="38" y="38">
+                <value name="CONTENT">
+                    <block type="text">
+                        <field name="TEXT">A</field>
+                    </block>
+                </value>
+            </block>
+           
         </category>
 		
 		

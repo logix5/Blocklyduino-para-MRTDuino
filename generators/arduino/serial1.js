@@ -17,19 +17,28 @@ Blockly.Arduino['serial1_read'] = function(block) {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
-Blockly.Arduino['serial1_print'] = function(block) {
+Blockly.Arduino['serial1_println'] = function(block) {
   var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_ATOMIC) || '0';
   //content = content.replace('(','').replace(')','');
   var code = 'Serial1.println('+content+');\n';
   return code;
 };
 
-Blockly.Arduino['serial1_write'] = function(block) {
+Blockly.Arduino['serial1_print'] = function(block) {
   var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_ATOMIC) || '0';
   //content = content.replace('(','').replace(')','');
   var code = 'Serial1.print('+content+');\n';
   return code;
 };
+
+Blockly.Arduino['serial1_write'] = function(block) {
+  var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  //content = content.replace('(','').replace(')','');
+   
+  var code = 'Serial1.write('+content+');\n';  //ORGINAL \nSerial.print(\'\\t\');
+  return code;
+};
+
 
 Blockly.Arduino['serial1_available'] = function(block) {
   // TODO: Assemble Python into code variable.

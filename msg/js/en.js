@@ -412,8 +412,9 @@ Blockly.Msg.Serial_flush="Serial flush";
 Blockly.Msg.SERIAL1_Init="INIT Serial1 RX# Port15 TX# Port16 ";
 Blockly.Msg.SERIAL1_BAUD="Baudios";
 Blockly.Msg.SERIAL1_Read="Serial1 Read";
-Blockly.Msg.SERIAL1_Print="Serial1 Print on new line";
-Blockly.Msg.SERIAL1_Write="Serial1 Print on same line";
+Blockly.Msg.SERIAL1_Write="Serial1 write";
+Blockly.Msg.SERIAL1_Println="Serial1 Print on new line";
+Blockly.Msg.SERIAL1_Print="Serial1 Print on same line";
 Blockly.Msg.SERIAL1_Avai="Serial1 Available?";
 Blockly.Msg.Serial1_flush="Serial1 flush";
 
@@ -423,8 +424,9 @@ Blockly.Msg.SSERIAL_TX="Port TX#";
 Blockly.Msg.SSERIAL_RX="Port RX#";
 Blockly.Msg.SSERIAL_BAUD="Baudios";
 Blockly.Msg.SSERIAL_Read="SoftwareSerial Read";
-Blockly.Msg.SSERIAL_Print="SoftwareSerial Print on new line";
-Blockly.Msg.SSERIAL_Write="SoftwareSerial Print on same line";
+Blockly.Msg.SSERIAL_Println="SoftwareSerial Print on new line";
+Blockly.Msg.SSERIAL_Print="SoftwareSerial Print on same line";
+Blockly.Msg.SSERIAL_Write="SoftwareSerial write"
 Blockly.Msg.SSERIAL_Avai="SoftwareSerial Available?";
 
 //SERVO
