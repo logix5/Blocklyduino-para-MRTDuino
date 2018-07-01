@@ -13,6 +13,17 @@ Blockly.Arduino['soft_init'] = function(block) {
   return code;
 };
 
+Blockly.Arduino['soft_printfor'] = function(block) {
+  var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_NONE);
+  //content = content.replace('(','').replace(')','');
+  var type = this.getTitleValue('TYPE');
+  
+  //Blockly.Arduino.setups_['setup_serial_'+profile.default.serial] = 'Serial.begin('+profile.default.serial+');\n';
+  
+  var code = 'mySerial.print('+content+ ','+type+');\n';//ORGINAL \nSerial.print(\'\\t\');
+  return code;
+};
+
 Blockly.Arduino['soft_available'] = function(block) {
   // TODO: Assemble Python into code variable.
   var code = 'mySerial.available()';

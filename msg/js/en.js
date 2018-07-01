@@ -417,6 +417,11 @@ Blockly.Msg.SERIAL1_Println="Serial1 Print on new line";
 Blockly.Msg.SERIAL1_Print="Serial1 Print on same line";
 Blockly.Msg.SERIAL1_Avai="Serial1 Available?";
 Blockly.Msg.Serial1_flush="Serial1 flush";
+Blockly.Msg.Serial1_Print_Format="Serial1 Print  Format";
+Blockly.Msg.Serial1_Print_ForDecimal="decimal";
+Blockly.Msg.Serial1_Print_ForHexa="hexadecimal";
+Blockly.Msg.Serial1_Print_ForBin="binary";
+Blockly.Msg.Serial1_Print_ForOct="octal";
 
 //SOFTWARE SERIAL
 Blockly.Msg.SSERIAL_Init="INIT";
@@ -428,6 +433,11 @@ Blockly.Msg.SSERIAL_Println="SoftwareSerial Print on new line";
 Blockly.Msg.SSERIAL_Print="SoftwareSerial Print on same line";
 Blockly.Msg.SSERIAL_Write="SoftwareSerial write"
 Blockly.Msg.SSERIAL_Avai="SoftwareSerial Available?";
+Blockly.Msg.SSerial_Print_Format="SoftwareSerial Print  Format";
+Blockly.Msg.SSerial_Print_ForDecimal="decimal";
+Blockly.Msg.SSerial_Print_ForHexa="hexadecimal";
+Blockly.Msg.SSerial_Print_ForBin="binary";
+Blockly.Msg.SSerial_Print_ForOct="octal";
 
 //SERVO
 Blockly.Msg.SERVO_Servo="Servo";

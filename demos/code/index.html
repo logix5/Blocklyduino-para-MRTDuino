@@ -197,6 +197,14 @@
 			 <field name="PIN2">Port11</field>
 			  <field name="PINBAUDIOS">115200</field>
 			</block>
+			 <block type="serial1_printfor" x="13" y="38">
+                <field name="TYPE">DEC</field>
+                <value name="CONTENT">
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+            </block>
 			<block type="serial1_available"></block> 
             <block type="serial1_read"></block>
             <block type="serial1_print">
@@ -230,6 +238,14 @@
 			 <field name="PIN2">Port11</field>
 			  <field name="PINBAUDIOS">115200</field>
 			</block>
+			<block type="soft_printfor" x="13" y="38">
+                <field name="TYPE">DEC</field>
+                <value name="CONTENT">
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+            </block>
 			<block type="soft_available"></block>  
             <block type="soft_read"></block>
             <block type="soft_print">

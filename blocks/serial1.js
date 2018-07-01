@@ -51,6 +51,23 @@ Blockly.Blocks['serial1_init'] = {
   }
 };
 
+Blockly.Blocks['serial1_printfor'] = {
+  helpUrl: 'http://arduino.cc/en/Serial/Println',
+  init: function() {
+    this.setColour(20);
+	this.appendDummyInput()
+	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
+	this.setInputsInline(true);
+    this.appendValueInput("CONTENT", 'Number')
+        .setCheck('Number')
+        .appendTitle(Blockly.Msg.Serial1_Print_Format)
+     	.appendTitle(new Blockly.FieldDropdown([[Blockly.Msg.Serial1_Print_ForDecimal, "DEC"],[Blockly.Msg.Serial1_Print_ForHexa, "HEX"],[Blockly.Msg.Serial1_Print_ForBin, "BIN"],[Blockly.Msg.Serial1_Print_ForOct, "OCT"]]), "TYPE");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Prints data to the console/serial port with a specific format.');
+  }
+};
+
 Blockly.Blocks['serial1_available'] = {
 	helpUrl: '',
   init: function() {
