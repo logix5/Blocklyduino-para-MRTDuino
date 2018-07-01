@@ -393,11 +393,11 @@ Blockly.Msg.INOUT_ANA_WRITE="Analog Write";
 Blockly.Msg.INOUT_VALUE="Value";
 
 //SERIAL
-Blockly.Msg.Serial_Print="Print on new line";
-Blockly.Msg.Serial_PrintL="Print on same line";
+Blockly.Msg.Serial_Print="Serial Print on new line";
+Blockly.Msg.Serial_PrintL="Serial Print on same line";
 Blockly.Msg.Serial_Write="Serial write";
 Blockly.Msg.Serial_write_out="Write";
-Blockly.Msg.Serial_Print_Format="Print  Format";
+Blockly.Msg.Serial_Print_Format="Serial Print  Format";
 Blockly.Msg.Serial_Print_ForDecimal="decimal";
 Blockly.Msg.Serial_Print_ForHexa="hexadecimal";
 Blockly.Msg.Serial_Print_ForBin="binary";
@@ -405,6 +405,14 @@ Blockly.Msg.Serial_Print_ForOct="octal";
 Blockly.Msg.Serial_read="Serial Read";
 Blockly.Msg.Serial_avai="Serial Available?";
 Blockly.Msg.Serial_flush="Serial flush";
+
+//SERIAL1
+Blockly.Msg.SERIAL1_Init="INIT Serial1 RX# Port15 TX# Port16 ";
+Blockly.Msg.SERIAL1_BAUD="Baudios";
+Blockly.Msg.SERIAL1_Read="Serial1 Read";
+Blockly.Msg.SERIAL1_Print="Serial1 Print on new line";
+Blockly.Msg.SERIAL1_Write="Serial1 Print on same line";
+Blockly.Msg.SERIAL1_Avai="Serial1 Available?";
 
 //SOFTWARE SERIAL
 Blockly.Msg.SSERIAL_Init="INIT";

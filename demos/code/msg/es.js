@@ -3,6 +3,7 @@ var MSG = {
     catDigital: "Digital",
     catAnalog: "Analógico",
     catSerial: "Serial",
+	catSerial1: "Serial1",
     catSoftSerial: "Software Serial",
     catServo: "Servo",
     catDisplay:'LCD Monitor',

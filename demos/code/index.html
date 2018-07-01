@@ -14,6 +14,7 @@
 
         <script src="../../blocks/inout.js"></script>
         <script src="../../blocks/serial.js"></script>
+		<script src="../../blocks/serial1.js"></script>
         <script src="../../blocks/softserial.js"></script>
         <script src="../../blocks/servo.js"></script>
         <script src="../../blocks/seriallcd.js"></script>
@@ -41,6 +42,7 @@
         <script src="../../generators/arduino.js"></script>
         <script src="../../generators/arduino/inout.js"></script>
         <script src="../../generators/arduino/serial.js"></script>
+		<script src="../../generators/arduino/serial1.js"></script>
         <script src="../../generators/arduino/softserial.js"></script>
         <script src="../../generators/arduino/servo.js"></script>
         <script src="../../generators/arduino/seriallcd.js"></script>
@@ -150,8 +152,8 @@
             </category>
         </category>
 		
-	 <category id="catSerialAll" colour="30">
-        <category id="catSerial" colour="30">
+	 <category id="catSerialAll" colour="20">
+        <category id="catSerial" colour="20">
             <block type="serial_printfor" x="13" y="38">
                 <field name="TYPE">DEC</field>
                 <value name="CONTENT">
@@ -192,8 +194,32 @@
             </block>
             <block type="serial_flush"></block>
         </category>
+		
+		 <category id="catSerial1" colour="20">
+            <block type="serial1_init">
+			 <field name="PIN1">Port10</field>
+			 <field name="PIN2">Port11</field>
+			  <field name="PINBAUDIOS">115200</field>
+			</block>
+            <block type="serial1_read"></block>
+            <block type="serial1_print">
+			    <value name="CONTENT">
+                    <block type="text">
+                        <field name="TEXT">text</field>
+                    </block>
+                </value>
+			</block>
+            <block type="serial1_write">
+			 <value name="CONTENT">
+                    <block type="text">
+                        <field name="TEXT">text</field>
+                    </block>
+                </value>
+			</block>
+            <block type="serial1_available"></block>  
+        </category>
 	
-        <category id="catSoftSerial" colour="50">
+        <category id="catSoftSerial" colour="20">
             <block type="soft_init">
 			 <field name="PIN1">Port10</field>
 			 <field name="PIN2">Port11</field>
@@ -216,6 +242,15 @@
 			</block>
             <block type="soft_available"></block>  
         </category>
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		 </category>
         <category id="catServo" colour="80">        
             <block type="servo_move" x="63" y="38">

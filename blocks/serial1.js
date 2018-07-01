@@ -24,7 +24,7 @@
  */
 'use strict';
 
-goog.provide('Blockly.Blocks.softserial');
+goog.provide('Blockly.Blocks.serial1');
 
 goog.require('Blockly.Blocks');
 
@@ -33,21 +33,16 @@ goog.require('Blockly.Blocks');
  * Common HSV hue for all blocks in this category.
  */
 
-Blockly.Blocks['soft_init'] = {
+Blockly.Blocks['serial1_init'] = {
   helpUrl: 'http://arduino.cc/en/Reference/AnalogWrite',
   init: function() {
     this.setColour(20);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
     this.appendDummyInput()
-	.appendField(Blockly.Msg.SSERIAL_Init)
-    .appendField(Blockly.Msg.SSERIAL_TX)
-	.appendField(new Blockly.FieldDropdown([['Port2', '15'],['Port3', '16'],['Port4', '14'],['Port10', '9'],['Port11', '11']]), "PIN1");
+	.appendField(Blockly.Msg.SERIAL1_Init)
     this.appendDummyInput()
-    .appendField(Blockly.Msg.SSERIAL_RX)
-	.appendField(new Blockly.FieldDropdown([['Port2', '15'],['Port3', '16'],['Port4', '14'],['Port10', '9'],['Port11', '11']]), "PIN2");
-	 this.appendDummyInput()
-    .appendField(Blockly.Msg.SSERIAL_BAUD)
+    .appendField(Blockly.Msg.SERIAL1_BAUD)
 	.appendField(new Blockly.FieldDropdown([['1200', '1200'],['2400', '2400'],['4800', '4800'],['9600', '9600'],['19200', '19200'],['38400', '38400'],['57600', '57600'],['115200', '115200']]), "PINBAUDIOS");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
@@ -56,42 +51,42 @@ Blockly.Blocks['soft_init'] = {
   }
 };
 
-Blockly.Blocks['soft_available'] = {
+Blockly.Blocks['serial1_available'] = {
 	helpUrl: '',
   init: function() {
     this.setColour(20);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
 	this.appendDummyInput("")
-	    .appendTitle(Blockly.Msg.SSERIAL_Avai);
+	    .appendTitle(Blockly.Msg.SERIAL1_Avai);
     this.setInputsInline(true);
     this.setOutput(true, 'Boolean');
     this.setTooltip('');
   }
 };
 
-Blockly.Blocks['soft_read'] = {
+Blockly.Blocks['serial1_read'] = {
 	helpUrl: '',
   init: function() {
     this.setColour(20);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
 	this.appendDummyInput("")
-	    .appendTitle(Blockly.Msg.SSERIAL_Read);
+	    .appendTitle(Blockly.Msg.SERIAL1_Read);
     this.setInputsInline(true);
     this.setOutput(true, 'String');
     this.setTooltip('');
   }
 };
 
-Blockly.Blocks['soft_print'] = {
+Blockly.Blocks['serial1_print'] = {
   helpUrl: 'http://www.arduino.cc/en/Serial/Print',
   init: function() {
     this.setColour(20);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
     this.appendValueInput("CONTENT", 'String')
-        .appendField(Blockly.Msg.SSERIAL_Print);
+        .appendField(Blockly.Msg.SERIAL1_Print);
 	this.setInputsInline(true);	
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -99,14 +94,14 @@ Blockly.Blocks['soft_print'] = {
   }
 };
 
-Blockly.Blocks['soft_write'] = {
+Blockly.Blocks['serial1_write'] = {
   helpUrl: 'http://www.arduino.cc/en/Serial/Print',
   init: function() {
     this.setColour(20);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
     this.appendValueInput("CONTENT", 'String')
-        .appendField(Blockly.Msg.SSERIAL_Write);
+        .appendField(Blockly.Msg.SERIAL1_Write);
 	this.setInputsInline(true);	
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
