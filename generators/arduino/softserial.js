@@ -30,7 +30,7 @@ Blockly.Arduino['soft_print'] = function(block) {
 Blockly.Arduino['soft_write'] = function(block) {
   var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_ATOMIC) || '0';
   //content = content.replace('(','').replace(')','');
-  var code = 'mySerial.write('+content+');\n';
+  var code = 'mySerial.print('+content+');\n';
   return code;
 };
 

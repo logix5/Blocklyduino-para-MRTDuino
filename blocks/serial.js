@@ -32,6 +32,24 @@ goog.require('Blockly.Blocks');
 /**
  * Common HSV hue for all blocks in this category.
  */
+ 
+ Blockly.Blocks['serial_init'] = {
+  helpUrl: 'http://arduino.cc/en/Reference/AnalogWrite',
+  init: function() {
+    this.setColour(20);
+	this.appendDummyInput()
+	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
+    this.appendDummyInput()
+	.appendField(Blockly.Msg.SERIAL_Init)
+    this.appendDummyInput()
+    .appendField(Blockly.Msg.SERIAL_BAUD)
+	.appendField(new Blockly.FieldDropdown([['1200', '1200'],['2400', '2400'],['4800', '4800'],['9600', '9600'],['19200', '19200'],['38400', '38400'],['57600', '57600'],['115200', '115200']]), "PINBAUDIOS");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('A call to SoftwareSerial(rxPin, txPin) creates a new Serial object');
+  }
+};
 
 Blockly.Blocks['serial_printfor'] = {
   helpUrl: 'http://arduino.cc/en/Serial/Println',
@@ -109,20 +127,20 @@ Blockly.Blocks['serial_write'] = {
 };
 
 
-Blockly.Blocks['serial_write_out'] = {
-  helpUrl: '',
-  init: function() {
-    this.setHelpUrl('http://arduino.cc/en/Serial/write');
-    this.setColour(20);
-	this.appendDummyInput()
-	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
-    this.appendValueInput("valeur")
-        .appendField(Blockly.Msg.Serial_write_out);
-    this.setInputsInline(true);
-    this.setOutput(true, "Number");
-    this.setTooltip('Writes binary data to the serial port. This data is sent as a byte or series of bytes; to send the characters representing the digits of a number use the print() function instead.');
-  }
-};
+//Blockly.Blocks['serial_write_out'] = {
+//  helpUrl: '',
+//  init: function() {
+//    this.setHelpUrl('http://arduino.cc/en/Serial/write');
+//    this.setColour(20);
+//	this.appendDummyInput()
+//	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
+//    this.appendValueInput("valeur")
+//        .appendField(Blockly.Msg.Serial_write_out);
+//    this.setInputsInline(true);
+//    this.setOutput(true, "Number");
+//    this.setTooltip('Writes binary data to the serial port. This data is sent as a byte or series of bytes; to send the characters representing the digits of a number use the print() function instead.');
+//  }
+//};
 
 Blockly.Blocks['serial_flush'] = {
 	helpUrl: 'http://arduino.cc/en/Serial/Flush',

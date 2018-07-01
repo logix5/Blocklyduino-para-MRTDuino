@@ -393,6 +393,8 @@ Blockly.Msg.INOUT_ANA_WRITE="Analog Write";
 Blockly.Msg.INOUT_VALUE="Value";
 
 //SERIAL
+Blockly.Msg.SERIAL_Init="INIT Serial-USB ";
+Blockly.Msg.SERIAL_BAUD="Baudios";
 Blockly.Msg.Serial_Print="Serial Print on new line";
 Blockly.Msg.Serial_PrintL="Serial Print on same line";
 Blockly.Msg.Serial_Write="Serial write";
@@ -413,6 +415,7 @@ Blockly.Msg.SERIAL1_Read="Serial1 Read";
 Blockly.Msg.SERIAL1_Print="Serial1 Print on new line";
 Blockly.Msg.SERIAL1_Write="Serial1 Print on same line";
 Blockly.Msg.SERIAL1_Avai="Serial1 Available?";
+Blockly.Msg.Serial1_flush="Serial1 flush";
 
 //SOFTWARE SERIAL
 Blockly.Msg.SSERIAL_Init="INIT";

@@ -154,6 +154,9 @@
 		
 	 <category id="catSerialAll" colour="20">
         <category id="catSerial" colour="20">
+		    <block type="serial_init">
+			 <field name="PINBAUDIOS">115200</field>
+			</block>
             <block type="serial_printfor" x="13" y="38">
                 <field name="TYPE">DEC</field>
                 <value name="CONTENT">
@@ -185,13 +188,6 @@
                     </block>
                 </value>
             </block>
-            <block type="serial_write_out" x="63" y="63">
-                <value name="valeur">
-                    <block type="text">
-                        <field name="TEXT"></field>
-                    </block>
-                </value>
-            </block>
             <block type="serial_flush"></block>
         </category>
 		
@@ -217,6 +213,7 @@
                 </value>
 			</block>
             <block type="serial1_available"></block>  
+			<block type="serial1_flush"></block>
         </category>
 	
         <category id="catSoftSerial" colour="20">

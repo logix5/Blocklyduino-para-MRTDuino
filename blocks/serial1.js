@@ -109,6 +109,21 @@ Blockly.Blocks['serial1_write'] = {
   }
 };
 
+Blockly.Blocks['serial1_flush'] = {
+	helpUrl: 'http://arduino.cc/en/Serial/Flush',
+  init: function() {
+    this.setColour(20);
+	this.appendDummyInput()
+	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
+	this.appendDummyInput("")
+	    .appendTitle(Blockly.Msg.Serial1_flush);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+	this.setInputsInline(true);
+    this.setTooltip('Waits for the transmission of outgoing serial data to complete.');
+  }
+};
+
 
 
 
