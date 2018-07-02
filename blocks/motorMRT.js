@@ -36,10 +36,10 @@ goog.require('Blockly.Blocks');
 Blockly.Blocks['motor_run'] = {
   helpUrl: '',
   init: function() {
-    this.setColour(20);
+    this.setColour(80);
 	this.appendDummyInput()
-	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
-    this.appendDummyInput()
+	.appendField(new Blockly.FieldImage("images/MotorMRT.png",45,29))
+	this.appendDummyInput()
 	.appendField(Blockly.Msg.MOTOR_Connector)
 	.appendField(new Blockly.FieldDropdown([['ML1'],['MR1'],['ML2'],['MR2']]), "MOTOR_CON");
     this.appendDummyInput()
