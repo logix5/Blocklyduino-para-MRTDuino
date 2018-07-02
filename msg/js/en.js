@@ -439,6 +439,12 @@ Blockly.Msg.SSerial_Print_ForHexa="hexadecimal";
 Blockly.Msg.SSerial_Print_ForBin="binary";
 Blockly.Msg.SSerial_Print_ForOct="octal";
 
+//MOTOR MRT
+Blockly.Msg.MOTOR_Connector="Motor";
+Blockly.Msg.MOTOR_Direction="Direction";
+Blockly.Msg.MOTOR_speed="Speed(0-100)";
+
+
 //SERVO
 Blockly.Msg.SERVO_Servo="Servo";
 Blockly.Msg.PIN="PIN#";

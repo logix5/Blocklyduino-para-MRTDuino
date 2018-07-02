@@ -16,6 +16,7 @@
         <script src="../../blocks/serial.js"></script>
 		<script src="../../blocks/serial1.js"></script>
         <script src="../../blocks/softserial.js"></script>
+		<script src="../../blocks/motorMRT.js"></script>
         <script src="../../blocks/servo.js"></script>
         <script src="../../blocks/seriallcd.js"></script>
         <script src="../../blocks/seriallcdi2c.js"></script>
@@ -44,6 +45,7 @@
         <script src="../../generators/arduino/serial.js"></script>
 		<script src="../../generators/arduino/serial1.js"></script>
         <script src="../../generators/arduino/softserial.js"></script>
+		<script src="../../generators/arduino/motorMRT.js"></script>
         <script src="../../generators/arduino/servo.js"></script>
         <script src="../../generators/arduino/seriallcd.js"></script>
         <script src="../../generators/arduino/seriallcdi2c.js"></script>
@@ -270,9 +272,19 @@
                 </value>
             </block>
            
+        </category>	
+	</category>
+		  <category id="catMotorMRT" colour="80">        
+            <block type="motor_run" >
+			<value name="CONTENT">
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+			
+			</block>
         </category>
-		
-		 </category>
+		 		 
         <category id="catServo" colour="80">        
             <block type="servo_move" x="63" y="38">
                 <field name="PIN">0</field>
