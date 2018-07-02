@@ -41,10 +41,10 @@ Blockly.Blocks['motor_run'] = {
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
     this.appendDummyInput()
 	.appendField(Blockly.Msg.MOTOR_Connector)
-	.appendField(new Blockly.FieldDropdown([['ML1', '15'],['MR1', '16'],['ML2', '14'],['MR2', '9']]), "MOTOR_CON");
+	.appendField(new Blockly.FieldDropdown([['ML1'],['MR1'],['ML2'],['MR2']]), "MOTOR_CON");
     this.appendDummyInput()
     .appendField(Blockly.Msg.MOTOR_Direction)
-	.appendField(new Blockly.FieldDropdown([['Foward', '15'],['Backward', '16'],['Stop', '14']]), "MOTOR_DIR");
+	.appendField(new Blockly.FieldDropdown([['Foward', 'HIGH'],['Backward', 'LOW'],['Stop', 'STOP']]), "MOTOR_DIR");
 	 this.appendValueInput("CONTENT", 'Number')
         .setCheck('Number')
     .appendField(Blockly.Msg.MOTOR_speed)
