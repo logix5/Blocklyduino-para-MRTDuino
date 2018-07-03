@@ -79,7 +79,7 @@ Blockly.Blocks['inout_analog_write'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.INOUT_ANA_WRITE);
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["Port3", "3"], ["Port4", "5"], ["6", "6"], ["9", "9"], ["10", "10"], ["11", "11"]]), "PIN");
+        .appendField(new Blockly.FieldDropdown([["Port1", "13"], ["Port9", "5"], ["Port10", "9"], ["Port11", "11"], ["Port12", "12"]]), "PIN");
     this.appendValueInput("Value")
         .setCheck("Number")
         .appendField(Blockly.Msg.INOUT_VALUE);
