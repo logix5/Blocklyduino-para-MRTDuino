@@ -382,18 +382,18 @@ Blockly.Msg.LISTS_INDEX_OF_INPUT_IN_LIST = Blockly.Msg.LISTS_INLIST;
 Blockly.Msg.LISTS_SET_INDEX_INPUT_IN_LIST = Blockly.Msg.LISTS_INLIST;
 
 //IN OUT
-Blockly.Msg.INOUT_HIGH_LEVEL="HIGH";
-Blockly.Msg.INOUT_LOW_LEVEL="LOW";
+Blockly.Msg.INOUT_HIGH_LEVEL="High";
+Blockly.Msg.INOUT_LOW_LEVEL="Low";
 Blockly.Msg.INPOUT_DIGITAL_WRITE="DigitalWrite PIN#";
-Blockly.Msg.INOUT_STAT="STAT";
+Blockly.Msg.INOUT_STAT="Stat";
 Blockly.Msg.INOUT_DIG_READ="Digital read PIN#";
 Blockly.Msg.INOUT_ANA_READ="AnalogRead PIN#";
 Blockly.Msg.INOUT_BUI_LED="Integrated LED Stat";
 Blockly.Msg.INOUT_ANA_WRITE="Analog Write";
-Blockly.Msg.INOUT_VALUE="Value";
+Blockly.Msg.INOUT_VALUE="Value(0-255)";
 
 //SERIAL
-Blockly.Msg.SERIAL_Init="INIT Serial-USB ";
+Blockly.Msg.SERIAL_Init="Init Serial-USB ";
 Blockly.Msg.SERIAL_BAUD="Baudios";
 Blockly.Msg.Serial_Print="Serial Print on new line";
 Blockly.Msg.Serial_PrintL="Serial Print on same line";
@@ -409,7 +409,7 @@ Blockly.Msg.Serial_avai="Serial Available?";
 Blockly.Msg.Serial_flush="Serial flush";
 
 //SERIAL1
-Blockly.Msg.SERIAL1_Init="INIT Serial1 RX# Port15 TX# Port16 ";
+Blockly.Msg.SERIAL1_Init="Init Serial1 RX# Port15 TX# Port16 ";
 Blockly.Msg.SERIAL1_BAUD="Baudios";
 Blockly.Msg.SERIAL1_Read="Serial1 Read";
 Blockly.Msg.SERIAL1_Write="Serial1 write";
@@ -424,7 +424,7 @@ Blockly.Msg.Serial1_Print_ForBin="binary";
 Blockly.Msg.Serial1_Print_ForOct="octal";
 
 //SOFTWARE SERIAL
-Blockly.Msg.SSERIAL_Init="INIT";
+Blockly.Msg.SSERIAL_Init="Init";
 Blockly.Msg.SSERIAL_TX="Port TX#";
 Blockly.Msg.SSERIAL_RX="Port RX#";
 Blockly.Msg.SSERIAL_BAUD="Baudios";

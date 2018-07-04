@@ -66,6 +66,7 @@ Blockly.Blocks['inout_analog_read'] = {
   init: function() {
     this.setColour(10);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/Analogsignal.png",68,45))
         .appendField(Blockly.Msg.INOUT_ANA_READ)
         .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN");
     this.setOutput(true, 'Number');
@@ -78,6 +79,7 @@ Blockly.Blocks['inout_analog_write'] = {
     this.setHelpUrl('');
     this.setColour(10);    
     this.appendDummyInput()
+	    .appendField(new Blockly.FieldImage("images/Analogsignal.png",68,45))
         .appendField(Blockly.Msg.INOUT_ANA_WRITE);
     this.appendDummyInput()
         .appendField(new Blockly.FieldDropdown([["Port1", "13"], ["Port9", "5"], ["Port10", "9"], ["Port11", "11"], ["Port12", "12"]]), "PIN");
