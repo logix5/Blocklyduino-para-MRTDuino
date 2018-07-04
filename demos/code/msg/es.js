@@ -5,6 +5,7 @@ var MSG = {
     catSerial: "Serial",
 	catSerial1: "Serial1",
     catSoftSerial: "Software Serial",
+	catMotors:"Motores",
 	catMotorMRT: "Motores MRT",
     catServo: "Servo",
     catDisplay:'LCD Monitor',

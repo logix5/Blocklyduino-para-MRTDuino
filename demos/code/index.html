@@ -273,6 +273,9 @@
            
         </category>	
 	</category>
+	
+	
+	  <category id="catMotors" colour="80"> 
 		  <category id="catMotorMRT" colour="80">        
             <block type="motor_run" >
 			<field name="MOTOR_CON">ML1</field>
@@ -288,7 +291,6 @@
 		 		 
         <category id="catServo" colour="80">        
             <block type="servo_move" x="63" y="38">
-                <field name="PIN">0</field>
                 <value name="DEGREE">
                     <block type="math_number">
                         <field name="NUM">0</field>
@@ -304,6 +306,8 @@
             <block type="servo_attached"></block>
             <block type="servo_detach"></block>
         </category>
+	  </category>
+	  
         <category id="catDivers" colour="150">
             <block type="grove_temporature_sensor"></block>
             <block type="grove_ultrasonic_ranger"></block>

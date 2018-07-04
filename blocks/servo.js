@@ -7,6 +7,7 @@ Blockly.Blocks['servo_move'] = {
   helpUrl: 'http://www.arduino.cc/playground/ComponentLib/servo',
   init: function() {
     this.setColour(80);
+	this.setInputsInline(true);
     this.appendDummyInput()
         .appendField(Blockly.Msg.SERVO_Servo)
         .appendField(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/a991.jpg", 64, 64))
@@ -30,6 +31,7 @@ Blockly.Blocks['servo_read_degrees'] = {
   helpUrl: 'http://www.arduino.cc/playground/ComponentLib/servo',
   init: function() {
 	this.setColour(80);
+	this.setInputsInline(true);
     this.appendDummyInput()
         .appendField(Blockly.Msg.SERVO_Servo)
         .appendField(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/a991.jpg", 64, 64))
@@ -47,6 +49,7 @@ Blockly.Blocks['servo_attached'] = {
   helpUrl: 'http://www.arduino.cc/playground/ComponentLib/servo',
   init: function() {
 	this.setColour(80);
+	this.setInputsInline(true);
     this.appendDummyInput()
         .appendField(Blockly.Msg.SERVO_Attached)
         .appendField(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/a991.jpg", 64, 64))

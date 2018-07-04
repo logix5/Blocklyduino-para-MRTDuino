@@ -6,6 +6,7 @@ var MSG = {
   catSerial:"Serial Uart0-USB",
   catSerial1:"Serial Uart1",
   catSoftSerial:"Software Serial",
+  catMotors:"Motors",
   catMotorMRT:"Motor MRT",
   catServo:"Servo",
   catDisplay:"Display",
