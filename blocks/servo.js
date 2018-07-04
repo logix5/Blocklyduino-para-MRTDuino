@@ -9,8 +9,8 @@ Blockly.Blocks['servo_move'] = {
     this.setColour(80);
 	this.setInputsInline(true);
     this.appendDummyInput()
-        .appendField(Blockly.Msg.SERVO_Servo)
-        .appendField(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/a991.jpg", 64, 64))
+        .appendField(new Blockly.FieldImage("images/Servo.png",50,38))
+		.appendField(Blockly.Msg.SERVO_Servo)
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
     this.appendValueInput("DEGREE", 'Number')
@@ -33,8 +33,8 @@ Blockly.Blocks['servo_read_degrees'] = {
 	this.setColour(80);
 	this.setInputsInline(true);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/Servo.png",50,38))
         .appendField(Blockly.Msg.SERVO_Servo)
-        .appendField(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/a991.jpg", 64, 64))
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
     this.appendDummyInput()
@@ -51,8 +51,8 @@ Blockly.Blocks['servo_attached'] = {
 	this.setColour(80);
 	this.setInputsInline(true);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/Servo.png",50,38))
         .appendField(Blockly.Msg.SERVO_Attached)
-        .appendField(new Blockly.FieldImage("http://www.seeedstudio.com/depot/images/product/a991.jpg", 64, 64))
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
     this.setOutput(true, 'Boolean');
@@ -66,6 +66,7 @@ Blockly.Blocks['servo_detach'] = {
     this.setColour(80);
 	this.setInputsInline(true);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/Servo.png",50,38))
         .appendField(Blockly.Msg.SERVO_Detach)
         .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
     this.setPreviousStatement(true, null);

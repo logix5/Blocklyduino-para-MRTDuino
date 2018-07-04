@@ -39,7 +39,7 @@ Blockly.Blocks.colour.HUE = 230;
 Blockly.Blocks['inout_highlow'] = {
   helpUrl: 'http://arduino.cc/en/Reference/Constants',
   init: function() {
-    this.setColour(30);
+    this.setColour(10);
     this.appendDummyInput()
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.INOUT_HIGH_LEVEL, "HIGH"], [Blockly.Msg.INOUT_LOW_LEVEL, "LOW"]]), 'BOOL');
     this.setOutput(true, 'Boolean');
@@ -51,8 +51,9 @@ Blockly.Blocks['inout_highlow'] = {
 Blockly.Blocks['inout_digital_read'] = {
   helpUrl: 'http://arduino.cc/en/Reference/DigitalRead',
   init: function() {
-    this.setColour(30);
+    this.setColour(10);
     this.appendDummyInput()
+		  .appendField(new Blockly.FieldImage("images/Digitalsignal.png",86,43))
 	      .appendField(Blockly.Msg.INOUT_DIG_READ)
 	      .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN");
     this.setOutput(true, 'Number');
@@ -63,7 +64,7 @@ Blockly.Blocks['inout_digital_read'] = {
 Blockly.Blocks['inout_analog_read'] = {
   helpUrl: 'http://arduino.cc/en/Reference/AnalogRead',
   init: function() {
-    this.setColour(30);
+    this.setColour(10);
     this.appendDummyInput()
         .appendField(Blockly.Msg.INOUT_ANA_READ)
         .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN");
@@ -75,7 +76,7 @@ Blockly.Blocks['inout_analog_read'] = {
 Blockly.Blocks['inout_analog_write'] = {
   init: function() {
     this.setHelpUrl('');
-    this.setColour(30);    
+    this.setColour(10);    
     this.appendDummyInput()
         .appendField(Blockly.Msg.INOUT_ANA_WRITE);
     this.appendDummyInput()
@@ -93,7 +94,7 @@ Blockly.Blocks['inout_analog_write'] = {
 Blockly.Blocks['inout_buildin_led'] = {
    helpUrl: 'http://arduino.cc/en/Reference/DigitalWrite',
    init: function() {
-     this.setColour(30);
+     this.setColour(10);
      this.appendDummyInput()
 	  .appendField(Blockly.Msg.INOUT_BUI_LED)
 	  .appendField(new Blockly.FieldDropdown([[Blockly.Msg.INOUT_HIGH_LEVEL, "HIGH"], [Blockly.Msg.INOUT_LOW_LEVEL, "LOW"]]), "STAT");
@@ -106,8 +107,9 @@ Blockly.Blocks['inout_buildin_led'] = {
 Blockly.Blocks['inout_digital_write'] = {
   helpUrl: 'http://arduino.cc/en/Reference/DigitalWrite',
   init: function() {
-    this.setColour(30);
+    this.setColour(10);
     this.appendDummyInput()
+	.appendField(new Blockly.FieldImage("images/Digitalsignal.png",86,43))
 	.appendField(Blockly.Msg.INPOUT_DIGITAL_WRITE)
         .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN")
       	.appendField(Blockly.Msg.INOUT_STAT)
