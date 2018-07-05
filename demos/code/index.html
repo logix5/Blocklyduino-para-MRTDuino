@@ -18,6 +18,8 @@
         <script src="../../blocks/softserial.js"></script>
 		<script src="../../blocks/motorMRT.js"></script>
         <script src="../../blocks/servo.js"></script>
+		<script src="../../blocks/softBT.js"></script>
+		<script src="../../blocks/serial1BT.js"></script>
         <script src="../../blocks/seriallcd.js"></script>
         <script src="../../blocks/seriallcdi2c.js"></script>
         <script src="../../blocks/divers.js"></script>
@@ -47,6 +49,8 @@
         <script src="../../generators/arduino/softserial.js"></script>
 		<script src="../../generators/arduino/motorMRT.js"></script>
         <script src="../../generators/arduino/servo.js"></script>
+		<script src="../../generators/arduino/softBT.js"></script>
+		<script src="../../generators/arduino/serial1BT.js"></script>
         <script src="../../generators/arduino/seriallcd.js"></script>
         <script src="../../generators/arduino/seriallcdi2c.js"></script>
         <script src="../../generators/arduino/divers.js"></script>
@@ -194,8 +198,6 @@
 		
 		 <category id="catSerial1" colour="30">
             <block type="serial1_init">
-			 <field name="PIN1">Port10</field>
-			 <field name="PIN2">Port11</field>
 			  <field name="PINBAUDIOS">115200</field>
 			</block>
 			 <block type="serial1_printfor" x="13" y="38">
@@ -235,8 +237,8 @@
 	
         <category id="catSoftSerial" colour="30">
             <block type="soft_init">
-			 <field name="PIN1">Port10</field>
-			 <field name="PIN2">Port11</field>
+			 <field name="PIN1">9</field>
+			 <field name="PIN2">11</field>
 			  <field name="PINBAUDIOS">115200</field>
 			</block>
 			<block type="soft_printfor" x="13" y="38">
@@ -274,7 +276,88 @@
         </category>	
 	</category>
 	
-	
+	   <category id="catBTAll" colour="185"> 
+		<category id="catBTSerial1" colour="185"> 
+		<block type="serial1_bt_init">
+			  <field name="PINBAUDIOS">115200</field>
+			</block>
+			 <block type="serial1_bt_printfor" x="13" y="38">
+                <field name="TYPE">DEC</field>
+                <value name="CONTENT">
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+            </block>
+			<block type="serial1_bt_available"></block> 
+            <block type="serial1_bt_read"></block>
+            <block type="serial1_bt_print">
+			    <value name="CONTENT">
+                    <block type="text">
+                        <field name="TEXT">text</field>
+                    </block>
+                </value>
+			</block>
+            <block type="serial1_bt_println">
+			 <value name="CONTENT">
+                    <block type="text">
+                        <field name="TEXT">text</field>
+                    </block>
+                </value>
+			</block>
+			<block type="serial1_bt_write" x="38" y="38">
+                <value name="CONTENT">
+                    <block type="text">
+                        <field name="TEXT">A</field>
+                    </block>
+                </value>
+            </block>
+            
+			<block type="serial1_bt_flush"></block>
+				
+		</category>
+		<category id="catBTSoftSerial" colour="185"> 
+		 <block type="soft_bt_init">
+			 <field name="PIN1">9</field>
+			 <field name="PIN2">11</field>
+			  <field name="PINBAUDIOS">115200</field>
+			</block>
+			<block type="soft_bt_printfor" x="13" y="38">
+                <field name="TYPE">DEC</field>
+                <value name="CONTENT">
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+            </block>
+			<block type="soft_bt_available"></block>  
+            <block type="soft_bt_read"></block>
+            <block type="soft_bt_print">
+			    <value name="CONTENT">
+                    <block type="text">
+                        <field name="TEXT">text</field>
+                    </block>
+                </value>
+			</block>
+            <block type="soft_bt_println">
+			 <value name="CONTENT">
+                    <block type="text">
+                        <field name="TEXT">text</field>
+                    </block>
+                </value>
+			</block>
+			<block type="soft_bt_write" x="38" y="38">
+                <value name="CONTENT">
+                    <block type="text">
+                        <field name="TEXT">A</field>
+                    </block>
+                </value>
+            </block>
+			
+		
+		</category>
+	  </category>
+			
 	  <category id="catMotors" colour="80"> 
 		  <category id="catMotorMRT" colour="80">        
             <block type="motor_run" >
@@ -288,7 +371,7 @@
 			
 			</block>
         </category>
-		 		 
+			 		 
         <category id="catServo" colour="80">        
             <block type="servo_move" x="55" y="38">
                 <value name="DEGREE">
@@ -307,6 +390,8 @@
             <block type="servo_detach"></block>
         </category>
 	  </category>
+	  
+	
 	  
         <category id="catDivers" colour="150">
             <block type="grove_temporature_sensor"></block>

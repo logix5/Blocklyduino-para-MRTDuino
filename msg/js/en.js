@@ -381,6 +381,9 @@ Blockly.Msg.TEXT_CREATE_JOIN_ITEM_TITLE_ITEM = Blockly.Msg.VARIABLES_DEFAULT_NAM
 Blockly.Msg.LISTS_INDEX_OF_INPUT_IN_LIST = Blockly.Msg.LISTS_INLIST;
 Blockly.Msg.LISTS_SET_INDEX_INPUT_IN_LIST = Blockly.Msg.LISTS_INLIST;
 
+//General
+Blockly.Msg.INOUT_VALUE="Value";
+
 //IN OUT
 Blockly.Msg.INOUT_HIGH_LEVEL="High";
 Blockly.Msg.INOUT_LOW_LEVEL="Low";
@@ -390,7 +393,7 @@ Blockly.Msg.INOUT_DIG_READ="Digital read PIN#";
 Blockly.Msg.INOUT_ANA_READ="AnalogRead PIN#";
 Blockly.Msg.INOUT_BUI_LED="Integrated LED Stat";
 Blockly.Msg.INOUT_ANA_WRITE="Analog Write";
-Blockly.Msg.INOUT_VALUE="Value(0-255)";
+Blockly.Msg.INOUT_VALUE2="Value(0-255)";
 Blockly.Msg.INOUT_TOOLTIP_WRITE="Write digital value to a specific Port";
 
 //SERIAL
@@ -439,6 +442,30 @@ Blockly.Msg.SSerial_Print_ForDecimal="decimal";
 Blockly.Msg.SSerial_Print_ForHexa="hexadecimal";
 Blockly.Msg.SSerial_Print_ForBin="binary";
 Blockly.Msg.SSerial_Print_ForOct="octal";
+
+// SOFTWARE SERIAL FOR BT
+Blockly.Msg.SSERIAL_BT_Init="Init Bluetooth";
+Blockly.Msg.SSERIAL_BT_TX="Port TX#";
+Blockly.Msg.SSERIAL_BT_RX="Port RX#";
+Blockly.Msg.SSERIAL_BT_BAUD="Baudios";
+Blockly.Msg.SSERIAL_BT_Read="SoftwareSerial BT Read";
+Blockly.Msg.SSERIAL_BT_Println="SoftwareSerial BT Print on new line";
+Blockly.Msg.SSERIAL_BT_Print="SoftwareSerial BT Print on same line";
+Blockly.Msg.SSERIAL_BT_Write="SoftwareSerial BT write"
+Blockly.Msg.SSERIAL_BT_Avai="SoftwareSerial BT Available?";
+Blockly.Msg.SSerial_BT_Print_Format="SoftwareSerial BT Print  Format";
+
+// SERIAL1 FOR BT
+Blockly.Msg.SERIAL1_BT_Init="Init BT Serial1 RX# Port15 TX# Port16 ";
+Blockly.Msg.SERIAL1_BT_BAUD="Baudios";
+Blockly.Msg.SERIAL1_BT_Read="BT Serial1 Read";
+Blockly.Msg.SERIAL1_BT_Write="BT Serial1 write";
+Blockly.Msg.SERIAL1_BT_Println="BT Serial1 Print on new line";
+Blockly.Msg.SERIAL1_BT_Print="BT Serial1 Print on same line";
+Blockly.Msg.SERIAL1_BT_Avai="BT Serial1 Available?";
+Blockly.Msg.Serial1_BT_flush="BT Serial1 flush";
+Blockly.Msg.Serial1_BT_Print_Format="BTSerial1 Print  Format";
+
 
 //MOTOR MRT
 Blockly.Msg.MOTOR_Connector="Motor";

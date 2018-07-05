@@ -390,6 +390,9 @@ Blockly.Msg.TEXT_CREATE_JOIN_ITEM_TITLE_ITEM = Blockly.Msg.VARIABLES_DEFAULT_NAM
 Blockly.Msg.LISTS_INDEX_OF_INPUT_IN_LIST = Blockly.Msg.LISTS_INLIST;
 Blockly.Msg.PROCEDURES_DEFRETURN_COMMENT = Blockly.Msg.PROCEDURES_DEFNORETURN_COMMENT;
 
+//General
+Blockly.Msg.INOUT_VALUE="Valor";
+
 //IN OUT
 Blockly.Msg.INOUT_HIGH_LEVEL="ALTO";
 Blockly.Msg.INOUT_LOW_LEVEL="BAJO";
@@ -398,13 +401,9 @@ Blockly.Msg.INOUT_STAT="ESTADO";
 Blockly.Msg.INOUT_DIG_READ="Lectura Digital PIN#";
 Blockly.Msg.INOUT_ANA_READ="Lectura Analógica PIN#";
 Blockly.Msg.INOUT_TOOLTIP_WRITE="Escribir el valor digital en el puerto específico";
-
-
 Blockly.Msg.INOUT_BUI_LED="Estado del LED integrado";
-
-
 Blockly.Msg.INOUT_ANA_WRITE="Escribe Analógica";
-Blockly.Msg.INOUT_VALUE="Valor";
+Blockly.Msg.INOUT_VALUE2="Valor(0-255)";
 
 
 //SERIAL
