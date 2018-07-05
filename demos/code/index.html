@@ -22,6 +22,7 @@
 		<script src="../../blocks/serial1BT.js"></script>
         <script src="../../blocks/seriallcd.js"></script>
         <script src="../../blocks/seriallcdi2c.js"></script>
+		<script src="../../blocks/simpleSensors.js"></script>
         <script src="../../blocks/divers.js"></script>
         <script src="../../blocks/logic.js"></script>
         <script src="../../blocks/loops.js"></script>
@@ -53,6 +54,7 @@
 		<script src="../../generators/arduino/serial1BT.js"></script>
         <script src="../../generators/arduino/seriallcd.js"></script>
         <script src="../../generators/arduino/seriallcdi2c.js"></script>
+		<script src="../../generators/arduino/simpleSensors.js"></script>
         <script src="../../generators/arduino/divers.js"></script>
         <script src="../../generators/arduino/math.js"></script>
         <script src="../../generators/arduino/logic.js"></script>
@@ -391,7 +393,10 @@
         </category>
 	  </category>
 	  
-	
+	<category id="catSimpleSensors" colour="220"> 
+	 <block type="button_sensor"></block>
+		
+	</category "> 
 	  
         <category id="catDivers" colour="150">
             <block type="grove_temporature_sensor"></block>
@@ -408,7 +413,8 @@
             <block type="var_random"></block>
             <block type="various_constrain"></block>
         </category>
-        <category id="catString" colour="210" custom="STRING"></category>
+		
+     
         <sep></sep>
         <category id="catDisplay" colour="150">
             <category id="catLCD" colour="125">
@@ -642,6 +648,7 @@
         <sep></sep>
         <category id="catVariables" colour="330" custom="VARIABLE"></category>
         <category id="catFunctions" colour="290" custom="PROCEDURE"></category>
+		   <category id="catString" colour="210" custom="STRING"></category>
     </xml>
 
     <div id="badBlockDiv" class="dialogHiddenContent">

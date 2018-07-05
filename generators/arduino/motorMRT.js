@@ -9,7 +9,7 @@ Blockly.Arduino['motor_run'] = function(block) {
   var motor_direction = this.getFieldValue('MOTOR_DIR');
   var motor_speed = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_ATOMIC);
   Blockly.Arduino.definitions_['define_pwmsoft'] = '#include <SoftPWM.h>\n';
-  Blockly.Arduino.setups_['setup_pwminit'] = 'SoftPWMBegin();';
+  
   
   if(motor_pin == 'ML1')
   {
@@ -56,7 +56,7 @@ Blockly.Arduino['motor_run'] = function(block) {
 				}
 			else
 				var code = '';
-  
+   Blockly.Arduino.setups_['setup_pwminit'] = 'SoftPWMBegin();';
   
   // TODO: Change ORDER_NONE to the correct strength.
   return code;

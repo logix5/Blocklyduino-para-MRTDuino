@@ -383,6 +383,13 @@ Blockly.Msg.LISTS_SET_INDEX_INPUT_IN_LIST = Blockly.Msg.LISTS_INLIST;
 
 //General
 Blockly.Msg.INOUT_VALUE="Value";
+Blockly.Msg.PIN="PIN#";
+
+//SIMPLE SENSORS
+Blockly.Msg.BUTTON_NAME="Button";
+Blockly.Msg.BUTTON_LOGIC="Logic inverse";
+Blockly.Msg.BUTTON_PRESSED="pressed?";
+
 
 //IN OUT
 Blockly.Msg.INOUT_HIGH_LEVEL="High";
