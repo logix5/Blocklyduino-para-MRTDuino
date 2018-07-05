@@ -391,6 +391,7 @@ Blockly.Msg.INOUT_ANA_READ="AnalogRead PIN#";
 Blockly.Msg.INOUT_BUI_LED="Integrated LED Stat";
 Blockly.Msg.INOUT_ANA_WRITE="Analog Write";
 Blockly.Msg.INOUT_VALUE="Value(0-255)";
+Blockly.Msg.INOUT_TOOLTIP_WRITE="Write digital value to a specific Port";
 
 //SERIAL
 Blockly.Msg.SERIAL_Init="Init Serial-USB ";

@@ -118,6 +118,6 @@ Blockly.Blocks['inout_digital_write'] = {
       	.appendField(new Blockly.FieldDropdown([[Blockly.Msg.INOUT_HIGH_LEVEL, "HIGH"], [Blockly.Msg.INOUT_LOW_LEVEL, "LOW"]]), "STAT");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('Write digital value to a specific Port');
+    this.setTooltip(Blockly.Msg.INOUT_TOOLTIP_WRITE);
   }
 };

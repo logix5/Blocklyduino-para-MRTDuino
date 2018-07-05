@@ -397,6 +397,7 @@ Blockly.Msg.INOUT_LOW_LEVEL="BAJO";
 Blockly.Msg.INOUT_STAT="ESTADO";
 Blockly.Msg.INOUT_DIG_READ="Lectura Digital PIN#";
 Blockly.Msg.INOUT_ANA_READ="Lectura Analógica PIN#";
+Blockly.Msg.INOUT_TOOLTIP_WRITE="Escribir el valor digital en el puerto específico";
 
 
 Blockly.Msg.INOUT_BUI_LED="Estado del LED integrado";
