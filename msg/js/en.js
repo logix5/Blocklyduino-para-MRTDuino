@@ -389,6 +389,7 @@ Blockly.Msg.PIN="PIN#";
 Blockly.Msg.BUTTON_NAME="Button";
 Blockly.Msg.BUTTON_LOGIC="Logic inverse";
 Blockly.Msg.BUTTON_PRESSED="pressed?";
+Blockly.Msg.BUTTON_TOUCH_NAME="Capacity Touch";
 
 
 //IN OUT

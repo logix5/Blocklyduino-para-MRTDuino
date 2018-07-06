@@ -47,3 +47,24 @@ Blockly.Blocks['button_sensor'] = {
     this.setTooltip('');
   }
 };
+
+Blockly.Blocks['button_touch_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/CapacitiveTouch.png",49,38))
+	    .appendField(Blockly.Msg.BUTTON_TOUCH_NAME)
+	    .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_BUTTON")
+    this.appendDummyInput()
+	    .appendField(Blockly.Msg.BUTTON_LOGIC)
+        .appendField(new Blockly.FieldCheckbox('FALSE'), 'LOGIC');
+		this.setOutput(true, 'Boolean');
+		this.appendDummyInput()
+		.appendField(Blockly.Msg.BUTTON_PRESSED)
+	this.appendDummyInput()
+	this.setInputsInline(true);
+    this.setTooltip('');
+  }
+};
