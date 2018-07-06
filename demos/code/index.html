@@ -140,7 +140,91 @@
         <textarea id="content_xml" class="content" wrap="off"></textarea>
 
     <xml id="toolbox" style="display: none">
-        <category id="catInOut" colour="10">
+	
+	       <category id="catLogic" colour="210">
+
+            <block type="controls_if"></block>
+            <block type="logic_compare"></block>
+            <block type="logic_operation"></block>
+            <block type="logic_null"></block>
+            <block type="logic_boolean"></block>
+            <block type="logic_negate"></block>
+        </category>
+
+        <category id="catLoops" colour="190">
+            <block type="while_do"></block>
+            <block type="do_while"></block>
+            <block type="cont_break"></block>
+            <block type="cont_continue"></block>  
+            <block type="controls_for">
+                <value name="FROM">
+                    <block type="math_number">
+                        <field name="NUM">1</field>
+                    </block>
+                </value>
+                <value name="TO">
+                    <block type="math_number">
+                        <field name="NUM">10</field>
+                    </block>
+                </value>
+                <value name="BY">
+                    <block type="math_number">
+                        <field name="NUM">1</field>
+                    </block>
+                </value>
+            </block>   
+            <block type="controls_repeat_x" x="113" y="38">
+                <value name="TIMES">
+                    <block type="math_number">
+                        <field name="NUM">10</field>
+                    </block>
+                </value>
+            </block>
+        </category>
+
+        <category id="catMath" colour="230">
+            <block type="base_map">
+                <value name="value">
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+                <value name="fromLow">
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+                <value name="fromHigh">
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+                <value name="toLow">
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+                <value name="toHigh">
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+            </block>
+            <block type="math_number"></block>
+            <block type="math_arithmetic"></block>
+            <block type="math_trig"></block>
+        </category>
+        <category id="catText" colour="160">
+            <block type="text"></block>
+            <block type="text_char"></block>
+        </category>
+        <sep></sep>
+
+        <category id="catVariables" colour="330" custom="VARIABLE"></category>
+        <category id="catFunctions" colour="290" custom="PROCEDURE"></category>
+		<category id="catString" colour="210" custom="STRING"></category>
+	 <sep></sep>
+	        <category id="catInOut" colour="10">
             <category id="catDigital" colour="10">
                 <block type="inout_highlow"></block>
                 <block type="inout_buildin_led"></block>
@@ -533,7 +617,6 @@
         </category>
         <sep></sep>
 
-
         <category id="catConversion" colour="165"> 
             <block type="conversion_tochar"></block>
             <block type="conversion_tobyte"></block>
@@ -565,90 +648,9 @@
             <block type="arduino_setup"></block>
 
         </category>
-        <sep></sep>
-        <category id="catLogic" colour="210">
 
-            <block type="controls_if"></block>
-            <block type="logic_compare"></block>
-            <block type="logic_operation"></block>
-            <block type="logic_null"></block>
-            <block type="logic_boolean"></block>
-            <block type="logic_negate"></block>
-        </category>
-
-        <category id="catLoops" colour="190">
-            <block type="while_do"></block>
-            <block type="do_while"></block>
-            <block type="cont_break"></block>
-            <block type="cont_continue"></block>  
-            <block type="controls_for">
-                <value name="FROM">
-                    <block type="math_number">
-                        <field name="NUM">1</field>
-                    </block>
-                </value>
-                <value name="TO">
-                    <block type="math_number">
-                        <field name="NUM">10</field>
-                    </block>
-                </value>
-                <value name="BY">
-                    <block type="math_number">
-                        <field name="NUM">1</field>
-                    </block>
-                </value>
-            </block>   
-            <block type="controls_repeat_x" x="113" y="38">
-                <value name="TIMES">
-                    <block type="math_number">
-                        <field name="NUM">10</field>
-                    </block>
-                </value>
-            </block>
-        </category>
-
-        <category id="catMath" colour="230">
-            <block type="base_map">
-                <value name="value">
-                    <block type="math_number">
-                        <field name="NUM">0</field>
-                    </block>
-                </value>
-                <value name="fromLow">
-                    <block type="math_number">
-                        <field name="NUM">0</field>
-                    </block>
-                </value>
-                <value name="fromHigh">
-                    <block type="math_number">
-                        <field name="NUM">0</field>
-                    </block>
-                </value>
-                <value name="toLow">
-                    <block type="math_number">
-                        <field name="NUM">0</field>
-                    </block>
-                </value>
-                <value name="toHigh">
-                    <block type="math_number">
-                        <field name="NUM">0</field>
-                    </block>
-                </value>
-            </block>
-            <block type="math_number"></block>
-            <block type="math_arithmetic"></block>
-            <block type="math_trig"></block>
-        </category>
-        <category id="catText" colour="160">
-            <block type="text"></block>
-            <block type="text_char"></block>
-        </category>
-        <sep></sep>
-
-        <sep></sep>
-        <category id="catVariables" colour="330" custom="VARIABLE"></category>
-        <category id="catFunctions" colour="290" custom="PROCEDURE"></category>
-		   <category id="catString" colour="210" custom="STRING"></category>
+ 
+		
     </xml>
 
     <div id="badBlockDiv" class="dialogHiddenContent">
