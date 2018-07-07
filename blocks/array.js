@@ -39,7 +39,8 @@ Blockly.Blocks['array_declare'] = {
   helpUrl: Blockly.LANG_VARIABLES_SET_HELPURL,
   init: function() {
     this.setColour(Blockly.Blocks.variables.HUE);
-    this.appendValueInput('VALUE', null)
+    this.appendValueInput('VALUE', 'Number')
+		.setCheck('Number')
         .appendField(Blockly.Msg.Var_Declare)
         .appendField(new Blockly.FieldVariable(
         Blockly.LANG_VARIABLES_SET_ITEM), 'VAR')
