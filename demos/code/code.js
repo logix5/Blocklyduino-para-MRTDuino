@@ -544,7 +544,7 @@ Code.initLanguage = function() {
   document.getElementById('copyButton').title = MSG['copycodeTooltip'];
 
   var categories = ['catInOut','catSerialAll','catSerial','catSerial1','catSoftSerial','catBTAll','catBTSerial1','catBTSoftSerial','catMotors','catMotorMRT','catServo','catSimpleSensors','catOLED','catSerialLCD','catSerialLCD_I2C','catDisplay','catLCD','catDigital','catAnalog', 
-                    'catString','catDivers', 'catLogic','catAdvanced','catConversion', 'catLoops', 'catMath', 'catText', 'catVariables', 'catFunctions'];
+                    'catString','catDivers', 'catLogic','catAdvanced','catConversion', 'catLoops', 'catMath', 'catText', 'catVariables', 'catFunctions','catArray'];
   for (var i = 0, cat; cat = categories[i]; i++) {
     document.getElementById(cat).setAttribute('name', MSG[cat]);
   }

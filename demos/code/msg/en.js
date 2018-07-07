@@ -37,6 +37,7 @@ var MSG = {
   catLoops: "Loops",
   catMath: "Math",
   catText: "Text",
+  catArray:"Array",
   catLists: "Lists",
   catColour: "Colour",
   catVariables: "Variables",
