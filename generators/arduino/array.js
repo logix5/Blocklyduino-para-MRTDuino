@@ -45,14 +45,14 @@ Blockly.Arduino.array_declare = function() {
 Blockly.Arduino['array_getIndex'] = function(block) {
   // Get element at index.
   // Note: Until January 2013 this block did not have MODE or WHERE inputs.
-  var mode = block.getFieldValue('MODE') || 'GET';
-  var where = block.getFieldValue('WHERE') || 'FROM_START';
+  //var mode = block.getFieldValue('MODE') || 'GET';
+  //var where = block.getFieldValue('WHERE') || 'FROM_START';
   var at = Blockly.Arduino.valueToCode(block, 'AT',
       Blockly.Arduino.ORDER_UNARY_NEGATION) || '1';
   var list = Blockly.Arduino.valueToCode(block, 'VALUE',
       Blockly.Arduino.ORDER_MEMBER) || '[]';
 
-  if (where == 'FIRST') {
+ /* if (where == 'FIRST') {
     if (mode == 'GET') {
       var code = list + '[0]';
       return [code, Blockly.Arduino.ORDER_MEMBER];
@@ -72,7 +72,7 @@ Blockly.Arduino['array_getIndex'] = function(block) {
     } else if (mode == 'REMOVE') {
       return list + '.pop();\n';
     }
-  } else if (where == 'FROM_START') {
+  } else */ //if (where == 'FROM_START') {
     // Blockly uses one-based indicies.
     if (Blockly.isNumber(at)) {
       // If the index is a naked number, decrement it right now.
@@ -81,16 +81,20 @@ Blockly.Arduino['array_getIndex'] = function(block) {
       // If the index is dynamic, decrement it in code.
       at += ' - 1';
     }
-    if (mode == 'GET') {
+//    if (mode == 'GET') {
       var code = list + '[' + at + ']';
       return [code, Blockly.Arduino.ORDER_MEMBER];
-    } else if (mode == 'GET_REMOVE') {
+  //  } 
+	
+/*	else if (mode == 'GET_REMOVE') {
       var code = list + '.splice(' + at + ', 1)[0]';
       return [code, Blockly.Arduino.ORDER_FUNCTION_CALL];
     } else if (mode == 'REMOVE') {
       return list + '.splice(' + at + ', 1);\n';
-    }
-  } else if (where == 'FROM_END') {
+    }*/
+ // } 
+  
+  /* else if (where == 'FROM_END') {
     if (mode == 'GET') {
       var code = list + '.slice(-' + at + ')[0]';
       return [code, Blockly.Arduino.ORDER_FUNCTION_CALL];
@@ -127,7 +131,9 @@ Blockly.Arduino['array_getIndex'] = function(block) {
     } else if (mode == 'REMOVE') {
       return code + ';\n';
     }
-  }
+  } */
+  
+  
   throw 'Unhandled combination (lists_getIndex).';
 };
 
@@ -136,8 +142,8 @@ Blockly.Arduino['array_setIndex'] = function(block) {
   // Note: Until February 2013 this block did not have MODE or WHERE inputs.
   var list = Blockly.Arduino.valueToCode(block, 'LIST',
       Blockly.Arduino.ORDER_MEMBER) || '[]';
-  var mode = block.getFieldValue('MODE') || 'GET';
-  var where = block.getFieldValue('WHERE') || 'FROM_START';
+ // var mode = block.getFieldValue('MODE') || 'GET';
+ // var where = block.getFieldValue('WHERE') || 'FROM_START';
   var at = Blockly.Arduino.valueToCode(block, 'AT',
       Blockly.Arduino.ORDER_NONE) || '1';
   var value = Blockly.Arduino.valueToCode(block, 'TO',
@@ -154,7 +160,7 @@ Blockly.Arduino['array_setIndex'] = function(block) {
     list = listVar;
     return code;
   }
-  if (where == 'FIRST') {
+ /* if (where == 'FIRST') {
     if (mode == 'SET') {
       return list + '[0] = ' + value + ';\n';
     } else if (mode == 'INSERT') {
@@ -168,7 +174,9 @@ Blockly.Arduino['array_setIndex'] = function(block) {
     } else if (mode == 'INSERT') {
       return list + '.push(' + value + ');\n';
     }
-  } else if (where == 'FROM_START') {
+  } else */
+	  
+ // if (where == 'FROM_START') {
     // Blockly uses one-based indicies.
     if (Blockly.isNumber(at)) {
       // If the index is a naked number, decrement it right now.
@@ -177,12 +185,14 @@ Blockly.Arduino['array_setIndex'] = function(block) {
       // If the index is dynamic, decrement it in code.
       at += ' - 1';
     }
-    if (mode == 'SET') {
+ //   if (mode == 'SET') {
       return list + '[' + at + '] = ' + value + ';\n';
-    } else if (mode == 'INSERT') {
+ //   } 
+	/* else if (mode == 'INSERT') {
       return list + '.splice(' + at + ', 0, ' + value + ');\n';
-    }
-  } else if (where == 'FROM_END') {
+    } */
+ // }
+  /* else if (where == 'FROM_END') {
     var code = cacheList();
     if (mode == 'SET') {
       code += list + '[' + list + '.length - ' + at + '] = ' + value + ';\n';
@@ -205,7 +215,7 @@ Blockly.Arduino['array_setIndex'] = function(block) {
       code += list + '.splice(' + xVar + ', 0, ' + value + ');\n';
       return code;
     }
-  }
+  } */
   throw 'Unhandled combination (lists_setIndex).';
 };
 

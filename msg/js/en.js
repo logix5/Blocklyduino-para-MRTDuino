@@ -557,6 +557,13 @@ Blockly.Msg.returnnull = "Return";
 Blockly.Msg.Var_Declare="Declare";
 Blockly.Msg.Var_As="as";
 
+//ARRAYS 
+Blockly.Msg.Array_Declare="Declare Array";
+Blockly.Msg.Array_As="as";
+Blockly.Msg.Array_Elements="Number of elements";
+Blockly.Msg.Array_INARRAY = "In Array";
+//Blockly.Msg.Array_SET_INDEX_SET = "set";
+
 //Math "Map "
 Blockly.Msg.Math_map="Map "; 
 Blockly.Msg.Math_valueto="value to [0-";
