@@ -71,6 +71,8 @@ Blockly.Blocks['array_getIndex'] = {
         [[Blockly.Msg.LISTS_GET_INDEX_GET, 'GET']];
     this.WHERE_OPTIONS =
         [[Blockly.Msg.LISTS_GET_INDEX_FROM_START, 'FROM_START']];
+		
+		
     this.setHelpUrl(Blockly.Msg.LISTS_GET_INDEX_HELPURL);
     this.setColour(Blockly.Blocks.lists.HUE);
     var modeMenu = new Blockly.FieldDropdown(MODE, function(value) {
@@ -204,8 +206,7 @@ Blockly.Blocks['array_setIndex'] = {
         .setCheck('Array')
         .appendField(Blockly.Msg.Array_INARRAY);
     this.appendDummyInput()
-	    
-       .appendField(new Blockly.FieldDropdown(MODE), 'MODE')
+		.appendField(new Blockly.FieldDropdown(MODE), 'MODE')
         .appendField('', 'SPACE');
     this.appendDummyInput('AT');
     this.appendValueInput('TO')
@@ -217,7 +218,7 @@ Blockly.Blocks['array_setIndex'] = {
     this.updateAt_(true);
     // Assign 'this' to a variable for use in the tooltip closure below.
     var thisBlock = this;
-    this.setTooltip(function() {
+   this.setTooltip(function() {
       var combo = thisBlock.getFieldValue('MODE') + '_' +
           thisBlock.getFieldValue('WHERE');
       return Blockly.Msg['LISTS_SET_INDEX_TOOLTIP_' + combo];

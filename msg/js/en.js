@@ -391,6 +391,10 @@ Blockly.Msg.BUTTON_LOGIC="Logic inverse";
 Blockly.Msg.BUTTON_PRESSED="pressed?";
 Blockly.Msg.BUTTON_TOUCH_NAME="Capacity Touch";
 
+//SIMPLE ACTUATORS
+
+Blockly.Msg.ACTUATOR_HIGH_LEVEL="On";
+Blockly.Msg.ACTUATOR_LOW_LEVEL="Off";
 
 //IN OUT
 Blockly.Msg.INOUT_HIGH_LEVEL="High";
@@ -562,7 +566,7 @@ Blockly.Msg.Array_Declare="Declare Array";
 Blockly.Msg.Array_As="as";
 Blockly.Msg.Array_Elements="Number of elements";
 Blockly.Msg.Array_INARRAY = "In Array";
-//Blockly.Msg.Array_SET_INDEX_SET = "set";
+Blockly.Msg.Array_SET_INDEX_SET = "set";
 
 //Math "Map "
 Blockly.Msg.Math_map="Map "; 

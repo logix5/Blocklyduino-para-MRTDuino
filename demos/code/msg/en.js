@@ -13,6 +13,7 @@ var MSG = {
   catMotorMRT:"Motor MRT",
   catServo:"Servo",
   catSimpleSensors:"Simple Sensors",
+  catSimpleActuators:"Simple Actuators",
   catDisplay:"Display",
   catSerialLCD:"Serial LCD",
   catSerialLCD_I2C:"Serial LCD I2C",
