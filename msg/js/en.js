@@ -392,9 +392,10 @@ Blockly.Msg.BUTTON_PRESSED="pressed?";
 Blockly.Msg.BUTTON_TOUCH_NAME="Capacity Touch";
 
 //SIMPLE ACTUATORS
-
-Blockly.Msg.ACTUATOR_HIGH_LEVEL="On";
-Blockly.Msg.ACTUATOR_LOW_LEVEL="Off";
+Blockly.Msg.LedPin="Led PIN#";
+Blockly.Msg.ONOFF="Set";
+Blockly.Msg.ACTUATOR_HIGH_LEVEL="ON";
+Blockly.Msg.ACTUATOR_LOW_LEVEL="OFF";
 
 //IN OUT
 Blockly.Msg.INOUT_HIGH_LEVEL="High";
