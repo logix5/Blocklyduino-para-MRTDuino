@@ -33,6 +33,7 @@ Blockly.Blocks['actuator_led'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
+	    .appendField(new Blockly.FieldImage("images/led_diode.png",54,38))
         .appendField(Blockly.Msg.LedPin)
         .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
      this.appendDummyInput()
@@ -50,6 +51,7 @@ Blockly.Blocks['actuator_laser'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
+	    .appendField(new Blockly.FieldImage("images/laser.png",34,38))
         .appendField(Blockly.Msg.LaserPin)
         .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
      this.appendDummyInput()
@@ -62,13 +64,32 @@ Blockly.Blocks['actuator_laser'] = {
   }
 };
 
+Blockly.Blocks['actuator_rele'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+	    .appendField(new Blockly.FieldImage("images/rele.png",47,38))
+        .appendField(Blockly.Msg.RelePin)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
+     this.appendDummyInput()
+        .appendField(Blockly.Msg.ONOFF)
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ACTUATOR_HIGH_LEVEL, "HIGH"], [Blockly.Msg.ACTUATOR_LOW_LEVEL, "LOW"]]), "STATUS");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip("Turn ON or OFF the rele");
+  }
+};
+
 Blockly.Blocks['actuator_tonedure'] = {
   helpUrl: 'http://www.arduino.cc/en/Reference/Tone',
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/buzzer.png",46,38))
         .appendField(Blockly.Msg.TonePin)
-        .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
+        .appendField(new Blockly.FieldDropdown(profile.default.analog_write), "PIN");
     this.appendValueInput("NUM", "Number")
         .appendField(Blockly.Msg.Frequence)
         .setCheck("Number");
@@ -78,7 +99,7 @@ Blockly.Blocks['actuator_tonedure'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip("Generate audio tones on a pin");
+    this.setTooltip("Generate audio tones on a pin.NOTE: If servomotor is used then the port10 doesn´t work, you must use other port");
   }
 };
 
@@ -87,12 +108,13 @@ Blockly.Blocks['actuator_notone'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/buzzer.png",46,38))
         .appendField(Blockly.Msg.NoTonePin)
-        .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
+        .appendField(new Blockly.FieldDropdown(profile.default.analog_write), "PIN");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip("Stops the generation of a square wave triggered by tone(). Has no effect if no tone is being generated. ");
+    this.setTooltip("Stops the generation of a square wave triggered by tone().Has no effect if no tone is being generated.NOTE: If servomotor is used then the port10 doesn´t work, you must use other port");
   }
 };
 

@@ -394,6 +394,7 @@ Blockly.Msg.BUTTON_TOUCH_NAME="Capacity Touch";
 //SIMPLE ACTUATORS
 Blockly.Msg.LedPin="Led PIN#";
 Blockly.Msg.LaserPin="Laser PIN#";
+Blockly.Msg.RelePin="Rele PIN#";
 Blockly.Msg.ONOFF="Set";
 Blockly.Msg.ACTUATOR_HIGH_LEVEL="ON";
 Blockly.Msg.ACTUATOR_LOW_LEVEL="OFF";
