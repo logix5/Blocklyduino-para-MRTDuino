@@ -11,6 +11,15 @@ Blockly.Arduino['actuator_led'] = function(block) {
     return code;
 };
 
+Blockly.Arduino['actuator_laser'] = function(block) {
+    
+  var dropdown_pin = this.getFieldValue('PIN');
+  var dropdown_stat = this.getFieldValue('STATUS');
+  Blockly.Arduino.setups_['setup_output_'+dropdown_pin] = 'pinMode('+dropdown_pin+', OUTPUT);';
+  var code = 'digitalWrite('+dropdown_pin+','+dropdown_stat+');\n';
+    return code;
+};
+
 Blockly.Arduino['advanced_tone'] = function(block) {
   var dropdown_pin = block.getFieldValue('PIN');
   var value = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_ATOMIC);

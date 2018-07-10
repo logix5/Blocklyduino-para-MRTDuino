@@ -28,57 +28,6 @@ goog.provide('Blockly.Blocks.advanced');
 
 goog.require('Blockly.Blocks');
 
-Blockly.Blocks['advanced_tone'] = {
-  helpUrl: 'http://www.arduino.cc/en/Reference/Tone',
-  init: function() {
-    this.setColour(150);
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.TonePin)
-        .appendField(new Blockly.FieldDropdown([["3", "3"], ["5", "5"], ["6", "6"], ["9", "9"], ["10", "10"], ["11", "11"]]), "PIN");
-    this.appendValueInput("NUM", "Number")
-        .appendField(Blockly.Msg.Frequence)
-        .setCheck("Number");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip("Generate audio tones on a pin");
-  }
-};
-
-Blockly.Blocks['advanced_tonedure'] = {
-  helpUrl: 'http://www.arduino.cc/en/Reference/Tone',
-  init: function() {
-    this.setColour(150);
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.TonePin)
-        .appendField(new Blockly.FieldDropdown([["3", "3"], ["5", "5"], ["6", "6"], ["9", "9"], ["10", "10"], ["11", "11"]]), "PIN");
-    this.appendValueInput("NUM", "Number")
-        .appendField(Blockly.Msg.Frequence)
-        .setCheck("Number");
-    this.appendValueInput("DUR", "Number")
-        .appendField(Blockly.Msg.Duration)
-        .setCheck("Number");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip("Generate audio tones on a pin");
-  }
-};
-
-Blockly.Blocks['advanced_notone'] = {
-  helpUrl: 'http://www.arduino.cc/en/Reference/NoTone',
-  init: function() {
-    this.setColour(150);
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.NoTonePin)
-        .appendField(new Blockly.FieldDropdown([["3", "3"], ["5", "5"], ["6", "6"], ["9", "9"], ["10", "10"], ["11", "11"]]), "PIN");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip("Stops the generation of a square wave triggered by tone(). Has no effect if no tone is being generated. ");
-  }
-};
-
 Blockly.Blocks['advanced_pulsein'] = {
   helpUrl: 'http://arduino.cc/en/Reference/pulseIn',
   init: function() {

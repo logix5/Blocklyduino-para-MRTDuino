@@ -31,7 +31,7 @@ goog.require('Blockly.Blocks');
 Blockly.Blocks['actuator_led'] = {
   helpUrl: '',
   init: function() {
-    this.setColour(150);
+    this.setColour(220);
     this.appendDummyInput()
         .appendField(Blockly.Msg.LedPin)
         .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
@@ -45,28 +45,27 @@ Blockly.Blocks['actuator_led'] = {
   }
 };
 
-/*
-Blockly.Blocks['actuator_tone'] = {
-  helpUrl: 'http://www.arduino.cc/en/Reference/Tone',
+Blockly.Blocks['actuator_laser'] = {
+  helpUrl: '',
   init: function() {
-    this.setColour(150);
+    this.setColour(220);
     this.appendDummyInput()
-        .appendField(Blockly.Msg.TonePin)
+        .appendField(Blockly.Msg.LaserPin)
         .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
-    this.appendValueInput("NUM", "Number")
-        .appendField(Blockly.Msg.Frequence)
-        .setCheck("Number");
+     this.appendDummyInput()
+        .appendField(Blockly.Msg.ONOFF)
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.ACTUATOR_HIGH_LEVEL, "HIGH"], [Blockly.Msg.ACTUATOR_LOW_LEVEL, "LOW"]]), "STATUS");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip("Generate audio tones on a pin");
+    this.setTooltip("Turn ON or OFF the laser");
   }
 };
 
 Blockly.Blocks['actuator_tonedure'] = {
   helpUrl: 'http://www.arduino.cc/en/Reference/Tone',
   init: function() {
-    this.setColour(150);
+    this.setColour(220);
     this.appendDummyInput()
         .appendField(Blockly.Msg.TonePin)
         .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
@@ -86,7 +85,7 @@ Blockly.Blocks['actuator_tonedure'] = {
 Blockly.Blocks['actuator_notone'] = {
   helpUrl: 'http://www.arduino.cc/en/Reference/NoTone',
   init: function() {
-    this.setColour(150);
+    this.setColour(220);
     this.appendDummyInput()
         .appendField(Blockly.Msg.NoTonePin)
         .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
@@ -95,4 +94,26 @@ Blockly.Blocks['actuator_notone'] = {
     this.setNextStatement(true, null);
     this.setTooltip("Stops the generation of a square wave triggered by tone(). Has no effect if no tone is being generated. ");
   }
-};*/
+};
+
+
+/*
+Blockly.Blocks['actuator_tone'] = {
+  helpUrl: 'http://www.arduino.cc/en/Reference/Tone',
+  init: function() {
+    this.setColour(150);
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.TonePin)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
+    this.appendValueInput("NUM", "Number")
+        .appendField(Blockly.Msg.Frequence)
+        .setCheck("Number");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip("Generate audio tones on a pin");
+  }
+};
+/*
+
+*/

@@ -494,6 +494,21 @@
 	
 	<category id="catSimpleActuators" colour="220"> 
 		<block type="actuator_led"></block>
+		<block type="actuator_laser"></block>
+		<block type="actuator_tonedure">
+				<value name="NUM">
+                    <block type="math_number">
+                        <field name="NUM">440</field>
+                    </block>
+                </value>
+                <value name="DUR">
+                    <block type="math_number">
+                        <field name="NUM">1000</field>
+                    </block>
+                </value>
+		
+		</block>
+		<block type="actuator_notone"></block>
 	</category "> 
 	  
         <category id="catDivers" colour="150">
@@ -638,26 +653,7 @@
             <block type="conversion_tofloat"></block>
         </category>
         <category id="catAdvanced" colour="185"> 
-            <block type="advanced_tone">
-                <value name="NUM">
-                    <block type="math_number">
-                        <field name="NUM">440</field>
-                    </block>
-                </value>
-            </block>
-            <block type="advanced_tonedure">
-                <value name="NUM">
-                    <block type="math_number">
-                        <field name="NUM">440</field>
-                    </block>
-                </value>
-                <value name="DUR">
-                    <block type="math_number">
-                        <field name="NUM">1000</field>
-                    </block>
-                </value>
-            </block>
-            <block type="advanced_notone"></block>
+           
             <block type="advanced_pulsein"></block> 
             <block type="arduino_setup"></block>
 

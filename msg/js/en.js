@@ -393,9 +393,14 @@ Blockly.Msg.BUTTON_TOUCH_NAME="Capacity Touch";
 
 //SIMPLE ACTUATORS
 Blockly.Msg.LedPin="Led PIN#";
+Blockly.Msg.LaserPin="Laser PIN#";
 Blockly.Msg.ONOFF="Set";
 Blockly.Msg.ACTUATOR_HIGH_LEVEL="ON";
 Blockly.Msg.ACTUATOR_LOW_LEVEL="OFF";
+Blockly.Msg.TonePin="Tone PIN#";
+Blockly.Msg.Frequence="Frequency";
+Blockly.Msg.Duration="Duration";
+Blockly.Msg.NoTonePin="No Tone PIN#";
 
 //IN OUT
 Blockly.Msg.INOUT_HIGH_LEVEL="High";
@@ -595,10 +600,7 @@ Blockly.Msg.CONV_toint="Convert to Int ";
 Blockly.Msg.CONV_tofloat="Convert to Float ";
     
 //ADVANCED I/O
-Blockly.Msg.TonePin="Tone PIN#";
-Blockly.Msg.Frequence="Frequency";
-Blockly.Msg.Duration="Duration";
-Blockly.Msg.NoTonePin="No Tone PIN#";
+
 Blockly.Msg.Setup="Setup";
 Blockly.Msg.Loop="Main loop";
 
