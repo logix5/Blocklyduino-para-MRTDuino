@@ -34,10 +34,10 @@ var rtl;
  * Lookup for names of supported languages.  Keys should be in ISO 639 format.
  */
 Code.LANGUAGE_NAME = {
-  'ar': 'العربية',
+ // 'ar': 'العربية',
   'en': 'English',
-  'es':'Español',
-  'fr': 'Français'
+  'es':'Español'
+  //'fr': 'Français'
 };
 
 /**
