@@ -33,8 +33,6 @@ var MSG = {
   discard: "Delete all %1 blocks?",
   trashTooltip: "Discard all blocks.",
   catLogic: "Logic",
-  catConversion:"Conversion",
-  catAdvanced:"Advanced I/0",
   catLoops: "Loops",
   catMath: "Math",
   catText: "Text",

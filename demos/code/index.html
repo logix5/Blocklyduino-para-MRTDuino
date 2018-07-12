@@ -520,24 +520,7 @@
 		</block>
 		<block type="actuator_notone"></block>
 	</category "> 
-	  
-        <category id="catDivers" colour="150">
-            <block type="grove_temporature_sensor"></block>
-            <block type="grove_ultrasonic_ranger"></block>
-            <block type="grove_motor_shield"></block>
-            <block type="base_delayms">
-                <value name="DELAY_TIME">
-                    <block type="math_number" id="20">
-                        <field name="NUM">1000</field>
-                    </block>
-                </value>
-            </block>
-            <block type="millis"></block>
-            <block type="var_random"></block>
-            <block type="various_constrain"></block>
-        </category>
-		
-     
+	     
         <sep></sep>
         <category id="catDisplay" colour="150">
             <category id="catLCD" colour="125">
@@ -655,21 +638,28 @@
             </category>    
         </category>
         <sep></sep>
-
-        <category id="catConversion" colour="165"> 
-            <block type="conversion_tochar"></block>
+		
+		  <category id="catDivers" colour="150">
+            <block type="grove_temporature_sensor"></block>
+            <block type="grove_ultrasonic_ranger"></block>
+            <block type="grove_motor_shield"></block>
+            <block type="base_delayms">
+                <value name="DELAY_TIME">
+                    <block type="math_number" id="20">
+                        <field name="NUM">1000</field>
+                    </block>
+                </value>
+            </block>
+            <block type="millis"></block>
+            <block type="var_random"></block>
+			<block type="advanced_pulsein"></block> 
+            <block type="arduino_setup"></block>
+            <block type="various_constrain"></block>
+			<block type="conversion_tochar"></block>
             <block type="conversion_tobyte"></block>
             <block type="conversion_toint"></block>
             <block type="conversion_tofloat"></block>
         </category>
-        <category id="catAdvanced" colour="185"> 
-           
-            <block type="advanced_pulsein"></block> 
-            <block type="arduino_setup"></block>
-
-        </category>
-
- 
 		
     </xml>
 

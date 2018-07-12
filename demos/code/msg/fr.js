@@ -24,8 +24,6 @@ var MSG = {
   discard: "Supprimer tous les %1 blocs ?",
   trashTooltip: "Jeter tous les blocs.",
   catLogic: "Logique",
-  catConversion:"Conversion",
-  catAdvanced:"E/S Avancées",
   catSerial:"Serial",
   catLoops: "Boucles",
   catMath: "Math",

@@ -16,8 +16,6 @@ var MSG = {
     catOLED:"OLED",
     catString: "Conjunto de caracteres",
     catDivers: "Varios",
-    catConversion: "Conversión",
-    catAdvanced: "I/0 Avanzado",
     title: "Código",
     blocks: "Bloques",
     linkTooltip: "Guarda conexión a los bloques.",

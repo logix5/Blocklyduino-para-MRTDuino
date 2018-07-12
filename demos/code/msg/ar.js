@@ -24,8 +24,6 @@ var MSG = {
   discard: "حذف كل بلوكات %1؟",
   trashTooltip: "تجاهل كل البلوكات.",
   catLogic: "منطق",
-  catConversion:"تحويل",
-  catAdvanced:"المداخل و المخارج المتقدمة",
   catLoops: "الحلقات",
   catMath: "رياضيات",
   catText: "نص",
