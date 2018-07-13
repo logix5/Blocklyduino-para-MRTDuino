@@ -74,8 +74,8 @@ Blockly.Arduino['ultrasonic_ranger_sensor'] = function(block) {
 
 Blockly.Arduino['Analog_temperature_sensor'] = function(block) {
   var dropdown_pin = this.getFieldValue('PIN');
-    Blockly.Arduino.definitions_['include_math'] = '#include <math.h>\n';
-    Blockly.Arduino.definitions_['define_thermister'] = "double Thermister(int RawADC) {\n"+
+    //Blockly.Arduino.definitions_['include_math'] = '#include <math.h>\n';
+    Blockly.Arduino.definitions_['define_thermister'] = "double Thermister(int RawADC) \n"+
 "{\n"+
      "  double Temp;\n"+
      "  Temp = log(((10240000/RawADC) - 10000));\n"+

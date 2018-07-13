@@ -115,10 +115,11 @@ Blockly.Blocks['knock_sensor'] = {
 };
 
 Blockly.Blocks['ultrasonic_ranger_sensor'] = {
-  helpUrl: 'http://www.seeedstudio.com/wiki/Grove_-_Ultrasonic_Ranger',
+  helpUrl: '',
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
+	    .appendField(new Blockly.FieldImage("images/ultrasonic.png",45,38))
 	    .appendField(Blockly.Msg.ultrasonic_ranger)
         .appendField(Blockly.Msg.TRIG)
         .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_TRIG")
@@ -134,6 +135,7 @@ Blockly.Blocks['Analog_temperature_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
+	    .appendField(new Blockly.FieldImage("images/Analog_temperature.png",58,38))
         .appendField(Blockly.Msg.VAR_TemSens)
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN");
