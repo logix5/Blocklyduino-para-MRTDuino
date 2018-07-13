@@ -540,7 +540,7 @@ Blockly.Msg.LCD_I2C_setup = "SETUP SERIAL LCD I2C Address";
 
 
 //VARIOUS
-Blockly.Msg.VAR_TemSens="Temporature Sensor";
+Blockly.Msg.VAR_TemSens="Analog Temperature(ºC)";
 Blockly.Msg.VAR_Motor="Motor";
 Blockly.Msg.Stop="Stop";
 Blockly.Msg.Forward="Forward";

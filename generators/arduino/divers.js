@@ -9,16 +9,22 @@ Blockly.Arduino['base_delayms'] = function(block) {
   return code;
 };
 
+/*
 Blockly.Arduino['grove_temporature_sensor'] = function(block) {
   var dropdown_pin = this.getFieldValue('PIN');
-  /*
-	a=analogRead(0);
-	  resistance=(float)(1023-a)*10000/a;
-	  temperature=1/(log(resistance/10000)/B+1/298.15)-273.15;
-  */
-  var code = 'round('+'(1/(log((float)(1023-analogRead('+dropdown_pin+'))*10000/analogRead('+dropdown_pin+'))/10000)/3975+1/298.15)-273.15'+')';
+    Blockly.Arduino.definitions_['include_math'] = '#include <math.h>\n';
+    Blockly.Arduino.definitions_['define_thermister'] = "double Thermister(int RawADC) {\n"+
+"{\n"+
+     "  double Temp;\n"+
+     "  Temp = log(((10240000/RawADC) - 10000));\n"+
+     "  Temp = 1 / (0.001129148 + (0.000234125 + (0.0000000876741 * Temp * Temp ))* Temp );\n"+
+     "  Temp = Temp - 273.15; // Convert Kelvin to Celcius\n"+
+     "  return Temp;\n"+
+"}\n";
+     
+  var code = 'Thermister(analogRead('+dropdown_pin+'));\n';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
-};
+};*/
 
 
 /*

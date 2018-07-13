@@ -95,7 +95,7 @@ Blockly.Arduino['math_single'] = function(block) {
         Blockly.Arduino.ORDER_UNARY_SIGN) || '0';
     return ['-' + code, Blockly.Arduino.ORDER_UNARY_SIGN];
   }
-  //Blockly.Arduino.definitions_['import_math'] = 'import math';
+  Blockly.Arduino.definitions_['include_math'] = '#include <math.h>';
   if (operator == 'SIN' || operator == 'COS' || operator == 'TAN') {
     arg = Blockly.Arduino.valueToCode(block, 'NUM',
         Blockly.Arduino.ORDER_MULTIPLICATIVE) || '0';

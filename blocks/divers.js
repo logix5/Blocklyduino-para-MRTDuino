@@ -28,6 +28,7 @@ goog.provide('Blockly.Blocks.divers');
 
 goog.require('Blockly.Blocks');
 
+/*
 Blockly.Blocks['grove_temporature_sensor'] = {
   helpUrl: 'http://www.seeedstudio.com/wiki/Project_Seven_-_Temperature',
   init: function() {
@@ -40,7 +41,7 @@ Blockly.Blocks['grove_temporature_sensor'] = {
     this.setOutput(true, 'Number');
     this.setTooltip('return number of ambient temperature in ℃');
   }
-};
+};*/
 
 /*
 Blockly.Blocks['grove_motor_shield'] = {

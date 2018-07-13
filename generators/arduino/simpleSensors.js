@@ -65,3 +65,19 @@ Blockly.Arduino['ultrasonic_ranger_sensor'] = function(block) {
     code = 'ultrason_'+PIN_TRIG+'()';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
+
+Blockly.Arduino['Analog_temperature_sensor'] = function(block) {
+  var dropdown_pin = this.getFieldValue('PIN');
+    Blockly.Arduino.definitions_['include_math'] = '#include <math.h>\n';
+    Blockly.Arduino.definitions_['define_thermister'] = "double Thermister(int RawADC) {\n"+
+"{\n"+
+     "  double Temp;\n"+
+     "  Temp = log(((10240000/RawADC) - 10000));\n"+
+     "  Temp = 1 / (0.001129148 + (0.000234125 + (0.0000000876741 * Temp * Temp ))* Temp );\n"+
+     "  Temp = Temp - 273.15; // Convert Kelvin to Celcius\n"+
+     "  return Temp;\n"+
+"}\n";
+     
+  var code = 'Thermister(analogRead('+dropdown_pin+'))';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
