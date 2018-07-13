@@ -76,9 +76,90 @@ Blockly.Arduino['base_map'] = function(block) {
   return [code, Blockly.Arduino.ORDER_NONE];
 };
 
+/*
 Blockly.Arduino.math_trig = function() {
     var mode = this.getFieldValue('OP');
     var argument = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_NONE);
     var code = mode+'('+argument+')';
     return [code, Blockly.Arduino.ORDER_NONE];
+};*/
+
+Blockly.Arduino['math_single'] = function(block) {
+  // Math operators with single operand.
+  var operator = block.getFieldValue('OP');
+  var code;
+  var arg;
+  if (operator == 'NEG') {
+    // Negation is a special case given its different operator precedence.
+    var code = Blockly.Arduino.valueToCode(block, 'NUM',
+        Blockly.Arduino.ORDER_UNARY_SIGN) || '0';
+    return ['-' + code, Blockly.Arduino.ORDER_UNARY_SIGN];
+  }
+  //Blockly.Arduino.definitions_['import_math'] = 'import math';
+  if (operator == 'SIN' || operator == 'COS' || operator == 'TAN') {
+    arg = Blockly.Arduino.valueToCode(block, 'NUM',
+        Blockly.Arduino.ORDER_MULTIPLICATIVE) || '0';
+  } else {
+    arg = Blockly.Arduino.valueToCode(block, 'NUM',
+        Blockly.Arduino.ORDER_NONE) || '0';
+  }
+  // First, handle cases which generate values that don't need parentheses
+  // wrapping the code.
+  switch (operator) {
+    case 'ABS':
+      code = 'abs(' + arg + ')';
+      break;
+    case 'ROOT':
+      code = 'sqrt(' + arg + ')';
+      break;
+    case 'LN':
+      code = 'log(' + arg + ')';
+      break;
+    case 'LOG10':
+      code = 'log10(' + arg + ')';
+      break;
+    case 'EXP':
+      code = 'exp(' + arg + ')';
+      break;
+    case 'POW10':
+      code = 'pow(10,' + arg + ')';
+      break;
+    case 'ROUND':
+      code = 'round(' + arg + ')';
+      break;
+    case 'ROUNDUP':
+      code = 'ceil(' + arg + ')';
+      break;
+    case 'ROUNDDOWN':
+      code = 'floor(' + arg + ')';
+      break;
+    case 'SIN':
+      code = 'sin((' + arg + '/180.0)*3.14159)';
+      break;
+    case 'COS':
+      code = 'cos((' + arg + '/180.0)*3.14159)';
+      break;
+    case 'TAN':
+      code = 'tan((' + arg + '/180.0)*3.14159)';
+      break;
+  }
+  if (code) {
+    return [code, Blockly.Arduino.ORDER_FUNCTION_CALL];
+  }
+  // Second, handle cases which generate values that may need parentheses
+  // wrapping the code.
+  switch (operator) {
+    case 'ASIN':
+      code = 'asin((' + arg + '/180.0)*3.14159)';
+      break;
+    case 'ACOS':
+      code = 'acos((' + arg + '/180.0)*3.14159)';
+      break;
+    case 'ATAN':
+      code = 'atan(((' + arg + '/180.0)*3.14159)';
+      break;
+    default:
+      throw 'Unknown math operator: ' + operator;
+  }
+  return [code, Blockly.Arduino.ORDER_MULTIPLICATIVE];
 };

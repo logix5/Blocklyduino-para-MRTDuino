@@ -42,23 +42,7 @@ Blockly.Blocks['grove_temporature_sensor'] = {
   }
 };
 
-Blockly.Blocks['grove_ultrasonic_ranger'] = {
-  helpUrl: 'http://www.seeedstudio.com/wiki/Grove_-_Ultrasonic_Ranger',
-  init: function() {
-    this.setColour(150);
-    this.appendDummyInput()
-	      .appendField(Blockly.Msg.ultrasonic_ranger)
-        .appendField(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/b/b0/Twig_-_Ultrasonic_Ranger2.jpg/200px-Twig_-_Ultrasonic_Ranger2.jpg", 64, 64))
-	      .appendField(Blockly.Msg.TRIG)
-        .appendField(new Blockly.FieldDropdown(profile.default.digital_2), "PIN_TRIG")
-        .appendField(Blockly.Msg.Echo)
-        .appendField(new Blockly.FieldDropdown(profile.default.digital_2), "PIN_ECHO");
-//        .appendField(new Blockly.FieldDropdown([["cm", "cm"],  ["inch", "inch"]]), "UNIT");
-    this.setOutput(true, 'Number');
-    this.setTooltip('Non-contact distance measurement module');
-  }
-};
-
+/*
 Blockly.Blocks['grove_motor_shield'] = {
   helpUrl: 'http://www.seeedstudio.com/wiki/Motor_Shield',
   init: function() {
@@ -67,15 +51,15 @@ Blockly.Blocks['grove_motor_shield'] = {
         .appendField(Blockly.Msg.VAR_Motor)
         .appendField(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/4/4d/Smotoshield2.jpg/400px-Smotoshield2.jpg", 64, 64))
         .appendField(new Blockly.FieldDropdown([[Blockly.Msg.Stop, "stop"], [Blockly.Msg.Forward, "forward"], [Blockly.Msg.Right, "right"], [Blockly.Msg.Left, "left"], [Blockly.Msg.Backward, "backward"]]), "DIRECTION");
-    /*this.appendValueInput("SPEED", 'Number')
-        .setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("Speed");*/
+    //this.appendValueInput("SPEED", 'Number')
+    //    .setCheck('Number')
+    //    .setAlign(Blockly.ALIGN_RIGHT)
+    //    .appendField("Speed");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Drive two brushed DC motors');
   }
-};
+}; */
 
 Blockly.Blocks['base_delayms'] = {
   helpUrl: 'http://arduino.cc/en/Reference/delay',

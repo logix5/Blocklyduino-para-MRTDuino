@@ -104,3 +104,18 @@ Blockly.Blocks['knock_sensor'] = {
     this.setTooltip('');
   }
 };
+
+Blockly.Blocks['ultrasonic_ranger_sensor'] = {
+  helpUrl: 'http://www.seeedstudio.com/wiki/Grove_-_Ultrasonic_Ranger',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+	    .appendField(Blockly.Msg.ultrasonic_ranger)
+        .appendField(Blockly.Msg.TRIG)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_TRIG")
+        .appendField(Blockly.Msg.Echo)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_ECHO");
+    this.setOutput(true, 'Number');
+    this.setTooltip('Non-contact distance measurement module');
+  }
+};

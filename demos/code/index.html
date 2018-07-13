@@ -223,7 +223,7 @@
             </block>
             <block type="math_number"></block>
             <block type="math_arithmetic"></block>
-            <block type="math_trig"></block>
+			<block type="math_single"></block>
         </category>
         <category id="catText" colour="160">
             <block type="text"></block>
@@ -499,6 +499,10 @@
 	 <block type="button_touch_sensor"></block>	
 	 <block type="tilt_sensor"></block>	
 	 <block type="knock_sensor"></block>	
+	 <block type="ultrasonic_ranger_sensor">
+	  <field name="PIN_ECHO">15</field>
+	 </block>
+	 
 	</category "> 
 	
 	<category id="catSimpleActuators" colour="220"> 
@@ -641,8 +645,6 @@
 		
 		  <category id="catDivers" colour="150">
             <block type="grove_temporature_sensor"></block>
-            <block type="grove_ultrasonic_ranger"></block>
-            <block type="grove_motor_shield"></block>
             <block type="base_delayms">
                 <value name="DELAY_TIME">
                     <block type="math_number" id="20">

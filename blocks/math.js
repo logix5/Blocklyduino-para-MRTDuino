@@ -100,7 +100,13 @@ Blockly.Blocks['math_single'] = {
          ['ln', 'LN'],
          ['log10', 'LOG10'],
          ['e^', 'EXP'],
-         ['10^', 'POW10']];
+         ['10^', 'POW10'],
+		 [Blockly.Msg.MATH_TRIG_SIN, 'SIN'],
+		 [Blockly.Msg.MATH_TRIG_COS, 'COS'],
+         [Blockly.Msg.MATH_TRIG_TAN, 'TAN'],
+		 [Blockly.Msg.MATH_TRIG_ASIN, 'ASIN'],
+         [Blockly.Msg.MATH_TRIG_ACOS, 'ACOS'],
+         [Blockly.Msg.MATH_TRIG_ATAN, 'ATAN']];
     this.setHelpUrl(Blockly.Msg.MATH_SINGLE_HELPURL);
     this.setColour(Blockly.Blocks.math.HUE);
     this.setOutput(true, 'Number');
@@ -118,7 +124,13 @@ Blockly.Blocks['math_single'] = {
         'LN': Blockly.Msg.MATH_SINGLE_TOOLTIP_LN,
         'LOG10': Blockly.Msg.MATH_SINGLE_TOOLTIP_LOG10,
         'EXP': Blockly.Msg.MATH_SINGLE_TOOLTIP_EXP,
-        'POW10': Blockly.Msg.MATH_SINGLE_TOOLTIP_POW10
+        'POW10': Blockly.Msg.MATH_SINGLE_TOOLTIP_POW10,
+		'SIN': Blockly.Msg.MATH_TRIG_TOOLTIP_SIN,
+		'COS': Blockly.Msg.MATH_TRIG_TOOLTIP_COS,
+        'TAN': Blockly.Msg.MATH_TRIG_TOOLTIP_TAN,
+        'ASIN': Blockly.Msg.MATH_TRIG_TOOLTIP_ASIN,
+        'ACOS': Blockly.Msg.MATH_TRIG_TOOLTIP_ACOS,
+        'ATAN': Blockly.Msg.MATH_TRIG_TOOLTIP_ATAN
       };
       return TOOLTIPS[mode];
     });
