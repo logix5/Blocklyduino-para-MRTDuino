@@ -505,37 +505,37 @@ Blockly.Msg.SERVO_ReadDegree="Read Degrees";
 Blockly.Msg.SERVO_Attached="Servo Attached?";
 Blockly.Msg.SERVO_Detach="Detach Servo PIN#";
 
-//SERIAL LCD
-Blockly.Msg.LCD_Serial="Serial LCD";
-Blockly.Msg.LCD_Print_Line1="print line 1";
-Blockly.Msg.LCD_Print_Line2="print line 2";
-Blockly.Msg.Power="Power";
-Blockly.Msg.ONN="ON";
-Blockly.Msg.OFFF="OFF";
-Blockly.Msg.LCD_Effect="Effect";
-Blockly.Msg.LCD_Scroll_Left="Scroll Left";
-Blockly.Msg.LCD_Scroll_Right="Scroll Right";
-Blockly.Msg.LCD_Scroll_Auto="Scroll Auto";
-
-//LCD PARALLEL
-Blockly.Msg.LCDP_Setup = "LCD Setup";
-Blockly.Msg.LCDP_RS = "RS";
-Blockly.Msg.LCDP_Enabled = "Enabled";
-Blockly.Msg.LCDP_D4 = "D4";
-Blockly.Msg.LCDP_D5 = "D5";
-Blockly.Msg.LCDP_D6 = "D6";
-Blockly.Msg.LCDP_D7 = "D7";
+//SERIAL LCD I2C
+//Blockly.Msg.LCD_Serial="Serial LCD";
+//Blockly.Msg.LCD_Print_Line1="print line 1";
+//Blockly.Msg.LCD_Print_Line2="print line 2";
+//Blockly.Msg.Power="Power";
+//Blockly.Msg.ONN="ON";
+//Blockly.Msg.OFFF="OFF";
+//Blockly.Msg.LCD_Effect="Effect";
+//Blockly.Msg.LCD_Scroll_Left="Scroll Left";
+//Blockly.Msg.LCD_Scroll_Right="Scroll Right";
+//Blockly.Msg.LCD_Scroll_Auto="Scroll Auto";
+//Blockly.Msg.LCDP_Setup = "LCD Setup";
+//Blockly.Msg.LCDP_RS = "RS";
+//Blockly.Msg.LCDP_Enabled = "Enabled";
+//Blockly.Msg.LCDP_D4 = "D4";
+//Blockly.Msg.LCDP_D5 = "D5";
+//Blockly.Msg.LCDP_D6 = "D6";
+//Blockly.Msg.LCDP_D7 = "D7";
 Blockly.Msg.LCDP_Column = "Columns";
 Blockly.Msg.LCDP_Row = "Rows";
-Blockly.Msg.LCDP_Print = "LCD PRINT";
-Blockly.Msg.LCDP_Clear = "LCD clear";
-Blockly.Msg.LCDP_scrollDisplayLeft = "LCD scroll Display Left ";
-Blockly.Msg.LCDP_scrollDisplayRight = "LCD scroll Display Right ";
-Blockly.Msg.LCDP_Home = "LCD home";
-Blockly.Msg.LCDP_SetCursor = "LCD set Cursor";
-Blockly.Msg.LCDP_Display = "LCD display";
-Blockly.Msg.LCDP_noDiplay = "LCD no display";
-Blockly.Msg.LCD_I2C_setup = "SETUP SERIAL LCD I2C Address";
+Blockly.Msg.LCDP_Column2 = "column";
+Blockly.Msg.LCDP_Row2 = "row";
+Blockly.Msg.LCDP_Print = "and print";
+Blockly.Msg.LCDP_Clear = "LCD I2C clear";
+Blockly.Msg.LCDP_scrollDisplayLeft = "LCD I2C scroll display Left ";
+Blockly.Msg.LCDP_scrollDisplayRight = "LCD I2C scroll display Right ";
+Blockly.Msg.LCDP_Home = "LCD I2C home";
+Blockly.Msg.LCDP_SetCursor = "LCD I2C set cursor";
+Blockly.Msg.LCDP_Display = "LCD I2C display";
+Blockly.Msg.LCDP_noDiplay = "LCD I2C no display";
+Blockly.Msg.LCD_I2C_setup = "Init LCD I2C - SDA Port13 - SCL Port14 Address";
 
 
 

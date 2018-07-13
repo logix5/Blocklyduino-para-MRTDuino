@@ -528,54 +528,6 @@
 	     
         <sep></sep>
         <category id="catDisplay" colour="150">
-            <category id="catLCD" colour="125">
-                <block type="lcd_setup" x="63" y="38">
-                    <field name="RSPIN">12</field>
-                    <field name="EPIN">11</field>
-                    <field name="D4PIN">5</field>
-                    <field name="D5PIN">4</field>
-                    <field name="D6PIN">3</field>
-                    <field name="D7PIN">2</field>
-                    <value name="COLUMNS">
-                        <block type="math_number">
-                            <field name="NUM">16</field>
-                        </block>
-                    </value>
-                    <value name="ROWS">
-                        <block type="math_number">
-                            <field name="NUM">2</field>
-                        </block>
-                    </value>
-                </block>
-                <block type="lcd_print" x="38" y="88">
-                    <value name="texttoprint">
-                        <block type="text">
-                            <field name="TEXT">Hello World!</field>
-                        </block>
-                    </value>
-                </block>
-                <block type="lcd_clear"></block>
-                <block type="lcd_home"></block>
-                <block type="lcd_setcursor" x="38" y="113">
-                    <value name="column">
-                        <block type="math_number">
-                            <field name="NUM">1</field>
-                        </block>
-                    </value>
-                    <value name="row">
-                        <block type="math_number">
-                            <field name="NUM">1</field>
-                        </block>
-                    </value>
-                </block>
-                <block type="lcd_display"></block> 
-                <block type="lcd_nodisplay"></block>
-            </category>
-            <category id="catSerialLCD" colour="120">
-                <block type="grove_serial_lcd_print"></block>
-                <block type="grove_serial_lcd_power"></block>
-                <block type="grove_serial_lcd_effect"></block>
-            </category>
             <category id="catSerialLCD_I2C" colour="140">
                 <block type="lcdi2c_setup" x="38" y="138">
                     <field name="NAME">0x3F</field>
@@ -587,13 +539,6 @@
                     <value name="ROWS">
                         <block type="math_number">
                             <field name="NUM">2</field>
-                        </block>
-                    </value>
-                </block>
-                <block type="lcdi2c_print" x="38" y="88">
-                    <value name="texttoprint">
-                        <block type="text">
-                            <field name="TEXT">Hello World!</field>
                         </block>
                     </value>
                 </block>
@@ -610,37 +555,17 @@
                             <field name="NUM">0</field>
                         </block>
                     </value>
+					<value name="texttoprint">
+                        <block type="text">
+                            <field name="TEXT">Soy un Robot</field>
+                        </block>
+                    </value>
                 </block>
                 <block type="lcdi2c_display"></block> 
                 <block type="lcdi2c_nodisplay"></block>
                 <block type="lcdi2c_scrollDisplayLeft"></block> 
                 <block type="lcdi2c_scrollDisplayRight"></block> 
             </category>
-            <category id="catOLED" colour="150">
-                <block type="oled_setup">
-                    <field name="NAME">0x3C</field>
-                </block>
-                <block type="oled_print" x="38" y="88">
-                    <value name="texttoprint">
-                        <block type="text">
-                            <field name="TEXT">Hello World!</field>
-                        </block>
-                    </value>
-                </block>
-                <block type="oled_clear"></block>
-                <block type="oled_setcursor" x="38" y="113">
-                    <value name="column">
-                        <block type="math_number">
-                            <field name="NUM">1</field>
-                        </block>
-                    </value>
-                    <value name="row">
-                        <block type="math_number">
-                            <field name="NUM">1</field>
-                        </block>
-                    </value>
-                </block>
-            </category>    
         </category>
         <sep></sep>
 		

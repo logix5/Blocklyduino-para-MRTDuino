@@ -22,13 +22,13 @@ var text_name = block.getFieldValue('NAME');  // TODO: Assemble Arduino into cod
   return code;
 };
 
-
+/*
 Blockly.Arduino['lcdi2c_print'] = function(block) {
   var value_texttoprint = Blockly.Arduino.valueToCode(block, 'texttoprint', Blockly.Arduino.ORDER_ATOMIC);
   // TODO: Assemble Arduino into code variable.
   var code = 'lcd.print('+value_texttoprint+');\n';
   return code;
-};
+}; */
 
 Blockly.Arduino['lcdi2c_clear'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
@@ -45,8 +45,10 @@ Blockly.Arduino['lcdi2c_home'] = function(block) {
 Blockly.Arduino['lcdi2c_setcursor'] = function(block) {
   var value_column = Blockly.JavaScript.valueToCode(block, 'column', Blockly.JavaScript.ORDER_ATOMIC);
   var value_row = Blockly.JavaScript.valueToCode(block, 'row', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_texttoprint = Blockly.Arduino.valueToCode(block, 'texttoprint', Blockly.Arduino.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
   var code = 'lcd.setCursor('+value_column+', '+value_row+ ');\n';
+  code+='lcd.print('+value_texttoprint+');\n';
   return code;
 };
 

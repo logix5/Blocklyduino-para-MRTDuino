@@ -1,3 +1,4 @@
+/*
 goog.provide('Blockly.Blocks.seriallcd');
 
 goog.require('Blockly.Blocks');
@@ -156,4 +157,4 @@ Blockly.Arduino['lcd_nodisplay'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
   var code = 'lcd.noDisplay();\n';
   return code;
-};
+}; */

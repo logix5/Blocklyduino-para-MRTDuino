@@ -9,6 +9,7 @@ Blockly.Blocks['lcdi2c_setup'] = {
    init: function() {
     this.setColour(140);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
         .appendField(Blockly.Msg.LCD_I2C_setup);
     this.appendDummyInput()
         .appendField(new Blockly.FieldTextInput("0x3F"), "NAME");
@@ -26,11 +27,13 @@ Blockly.Blocks['lcdi2c_setup'] = {
   }
 };
 
+/*
 Blockly.Blocks['lcdi2c_print'] = {
   init: function() {
     this.setColour(140);
     this.appendValueInput("texttoprint")
         .setCheck(null)
+		.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
         .appendField(Blockly.Msg.LCDP_Print);
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
@@ -38,12 +41,13 @@ Blockly.Blocks['lcdi2c_print'] = {
     this.setTooltip('');
     this.setHelpUrl('https://www.arduino.cc/en/Reference/LiquidCrystalPrint');
   }
-};
+};*/
 
 Blockly.Blocks['lcdi2c_clear'] = {
   init: function() {
     this.setColour(140);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
         .appendField(Blockly.Msg.LCDP_Clear);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -56,6 +60,7 @@ Blockly.Blocks['lcdi2c_home'] = {
   init: function() {
     this.setColour(140);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
         .appendField(Blockly.Msg.LCDP_Home);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -68,13 +73,17 @@ Blockly.Blocks['lcdi2c_setcursor'] = {
   init: function() {
     this.setColour(140);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
         .appendField(Blockly.Msg.LCDP_SetCursor);
     this.appendValueInput("column")
         .setCheck("Number")
-        .appendField(Blockly.Msg.LCDP_Column);
+        .appendField(Blockly.Msg.LCDP_Column2);
     this.appendValueInput("row")
         .setCheck("Number")
-        .appendField(Blockly.Msg.LCDP_Row);
+        .appendField(Blockly.Msg.LCDP_Row2);
+	this.appendValueInput("texttoprint")
+        .setCheck(null)
+		.appendField(Blockly.Msg.LCDP_Print);
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -87,6 +96,7 @@ Blockly.Blocks['lcdi2c_display'] = {
   init: function() {
     this.setColour(140);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
         .appendField(Blockly.Msg.LCDP_Display);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -99,6 +109,7 @@ Blockly.Blocks['lcdi2c_nodisplay'] = {
   init: function() {
     this.setColour(140);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
         .appendField(Blockly.Msg.LCDP_noDiplay);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -111,6 +122,7 @@ Blockly.Blocks['lcdi2c_scrollDisplayLeft'] = {
   init: function() {
     this.setColour(140);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
         .appendField(Blockly.Msg.LCDP_scrollDisplayLeft);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -123,6 +135,7 @@ Blockly.Blocks['lcdi2c_scrollDisplayRight'] = {
   init: function() {
     this.setColour(140);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
         .appendField(Blockly.Msg.LCDP_scrollDisplayRight);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -131,6 +144,7 @@ Blockly.Blocks['lcdi2c_scrollDisplayRight'] = {
   }
 };
 
+/*
 //OLED
 Blockly.Blocks['oled_setup'] = {
    init: function() {
@@ -190,4 +204,4 @@ Blockly.Blocks['oled_setcursor'] = {
     this.setTooltip('');
     this.setHelpUrl('https://www.arduino.cc/en/Reference/LiquidCrystalSetCursor');
   }
-};
+};*/

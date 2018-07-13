@@ -22,7 +22,7 @@
  * @fileoverview Colour blocks for Blockly.
  * @author fraser@google.com (Neil Fraser)
  */
-'use strict';
+/*'use strict';
 
 goog.provide('Blockly.Blocks.seriallcd');
 
@@ -204,4 +204,4 @@ Blockly.Blocks['lcd_nodisplay'] = {
     this.setTooltip('');
     this.setHelpUrl('https://www.arduino.cc/en/Reference/LiquidCrystalNoDisplay');
   }
-};
+}; */
