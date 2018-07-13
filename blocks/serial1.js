@@ -22,6 +22,13 @@
  * @fileoverview Colour blocks for Blockly.
  * @author fraser@google.com (Neil Fraser)
  */
+ 
+ /***************************************************************
+ *
+ *  This module was created by Oscar Ferruz. oferruz@logix5.com
+ *
+ ****************************************************************/
+ 
 'use strict';
 
 goog.provide('Blockly.Blocks.serial1');

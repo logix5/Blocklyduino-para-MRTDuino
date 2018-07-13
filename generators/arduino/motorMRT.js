@@ -1,3 +1,9 @@
+/***************************************************************
+ *
+ *  This module was created by Oscar Ferruz. oferruz@logix5.com
+ *
+ ****************************************************************/
+
 goog.provide('Blockly.Blocks.motorMRT');
 
 goog.require('Blockly.Blocks');

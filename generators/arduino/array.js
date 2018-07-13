@@ -21,6 +21,12 @@
  * @fileoverview Generating Arduino for text blocks.
  * @author gasolin@gmail.com (Fred Lin)
  */
+ 
+ /***************************************************************
+ *
+ *  This module was created by Oscar Ferruz. oferruz@logix5.com
+ *
+ ****************************************************************/
 'use strict';
 
 goog.provide('Blockly.Arduino.array');
