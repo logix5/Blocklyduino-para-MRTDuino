@@ -96,6 +96,24 @@ Blockly.Blocks['tilt_sensor'] = {
   }
 };
 
+Blockly.Blocks['photointerrupter_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/photointerrupter.png",52,38))
+	    .appendField(Blockly.Msg.PHOTO_NAME)
+	    .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_BUTTON")
+	this.setOutput(true, 'Boolean');
+   	this.appendDummyInput()
+		.appendField(Blockly.Msg.PHOTO_DETECTED)
+	this.appendDummyInput()
+	this.setInputsInline(true);
+    this.setTooltip('');
+  }
+};
+
 Blockly.Blocks['knock_sensor'] = {
   helpUrl: '',
   init: function() {
@@ -141,6 +159,21 @@ Blockly.Blocks['Analog_temperature_sensor'] = {
         .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN");
     this.setOutput(true, 'Number');
     this.setTooltip('return number of ambient temperature in ºC');
+  }
+};
+
+Blockly.Blocks['potentiometer_ranger_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+	    .appendField(new Blockly.FieldImage("images/potentiometer.png",47,38))
+	    .appendField(Blockly.Msg.POTE_NAME)
+        .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_POTENTIOMETER")
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.PERCENT, "0"], [Blockly.Msg.VALUE, "1"]]), "OUTPUT_VALUE");
+    this.setOutput(true, 'Number');
+    this.setTooltip('Potentiometer');
   }
 };
 

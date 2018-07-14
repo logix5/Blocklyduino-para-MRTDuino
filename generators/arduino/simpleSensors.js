@@ -42,6 +42,15 @@ Blockly.Arduino['tilt_sensor'] = function(block) {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino['photointerrupter_sensor'] = function(block) {
+  var dropdown_pin = this.getFieldValue('PIN_BUTTON');
+  
+  Blockly.Arduino.setups_['setup_photointerrupter_'+dropdown_pin] = 'pinMode('+dropdown_pin+',INPUT);';
+  
+  var code = 'digitalRead('+dropdown_pin+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
 Blockly.Arduino['knock_sensor'] = function(block) {
   var dropdown_pin = this.getFieldValue('PIN_BUTTON');
   
@@ -85,5 +94,18 @@ Blockly.Arduino['Analog_temperature_sensor'] = function(block) {
 "}\n";
      
   var code = 'Thermister(analogRead('+dropdown_pin+'))';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['potentiometer_ranger_sensor'] = function(block) {
+    var PinPotentiometer = this.getFieldValue('PIN_POTENTIOMETER'); 
+    var Status = this.getFieldValue('OUTPUT_VALUE');
+	var code;
+    Blockly.Arduino.setups_['setup_input_'+PinPotentiometer] = 'pinMode('+PinPotentiometer+', INPUT);';
+    if(Status=='0')
+      var code = 'map(analogRead('+PinPotentiometer+'),0,1023,0,100)';
+    else
+      var code = 'analogRead('+PinPotentiometer+')';
+   
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };

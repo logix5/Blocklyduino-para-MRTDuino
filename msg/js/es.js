@@ -396,7 +396,7 @@ Blockly.Msg.INOUT_VALUE="Valor";
 //IN OUT
 Blockly.Msg.INOUT_HIGH_LEVEL="ALTO";
 Blockly.Msg.INOUT_LOW_LEVEL="BAJO";
- Blockly.Msg.INPOUT_DIGITAL_WRITE="Esbribe en Digital PIN#";
+Blockly.Msg.INPOUT_DIGITAL_WRITE="Esbribe en Digital PIN#";
 Blockly.Msg.INOUT_STAT="ESTADO";
 Blockly.Msg.INOUT_DIG_READ="Lectura Digital PIN#";
 Blockly.Msg.INOUT_ANA_READ="Lectura Analógica PIN#";
@@ -408,8 +408,6 @@ Blockly.Msg.INOUT_VALUE2="Valor(0-255)";
 
 //SERIAL
  Blockly.Msg.Serial_Print="Imprime con salto de línea";
-
-
  Blockly.Msg.Serial_PrintL="Imprime en la misma línea";
  Blockly.Msg.Serial_Write="Escribe puerto Serial";
  Blockly.Msg.Serial_write_out="Escribe";

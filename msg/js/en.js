@@ -394,6 +394,13 @@ Blockly.Msg.KNOCK_NAME="Knock";
 Blockly.Msg.KNOCK_DETECTED="detected?";
 Blockly.Msg.TILT_NAME="Digital Tilt";
 Blockly.Msg.TILT_DETECTED="detected?";
+Blockly.Msg.POTE_NAME="Potentiometer";
+Blockly.Msg.PERCENT="percent(0-100)%";
+Blockly.Msg.VALUE="Value(0-1023)";
+Blockly.Msg.PHOTO_NAME="Photo Interrupter";
+Blockly.Msg.PHOTO_DETECTED="detected?";
+
+
 
 //SIMPLE ACTUATORS
 Blockly.Msg.LedPin="Led PIN#";
@@ -493,13 +500,13 @@ Blockly.Msg.Serial1_BT_Print_Format="BTSerial1 Print  Format";
 //MOTOR MRT
 Blockly.Msg.MOTOR_Connector="Motor";
 Blockly.Msg.MOTOR_Direction="Direction";
-Blockly.Msg.MOTOR_speed="Speed(0-100)";
+Blockly.Msg.MOTOR_speed="Speed(0-255)";
 
 
 //SERVO
 Blockly.Msg.SERVO_Servo="Servo";
 Blockly.Msg.PIN="PIN#";
-Blockly.Msg.Degree="Degree (0~180)";
+Blockly.Msg.Degree="Degree(0-180)";
 Blockly.Msg.Delay="Delay";
 Blockly.Msg.SERVO_ReadDegree="Read Degrees";
 Blockly.Msg.SERVO_Attached="Servo Attached?";
