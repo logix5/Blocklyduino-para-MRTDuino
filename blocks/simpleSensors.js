@@ -162,6 +162,20 @@ Blockly.Blocks['Analog_temperature_sensor'] = {
   }
 };
 
+Blockly.Blocks['LM35_temperature_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+	    .appendField(new Blockly.FieldImage("images/LM35_temperature.png",52,38))
+        .appendField(Blockly.Msg.VAR_LM35)
+        .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN");
+    this.setOutput(true, 'Number');
+    this.setTooltip('return number of ambient temperature in ?C');
+  }
+};
+
 Blockly.Blocks['potentiometer_ranger_sensor'] = {
   helpUrl: '',
   init: function() {

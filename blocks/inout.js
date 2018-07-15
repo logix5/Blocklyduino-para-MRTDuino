@@ -82,7 +82,7 @@ Blockly.Blocks['inout_analog_write'] = {
 	    .appendField(new Blockly.FieldImage("images/Analogsignal.png",68,45))
         .appendField(Blockly.Msg.INOUT_ANA_WRITE);
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["Port1", "13"], ["Port9", "5"], ["Port10", "9"], ["Port11", "11"], ["Port12", "12"]]), "PIN");
+        .appendField(new Blockly.FieldDropdown(profile.default.analog_write), "PIN");
     this.appendValueInput("Value")
         .setCheck("Number")
         .appendField(Blockly.Msg.INOUT_VALUE2);

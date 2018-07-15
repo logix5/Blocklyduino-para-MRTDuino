@@ -84,6 +84,7 @@ Blockly.Arduino['ultrasonic_ranger_sensor'] = function(block) {
 Blockly.Arduino['Analog_temperature_sensor'] = function(block) {
   var dropdown_pin = this.getFieldValue('PIN');
     //Blockly.Arduino.definitions_['include_math'] = '#include <math.h>\n';
+	//Blockly.Arduino.setups_['setup_Analog_Temp'+dropdown_pin] = 'pinMode('+dropdown_pin+',INPUT);';
     Blockly.Arduino.definitions_['define_thermister'] = "double Thermister(int RawADC) \n"+
 "{\n"+
      "  double Temp;\n"+
@@ -97,11 +98,20 @@ Blockly.Arduino['Analog_temperature_sensor'] = function(block) {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino['LM35_temperature_sensor'] = function(block) {
+  var dropdown_pin = this.getFieldValue('PIN');
+  //Blockly.Arduino.setups_['setup_LM35_Temp'+dropdown_pin] = 'pinMode('+dropdown_pin+',INPUT);';
+        
+  var code = '((analogRead('+dropdown_pin+')*500)/1024)';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+
 Blockly.Arduino['potentiometer_ranger_sensor'] = function(block) {
     var PinPotentiometer = this.getFieldValue('PIN_POTENTIOMETER'); 
     var Status = this.getFieldValue('OUTPUT_VALUE');
 	var code;
-    Blockly.Arduino.setups_['setup_input_'+PinPotentiometer] = 'pinMode('+PinPotentiometer+', INPUT);';
+    //Blockly.Arduino.setups_['setup_input_'+PinPotentiometer] = 'pinMode('+PinPotentiometer+', INPUT);';
     if(Status=='0')
       var code = 'map(analogRead('+PinPotentiometer+'),0,1023,0,100)';
     else

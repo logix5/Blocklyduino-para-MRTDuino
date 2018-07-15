@@ -399,6 +399,7 @@ Blockly.Msg.PERCENT="percent(0-100)%";
 Blockly.Msg.VALUE="Value(0-1023)";
 Blockly.Msg.PHOTO_NAME="Photo Interrupter";
 Blockly.Msg.PHOTO_DETECTED="detected?";
+Blockly.Msg.VAR_LM35="LM35 Temperature (ºC)";
 
 
 
@@ -547,7 +548,7 @@ Blockly.Msg.LCD_I2C_setup = "Init LCD I2C - SDA Port13 - SCL Port14 Address";
 
 
 //VARIOUS
-Blockly.Msg.VAR_TemSens="Analog Temperature(ºC)";
+Blockly.Msg.VAR_TemSens="Analog NTC Temperature (ºC)";
 Blockly.Msg.VAR_Motor="Motor";
 Blockly.Msg.Stop="Stop";
 Blockly.Msg.Forward="Forward";
@@ -563,7 +564,7 @@ Blockly.Msg.Number="Number";
 Blockly.Msg.NumberA="A";
 Blockly.Msg.NumberB="B";
 Blockly.Msg.PulseIn="Pulse In";
-Blockly.Msg.ultrasonic_ranger="Ultrasonic Ranger HC-SR04";
+Blockly.Msg.ultrasonic_ranger="HC-SR04 Ultrasonic (cm)";
 Blockly.Msg.unit="Unit";
 Blockly.Msg.cm="cm";
 Blockly.Msg.inch="inch";
