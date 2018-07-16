@@ -253,5 +253,67 @@ Blockly.Blocks['IR_status_sensor'] = {
   }
 };
 
+Blockly.Blocks['Flame_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+	    .appendField(Blockly.Msg.FLAME_NAME)
+        .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_FLAME")
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.PERCENT, "0"], [Blockly.Msg.VALUE, "1"]]), "OUTPUT_VALUE");
+    this.setOutput(true, 'Number');
+    this.setTooltip('Flame infrared sensor.Value');
+  }
+};
+
+Blockly.Blocks['Flame_status_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+	    .appendField(Blockly.Msg.FLAME_NAME)
+	    .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_FLAME")
+	this.setOutput(true, 'Boolean');
+   	this.appendDummyInput()
+		.appendField(Blockly.Msg.FLAME_DETECTED)
+	this.appendDummyInput()
+	this.setInputsInline(true);
+    this.setTooltip('');
+  }
+};
+
+Blockly.Blocks['Sound_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+	    .appendField(Blockly.Msg.SOUND_NAME)
+        .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_SOUND")
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.PERCENT, "0"], [Blockly.Msg.VALUE, "1"]]), "OUTPUT_VALUE");
+    this.setOutput(true, 'Number');
+    this.setTooltip('Analog sound sensor.Value');
+  }
+};
+
+Blockly.Blocks['Sound_status_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+	    .appendField(Blockly.Msg.SOUND_NAME)
+	    .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_SOUND")
+	this.setOutput(true, 'Boolean');
+   	this.appendDummyInput()
+		.appendField(Blockly.Msg.SOUND_DETECTED)
+	this.appendDummyInput()
+	this.setInputsInline(true);
+    this.setTooltip('');
+  }
+};
+
 
 

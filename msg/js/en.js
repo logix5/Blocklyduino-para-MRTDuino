@@ -404,6 +404,10 @@ Blockly.Msg.LDR_NAME="Photocell (LDR or CDS) ";
 Blockly.Msg.LDR_DETECTED="detected?";
 Blockly.Msg.IR_NAME="Infrared";
 Blockly.Msg.IR_DETECTED="sensed?";
+Blockly.Msg.FLAME_NAME="Flame";
+Blockly.Msg.FLAME_DETECTED="detected?";
+Blockly.Msg.SOUND_NAME="Sound (MIC)";
+Blockly.Msg.SOUND_DETECTED="detected?";
 
 
 

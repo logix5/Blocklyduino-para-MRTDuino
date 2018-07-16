@@ -163,3 +163,47 @@ Blockly.Arduino['IR_status_sensor'] = function(block) {
   var code = 'digitalRead('+dropdown_pin+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
+
+Blockly.Arduino['Flame_sensor'] = function(block) {
+    var PinFlame = this.getFieldValue('PIN_FLAME'); 
+    var Status = this.getFieldValue('OUTPUT_VALUE');
+	var code;
+    //Blockly.Arduino.setups_['setup_input_'+PinPotentiometer] = 'pinMode('+PinPotentiometer+', INPUT);';
+    if(Status=='0')
+      var code = 'map(analogRead('+PinFlame+'),0,1023,0,100)';
+    else
+      var code = 'analogRead('+PinFlame+')';
+   
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['Flame_status_sensor'] = function(block) {
+  var dropdown_pin = this.getFieldValue('PIN_FLAME');
+  
+  Blockly.Arduino.setups_['setup_flame_'+dropdown_pin] = 'pinMode('+dropdown_pin+',INPUT);';
+  
+  var code = 'digitalRead('+dropdown_pin+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['Sound_sensor'] = function(block) {
+    var PinSound = this.getFieldValue('PIN_SOUND'); 
+    var Status = this.getFieldValue('OUTPUT_VALUE');
+	var code;
+    //Blockly.Arduino.setups_['setup_input_'+PinPotentiometer] = 'pinMode('+PinPotentiometer+', INPUT);';
+    if(Status=='0')
+      var code = 'map(analogRead('+PinSound+'),0,1023,0,100)';
+    else
+      var code = 'analogRead('+PinSound+')';
+   
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['Sound_status_sensor'] = function(block) {
+  var dropdown_pin = this.getFieldValue('PIN_SOUND');
+  
+  Blockly.Arduino.setups_['setup_sound_'+dropdown_pin] = 'pinMode('+dropdown_pin+',INPUT);';
+  
+  var code = 'digitalRead('+dropdown_pin+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
