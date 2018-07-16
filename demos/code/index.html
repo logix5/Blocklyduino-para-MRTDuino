@@ -493,22 +493,29 @@
             <block type="servo_detach"></block>
         </category>
 	  </category>
-	  
+ <category id="catSimpleSensorsALL" colour="220"> 
 	<category id="catSimpleSensors" colour="220"> 
 		 <block type="button_sensor"></block>
-		 <block type="button_touch_sensor"></block>	
 		 <block type="potentiometer_ranger_sensor"></block>	
-		 <block type="photointerrupter_sensor"></block>	
-		 <block type="tilt_sensor"></block>	
-		 <block type="knock_sensor"></block>	
+		 <block type="IR_sensor"></block>	
+		 <block type="IR_status_sensor"></block>	
+		 <block type="LDR_sensor"></block>	
+		 <block type="LDR_status_sensor"></block>	
 		 <block type="ultrasonic_ranger_sensor">
 		  <field name="PIN_ECHO">15</field>
 		 </block>
-		  <block type="LM35_temperature_sensor"></block>
-		 <block type="Analog_temperature_sensor"></block>
-	
 	</category "> 
 	
+	<category id="catSimpleSensors2" colour="220"> 
+	     <block type="button_touch_sensor"></block>	
+		 <block type="photointerrupter_sensor"></block>	
+		 <block type="tilt_sensor"></block>	
+		 <block type="knock_sensor"></block>	
+		 <block type="LM35_temperature_sensor"></block>
+		 <block type="Analog_temperature_sensor"></block>
+	</category "> 
+</category>
+		
 	<category id="catSimpleActuators" colour="220"> 
 		<block type="actuator_led"></block>
 		<block type="actuator_laser"></block>

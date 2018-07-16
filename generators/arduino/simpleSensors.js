@@ -119,3 +119,47 @@ Blockly.Arduino['potentiometer_ranger_sensor'] = function(block) {
    
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
+
+Blockly.Arduino['LDR_sensor'] = function(block) {
+    var PinLDR = this.getFieldValue('PIN_LDR'); 
+    var Status = this.getFieldValue('OUTPUT_VALUE');
+	var code;
+    //Blockly.Arduino.setups_['setup_input_'+PinPotentiometer] = 'pinMode('+PinPotentiometer+', INPUT);';
+    if(Status=='0')
+      var code = 'map(analogRead('+PinLDR+'),0,1023,0,100)';
+    else
+      var code = 'analogRead('+PinLDR+')';
+   
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['LDR_status_sensor'] = function(block) {
+  var dropdown_pin = this.getFieldValue('PIN_LDR');
+  
+  Blockly.Arduino.setups_['setup_ldr_'+dropdown_pin] = 'pinMode('+dropdown_pin+',INPUT);';
+  
+  var code = 'digitalRead('+dropdown_pin+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['IR_sensor'] = function(block) {
+    var PinIR = this.getFieldValue('PIN_IR'); 
+    var Status = this.getFieldValue('OUTPUT_VALUE');
+	var code;
+    //Blockly.Arduino.setups_['setup_input_'+PinPotentiometer] = 'pinMode('+PinPotentiometer+', INPUT);';
+    if(Status=='0')
+      var code = 'map(analogRead('+PinIR+'),0,1023,0,100)';
+    else
+      var code = 'analogRead('+PinIR+')';
+   
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['IR_status_sensor'] = function(block) {
+  var dropdown_pin = this.getFieldValue('PIN_IR');
+  
+  Blockly.Arduino.setups_['setup_ir_'+dropdown_pin] = 'pinMode('+dropdown_pin+',INPUT);';
+  
+  var code = 'digitalRead('+dropdown_pin+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};

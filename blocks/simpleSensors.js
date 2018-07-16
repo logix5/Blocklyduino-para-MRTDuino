@@ -191,5 +191,67 @@ Blockly.Blocks['potentiometer_ranger_sensor'] = {
   }
 };
 
+Blockly.Blocks['LDR_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+	    .appendField(Blockly.Msg.LDR_NAME)
+        .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_LDR")
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.PERCENT, "0"], [Blockly.Msg.VALUE, "1"]]), "OUTPUT_VALUE");
+    this.setOutput(true, 'Number');
+    this.setTooltip('LDR Light sensor. Value');
+  }
+};
+
+Blockly.Blocks['LDR_status_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+	    .appendField(Blockly.Msg.LDR_NAME)
+	    .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_LDR")
+	this.setOutput(true, 'Boolean');
+   	this.appendDummyInput()
+		.appendField(Blockly.Msg.LDR_DETECTED)
+	this.appendDummyInput()
+	this.setInputsInline(true);
+    this.setTooltip('');
+  }
+};
+
+Blockly.Blocks['IR_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+	    .appendField(Blockly.Msg.IR_NAME)
+        .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_IR")
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.PERCENT, "0"], [Blockly.Msg.VALUE, "1"]]), "OUTPUT_VALUE");
+    this.setOutput(true, 'Number');
+    this.setTooltip('Infrared sensor.Value');
+  }
+};
+
+Blockly.Blocks['IR_status_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+	    .appendField(Blockly.Msg.IR_NAME)
+	    .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_IR")
+	this.setOutput(true, 'Boolean');
+   	this.appendDummyInput()
+		.appendField(Blockly.Msg.IR_DETECTED)
+	this.appendDummyInput()
+	this.setInputsInline(true);
+    this.setTooltip('');
+  }
+};
+
 
 

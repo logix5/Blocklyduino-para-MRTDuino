@@ -400,6 +400,10 @@ Blockly.Msg.VALUE="Value(0-1023)";
 Blockly.Msg.PHOTO_NAME="Photo Interrupter";
 Blockly.Msg.PHOTO_DETECTED="detected?";
 Blockly.Msg.VAR_LM35="LM35 Temperature (ºC)";
+Blockly.Msg.LDR_NAME="Photocell (LDR or CDS) ";
+Blockly.Msg.LDR_DETECTED="detected?";
+Blockly.Msg.IR_NAME="Infrared";
+Blockly.Msg.IR_DETECTED="sensed?";
 
 
 
