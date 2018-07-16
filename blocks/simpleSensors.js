@@ -196,6 +196,7 @@ Blockly.Blocks['LDR_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/LDR.png",59,38))
 	    .appendField(Blockly.Msg.LDR_NAME)
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_LDR")
@@ -210,6 +211,7 @@ Blockly.Blocks['LDR_status_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/LDR.png",59,38))
 	    .appendField(Blockly.Msg.LDR_NAME)
 	    .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_LDR")
@@ -227,6 +229,7 @@ Blockly.Blocks['IR_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
+	    .appendField(new Blockly.FieldImage("images/IR_simple.png",60,38))
 	    .appendField(Blockly.Msg.IR_NAME)
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_IR")
@@ -241,6 +244,7 @@ Blockly.Blocks['IR_status_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/IR_simple.png",60,38))
 	    .appendField(Blockly.Msg.IR_NAME)
 	    .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_IR")
@@ -258,6 +262,7 @@ Blockly.Blocks['Flame_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/flame.png",58,38))
 	    .appendField(Blockly.Msg.FLAME_NAME)
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_FLAME")
@@ -272,6 +277,7 @@ Blockly.Blocks['Flame_status_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/flame.png",58,38))
 	    .appendField(Blockly.Msg.FLAME_NAME)
 	    .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_FLAME")
@@ -289,6 +295,7 @@ Blockly.Blocks['Sound_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
 	    .appendField(Blockly.Msg.SOUND_NAME)
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_SOUND")
@@ -303,6 +310,7 @@ Blockly.Blocks['Sound_status_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
 	    .appendField(Blockly.Msg.SOUND_NAME)
 	    .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_SOUND")
