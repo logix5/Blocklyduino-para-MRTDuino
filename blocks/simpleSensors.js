@@ -323,5 +323,21 @@ Blockly.Blocks['Sound_status_sensor'] = {
   }
 };
 
+Blockly.Blocks['dht_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/DHT.png",55,38))
+	    .appendField(Blockly.Msg.DHT_NAME)
+        .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_DHT")
+		.appendField(Blockly.Msg.DHT_Type)
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.DHT_Type11, "0"], [Blockly.Msg.DHT_Type21, "1"],[Blockly.Msg.DHT_Type22, "2"]]), "OUTPUT_TYPE")
+		.appendField(new Blockly.FieldDropdown([[Blockly.Msg.DHT_Temp, "0"], [Blockly.Msg.DHT_Humi, "1"],[Blockly.Msg.DHT_Head, "2"]]), "OUTPUT_VALUE");
+    this.setOutput(true, 'Number');
+    this.setTooltip('DHT temperature, humidity and headindex sensor.Reading temperature or humidity takes about 250 milliseconds.OLD Sensor readings may also be up to 2 seconds (its a very slow sensor)');
+  }
+};
 
 

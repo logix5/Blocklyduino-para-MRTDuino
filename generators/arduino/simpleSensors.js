@@ -207,3 +207,37 @@ Blockly.Arduino['Sound_status_sensor'] = function(block) {
   var code = 'digitalRead('+dropdown_pin+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
+
+Blockly.Arduino['dht_sensor'] = function(block) {
+    var PinDHT = this.getFieldValue('PIN_DHT'); 
+	var TypeDHT = this.getFieldValue('OUTPUT_TYPE');
+    var Status = this.getFieldValue('OUTPUT_VALUE');
+	var code;
+	
+	Blockly.Arduino.definitions_['include_dht'] = '#include "DHT.h" \n';
+	
+	if (TypeDHT=='0')
+	{
+		Blockly.Arduino.definitions_['define_dht'] = '#define DHTTYPE DHT11   // DHT 11\n';
+		}
+	else if (TypeDHT=='1')
+		{
+		Blockly.Arduino.definitions_['define_dht'] = '#define DHTTYPE DHT21   // DHT 21\n';
+		}
+	else
+		{
+		Blockly.Arduino.definitions_['define_dht'] = '#define DHTTYPE DHT22   // DHT 22\n';
+		}
+	Blockly.Arduino.definitions_['begin_dht_'+PinDHT] = 'DHT dht_'+PinDHT+'('+PinDHT+',DHTTYPE);\n';
+	Blockly.Arduino.setups_['setup_input_'+PinDHT] = 'dht_'+PinDHT+'.begin();\n';
+	
+    if(Status=='0')
+      var code = 'dht_'+PinDHT+'.readTemperature()';  
+    else if (Status=='1')
+      var code = 'dht_'+PinDHT+'.readHumidity()';
+    else
+		var code= 'dht_'+PinDHT+'.computeHeatIndex(dht_'+PinDHT+'.readTemperature(),dht_'+PinDHT+'.readHumidity(),true)';	
+  
+   
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};

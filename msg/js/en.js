@@ -408,6 +408,18 @@ Blockly.Msg.FLAME_NAME="Flame";
 Blockly.Msg.FLAME_DETECTED="detected?";
 Blockly.Msg.SOUND_NAME="Sound (MIC)";
 Blockly.Msg.SOUND_DETECTED="detected?";
+Blockly.Msg.DHT_NAME="DHT";
+Blockly.Msg.DHT_Type="Type";
+Blockly.Msg.DHT_Type11="DHT11";
+Blockly.Msg.DHT_Type21="DHT21";
+Blockly.Msg.DHT_Type22="DHT22";
+Blockly.Msg.DHT_Temp="Temperature ºC";
+Blockly.Msg.DHT_Humi="Humidity";
+Blockly.Msg.DHT_Head="Heat Index ºC";
+
+
+
+
 
 
 
