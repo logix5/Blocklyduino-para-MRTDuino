@@ -11,6 +11,7 @@ var MSG = {
   catBTSoftSerial:"BT Software Serial",
   catMotors:"Motors",
   catMotorMRT:"Motor MRT",
+  catStepper:"Stepper",
   catServo:"Servo",
   catSimpleSensorsALL:"Simple Sensors",
   catSimpleSensors:"Sensors I",

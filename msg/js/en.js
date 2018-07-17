@@ -535,6 +535,16 @@ Blockly.Msg.MOTOR_Connector="Motor";
 Blockly.Msg.MOTOR_Direction="Direction";
 Blockly.Msg.MOTOR_speed="Speed(0-255)";
 
+//STEPPER
+Blockly.Msg.STEEPER_name="Init Stepper ID";
+Blockly.Msg.STEEPER2_name="Stepper ID";
+Blockly.Msg.STEEPER_steprev="Steps/Rev.";
+Blockly.Msg.STEEPER_step="Steps";
+Blockly.Msg.STEEPER_speed="Speed (rpm)";
+Blockly.Msg.STEEPER_pin1="PIN-A";
+Blockly.Msg.STEEPER_pin2="PIN-B";
+Blockly.Msg.STEEPER_pin3="PIN-C";
+Blockly.Msg.STEEPER_pin4="PIN-D";
 
 //SERVO
 Blockly.Msg.SERVO_Servo="Servo";

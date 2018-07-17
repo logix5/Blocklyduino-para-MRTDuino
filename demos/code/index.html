@@ -17,6 +17,7 @@
 		<script src="../../blocks/serial1.js"></script>
         <script src="../../blocks/softserial.js"></script>
 		<script src="../../blocks/motorMRT.js"></script>
+		<script src="../../blocks/stepper.js"></script>
         <script src="../../blocks/servo.js"></script>
 		<script src="../../blocks/softBT.js"></script>
 		<script src="../../blocks/serial1BT.js"></script>
@@ -51,6 +52,7 @@
 		<script src="../../generators/arduino/serial1.js"></script>
         <script src="../../generators/arduino/softserial.js"></script>
 		<script src="../../generators/arduino/motorMRT.js"></script>
+		<script src="../../generators/arduino/stepper.js"></script>
         <script src="../../generators/arduino/servo.js"></script>
 		<script src="../../generators/arduino/softBT.js"></script>
 		<script src="../../generators/arduino/serial1BT.js"></script>
@@ -491,6 +493,38 @@
             <block type="servo_attached"></block>
             <block type="servo_detach"></block>
         </category>
+		 <category id="catStepper" colour="80">
+		 
+		 <block type="stepper_configuration2">
+		       
+				<value name="STEP_RPM">
+                    <block type="math_number">
+                        <field name="NUM">4096</field>
+                    </block>
+                </value>
+				<field name="PIN_STEEPER1">21</field>
+				 <field name="PIN_STEEPER2">5</field>
+				 <field name="PIN_STEEPER3">9</field>
+				 <field name="PIN_STEEPER4">11</field>
+		  </block>
+		 
+		   <block type="stepper_speed">
+				<value name="STEPPER_SPEED">
+                    <block type="math_number">
+                        <field name="NUM">20</field>
+                    </block>
+                </value>
+		   </block>
+		   <block type="stepper_steps">
+				<value name="STEPPER_STEP">
+                    <block type="math_number">
+                        <field name="NUM">4096</field>
+                    </block>
+                </value>
+		   
+		   </block>
+		  		   
+		 </category>
 	  </category>
  <category id="catSimpleSensorsALL" colour="220"> 
  
@@ -535,7 +569,8 @@
 		 <block type="Alcohol_status_sensor"></block>	
 		 <block type="Water_sensor"></block>
 		 <block type="Moisture_sensor"></block>	
-		 <block type="Vapor_sensor"></block>		 
+		 <block type="Vapor_sensor"></block>	
+				 
 	</category > 
 </category>
 		
