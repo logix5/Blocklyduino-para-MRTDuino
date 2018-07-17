@@ -340,4 +340,235 @@ Blockly.Blocks['dht_sensor'] = {
   }
 };
 
+Blockly.Blocks['Gas_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+	    .appendField(Blockly.Msg.GAS_NAME)
+        .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_GAS")
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.PERCENT, "0"], [Blockly.Msg.VALUE, "1"]]), "OUTPUT_VALUE");
+    this.setOutput(true, 'Number');
+    this.setTooltip('Target gas: carbon monoxide.Gas sensor.Value');
+  }
+};
+
+Blockly.Blocks['Gas_status_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+	    .appendField(Blockly.Msg.GAS_NAME)
+	    .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_GAS")
+	this.setOutput(true, 'Boolean');
+   	this.appendDummyInput()
+		.appendField(Blockly.Msg.GAS_DETECTED)
+	this.appendDummyInput()
+	this.setInputsInline(true);
+    this.setTooltip('');
+  }
+};
+
+Blockly.Blocks['Alcohol_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+	    .appendField(Blockly.Msg.ALCOHOL_NAME)
+        .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_ALCOHOL")
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.PERCENT, "0"], [Blockly.Msg.VALUE, "1"]]), "OUTPUT_VALUE");
+    this.setOutput(true, 'Number');
+    this.setTooltip('Target gas: alcohol.Value');
+  }
+};
+
+Blockly.Blocks['Alcohol_status_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+	    .appendField(Blockly.Msg.ALCOHOL_NAME)
+	    .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_ALCOHOL")
+	this.setOutput(true, 'Boolean');
+   	this.appendDummyInput()
+		.appendField(Blockly.Msg.ALCOHOL_DETECTED)
+	this.appendDummyInput()
+	this.setInputsInline(true);
+    this.setTooltip('');
+  }
+};
+
+Blockly.Blocks['Vibration_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+	    .appendField(Blockly.Msg.VIBRATION_NAME)
+        .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_VIBRATION")
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.PERCENT, "0"], [Blockly.Msg.VALUE, "1"]]), "OUTPUT_VALUE");
+    this.setOutput(true, 'Number');
+    this.setTooltip('Vibration sensor.Value');
+  }
+};
+
+Blockly.Blocks['Vibration_status_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+	    .appendField(Blockly.Msg.VIBRATION_NAME)
+	    .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_VIBRATION")
+	this.setOutput(true, 'Boolean');
+   	this.appendDummyInput()
+		.appendField(Blockly.Msg.VIBRATION_DETECTED)
+	this.appendDummyInput()
+	this.setInputsInline(true);
+    this.setTooltip('');
+  }
+};
+
+Blockly.Blocks['hall_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/knock.png",54,38))
+	    .appendField(Blockly.Msg.HALL_NAME)
+	    .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_HALL")
+	this.setOutput(true, 'Boolean');
+   	this.appendDummyInput()
+		.appendField(Blockly.Msg.HALL_DETECTED)
+	this.appendDummyInput()
+	this.setInputsInline(true);
+    this.setTooltip('');
+  }
+};
+
+Blockly.Blocks['pir_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/knock.png",54,38))
+	    .appendField(Blockly.Msg.PIR_NAME)
+	    .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_PIR")
+	this.setOutput(true, 'Boolean');
+   	this.appendDummyInput()
+		.appendField(Blockly.Msg.PIR_DETECTED)
+	this.appendDummyInput()
+	this.setInputsInline(true);
+    this.setTooltip('');
+  }
+};
+
+Blockly.Blocks['Vapor_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+	    .appendField(Blockly.Msg.VAPOR_NAME)
+        .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_VAPOR")
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.PERCENT, "0"], [Blockly.Msg.VALUE, "1"]]), "OUTPUT_VALUE");
+    this.setOutput(true, 'Number');
+    this.setTooltip('Vapor sensor.Value');
+  }
+};
+
+Blockly.Blocks['AmbientLight_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+	    .appendField(Blockly.Msg.ALIGHT_NAME)
+        .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_ALIGHT")
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.PERCENT, "0"], [Blockly.Msg.VALUE, "1"]]), "OUTPUT_VALUE");
+    this.setOutput(true, 'Number');
+    this.setTooltip('Ambient light sensor.Value');
+  }
+};
+
+Blockly.Blocks['Water_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+	    .appendField(Blockly.Msg.WATER_NAME)
+        .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_WATER")
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.PERCENT, "0"], [Blockly.Msg.VALUE, "1"]]), "OUTPUT_VALUE");
+    this.setOutput(true, 'Number');
+    this.setTooltip('Water level sensor.Value');
+  }
+};
+
+Blockly.Blocks['Moisture_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+	    .appendField(Blockly.Msg.MOISTURE_NAME)
+        .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_MOISTURE")
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.PERCENT, "0"], [Blockly.Msg.VALUE, "1"]]), "OUTPUT_VALUE");
+    this.setOutput(true, 'Number');
+    this.setTooltip('Water level sensor.Value');
+  }
+};
+
+
+Blockly.Blocks['Joystick_axis_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+	    .appendField(Blockly.Msg.JOYSTICK_NAME)
+		.appendField(new Blockly.FieldDropdown([["X", "0"], ["Y", "1"]]), "OUTPUT_AXIS")
+        .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_JOYSTICK")
+        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.PERCENT, "0"], [Blockly.Msg.VALUE, "1"]]), "OUTPUT_VALUE");
+    this.setOutput(true, 'Number');
+    this.setTooltip('Joystick axes sensor.Value');
+  }
+};
+
+Blockly.Blocks['joystick_button_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/CapacitiveTouch.png",49,38))
+	    .appendField(Blockly.Msg.JOYSTICK_BUTTON)
+	    .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_JOYSTICK_BUTTON");
+    this.appendDummyInput()
+		.appendField(Blockly.Msg.JOYSTICK_PRESSED)
+	this.setOutput(true, 'Boolean');
+	this.setInputsInline(true);
+    this.setTooltip('');
+  }
+};
+
+
+
 

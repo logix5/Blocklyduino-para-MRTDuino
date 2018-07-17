@@ -232,14 +232,13 @@
         <sep></sep>
 
         <category id="catVariables" colour="330" custom="VARIABLE"></category>
-        <category id="catFunctions" colour="290" custom="PROCEDURE"></category>
-		<category id="catString" colour="210" custom="STRING"></category>
-		<category id="catArray" colour="210" >
+		<category id="catString" colour="330" custom="STRING"></category>
+		<category id="catArray" colour="330" >
 		 <block type="array_declare"></block>
 		 <block type="array_setIndex"></block>
 		 <block type="array_getIndex"></block>
-			
 		</category>
+		<category id="catFunctions" colour="290" custom="PROCEDURE"></category>
 	 <sep></sep>
 	        <category id="catInOut" colour="10">
             <category id="catDigital" colour="10">
@@ -494,8 +493,9 @@
         </category>
 	  </category>
  <category id="catSimpleSensorsALL" colour="220"> 
+ 
 	<category id="catSimpleSensors" colour="220"> 
-		 <block type="button_sensor"></block>
+	 <block type="button_sensor"></block>
 		 <block type="potentiometer_ranger_sensor"></block>	
 		 <block type="IR_sensor"></block>	
 		 <block type="IR_status_sensor"></block>	
@@ -506,23 +506,37 @@
 		 <block type="ultrasonic_ranger_sensor">
 		  <field name="PIN_ECHO">15</field>
 		 </block>
-		  <block type="dht_sensor"></block>	
-		 
+		 <block type="dht_sensor"></block>	
 	</category > 
 	
 	<category id="catSimpleSensors2" colour="220"> 
+		 <block type="button_touch_sensor"></block>	
+		 <block type="Joystick_axis_sensor"></block>
+		 <block type="joystick_button_sensor"></block>
+		 <block type="knock_sensor"></block>	
+		 <block type="Vibration_sensor"></block>	
+		 <block type="Vibration_status_sensor"></block>	
 	  	 <block type="photointerrupter_sensor"></block>	
 		 <block type="tilt_sensor"></block>	
-		 <block type="LM35_temperature_sensor"></block>
-		 <block type="Analog_temperature_sensor"></block>	
+		 <block type="hall_sensor"></block>
+		 <block type="pir_sensor"></block>
+		 <block type="AmbientLight_sensor"></block>
+		 		
 	</category > 
+	
 	<category id="catSimpleSensors3" colour="220"> 
-	     <block type="button_touch_sensor"></block>	
-		 <block type="knock_sensor"></block>	
+	     <block type="LM35_temperature_sensor"></block>
+		 <block type="Analog_temperature_sensor"></block>	
 		 <block type="Flame_sensor"></block>	
 		 <block type="Flame_status_sensor"></block>	
+		 <block type="Gas_sensor"></block>	
+		 <block type="Gas_status_sensor"></block>	
+		 <block type="Alcohol_sensor"></block>	
+		 <block type="Alcohol_status_sensor"></block>	
+		 <block type="Water_sensor"></block>
+		 <block type="Moisture_sensor"></block>	
+		 <block type="Vapor_sensor"></block>		 
 	</category > 
-
 </category>
 		
 	<category id="catSimpleActuators" colour="220"> 

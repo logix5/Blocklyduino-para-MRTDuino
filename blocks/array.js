@@ -74,7 +74,7 @@ Blockly.Blocks['array_getIndex'] = {
 		
 		
     this.setHelpUrl(Blockly.Msg.LISTS_GET_INDEX_HELPURL);
-    this.setColour(Blockly.Blocks.lists.HUE);
+    this.setColour(Blockly.Blocks.variables.HUE);
     var modeMenu = new Blockly.FieldDropdown(MODE, function(value) {
       var isStatement = (value == 'REMOVE');
       this.sourceBlock_.updateStatement_(isStatement);
@@ -201,7 +201,7 @@ Blockly.Blocks['array_setIndex'] = {
         [[Blockly.Msg.LISTS_GET_INDEX_FROM_START, 'FROM_START']];
 		
     this.setHelpUrl(Blockly.Msg.LISTS_SET_INDEX_HELPURL);
-    this.setColour(Blockly.Blocks.lists.HUE);
+    this.setColour(Blockly.Blocks.variables.HUE);
     this.appendValueInput('LIST')
         .setCheck('Array')
         .appendField(Blockly.Msg.Array_INARRAY);

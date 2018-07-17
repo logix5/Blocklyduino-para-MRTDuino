@@ -416,11 +416,23 @@ Blockly.Msg.DHT_Type22="DHT22";
 Blockly.Msg.DHT_Temp="Temperature ºC";
 Blockly.Msg.DHT_Humi="Humidity";
 Blockly.Msg.DHT_Head="Heat Index ºC";
-
-
-
-
-
+Blockly.Msg.GAS_NAME="Gas CO (MQ-7)";
+Blockly.Msg.GAS_DETECTED="detected?";
+Blockly.Msg.ALCOHOL_NAME="Alcohol (MQ-3)";
+Blockly.Msg.ALCOHOL_DETECTED="detected?";
+Blockly.Msg.VIBRATION_NAME="Vibration";
+Blockly.Msg.VIBRATION_DETECTED="detected?";
+Blockly.Msg.HALL_NAME="Hall Magnetic";
+Blockly.Msg.HALL_DETECTED="detected?";
+Blockly.Msg.PIR_NAME="PIR Motion";
+Blockly.Msg.PIR_DETECTED="detected?";
+Blockly.Msg.VAPOR_NAME="Vapor (Steam)";
+Blockly.Msg.ALIGHT_NAME="Ambient Light (TEMT6000)";
+Blockly.Msg.WATER_NAME="Water level";
+Blockly.Msg.MOISTURE_NAME="Soil Moisture";
+Blockly.Msg.JOYSTICK_NAME="Joystick axis";
+Blockly.Msg.JOYSTICK_BUTTON="Joystick button";
+Blockly.Msg.JOYSTICK_PRESSED="pressed?";
 
 
 //SIMPLE ACTUATORS

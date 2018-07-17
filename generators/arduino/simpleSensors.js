@@ -218,17 +218,20 @@ Blockly.Arduino['dht_sensor'] = function(block) {
 	
 	if (TypeDHT=='0')
 	{
-		Blockly.Arduino.definitions_['define_dht'] = '#define DHTTYPE DHT11   // DHT 11\n';
+		//Blockly.Arduino.definitions_['define_dht'] = '#define DHTTYPE DHT11   // DHT 11\n';
+		Blockly.Arduino.definitions_['begin_dht_'+PinDHT] = 'DHT dht_'+PinDHT+'('+PinDHT+',DHT11);\n';
 		}
 	else if (TypeDHT=='1')
 		{
-		Blockly.Arduino.definitions_['define_dht'] = '#define DHTTYPE DHT21   // DHT 21\n';
+		//Blockly.Arduino.definitions_['define_dht'] = '#define DHTTYPE DHT21   // DHT 21\n';
+		Blockly.Arduino.definitions_['begin_dht_'+PinDHT] = 'DHT dht_'+PinDHT+'('+PinDHT+',DHT21);\n';
 		}
 	else
 		{
-		Blockly.Arduino.definitions_['define_dht'] = '#define DHTTYPE DHT22   // DHT 22\n';
+		//Blockly.Arduino.definitions_['define_dht'] = '#define DHTTYPE DHT22   // DHT 22\n';
+		Blockly.Arduino.definitions_['begin_dht_'+PinDHT] = 'DHT dht_'+PinDHT+'('+PinDHT+',DHT22);\n';
 		}
-	Blockly.Arduino.definitions_['begin_dht_'+PinDHT] = 'DHT dht_'+PinDHT+'('+PinDHT+',DHTTYPE);\n';
+	//Blockly.Arduino.definitions_['begin_dht_'+PinDHT] = 'DHT dht_'+PinDHT+'('+PinDHT+',DHTTYPE);\n';
 	Blockly.Arduino.setups_['setup_input_'+PinDHT] = 'dht_'+PinDHT+'.begin();\n';
 	
     if(Status=='0')
@@ -241,3 +244,166 @@ Blockly.Arduino['dht_sensor'] = function(block) {
    
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
+
+Blockly.Arduino['Gas_sensor'] = function(block) {
+    var PinGas = this.getFieldValue('PIN_GAS'); 
+    var Status = this.getFieldValue('OUTPUT_VALUE');
+	var code;
+    //Blockly.Arduino.setups_['setup_input_'+PinPotentiometer] = 'pinMode('+PinPotentiometer+', INPUT);';
+    if(Status=='0')
+      var code = 'map(analogRead('+PinGas+'),0,1023,0,100)';
+    else
+      var code = 'analogRead('+PinGas+')';
+   
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['Gas_status_sensor'] = function(block) {
+  var dropdown_pin = this.getFieldValue('PIN_GAS');
+  
+  Blockly.Arduino.setups_['setup_gas_'+dropdown_pin] = 'pinMode('+dropdown_pin+',INPUT);';
+  
+  var code = 'digitalRead('+dropdown_pin+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['Alcohol_sensor'] = function(block) {
+    var PinAlcohol = this.getFieldValue('PIN_ALCOHOL'); 
+    var Status = this.getFieldValue('OUTPUT_VALUE');
+	var code;
+    //Blockly.Arduino.setups_['setup_input_'+PinPotentiometer] = 'pinMode('+PinPotentiometer+', INPUT);';
+    if(Status=='0')
+      var code = 'map(analogRead('+PinAlcohol+'),0,1023,0,100)';
+    else
+      var code = 'analogRead('+PinAlcohol+')';
+   
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['Alcohol_status_sensor'] = function(block) {
+  var dropdown_pin = this.getFieldValue('PIN_ALCOHOL');
+  
+  Blockly.Arduino.setups_['setup_Alcohol_'+dropdown_pin] = 'pinMode('+dropdown_pin+',INPUT);';
+  
+  var code = 'digitalRead('+dropdown_pin+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['Vibration_sensor'] = function(block) {
+    var PinVibration = this.getFieldValue('PIN_VIBRATION'); 
+    var Status = this.getFieldValue('OUTPUT_VALUE');
+	var code;
+    //Blockly.Arduino.setups_['setup_input_'+PinPotentiometer] = 'pinMode('+PinPotentiometer+', INPUT);';
+    if(Status=='0')
+      var code = 'map(analogRead('+PinVibration+'),0,1023,0,100)';
+    else
+      var code = 'analogRead('+PinVibration+')';
+   
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['Vibration_status_sensor'] = function(block) {
+  var dropdown_pin = this.getFieldValue('PIN_VIBRATION');
+  
+  Blockly.Arduino.setups_['setup_Vibration_'+dropdown_pin] = 'pinMode('+dropdown_pin+',INPUT);';
+  
+  var code = 'digitalRead('+dropdown_pin+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['hall_sensor'] = function(block) {
+  var dropdown_pin = this.getFieldValue('PIN_HALL');
+  
+  Blockly.Arduino.setups_['setup_hall_'+dropdown_pin] = 'pinMode('+dropdown_pin+',INPUT);';
+  
+  var code = 'digitalRead('+dropdown_pin+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['pir_sensor'] = function(block) {
+  var dropdown_pin = this.getFieldValue('PIN_PIR');
+  
+  Blockly.Arduino.setups_['setup_pir_'+dropdown_pin] = 'pinMode('+dropdown_pin+',INPUT);';
+  
+  var code = 'digitalRead('+dropdown_pin+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['Vapor_sensor'] = function(block) {
+    var PinVapor = this.getFieldValue('PIN_VAPOR'); 
+    var Status = this.getFieldValue('OUTPUT_VALUE');
+	var code;
+    //Blockly.Arduino.setups_['setup_input_'+PinPotentiometer] = 'pinMode('+PinPotentiometer+', INPUT);';
+    if(Status=='0')
+      var code = 'map(analogRead('+PinVapor+'),0,1023,0,100)';
+    else
+      var code = 'analogRead('+PinVapor+')';
+   
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['AmbientLight_sensor'] = function(block) {
+    var PinAlight = this.getFieldValue('PIN_ALIGHT'); 
+    var Status = this.getFieldValue('OUTPUT_VALUE');
+	var code;
+    //Blockly.Arduino.setups_['setup_input_'+PinPotentiometer] = 'pinMode('+PinPotentiometer+', INPUT);';
+    if(Status=='0')
+      var code = 'map(analogRead('+PinAlight+'),0,1023,0,100)';
+    else
+      var code = 'analogRead('+PinAlight+')';
+   
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['Water_sensor'] = function(block) {
+    var PinWater = this.getFieldValue('PIN_WATER'); 
+    var Status = this.getFieldValue('OUTPUT_VALUE');
+	var code;
+    //Blockly.Arduino.setups_['setup_input_'+PinPotentiometer] = 'pinMode('+PinPotentiometer+', INPUT);';
+    if(Status=='0')
+      var code = 'map(analogRead('+PinWater+'),0,1023,0,100)';
+    else
+      var code = 'analogRead('+PinWater+')';
+   
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+
+Blockly.Arduino['Moisture_sensor'] = function(block) {
+    var PinMoisture = this.getFieldValue('PIN_MOISTURE'); 
+    var Status = this.getFieldValue('OUTPUT_VALUE');
+	var code;
+    //Blockly.Arduino.setups_['setup_input_'+PinPotentiometer] = 'pinMode('+PinPotentiometer+', INPUT);';
+    if(Status=='0')
+      var code = 'map(analogRead('+PinMoisture+'),0,1023,0,100)';
+    else
+      var code = 'analogRead('+PinMoisture+')';
+   
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+
+Blockly.Arduino['Joystick_axis_sensor'] = function(block) {
+    var PinJoystick = this.getFieldValue('PIN_JOYSTICK'); 
+    var Status = this.getFieldValue('OUTPUT_VALUE');
+	var code;
+    //Blockly.Arduino.setups_['setup_input_'+PinPotentiometer] = 'pinMode('+PinPotentiometer+', INPUT);';
+    if(Status=='0')
+      var code = 'map(analogRead('+PinJoystick+'),0,1023,0,100)';
+    else
+      var code = 'analogRead('+PinJoystick+')';
+   
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+}; 
+
+Blockly.Arduino['joystick_button_sensor'] = function(block) {
+  var dropdown_pin = this.getFieldValue('PIN_JOYSTICK_BUTTON');
+  
+  Blockly.Arduino.setups_['setup_btntouch_'+dropdown_pin] = 'pinMode('+dropdown_pin+',INPUT_PULLUP);';
+  
+  var code = 'digitalRead('+dropdown_pin+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+
+

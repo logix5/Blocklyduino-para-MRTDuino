@@ -13,10 +13,15 @@ Blockly.Blocks['servo_move'] = {
 		.appendField(Blockly.Msg.SERVO_Servo)
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
-    this.appendValueInput("DEGREE", 'Number')
-        .setCheck('Number')
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.Degree);
+  //  this.appendValueInput("DEGREE", 'Number')
+ //       .setCheck('Number')
+ //       .setAlign(Blockly.ALIGN_RIGHT)
+  //      .appendField(Blockly.Msg.Degree);
+		
+		this.appendDummyInput()
+		.appendField(Blockly.Msg.Degree)
+		.appendField(new Blockly.FieldAngle(180), "DEGREE");
+		
     this.appendValueInput("DELAY_TIME", 'Number')
         .setCheck('Number')
         .setAlign(Blockly.ALIGN_RIGHT)
