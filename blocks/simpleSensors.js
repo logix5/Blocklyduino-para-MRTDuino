@@ -345,7 +345,7 @@ Blockly.Blocks['Gas_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+		.appendField(new Blockly.FieldImage("images/gas.png",63,38))
 	    .appendField(Blockly.Msg.GAS_NAME)
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_GAS")
@@ -360,7 +360,7 @@ Blockly.Blocks['Gas_status_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+		.appendField(new Blockly.FieldImage("images/gas.png",63,38))
 	    .appendField(Blockly.Msg.GAS_NAME)
 	    .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_GAS")
@@ -378,7 +378,7 @@ Blockly.Blocks['Alcohol_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+		.appendField(new Blockly.FieldImage("images/alcohol.png",63,38))
 	    .appendField(Blockly.Msg.ALCOHOL_NAME)
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_ALCOHOL")
@@ -393,7 +393,7 @@ Blockly.Blocks['Alcohol_status_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+		.appendField(new Blockly.FieldImage("images/alcohol.png",63,38))
 	    .appendField(Blockly.Msg.ALCOHOL_NAME)
 	    .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_ALCOHOL")
@@ -411,7 +411,7 @@ Blockly.Blocks['Vibration_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+		.appendField(new Blockly.FieldImage("images/vibration.png",53,38))
 	    .appendField(Blockly.Msg.VIBRATION_NAME)
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_VIBRATION")
@@ -426,7 +426,7 @@ Blockly.Blocks['Vibration_status_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+		.appendField(new Blockly.FieldImage("images/vibration.png",53,38))
 	    .appendField(Blockly.Msg.VIBRATION_NAME)
 	    .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_VIBRATION")
@@ -444,7 +444,7 @@ Blockly.Blocks['hall_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/knock.png",54,38))
+		.appendField(new Blockly.FieldImage("images/hall.png",45,38))
 	    .appendField(Blockly.Msg.HALL_NAME)
 	    .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_HALL")
@@ -462,7 +462,7 @@ Blockly.Blocks['pir_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/knock.png",54,38))
+		.appendField(new Blockly.FieldImage("images/pir.png",59,38))
 	    .appendField(Blockly.Msg.PIR_NAME)
 	    .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_PIR")
@@ -480,7 +480,7 @@ Blockly.Blocks['Vapor_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+		.appendField(new Blockly.FieldImage("images/vapor.png",54,38))
 	    .appendField(Blockly.Msg.VAPOR_NAME)
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_VAPOR")
@@ -495,7 +495,7 @@ Blockly.Blocks['AmbientLight_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+		.appendField(new Blockly.FieldImage("images/alight.png",48,38))
 	    .appendField(Blockly.Msg.ALIGHT_NAME)
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_ALIGHT")
@@ -510,7 +510,7 @@ Blockly.Blocks['Water_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+		.appendField(new Blockly.FieldImage("images/water.png",47,38))
 	    .appendField(Blockly.Msg.WATER_NAME)
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_WATER")
@@ -525,7 +525,7 @@ Blockly.Blocks['Moisture_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+		.appendField(new Blockly.FieldImage("images/moisture.png",61,38))
 	    .appendField(Blockly.Msg.MOISTURE_NAME)
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN_MOISTURE")
@@ -541,7 +541,7 @@ Blockly.Blocks['Joystick_axis_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/MIC.png",54,38))
+		.appendField(new Blockly.FieldImage("images/joystick.png",46,38))
 	    .appendField(Blockly.Msg.JOYSTICK_NAME)
 		.appendField(new Blockly.FieldDropdown([["X", "0"], ["Y", "1"]]), "OUTPUT_AXIS")
         .appendField(Blockly.Msg.PIN)
@@ -557,7 +557,7 @@ Blockly.Blocks['joystick_button_sensor'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/CapacitiveTouch.png",49,38))
+		.appendField(new Blockly.FieldImage("images/joystick.png",46,38))
 	    .appendField(Blockly.Msg.JOYSTICK_BUTTON)
 	    .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_JOYSTICK_BUTTON");
