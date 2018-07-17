@@ -39,7 +39,7 @@ goog.require('Blockly.Blocks');
  * Common HSV hue for all blocks in this category.
  */
 
-Blockly.Blocks['stepper_configuration2'] = {
+Blockly.Blocks['stepper_configuration'] = {
   helpUrl: '',
   init: function() {
     this.setColour(80);

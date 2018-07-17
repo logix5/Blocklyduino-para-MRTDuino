@@ -8,7 +8,7 @@ goog.provide('Blockly.Blocks.stepper');
 
 goog.require('Blockly.Blocks');
 
-Blockly.Arduino['stepper_configuration2'] = function(block) {
+Blockly.Arduino['stepper_configuration'] = function(block) {
   // TODO: Assemble Python into code variable.
   
   var steeper_number = this.getFieldValue('STEEPER_NUMBER');
