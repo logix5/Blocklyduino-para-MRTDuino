@@ -243,24 +243,212 @@ Blockly.Arduino['frequency'] = function(block) {
 						    break;					
 				}
 	    break;				
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		case 'F':
+				switch(octave)
+				{
+				  case '2':
+							code='87';
+							break;
+				  case '3':
+							code='175';
+							break;
+				  case '4':
+							code='349';
+							break;
+				  case '5':
+							code='698';
+							break;
+				  case '6':
+							code='1397';
+							break;
+				  case '7':
+							code='2794';
+							break;
+				  case '8':
+							code='5588';
+							break;
+				  default:
+							code='5588';
+						    break;					
+				}
+	    break;			
+		case 'F#':
+				switch(octave)
+				{
+				  case '2':
+							code='92';
+							break;
+				  case '3':
+							code='185';
+							break;
+				  case '4':
+							code='370';
+							break;
+				  case '5':
+							code='740';
+							break;
+				  case '6':
+							code='1480';
+							break;
+				  case '7':
+							code='2960';
+							break;
+				  case '8':
+							code='5920';
+							break;
+				  default:
+							code='5920';
+						    break;					
+				}
+	    break;					
+			case 'G':
+				switch(octave)
+				{
+				  case '2':
+							code='98';
+							break;
+				  case '3':
+							code='196';
+							break;
+				  case '4':
+							code='392';
+							break;
+				  case '5':
+							code='784';
+							break;
+				  case '6':
+							code='1568';
+							break;
+				  case '7':
+							code='3136';
+							break;
+				  case '8':
+							code='6272';
+							break;
+				  default:
+							code='6272';
+						    break;					
+				}
+	    break;				
+		case 'G#':
+				switch(octave)
+				{
+				  case '2':
+							code='104';
+							break;
+				  case '3':
+							code='208';
+							break;
+				  case '4':
+							code='415';
+							break;
+				  case '5':
+							code='831';
+							break;
+				  case '6':
+							code='1661';
+							break;
+				  case '7':
+							code='3322';
+							break;
+				  case '8':
+							code='6645';
+							break;
+				  default:
+							code='6645';
+						    break;					
+				}
+	    break;			
+		case 'A':
+				switch(octave)
+				{
+				  case '2':
+							code='110';
+							break;
+				  case '3':
+							code='220';
+							break;
+				  case '4':
+							code='440';
+							break;
+				  case '5':
+							code='880';
+							break;
+				  case '6':
+							code='1760';
+							break;
+				  case '7':
+							code='3520';
+							break;
+				  case '8':
+							code='7040';
+							break;
+				  default:
+							code='7040';
+						    break;					
+				}
+	    break;			
+			case 'A#':
+				switch(octave)
+				{
+				  case '2':
+							code='117';
+							break;
+				  case '3':
+							code='233';
+							break;
+				  case '4':
+							code='466';
+							break;
+				  case '5':
+							code='932';
+							break;
+				  case '6':
+							code='1867';
+							break;
+				  case '7':
+							code='3729';
+							break;
+				  case '8':
+							code='7459';
+							break;
+				  default:
+							code='7459';
+						    break;					
+				}
+	    break;		
+			case 'B':
+				switch(octave)
+				{
+				  case '2':
+							code='123';
+							break;
+				  case '3':
+							code='247';
+							break;
+				  case '4':
+							code='494';
+							break;
+				  case '5':
+							code='988';
+							break;
+				  case '6':
+							code='1976';
+							break;
+				  case '7':
+							code='3951';
+							break;
+				  case '8':
+							code='7902';
+							break;
+				  default:
+							code='7902';
+						    break;					
+				}
+	    break;		
+			
 	  default:
+				code='7040';
 				break;
 	  
   }
