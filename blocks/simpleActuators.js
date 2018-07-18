@@ -71,6 +71,35 @@ Blockly.Blocks['actuator_ledlevel'] = {
   }
 };
 
+Blockly.Blocks['actuator_rgbled'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/led_diode.png",46,38))
+        .appendField(Blockly.Msg.LedRGBName)
+		.appendField(new Blockly.FieldDropdown([['Anode', '1'], ['Cathode', '0']]), "RGB_TYPE");
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.LedRGBpinR)
+		.appendField(new Blockly.FieldDropdown(profile.default.analog_write), "PINRed");
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.LedRGBpinG)
+		.appendField(new Blockly.FieldDropdown(profile.default.analog_write), "PINGreen");
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.LedRGBpinB)
+		.appendField(new Blockly.FieldDropdown(profile.default.analog_write), "PINBlue");
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.LedRGBcolor)	 
+		.appendField(new Blockly.FieldColour('#ff0000'), 'RGBCOLOR');
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip("Generate PWM in each RGB pin");
+  }
+};
+
+
+
 Blockly.Blocks['actuator_laser'] = {
   helpUrl: '',
   init: function() {
@@ -144,23 +173,26 @@ Blockly.Blocks['actuator_notone'] = {
 };
 
 
-/*
-Blockly.Blocks['actuator_tone'] = {
-  helpUrl: 'http://www.arduino.cc/en/Reference/Tone',
+Blockly.Blocks['frequency'] = {
+  helpUrl: '',
   init: function() {
-    this.setColour(150);
+    this.setColour(220);
     this.appendDummyInput()
-        .appendField(Blockly.Msg.TonePin)
-        .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
-    this.appendValueInput("NUM", "Number")
-        .appendField(Blockly.Msg.Frequence)
-        .setCheck("Number");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip("Generate audio tones on a pin");
+		//.appendField(new Blockly.FieldImage("images/joystick.png",46,38))
+	    .appendField(Blockly.Msg.Note)
+        .appendField(new Blockly.FieldDropdown([['C (do)','C'],['C# (do#)','C#'],['D (re)','D'],['D# (re#)','D#'],['E (mi)','E'],['F (fa)','F'],['F# (fa#)','F#'],['G (sol)','G'],['G# (sol#)','G#'],['A (la)','A'],['A# (la#)','A#'],['B (si)','B']]), "NOTE");
+    this.appendDummyInput()
+		.appendField(Blockly.Msg.Octave)
+		.appendField(new Blockly.FieldDropdown([['2','2'],['3', '3'],['4', '4'],['5', '5'],['6', '6'],['7', '7'],['8', '8']]), "OCTAVE")
+	this.setOutput(true, 'Number');
+	this.setInputsInline(true);
+    this.setTooltip('');
   }
 };
-/*
 
-*/
+
+
+
+
+
+

@@ -448,6 +448,13 @@ Blockly.Msg.Duration="Duration";
 Blockly.Msg.NoTonePin="No Tone PIN#";
 Blockly.Msg.LedLevelPin="Led intensity (PWM) PIN#";
 Blockly.Msg.LedLevelValue="Value(0-255)";
+Blockly.Msg.LedRGBName="RGB Led(0-255) Common";
+Blockly.Msg.LedRGBpinR="Pin R";
+Blockly.Msg.LedRGBpinG="Pin G";
+Blockly.Msg.LedRGBpinB="Pin B";
+Blockly.Msg.LedRGBcolor="Color";
+Blockly.Msg.Note="Frequency(Hz) Note";
+Blockly.Msg.Octave="Octave";
 
 //IN OUT
 Blockly.Msg.INOUT_HIGH_LEVEL="High";
