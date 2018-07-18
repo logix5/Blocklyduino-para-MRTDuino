@@ -27,21 +27,20 @@ Blockly.Blocks['lcdi2c_setup'] = {
   }
 };
 
-/*
-Blockly.Blocks['lcdi2c_print'] = {
-  init: function() {
+Blockly.Blocks['lcdi2c_bq_setup'] = {
+   init: function() {
     this.setColour(140);
-    this.appendValueInput("texttoprint")
-        .setCheck(null)
+    this.appendDummyInput()
 		.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
-        .appendField(Blockly.Msg.LCDP_Print);
+        .appendField(Blockly.Msg.LCD_I2C_BQ_setup)
+		.appendField(Blockly.Msg.LCD_I2C_BQ_pins);
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('');
-    this.setHelpUrl('https://www.arduino.cc/en/Reference/LiquidCrystalPrint');
+    this.setHelpUrl('http://www.example.com/');
   }
-};*/
+};
 
 Blockly.Blocks['lcdi2c_clear'] = {
   init: function() {
@@ -97,7 +96,8 @@ Blockly.Blocks['lcdi2c_display'] = {
     this.setColour(140);
     this.appendDummyInput()
 		.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
-        .appendField(Blockly.Msg.LCDP_Display);
+        .appendField(Blockly.Msg.LCDP_Display)
+		.appendField(new Blockly.FieldDropdown([["Display", "1"], ["No Display", "0"]]), "OUTPUT_DISPLAY")
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('');
@@ -105,25 +105,13 @@ Blockly.Blocks['lcdi2c_display'] = {
   }
 };
 
-Blockly.Blocks['lcdi2c_nodisplay'] = {
+Blockly.Blocks['lcdi2c_scrollDisplay'] = {
   init: function() {
     this.setColour(140);
     this.appendDummyInput()
 		.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
-        .appendField(Blockly.Msg.LCDP_noDiplay);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip('');
-    this.setHelpUrl('https://www.arduino.cc/en/Reference/LiquidCrystalNoDisplay');
-  }
-};
-
-Blockly.Blocks['lcdi2c_scrollDisplayLeft'] = {
-  init: function() {
-    this.setColour(140);
-    this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
-        .appendField(Blockly.Msg.LCDP_scrollDisplayLeft);
+        .appendField(Blockly.Msg.LCDP_scrollDisplay)
+		.appendField(new Blockly.FieldDropdown([["Left", "1"], ["Right", "0"]]), "OUTPUT_DISPLAY")
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('');
@@ -131,18 +119,48 @@ Blockly.Blocks['lcdi2c_scrollDisplayLeft'] = {
   }
 };
 
-Blockly.Blocks['lcdi2c_scrollDisplayRight'] = {
+Blockly.Blocks['lcdi2c_setBacklight'] = {
   init: function() {
     this.setColour(140);
     this.appendDummyInput()
 		.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
-        .appendField(Blockly.Msg.LCDP_scrollDisplayRight);
+        .appendField(Blockly.Msg.LCDP_setBcklight)
+		.appendField(new Blockly.FieldDropdown([["ON", "1"], ["OFF", "0"]]), "OUTPUT_DISPLAY")
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('');
     this.setHelpUrl('https://www.arduino.cc/en/Reference/LiquidCrystalClear');
   }
 };
+
+Blockly.Blocks['lcdi2c_showCursor'] = {
+  init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
+        .appendField(Blockly.Msg.LCDP_showCursor)
+		.appendField(new Blockly.FieldDropdown([["ON", "1"], ["OFF", "0"]]), "OUTPUT_DISPLAY")
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('https://www.arduino.cc/en/Reference/LiquidCrystalClear');
+  }
+};
+
+Blockly.Blocks['lcdi2c_blinkCursor'] = {
+  init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
+        .appendField(Blockly.Msg.LCDP_blinkCursor)
+		.appendField(new Blockly.FieldDropdown([["ON", "1"], ["OFF", "0"]]), "OUTPUT_DISPLAY")
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('https://www.arduino.cc/en/Reference/LiquidCrystalClear');
+  }
+};
+
 
 /*
 //OLED

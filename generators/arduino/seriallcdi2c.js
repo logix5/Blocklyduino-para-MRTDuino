@@ -22,13 +22,15 @@ var text_name = block.getFieldValue('NAME');  // TODO: Assemble Arduino into cod
   return code;
 };
 
-/*
-Blockly.Arduino['lcdi2c_print'] = function(block) {
-  var value_texttoprint = Blockly.Arduino.valueToCode(block, 'texttoprint', Blockly.Arduino.ORDER_ATOMIC);
-  // TODO: Assemble Arduino into code variable.
-  var code = 'lcd.print('+value_texttoprint+');\n';
+Blockly.Arduino['lcdi2c_bq_setup'] = function(block) {
+
+    Blockly.Arduino.definitions_['define_lcd'] = '#include "BitbloqLiquidCrystal.h"\n';
+    Blockly.Arduino.definitions_['define_lcdpins'] = 'LiquidCrystal lcd(0);\n';
+    Blockly.Arduino.setups_['setup_lcdi2c']='lcd.begin(16,2);\n'
+
+  var code = '';
   return code;
-}; */
+};
 
 Blockly.Arduino['lcdi2c_clear'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
@@ -46,6 +48,18 @@ Blockly.Arduino['lcdi2c_setcursor'] = function(block) {
   var value_column = Blockly.JavaScript.valueToCode(block, 'column', Blockly.JavaScript.ORDER_ATOMIC);
   var value_row = Blockly.JavaScript.valueToCode(block, 'row', Blockly.JavaScript.ORDER_ATOMIC);
   var value_texttoprint = Blockly.Arduino.valueToCode(block, 'texttoprint', Blockly.Arduino.ORDER_ATOMIC);
+  
+  if (value_column<=0)
+	  value_column=1;
+  else
+	  value_column-=1;
+  
+   if (value_row<=0)
+	  value_row=1;
+  else
+	  value_row-=1;
+  
+ 
   // TODO: Assemble JavaScript into code variable.
   var code = 'lcd.setCursor('+value_column+', '+value_row+ ');\n';
   code+='lcd.print('+value_texttoprint+');\n';
@@ -54,29 +68,61 @@ Blockly.Arduino['lcdi2c_setcursor'] = function(block) {
 
 Blockly.Arduino['lcdi2c_display'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
-  var code = 'lcd.display();\n';
+   var OptionDisplay = this.getFieldValue('OUTPUT_DISPLAY'); 
+   if (OptionDisplay==1)
+     var code = 'lcd.display();\n';
+   else
+     var code = 'lcd.noDisplay();\n';
+ 
   return code;
 };
 
-Blockly.Arduino['lcdi2c_nodisplay'] = function(block) {
+Blockly.Arduino['lcdi2c_scrollDisplay'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
-  var code = 'lcd.noDisplay();\n';
+  var OptionDisplay = this.getFieldValue('OUTPUT_DISPLAY'); 
+   if (OptionDisplay==1)
+     var code = 'lcd.scrollDisplayLeft();\n';
+   else
+     var code = 'lcd.scrollDisplayRight();\n';
+  
   return code;
 };
 
-Blockly.Arduino['lcdi2c_scrollDisplayLeft'] = function(block) {
+Blockly.Arduino['lcdi2c_setBacklight'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
-  var code = 'lcd.scrollDisplayLeft();\n';
+  var OptionDisplay = this.getFieldValue('OUTPUT_DISPLAY'); 
+   if (OptionDisplay==1)
+     var code = 'lcd.backlight();\n';
+   else
+     var code = 'lcd.noBacklight();\n';
+  
   return code;
 };
 
-Blockly.Arduino['lcdi2c_scrollDisplayRight'] = function(block) {
+Blockly.Arduino['lcdi2c_showCursor'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
-  var code = 'lcd.scrollDisplayRight();\n';
+  var OptionDisplay = this.getFieldValue('OUTPUT_DISPLAY'); 
+   if (OptionDisplay==1)
+     var code = 'lcd.cursor();\n';
+   else
+     var code = 'lcd.noCursor();\n';
+  
   return code;
 };
 
-//OLED
+Blockly.Arduino['lcdi2c_blinkCursor'] = function(block) {
+  // TODO: Assemble JavaScript into code variable.
+  var OptionDisplay = this.getFieldValue('OUTPUT_DISPLAY'); 
+   if (OptionDisplay==1)
+     var code = 'lcd.blink();\n';
+   else
+     var code = 'lcd.noBlink();\n';
+  
+  return code;
+};
+
+
+//OLED --------------------------------------------------------------------------------------------
 Blockly.Arduino['oled_setup'] = function(block) {
 var adr = block.getFieldValue('NAME');  // TODO: Assemble Arduino into code variable.
     Blockly.Arduino.definitions_['define_oled'] = '#include <SPI.h>\n#include <Wire.h>\n#include <Adafruit_GFX.h>\n#include <Adafruit_SSD1306.h>\n\n#define OLED_RESET 4\n  Adafruit_SSD1306 display(OLED_RESET);';

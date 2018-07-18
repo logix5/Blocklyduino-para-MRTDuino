@@ -53,6 +53,24 @@ Blockly.Blocks['actuator_led'] = {
   }
 };
 
+Blockly.Blocks['actuator_ledlevel'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/led_diode.png",46,38))
+        .appendField(Blockly.Msg.LedLevelPin)
+        .appendField(new Blockly.FieldDropdown(profile.default.analog_write), "PIN");
+    this.appendValueInput("NUM", "Number")
+        .appendField(Blockly.Msg.LedLevelValue)
+        .setCheck("Number");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip("Generate PWM in the pin");
+  }
+};
+
 Blockly.Blocks['actuator_laser'] = {
   helpUrl: '',
   init: function() {

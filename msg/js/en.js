@@ -446,6 +446,8 @@ Blockly.Msg.TonePin="Tone PIN#";
 Blockly.Msg.Frequence="Frequency";
 Blockly.Msg.Duration="Duration";
 Blockly.Msg.NoTonePin="No Tone PIN#";
+Blockly.Msg.LedLevelPin="Led intensity (PWM) PIN#";
+Blockly.Msg.LedLevelValue="Value(0-255)";
 
 //IN OUT
 Blockly.Msg.INOUT_HIGH_LEVEL="High";
@@ -579,14 +581,17 @@ Blockly.Msg.LCDP_Column2 = "column";
 Blockly.Msg.LCDP_Row2 = "row";
 Blockly.Msg.LCDP_Print = "and print";
 Blockly.Msg.LCDP_Clear = "LCD I2C clear";
-Blockly.Msg.LCDP_scrollDisplayLeft = "LCD I2C scroll display Left ";
-Blockly.Msg.LCDP_scrollDisplayRight = "LCD I2C scroll display Right ";
+Blockly.Msg.LCDP_scrollDisplay = "LCD I2C scroll display ";
+Blockly.Msg.LCDP_setBcklight = "LCD I2C set Backlight ";
+Blockly.Msg.LCDP_showCursor = "LCD I2C show Cursor ";
+Blockly.Msg.LCDP_blinkCursor = "LCD I2C blink Cursor ";
 Blockly.Msg.LCDP_Home = "LCD I2C home";
 Blockly.Msg.LCDP_SetCursor = "LCD I2C set cursor";
-Blockly.Msg.LCDP_Display = "LCD I2C display";
-Blockly.Msg.LCDP_noDiplay = "LCD I2C no display";
+Blockly.Msg.LCDP_Display = "LCD I2C ";
+//Blockly.Msg.LCDP_noDiplay = "LCD I2C no display";
 Blockly.Msg.LCD_I2C_setup = "Init LCD I2C - SDA Port13 - SCL Port14 Address";
-
+Blockly.Msg.LCD_I2C_BQ_setup = "Init BQ LCD I2C (16 columns 2 rows) ";
+Blockly.Msg.LCD_I2C_BQ_pins = "SDA Port13 - SCL Port14";
 
 
 //VARIOUS
