@@ -456,7 +456,38 @@ Blockly.Arduino['frequency'] = function(block) {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
-
+Blockly.Arduino['duration'] = function(block) {
+  var duration = this.getFieldValue('DURATION');
+  var code;
+  
+  switch(duration)
+  {
+	    case '1':
+				code='500';
+				break;
+		case '2':
+				code='250';
+				break;
+		case '3':
+				code='125';
+				break;
+		case '4':
+				code='1000';
+				break;
+		case '5':
+				code='2000';
+				break;
+		case '6':
+				code='63';
+				break;
+		
+		default:
+				code='1000';
+			    break;					
+	}
+ 
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
 
 
 

@@ -190,6 +190,20 @@ Blockly.Blocks['frequency'] = {
   }
 };
 
+Blockly.Blocks['duration'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/durationNote.png",76,38))
+	    //.appendField(Blockly.Msg.Duration)
+        .appendField(new Blockly.FieldDropdown([['Double','5'],['Whole','4'],['Half','1'],['Quater','2'],['Eighth','3'],['Sixteenth','6']]), "DURATION");
+   	this.setOutput(true, 'Number');
+	this.setInputsInline(true);
+    this.setTooltip('');
+  }
+};
+
 
 
 

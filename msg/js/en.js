@@ -453,8 +453,9 @@ Blockly.Msg.LedRGBpinR="Pin R";
 Blockly.Msg.LedRGBpinG="Pin G";
 Blockly.Msg.LedRGBpinB="Pin B";
 Blockly.Msg.LedRGBcolor="Color";
-Blockly.Msg.Note="Frequency(Hz) Note";
+Blockly.Msg.Note="Note";
 Blockly.Msg.Octave="Octave";
+//Blockly.Msg.Duration="Duration(ms)";
 
 //IN OUT
 Blockly.Msg.INOUT_HIGH_LEVEL="High";
