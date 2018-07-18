@@ -178,7 +178,7 @@ Blockly.Blocks['frequency'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/joystick.png",46,38))
+		.appendField(new Blockly.FieldImage("images/notas.png",62,38))
 	    .appendField(Blockly.Msg.Note)
         .appendField(new Blockly.FieldDropdown([['C (do)','C'],['C# (do#)','C#'],['D (re)','D'],['D# (re#)','D#'],['E (mi)','E'],['F (fa)','F'],['F# (fa#)','F#'],['G (sol)','G'],['G# (sol#)','G#'],['A (la)','A'],['A# (la#)','A#'],['B (si)','B']]), "NOTE");
     this.appendDummyInput()
