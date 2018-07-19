@@ -168,7 +168,7 @@ Blockly.Blocks['actuator_notone'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip("Stops the generation of a square wave triggered by tone().Has no effect if no tone is being generated.NOTE: If servomotor is used then the port10 doesn´t work, you must use other port");
+    this.setTooltip("Stops the generation of a square wave triggered by tone().Has no effect if no tone is being generated.NOTE: If servomotor is used then the port10 doesn´t work, you must use other port.If you want to play different pitches on multiple pins, you need to call noTone() on one pin before calling tone() on the next pin.");
   }
 };
 
