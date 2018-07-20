@@ -20,6 +20,7 @@
 		<script src="../../blocks/stepper.js"></script>
         <script src="../../blocks/servo.js"></script>
 		<script src="../../blocks/softBT.js"></script>
+		<script src="../../blocks/remoteControlMRT.js"></script>
 		<script src="../../blocks/serial1BT.js"></script>
         <script src="../../blocks/seriallcd.js"></script>
         <script src="../../blocks/seriallcdi2c.js"></script>
@@ -55,6 +56,7 @@
 		<script src="../../generators/arduino/stepper.js"></script>
         <script src="../../generators/arduino/servo.js"></script>
 		<script src="../../generators/arduino/softBT.js"></script>
+		<script src="../../generators/arduino/remoteControlMRT.js"></script>
 		<script src="../../generators/arduino/serial1BT.js"></script>
         <script src="../../generators/arduino/seriallcd.js"></script>
         <script src="../../generators/arduino/seriallcdi2c.js"></script>
@@ -461,7 +463,11 @@
 		
 		</category>
 	  </category>
-			
+	  <category id="catRemoteIR" colour="200"> 
+	   <block type="Init_remotecontrolMRT"></block>
+	   <block type="IR_Remote_Key"></block>
+	   </category>
+	   <sep></sep>
 	  <category id="catMotors" colour="80"> 
 		  <category id="catMotorMRT" colour="80">        
             <block type="motor_run" >
@@ -526,6 +532,8 @@
 		  		   
 		 </category>
 	  </category>
+	  
+	   <sep></sep>
  <category id="catSimpleSensorsALL" colour="220"> 
  
 	<category id="catSimpleSensors" colour="220"> 
@@ -569,8 +577,7 @@
 		 <block type="Alcohol_status_sensor"></block>	
 		 <block type="Water_sensor"></block>
 		 <block type="Moisture_sensor"></block>	
-		 <block type="Vapor_sensor"></block>	
-				 
+		 <block type="Vapor_sensor"></block>		
 	</category > 
 </category>
 		

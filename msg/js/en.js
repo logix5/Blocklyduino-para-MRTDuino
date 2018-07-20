@@ -565,6 +565,12 @@ Blockly.Msg.SERVO_ReadDegree="Read Degrees";
 Blockly.Msg.SERVO_Attached="Servo Attached?";
 Blockly.Msg.SERVO_Detach="Detach Servo PIN#";
 
+//REMOTE CONTROL IR_DETECTED
+Blockly.Msg.MRT_IR="Init Remote Control IR MRT";
+Blockly.Msg.MRT_CHANNEL="Channel";
+Blockly.Msg.MRT_KEY="Key MRT";
+Blockly.Msg.MRT_PRESSED="Pressed?";
+
 //SERIAL LCD I2C
 //Blockly.Msg.LCD_Serial="Serial LCD";
 //Blockly.Msg.LCD_Print_Line1="print line 1";

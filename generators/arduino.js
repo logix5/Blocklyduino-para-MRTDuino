@@ -76,9 +76,9 @@ var profile = {
     description: "Arduino Leonardo board",
     digital: [["Port1", "13"],["Port2", "15"], ["Port3", "16"], ["Port4", "14"], ["Port5", "18"], ["Port6", "19"], ["Port7", "20"], ["Port8", "21"], ["Port9", "5"], ["Port10", "9"], ["Port11", "11"], ["Port12", "12"], ["Port13", "2"], ["Port14", "3"], ["Port15", "0"], ["Port16", "1"]],
 	digital_input: [["Port1", "13"],["Port2", "15"], ["Port3", "16"], ["Port4", "14"], ["Port5", "18"], ["Port6", "19"], ["Port7", "20"], ["Port8", "21"], ["Port9", "5"], ["Port10", "9"], ["Port11", "11"], ["Port12", "12"]],
-    //digital_2: [["0", "0"],["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["6", "6"], ["7", "7"], ["8", "8"], ["9", "9"], ["10", "10"], ["11", "11"], ["12", "12"], ["13", "13"]],
     analog_write: [["Port1", "13"], ["Port9", "5"], ["Port10", "9"], ["Port11", "11"], ["Port14", "3"],["Pin Remote control 1", "10"]],
 	analog: [["Port5", "A0"], ["Port6", "A1"], ["Port7", "A2"], ["Port8", "A3"], ["Port10", "A9"], ["Port12", "A11"],["Pin Remote control 1", "A10"],["Pin Remote control 2", "A4"],["Pin Remote control 3", "A5"]],
+	interrupt: [["Port13", "2"], ["Port14", "3"], ["Port15", "0"], ["Port16", "1"]],
     serial: 9600
   },
   arduino_mega: {

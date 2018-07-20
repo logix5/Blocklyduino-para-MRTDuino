@@ -9,6 +9,7 @@ var MSG = {
   catBTAll:"Bluetooth",
   catBTSerial1:"BT Serial Uart1",
   catBTSoftSerial:"BT Software Serial",
+  catRemoteIR:"IR Remote Control",
   catMotors:"Motors",
   catMotorMRT:"Motor MRT",
   catStepper:"Stepper",
