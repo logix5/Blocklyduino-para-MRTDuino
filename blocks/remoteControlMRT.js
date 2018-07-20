@@ -40,7 +40,7 @@ Blockly.Blocks['Init_remotecontrolMRT'] = {
   init: function() {
     this.setColour(200);
 	this.appendDummyInput()
-        //.appendField(new Blockly.FieldImage("images/Servo.png",50,38))
+        .appendField(new Blockly.FieldImage("images/irreceiverMRT.png",26,38))
 		.appendField(Blockly.Msg.MRT_IR)
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.interrupt), "PIN");
@@ -59,7 +59,7 @@ Blockly.Blocks['IR_Remote_Key'] = {
   init: function() {
     this.setColour(200);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/joystick.png",46,38))
+		.appendField(new Blockly.FieldImage("images/remotecontrol.png",65,38))
 	    .appendField(Blockly.Msg.MRT_KEY)
 		.appendField(new Blockly.FieldDropdown([["UP", "0x1FC3"], ["DOWN", "0x1F"],["LEFT", "0x07"],["RIGHT", "0x73"],["UP and LEFT", "0x7C3"],["UP and RIGHT", "0x7F"],["DOWN and LEFT", "0x70F"],["DOWN and RIGHT", "0x1CF"],["F1", "0x7CF"],["F2", "0x1C3F"],["F3", "0x7F3"],["F4", "0x1CCF"],["F5", "0x1F0F"],["F6", "0x703"],["OFF", "0x733"]]), "KEY")
 	this.appendDummyInput()
