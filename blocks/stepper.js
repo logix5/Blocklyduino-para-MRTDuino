@@ -20,7 +20,7 @@
 
 /**
  * @fileoverview Colour blocks for Blockly.
- * @author fraser@google.com (Neil Fraser)
+ * @author fraser@google.com (Neil Fraser)  
  */
  
  /***************************************************************
