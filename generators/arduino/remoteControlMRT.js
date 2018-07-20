@@ -12,7 +12,7 @@ Blockly.Arduino['Init_remotecontrolMRT'] = function(block) {
   var dropdown_pin = this.getFieldValue('PIN');
   var Channel = this.getFieldValue('CHANNEL');
   
-  Blockly.Arduino.definitions_['include_enableinterrupt'] = '<EnableInterrupt.h>\n';
+  Blockly.Arduino.definitions_['include_enableinterrupt'] = '#include <EnableInterrupt.h>\n';
   Blockly.Arduino.definitions_['defines_remoteMRT'] = '#define Timeout 500\n'+
 '#define Shift 8\n' +
 'unsigned long time, dtime,timeout_mark;\n' +
@@ -29,7 +29,7 @@ Blockly.Arduino['Init_remotecontrolMRT'] = function(block) {
 'bool RC(long BT_ID)\n' +
 '{ \n' +
 '  if (Timeout < millis() - timeout_mark)\n' +
-'   Button_ID = OFF_KEY;\n' +
+'   Button_ID = 0x733;\n' +
 '  if (BT_ID == Button_ID) \n' +
 '    return 1;\n' +
 '  return 0;  \n' +  
