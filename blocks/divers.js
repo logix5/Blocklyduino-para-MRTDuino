@@ -28,40 +28,6 @@ goog.provide('Blockly.Blocks.divers');
 
 goog.require('Blockly.Blocks');
 
-/*
-Blockly.Blocks['grove_temporature_sensor'] = {
-  helpUrl: 'http://www.seeedstudio.com/wiki/Project_Seven_-_Temperature',
-  init: function() {
-    this.setColour(150);
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.VAR_TemSens)
-        .appendField(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/b/b0/Temperature1.jpg/400px-Temperature1.jpg", 64, 64))
-        .appendField(Blockly.Msg.PIN)
-        .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN");
-    this.setOutput(true, 'Number');
-    this.setTooltip('return number of ambient temperature in ℃');
-  }
-};*/
-
-/*
-Blockly.Blocks['grove_motor_shield'] = {
-  helpUrl: 'http://www.seeedstudio.com/wiki/Motor_Shield',
-  init: function() {
-    this.setColour(150);
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.VAR_Motor)
-        .appendField(new Blockly.FieldImage("http://www.seeedstudio.com/wiki/images/thumb/4/4d/Smotoshield2.jpg/400px-Smotoshield2.jpg", 64, 64))
-        .appendField(new Blockly.FieldDropdown([[Blockly.Msg.Stop, "stop"], [Blockly.Msg.Forward, "forward"], [Blockly.Msg.Right, "right"], [Blockly.Msg.Left, "left"], [Blockly.Msg.Backward, "backward"]]), "DIRECTION");
-    //this.appendValueInput("SPEED", 'Number')
-    //    .setCheck('Number')
-    //    .setAlign(Blockly.ALIGN_RIGHT)
-    //    .appendField("Speed");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip('Drive two brushed DC motors');
-  }
-}; */
-
 Blockly.Blocks['base_delayms'] = {
   helpUrl: 'http://arduino.cc/en/Reference/delay',
   init: function() {

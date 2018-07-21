@@ -121,3 +121,18 @@ Blockly.Blocks['inout_digital_write'] = {
     this.setTooltip(Blockly.Msg.INOUT_TOOLTIP_WRITE);
   }
 };
+
+Blockly.Blocks['advanced_pulsein'] = {
+  helpUrl: 'http://arduino.cc/en/Reference/pulseIn',
+  init: function() {
+    this.setColour(10);
+    this.appendDummyInput()
+                .appendField(Blockly.Msg.PulseIn)
+                .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN")
+            	.appendField(Blockly.Msg.INOUT_STAT)
+                .appendField(new Blockly.FieldDropdown([[Blockly.Msg.INOUT_HIGH_LEVEL, "HIGH"], [Blockly.Msg.INOUT_LOW_LEVEL, "LOW"]]), "STAT");
+    this.setOutput(true, 'Number');
+    this.setTooltip('Reads a pulse (either HIGH or LOW) on a pin. For example, if value is HIGH, pulseIn() waits for the pin to go HIGH, starts timing, then waits for the pin to go LOW and stops timing. Returns the length of the pulse in microseconds. Gives up and returns 0 if no pulse starts within a specified time out.');
+  }
+};
+
