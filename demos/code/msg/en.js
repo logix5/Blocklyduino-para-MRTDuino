@@ -18,6 +18,8 @@ var MSG = {
   catSimpleSensors:"Sensors I",
   catSimpleSensors2: "Sensors II",
   catSimpleSensors3: "Sensors III",
+  catOtherSensors:"Other Sensors",
+  catds18b20:"DS18B20",
   catSimpleActuators:"Simple Actuators",
   catDisplay:"Displays",
   catSerialLCD:"Serial LCD",

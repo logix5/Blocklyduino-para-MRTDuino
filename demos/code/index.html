@@ -25,6 +25,7 @@
         <script src="../../blocks/seriallcd.js"></script>
         <script src="../../blocks/seriallcdi2c.js"></script>
 		<script src="../../blocks/simpleSensors.js"></script>
+		<script src="../../blocks/Temp-ds18b20.js"></script>
 		<script src="../../blocks/simpleActuators.js"></script>
         <script src="../../blocks/divers.js"></script>
         <script src="../../blocks/logic.js"></script>
@@ -62,6 +63,7 @@
         <script src="../../generators/arduino/seriallcdi2c.js"></script>
 		<script src="../../generators/arduino/simpleSensors.js"></script>
 		<script src="../../generators/arduino/simpleActuators.js"></script>
+		<script src="../../generators/arduino/Temp-ds18b20.js"></script>
         <script src="../../generators/arduino/divers.js"></script>
         <script src="../../generators/arduino/math.js"></script>
         <script src="../../generators/arduino/logic.js"></script>
@@ -578,9 +580,30 @@
 		 <block type="Alcohol_status_sensor"></block>	
 		 <block type="Water_sensor"></block>
 		 <block type="Moisture_sensor"></block>	
-		 <block type="Vapor_sensor"></block>		
+		 <block type="Vapor_sensor"></block>	
+ 
+		 
 	</category > 
 </category>
+
+<category id="catOtherSensors" colour="220"> 
+	<category id="catds18b20" colour="220"> 
+	  <block type="Init_Temp_ds18b20"></block>
+	  <block type="order_read_temeperature_ds18b20"></block>
+	  <block type="read_temeperature_ds18b20">
+				<value name="Sensor">
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+	  </block>
+	  
+	  
+	</category>
+ 
+</category>
+
+
 		
 	<category id="catSimpleActuators" colour="220"> 
 		<block type="actuator_led"></block>

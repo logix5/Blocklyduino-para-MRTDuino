@@ -457,6 +457,11 @@ Blockly.Msg.Note="Note";
 Blockly.Msg.Octave="Octave";
 //Blockly.Msg.Duration="Duration(ms)";
 
+//OTHER SENSORS
+Blockly.Msg.TempDS18B20="Init DS18B20 temperature sensor ";
+Blockly.Msg.OrderReadTempDS18B20="DS18B20 Order to read the temperature";
+Blockly.Msg.ReadTempDS18B20="DS18B20 Read the temperature ºC #Sensor";
+
 //IN OUT
 Blockly.Msg.INOUT_HIGH_LEVEL="High";
 Blockly.Msg.INOUT_LOW_LEVEL="Low";
