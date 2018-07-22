@@ -38,12 +38,14 @@ Blockly.Blocks['conversion_tochar'] = {
     this.setColour(Blockly.Blocks.conversion.HUE);
     this.appendValueInput("NAME")
         .appendField(Blockly.Msg.CONV_tochar);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
+	this.setOutput(true, 'String');
+   // this.setPreviousStatement(true);
+   // this.setNextStatement(true);
     this.setTooltip('Converts a value to the char data type.');
     this.setHelpUrl('https://www.arduino.cc/en/Reference/CharCast');
   }
 };
+
 
 Blockly.Blocks['conversion_tobyte'] = {
   init: function() {
