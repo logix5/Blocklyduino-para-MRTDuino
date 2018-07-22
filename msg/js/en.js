@@ -461,6 +461,16 @@ Blockly.Msg.Octave="Octave";
 Blockly.Msg.TempDS18B20="Init DS18B20 temperature sensor ";
 Blockly.Msg.OrderReadTempDS18B20="DS18B20 Order to read the temperature";
 Blockly.Msg.ReadTempDS18B20="DS18B20 Read the temperature ºC #Sensor";
+Blockly.Msg.RotaryEncoderInit="Init Rotary Encoder";
+Blockly.Msg.RotaryEncoderNumber="Rotary Encoder";
+Blockly.Msg.RE_Interrupt="using interrupts";
+Blockly.Msg.RE_withoutInterrupt="without interrupts";
+Blockly.Msg.RE_PINDT="Pin DT";
+Blockly.Msg.RE_PINCLK="Pin CLK";
+Blockly.Msg.RE_READ="Read Value";
+Blockly.Msg.RE_WRITE="Write Value";
+Blockly.Msg.RE_Button="Button";
+Blockly.Msg.RE_Pressed="pressed?";
 
 //IN OUT
 Blockly.Msg.INOUT_HIGH_LEVEL="High";

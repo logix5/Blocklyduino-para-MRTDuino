@@ -26,6 +26,7 @@
         <script src="../../blocks/seriallcdi2c.js"></script>
 		<script src="../../blocks/simpleSensors.js"></script>
 		<script src="../../blocks/Temp-ds18b20.js"></script>
+		<script src="../../blocks/RotaryEncoder.js"></script>
 		<script src="../../blocks/simpleActuators.js"></script>
         <script src="../../blocks/divers.js"></script>
         <script src="../../blocks/logic.js"></script>
@@ -64,7 +65,8 @@
 		<script src="../../generators/arduino/simpleSensors.js"></script>
 		<script src="../../generators/arduino/simpleActuators.js"></script>
 		<script src="../../generators/arduino/Temp-ds18b20.js"></script>
-        <script src="../../generators/arduino/divers.js"></script>
+		<script src="../../generators/arduino/RotaryEncoder.js"></script>
+		<script src="../../generators/arduino/divers.js"></script>
         <script src="../../generators/arduino/math.js"></script>
         <script src="../../generators/arduino/logic.js"></script>
         <script src="../../generators/arduino/loops.js"></script>
@@ -598,14 +600,29 @@
                     </block>
                 </value>
 	  </block>
-	  
-	  
 	</category>
- 
+	<category id="catRotaryEncoder" colour="220"> 
+	 <block type="Init_RotaryEncoderInterrupt">
+				 <field name="PINDT">0</field>
+				 <field name="PINCLK">1</field>
+	 </block>
+	 <block type="Init_RotaryEncoder">
+				 <field name="PINDT">15</field>
+				 <field name="PINCLK">16</field>
+	 
+	 </block>
+	 <block type="RotaryEncoder_Write">
+				<value name="Writecounter">
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+	 </block>
+	 <block type="RotaryEncoder_Read"></block>
+	 <block type="rotaryencoder_button_sensor"></block>
+	</category>
 </category>
 
-
-		
 	<category id="catSimpleActuators" colour="220"> 
 		<block type="actuator_led"></block>
 		<block type="actuator_ledlevel">
