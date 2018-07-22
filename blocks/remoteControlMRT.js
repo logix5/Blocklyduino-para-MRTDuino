@@ -70,5 +70,22 @@ Blockly.Blocks['IR_Remote_Key'] = {
   }
 };
 
+Blockly.Blocks['Init_generalremotecontrol'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(200);
+	this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("images/genericRC.png",57,38))
+		.appendField(Blockly.Msg.GENERAL_IR)
+        .appendField(Blockly.Msg.PIN)
+        .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN");
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.GENERAL_PRESSED)		
+	this.setInputsInline(true);
+    this.setOutput(true, 'Number');
+    this.setTooltip('Read the key pressed by a remote control');
+  }
+};
+
 
 

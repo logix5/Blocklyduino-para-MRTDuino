@@ -575,6 +575,8 @@ Blockly.Msg.MRT_IR="Init Remote Control IR MRT";
 Blockly.Msg.MRT_CHANNEL="Channel";
 Blockly.Msg.MRT_KEY="Key MRT";
 Blockly.Msg.MRT_PRESSED="Pressed?";
+Blockly.Msg.GENERAL_IR="Generic Remote Control IR";
+Blockly.Msg.GENERAL_PRESSED="Read key";
 
 //SERIAL LCD I2C
 //Blockly.Msg.LCD_Serial="Serial LCD";

@@ -151,3 +151,34 @@ Blockly.Arduino['IR_Remote_Key'] = function(block) {
   var code = 'RC('+key_detected+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
+
+Blockly.Arduino['Init_generalremotecontrol'] = function(block) {
+  var dropdown_pin = this.getFieldValue('PIN');
+   
+  Blockly.Arduino.definitions_['include_IRremote'] = '#include <IRremote.h>\n';
+  Blockly.Arduino.definitions_['reception_function'] = 'IRrecv ir_rx('+dropdown_pin+');\n'+
+'decode_results ir_rx_results;\n'+
+'\n'+
+'unsigned long fnc_ir_rx_decode()\n'+
+' {\n'+
+'  bool decoded=false;\n'+
+'  if( ir_rx.decode(&ir_rx_results))\n'+
+'	{\n'+
+'		decoded=true;\n'+
+'		ir_rx.resume();\n'+
+'	}\n'+
+'	if(decoded) \n'+
+'		return ir_rx_results.value; \n'+
+'	else \n'+
+'		return 0;\n'+
+' }\n';
+  
+  
+  Blockly.Arduino.setups_['setup_genericRC'] = 'ir_rx.enableIRIn();\n';
+  	 	 
+  var code='(unsigned long)fnc_ir_rx_decode()';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+
+
