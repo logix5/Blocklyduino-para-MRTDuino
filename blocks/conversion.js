@@ -52,8 +52,9 @@ Blockly.Blocks['conversion_tobyte'] = {
     this.setColour(Blockly.Blocks.conversion.HUE);
     this.appendValueInput("NAME")
         .appendField(Blockly.Msg.CONV_tobyte);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
+	this.setOutput(true, 'Number');
+    //this.setPreviousStatement(true);
+    //this.setNextStatement(true);
     this.setTooltip('Converts a value to the Byte data type. ');
     this.setHelpUrl('https://www.arduino.cc/en/Reference/ByteCast');
   }
@@ -64,8 +65,9 @@ Blockly.Blocks['conversion_toint'] = {
     this.setColour(Blockly.Blocks.conversion.HUE);
     this.appendValueInput("NAME")
         .appendField(Blockly.Msg.CONV_toint);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
+	this.setOutput(true, 'Number');
+    //this.setPreviousStatement(true);
+    //this.setNextStatement(true);
     this.setTooltip('Converts a value to the Int data type. ');
     this.setHelpUrl('https://www.arduino.cc/en/Reference/IntCast');
   }
@@ -76,9 +78,23 @@ Blockly.Blocks['conversion_tofloat'] = {
     this.setColour(Blockly.Blocks.conversion.HUE);
     this.appendValueInput("NAME")
         .appendField(Blockly.Msg.CONV_tofloat);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
+	this.setOutput(true, 'Number');
+    //this.setPreviousStatement(true);
+    //this.setNextStatement(true);
     this.setTooltip('Converts a value to the float data type. ');
     this.setHelpUrl('https://www.arduino.cc/en/Reference/floatCast');
+  }
+};
+
+
+Blockly.Blocks['conversion_toString'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.conversion.HUE);
+    this.appendValueInput("NAME")
+		//.setCheck('Number')
+        .appendField(Blockly.Msg.CONV_toString);
+    this.setOutput(true, 'String');
+    this.setTooltip('');
+    this.setHelpUrl('https://www.arduino.cc/en/Reference/StringConstructor');
   }
 };
