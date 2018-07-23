@@ -94,7 +94,7 @@ Blockly.Blocks['conversion_toString'] = {
 		//.setCheck('Number')
         .appendField(Blockly.Msg.CONV_toString);
     this.setOutput(true, 'String');
-    this.setTooltip('');
+    this.setTooltip('Converts a value to the String data type.');
     this.setHelpUrl('https://www.arduino.cc/en/Reference/StringConstructor');
   }
 };

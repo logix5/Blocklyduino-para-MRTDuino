@@ -28,6 +28,7 @@ goog.provide('Blockly.Blocks.divers');
 
 goog.require('Blockly.Blocks');
 
+/*
 Blockly.Blocks['base_delayms'] = {
   helpUrl: 'http://arduino.cc/en/Reference/delay',
   init: function() {
@@ -51,7 +52,7 @@ Blockly.Blocks['millis'] = {
     this.setOutput(true, 'Number');
     this.setTooltip('Number of milliseconds since the program started (unsigned long)');
   }
-};
+};*/
 
 Blockly.Blocks['var_random'] = {
   init: function() {

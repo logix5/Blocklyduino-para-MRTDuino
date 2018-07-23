@@ -47,6 +47,8 @@ var MSG = {
   catArray:"Array",
   catLists: "Lists",
   catColour: "Colour",
+  catTime:"Time",
+  catGenericTime:"Generic",
   catVariables: "Variables",
   catFunctions: "Functions",
   listVariable: "list",

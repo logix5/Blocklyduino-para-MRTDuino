@@ -16,6 +16,7 @@
         <script src="../../blocks/serial.js"></script>
 		<script src="../../blocks/serial1.js"></script>
         <script src="../../blocks/softserial.js"></script>
+		<script src="../../blocks/genericTime.js"></script>
 		<script src="../../blocks/motorMRT.js"></script>
 		<script src="../../blocks/stepper.js"></script>
         <script src="../../blocks/servo.js"></script>
@@ -56,6 +57,7 @@
         <script src="../../generators/arduino/softserial.js"></script>
 		<script src="../../generators/arduino/motorMRT.js"></script>
 		<script src="../../generators/arduino/stepper.js"></script>
+		<script src="../../generators/arduino/genericTime.js"></script>
         <script src="../../generators/arduino/servo.js"></script>
 		<script src="../../generators/arduino/softBT.js"></script>
 		<script src="../../generators/arduino/remoteControlMRT.js"></script>
@@ -237,7 +239,54 @@
             <block type="text"></block>
             <block type="text_char"></block>
         </category>
-        <sep></sep>
+		 <category id="catTime" colour="230">
+		  <category id="catGenericTime" colour="230">
+		  <block type="base_delays">
+                <value name="DELAY_TIME">
+                    <block type="math_number" id="20">
+                        <field name="NUM">1</field>
+                    </block>
+                </value>
+            </block>
+		   <block type="base_delayms">
+                <value name="DELAY_TIME">
+                    <block type="math_number" id="20">
+                        <field name="NUM">1000</field>
+                    </block>
+                </value>
+            </block>
+			<block type="base_delaymicros">
+                <value name="DELAY_TIME">
+                    <block type="math_number" id="20">
+                        <field name="NUM">1000000</field>
+                    </block>
+                </value>
+            </block>    
+			<block type="seconds"></block>
+			<block type="millis"></block>
+			<block type="micros"></block>
+			<block type="tempo_no_delay">
+			 <field name="unit">s</field>
+			<value name="DELAY_TIME">
+                    <block type="math_number" id="20">
+                        <field name="NUM">5</field>
+                    </block>
+                </value>
+			</block>
+		  </category>
+		 </category>
+		 
+		 <category id="catDivers" colour="150">        
+            <block type="var_random"></block>
+			<block type="arduino_setup"></block>
+            <block type="various_constrain"></block>
+			<block type="conversion_tochar"></block>
+            <block type="conversion_tobyte"></block>
+            <block type="conversion_toint"></block>
+            <block type="conversion_tofloat"></block>
+			<block type="conversion_toString"></block>
+        </category>
+	  <sep></sep>	 
 
         <category id="catVariables" colour="330" custom="VARIABLE"></category>
 		<category id="catString" colour="330" custom="STRING"></category>
@@ -267,6 +316,7 @@
                 </block>
             </category>
         </category>
+		
 		
 	 <category id="catSerialAll" colour="30">
         <category id="catSerial" colour="30">
@@ -702,27 +752,7 @@
 				<block type="lcdi2c_blinkCursor"></block>				
             </category>
         </category>
-        <sep></sep>
-		
-		  <category id="catDivers" colour="150">
-          
-            <block type="base_delayms">
-                <value name="DELAY_TIME">
-                    <block type="math_number" id="20">
-                        <field name="NUM">1000</field>
-                    </block>
-                </value>
-            </block>
-            <block type="millis"></block>
-            <block type="var_random"></block>
-			<block type="arduino_setup"></block>
-            <block type="various_constrain"></block>
-			<block type="conversion_tochar"></block>
-            <block type="conversion_tobyte"></block>
-            <block type="conversion_toint"></block>
-            <block type="conversion_tofloat"></block>
-			<block type="conversion_toString"></block>
-        </category>
+      
 		
     </xml>
 

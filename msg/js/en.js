@@ -633,8 +633,19 @@ Blockly.Msg.Forward="Forward";
 Blockly.Msg.Right="Right";
 Blockly.Msg.Left="Left";
 Blockly.Msg.Backward="Backward";
-Blockly.Msg.DelayMs="Delay Ms";
-Blockly.Msg.SinceProgramStarted="Program started since";
+Blockly.Msg.DelayMicros="Delay microseconds";
+Blockly.Msg.DelayMs="Delay milliseconds";
+Blockly.Msg.DelayS="Delay seconds";
+Blockly.Msg.SinceProgramStarted="Milliseconds since the program started"; 
+Blockly.Msg.SecondSinceProgramStarted="Seconds since the program started";  
+Blockly.Msg.MicroSecondSinceProgramStarted="Microseconds since the program started";  
+Blockly.Msg.ARDUINO_BASE_TEMPO1 = "When";
+Blockly.Msg.ARDUINO_BASE_TEMPO2 = "elapsed";
+Blockly.Msg.ARDUINO_BASE_TEMPO_TIME = [["microseconds", "us"],["milliseconds", "ms"],["seconds", "s"]];
+Blockly.Msg.ARDUINO_BASE_TEMPO_TOOLTIP = "Verify if interval of time is elapsed, if so do instructions.";
+
+
+
 Blockly.Msg.RandomBetween="Random number between";
 Blockly.Msg.And="and";
 Blockly.Msg.Constrain="Constrain";
