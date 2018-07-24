@@ -49,3 +49,12 @@ Blockly.Arduino['inout_buildin_led'] = function(block) {
   var code = 'digitalWrite(13,'+dropdown_stat+');\n'
   return code;
 };
+
+Blockly.Arduino['advanced_pulsein'] = function(block) {
+  var dropdown_pin = this.getFieldValue('PIN');
+  var dropdown_stat = this.getFieldValue('STAT');
+  
+  Blockly.Arduino.setups_['setup_input_'+dropdown_pin] = 'pinMode('+dropdown_pin+', INPUT);';
+  var code = 'pulseIn('+dropdown_pin+','+dropdown_stat+ ');';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};

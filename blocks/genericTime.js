@@ -39,7 +39,7 @@ goog.require('Blockly.Blocks');
 Blockly.Blocks['base_delayms'] = {
   helpUrl: 'http://arduino.cc/en/Reference/delay',
   init: function() {
-    this.setColour(230);
+    this.setColour(190);
 	this.appendValueInput("DELAY_TIME", 'Number')
 		.appendField(new Blockly.FieldImage("images/crono.png",19,20))
         .appendField(Blockly.Msg.DelayMs)
@@ -54,7 +54,7 @@ Blockly.Blocks['base_delayms'] = {
 Blockly.Blocks['base_delays'] = {
   helpUrl: 'http://arduino.cc/en/Reference/delay',
   init: function() {
-     this.setColour(230);
+     this.setColour(190);
     this.appendValueInput("DELAY_TIME", 'Number')
 		.appendField(new Blockly.FieldImage("images/crono.png",19,20))
         .appendField(Blockly.Msg.DelayS)
@@ -69,7 +69,7 @@ Blockly.Blocks['base_delays'] = {
 Blockly.Blocks['base_delaymicros'] = {
   helpUrl: 'http://arduino.cc/en/Reference/delay',
   init: function() {
-     this.setColour(230);
+     this.setColour(190);
     this.appendValueInput("DELAY_TIME", 'Number')
 		.appendField(new Blockly.FieldImage("images/crono.png",19,20))
         .appendField(Blockly.Msg.DelayMicros)
@@ -84,7 +84,7 @@ Blockly.Blocks['base_delaymicros'] = {
 Blockly.Blocks['micros'] = {
   helpUrl: 'http://arduino.cc/en/Reference/Millis',
   init: function() {
-     this.setColour(230);
+     this.setColour(190);
       this.appendDummyInput()
 		  .appendField(new Blockly.FieldImage("images/crono.png",19,20))
           .appendField(Blockly.Msg.MicroSecondSinceProgramStarted);
@@ -96,7 +96,7 @@ Blockly.Blocks['micros'] = {
 Blockly.Blocks['millis'] = {
   helpUrl: 'http://arduino.cc/en/Reference/Millis',
   init: function() {
-     this.setColour(230);
+     this.setColour(190);
       this.appendDummyInput()
 		  .appendField(new Blockly.FieldImage("images/crono.png",19,20))
           .appendField(Blockly.Msg.SinceProgramStarted);
@@ -108,7 +108,7 @@ Blockly.Blocks['millis'] = {
 Blockly.Blocks['seconds'] = {
   helpUrl: 'http://arduino.cc/en/Reference/Millis',
   init: function() {
-     this.setColour(230);
+     this.setColour(190);
       this.appendDummyInput()
 		  .appendField(new Blockly.FieldImage("images/crono.png",19,20))
           .appendField(Blockly.Msg.SecondSinceProgramStarted);
@@ -119,7 +119,7 @@ Blockly.Blocks['seconds'] = {
 
 Blockly.Blocks['tempo_no_delay'] = {
 	init: function() {
-		this.setColour(230);
+		this.setColour(190);
 		this.appendValueInput("DELAY_TIME")
 			.setCheck("Number")
 			.appendField(new Blockly.FieldImage("images/crono.png",19,20))

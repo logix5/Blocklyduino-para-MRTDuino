@@ -699,6 +699,7 @@ Blockly.Msg.STRING_Equal="Equal to ";
 Blockly.Msg.CONV_tochar="Convert to char "; 
 Blockly.Msg.CONV_tobyte="Convert to Byte ";
 Blockly.Msg.CONV_toint="Convert to Int ";
+Blockly.Msg.CONV_tounsigendint="Convert to unsigned Int ";
 Blockly.Msg.CONV_tofloat="Convert to Float ";
 Blockly.Msg.CONV_toString="Convert to String ";
     

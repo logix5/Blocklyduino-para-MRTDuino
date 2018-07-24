@@ -39,3 +39,21 @@ Blockly.Arduino.text_char = function() {
   var code = Blockly.Arduino.simplequote_(this.getFieldValue('TEXT'));
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
+
+
+Blockly.Arduino['conversion_tochar'] = function(block) {
+var value_name = Blockly.Arduino.valueToCode(block, 'NAME', Blockly.Arduino.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+ var code = 'char('+value_name+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+}
+
+
+Blockly.Arduino['conversion_toString'] = function(block) {
+	var value_name = Blockly.Arduino.valueToCode(block, 'NAME', Blockly.Arduino.ORDER_ATOMIC);
+	var code = 'String('+value_name+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+
+

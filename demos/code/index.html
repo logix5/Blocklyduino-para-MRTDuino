@@ -29,7 +29,6 @@
 		<script src="../../blocks/Temp-ds18b20.js"></script>
 		<script src="../../blocks/RotaryEncoder.js"></script>
 		<script src="../../blocks/simpleActuators.js"></script>
-        <script src="../../blocks/divers.js"></script>
         <script src="../../blocks/logic.js"></script>
         <script src="../../blocks/loops.js"></script>
         <script src="../../blocks/math.js"></script>
@@ -38,7 +37,6 @@
         <script src="../../blocks/variables.js"></script>   
         <script src="../../blocks/procedures.js"></script>
         <script src="../../blocks/string.js"></script>  
-        <script src="../../blocks/conversion.js"></script> 
         <script src="../../blocks/advanced.js"></script> 
 
         <script src="../../core/variables.js"></script> 
@@ -68,7 +66,6 @@
 		<script src="../../generators/arduino/simpleActuators.js"></script>
 		<script src="../../generators/arduino/Temp-ds18b20.js"></script>
 		<script src="../../generators/arduino/RotaryEncoder.js"></script>
-		<script src="../../generators/arduino/divers.js"></script>
         <script src="../../generators/arduino/math.js"></script>
         <script src="../../generators/arduino/logic.js"></script>
         <script src="../../generators/arduino/loops.js"></script>
@@ -77,7 +74,6 @@
         <script src="../../generators/arduino/variables.js"></script>
         <script src="../../generators/arduino/procedures.js"></script>
         <script src="../../generators/arduino/string.js"></script>
-        <script src="../../generators/arduino/conversion.js"></script>
         <script src="../../generators/arduino/advanced.js"></script>
 
         <script type="text/javascript" src="Blob.js"></script>
@@ -207,7 +203,7 @@
             <block type="base_map">
                 <value name="value">
                     <block type="math_number">
-                        <field name="NUM">0</field>
+                        <field name="NUM">100</field>
                     </block>
                 </value>
                 <value name="fromLow">
@@ -217,7 +213,7 @@
                 </value>
                 <value name="fromHigh">
                     <block type="math_number">
-                        <field name="NUM">0</field>
+                        <field name="NUM">1023</field>
                     </block>
                 </value>
                 <value name="toLow">
@@ -227,20 +223,39 @@
                 </value>
                 <value name="toHigh">
                     <block type="math_number">
-                        <field name="NUM">0</field>
+                        <field name="NUM">255</field>
                     </block>
                 </value>
             </block>
+		    <block type="var_random">
+				<value name="rand_min">
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+                <value name="rand_max">
+                    <block type="math_number">
+                        <field name="NUM">100</field>
+                    </block>
+                </value>
+			</block>
+			<block type="various_constrain"></block>
             <block type="math_number"></block>
             <block type="math_arithmetic"></block>
 			<block type="math_single"></block>
+			<block type="conversion_tobyte"></block>
+            <block type="conversion_tounsignedint"></block>
+			<block type="conversion_toint"></block>
+            <block type="conversion_tofloat"></block>
         </category>
         <category id="catText" colour="160">
             <block type="text"></block>
             <block type="text_char"></block>
+			<block type="conversion_tochar"></block>
+			<block type="conversion_toString"></block>
         </category>
-		 <category id="catTime" colour="230">
-		  <category id="catGenericTime" colour="230">
+		 <category id="catTime" colour="190">
+		  <category id="catGenericTime" colour="190">
 		  <block type="base_delays">
                 <value name="DELAY_TIME">
                     <block type="math_number" id="20">
@@ -277,14 +292,7 @@
 		 </category>
 		 
 		 <category id="catDivers" colour="150">        
-            <block type="var_random"></block>
 			<block type="arduino_setup"></block>
-            <block type="various_constrain"></block>
-			<block type="conversion_tochar"></block>
-            <block type="conversion_tobyte"></block>
-            <block type="conversion_toint"></block>
-            <block type="conversion_tofloat"></block>
-			<block type="conversion_toString"></block>
         </category>
 	  <sep></sep>	 
 

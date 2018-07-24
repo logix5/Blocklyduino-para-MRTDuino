@@ -163,3 +163,56 @@ Blockly.Arduino['math_single'] = function(block) {
   }
   return [code, Blockly.Arduino.ORDER_MULTIPLICATIVE];
 };
+
+Blockly.Arduino['var_random'] = function(block) {
+  var value_rand_min = Blockly.Arduino.valueToCode(this, 'rand_min', Blockly.Arduino.ORDER_ATOMIC);
+  var value_rand_max = Blockly.Arduino.valueToCode(this, 'rand_max', Blockly.Arduino.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'random('+value_rand_min+','+value_rand_max+')';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.Arduino.ORDER_NONE];
+};
+
+
+Blockly.Arduino['various_constrain'] = function(block) {
+  var value_x = Blockly.Arduino.valueToCode(this, 'x', Blockly.Arduino.ORDER_ATOMIC);
+  var value_a = Blockly.Arduino.valueToCode(this, 'a', Blockly.Arduino.ORDER_ATOMIC);
+  var value_b = Blockly.Arduino.valueToCode(this, 'b', Blockly.Arduino.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'constrain('+value_x+','+value_a+','+value_b+')';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.Arduino.ORDER_NONE];
+};
+
+Blockly.Arduino['conversion_tobyte'] = function(block) {
+var value_name = Blockly.Arduino.valueToCode(block, 'NAME', Blockly.Arduino.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'byte('+value_name+')';
+ return [code, Blockly.Arduino.ORDER_ATOMIC];
+}
+
+Blockly.Arduino['conversion_toint'] = function(block) {
+var value_name = Blockly.Arduino.valueToCode(block, 'NAME', Blockly.Arduino.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'int('+value_name+')';
+ return [code, Blockly.Arduino.ORDER_ATOMIC]; 
+}
+
+Blockly.Arduino['conversion_tounsignedint'] = function(block) {
+var value_name = Blockly.Arduino.valueToCode(block, 'NAME', Blockly.Arduino.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'unsigned int('+value_name+')';
+ return [code, Blockly.Arduino.ORDER_ATOMIC]; 
+}
+
+Blockly.Arduino['conversion_tofloat'] = function(block) {
+var value_name = Blockly.Arduino.valueToCode(block, 'NAME', Blockly.Arduino.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'float('+value_name+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+}
+
+
+
+
+

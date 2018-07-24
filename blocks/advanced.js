@@ -28,8 +28,6 @@ goog.provide('Blockly.Blocks.advanced');
 
 goog.require('Blockly.Blocks');
 
-
-
 Blockly.Blocks['arduino_setup'] = {
   init: function() {
 	  this.setColour(150);
