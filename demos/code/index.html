@@ -175,26 +175,26 @@
             <block type="cont_continue"></block>  
             <block type="controls_for">
                 <value name="FROM">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">1</field>
-                    </block>
+                    </shadow>
                 </value>
                 <value name="TO">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">10</field>
-                    </block>
+                    </shadow>
                 </value>
                 <value name="BY">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">1</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>   
             <block type="controls_repeat_x" x="113" y="38">
                 <value name="TIMES">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">10</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>
         </category>
@@ -202,41 +202,41 @@
         <category id="catMath" colour="230">
             <block type="base_map">
                 <value name="value">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">100</field>
-                    </block>
+                    </shadow>
                 </value>
                 <value name="fromLow">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">0</field>
-                    </block>
+                    </shadow>
                 </value>
                 <value name="fromHigh">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">1023</field>
-                    </block>
+                    </shadow>
                 </value>
                 <value name="toLow">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">0</field>
-                    </block>
+                    </shadow>
                 </value>
                 <value name="toHigh">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">255</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>
 		    <block type="var_random">
 				<value name="rand_min">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">0</field>
-                    </block>
+                    </shadow>
                 </value>
                 <value name="rand_max">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">100</field>
-                    </block>
+                    </shadow>
                 </value>
 			</block>
 			<block type="various_constrain"></block>
@@ -258,23 +258,23 @@
 		  <category id="catGenericTime" colour="190">
 		  <block type="base_delays">
                 <value name="DELAY_TIME">
-                    <block type="math_number" id="20">
+                    <shadow type="math_number" id="20">
                         <field name="NUM">1</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>
 		   <block type="base_delayms">
                 <value name="DELAY_TIME">
-                    <block type="math_number" id="20">
+                    <shadow type="math_number" id="20">
                         <field name="NUM">1000</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>
 			<block type="base_delaymicros">
                 <value name="DELAY_TIME">
-                    <block type="math_number" id="20">
+                    <shadow type="math_number" id="20">
                         <field name="NUM">1000000</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>    
 			<block type="seconds"></block>
@@ -283,9 +283,9 @@
 			<block type="tempo_no_delay">
 			 <field name="unit">s</field>
 			<value name="DELAY_TIME">
-                    <block type="math_number" id="20">
+                    <shadow type="math_number" id="20">
                         <field name="NUM">5</field>
-                    </block>
+                    </shadow>
                 </value>
 			</block>
 		  </category>
@@ -320,9 +320,9 @@
                 <block type="inout_analog_read"></block>
                 <block type="inout_analog_write" x="63" y="38">
                     <value name="Value">
-                        <block  type="math_number">
+                        <shadow  type="math_number">
                             <field name="NUM">0</field>
-                        </block>
+                        </shadow>
                     </value>
                 </block>
             </category>
@@ -337,32 +337,32 @@
             <block type="serial_printfor" x="13" y="38">
                 <field name="TYPE">DEC</field>
                 <value name="CONTENT">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">0</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>
             <block type="serial_read"></block>
             <block type="serial_available"></block>
             <block type="serial_print" x="13" y="13">
                 <value name="CONTENT">
-                    <block type="text">
+                    <shadow type="text">
                         <field name="TEXT">text</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>
             <block type="serial_printL" x="13" y="38">
                 <value name="CONTENT">
-                    <block type="text">
+                    <shadow type="text">
                         <field name="TEXT">text</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>
             <block type="serial_write" x="38" y="38">
                 <value name="CONTENT">
-                    <block type="text">
+                    <shadow type="text">
                         <field name="TEXT">A</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>
             <block type="serial_flush"></block>
@@ -375,32 +375,32 @@
 			 <block type="serial1_printfor" x="13" y="38">
                 <field name="TYPE">DEC</field>
                 <value name="CONTENT">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">0</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>
 			<block type="serial1_available"></block> 
             <block type="serial1_read"></block>
             <block type="serial1_print">
 			    <value name="CONTENT">
-                    <block type="text">
+                    <shadow type="text">
                         <field name="TEXT">text</field>
-                    </block>
+                    </shadow>
                 </value>
 			</block>
             <block type="serial1_println">
 			 <value name="CONTENT">
-                    <block type="text">
+                    <shadow type="text">
                         <field name="TEXT">text</field>
-                    </block>
+                    </shadow>
                 </value>
 			</block>
 			<block type="serial1_write" x="38" y="38">
                 <value name="CONTENT">
-                    <block type="text">
+                    <shadow type="text">
                         <field name="TEXT">A</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>
             
@@ -416,32 +416,32 @@
 			<block type="soft_printfor" x="13" y="38">
                 <field name="TYPE">DEC</field>
                 <value name="CONTENT">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">0</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>
 			<block type="soft_available"></block>  
             <block type="soft_read"></block>
             <block type="soft_print">
 			    <value name="CONTENT">
-                    <block type="text">
+                    <shadow type="text">
                         <field name="TEXT">text</field>
-                    </block>
+                    </shadow>
                 </value>
 			</block>
             <block type="soft_println">
 			 <value name="CONTENT">
-                    <block type="text">
+                    <shadow type="text">
                         <field name="TEXT">text</field>
-                    </block>
+                    </shadow>
                 </value>
 			</block>
 			<block type="soft_write" x="38" y="38">
                 <value name="CONTENT">
-                    <block type="text">
+                    <shadow type="text">
                         <field name="TEXT">A</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>
            
@@ -456,32 +456,32 @@
 			 <block type="serial1_bt_printfor" x="13" y="38">
                 <field name="TYPE">DEC</field>
                 <value name="CONTENT">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">0</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>
 			<block type="serial1_bt_available"></block> 
             <block type="serial1_bt_read"></block>
             <block type="serial1_bt_print">
 			    <value name="CONTENT">
-                    <block type="text">
+                    <shadow type="text">
                         <field name="TEXT">text</field>
-                    </block>
+                    </shadow>
                 </value>
 			</block>
             <block type="serial1_bt_println">
 			 <value name="CONTENT">
-                    <block type="text">
+                    <shadow type="text">
                         <field name="TEXT">text</field>
-                    </block>
+                    </shadow>
                 </value>
 			</block>
 			<block type="serial1_bt_write" x="38" y="38">
                 <value name="CONTENT">
-                    <block type="text">
+                    <shadow type="text">
                         <field name="TEXT">A</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>
             
@@ -497,32 +497,32 @@
 			<block type="soft_bt_printfor" x="13" y="38">
                 <field name="TYPE">DEC</field>
                 <value name="CONTENT">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">0</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>
 			<block type="soft_bt_available"></block>  
             <block type="soft_bt_read"></block>
             <block type="soft_bt_print">
 			    <value name="CONTENT">
-                    <block type="text">
+                    <shadow type="text">
                         <field name="TEXT">text</field>
-                    </block>
+                    </shadow>
                 </value>
 			</block>
             <block type="soft_bt_println">
 			 <value name="CONTENT">
-                    <block type="text">
+                    <shadow type="text">
                         <field name="TEXT">text</field>
-                    </block>
+                    </shadow>
                 </value>
 			</block>
 			<block type="soft_bt_write" x="38" y="38">
                 <value name="CONTENT">
-                    <block type="text">
+                    <shadow type="text">
                         <field name="TEXT">A</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>
 			
@@ -541,9 +541,9 @@
 			<field name="MOTOR_CON">ML1</field>
 			<field name="MOTOR_DIR">STOP</field>
 			<value name="CONTENT">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">0</field>
-                    </block>
+                    </shadow>
                 </value>
 			
 			</block>
@@ -552,14 +552,14 @@
         <category id="catServo" colour="80">        
             <block type="servo_move" x="55" y="38">
                 <value name="DEGREE">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">0</field>
-                    </block>
+                    </shadow>
                 </value>
                 <value name="DELAY_TIME">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">0</field>
-                    </block>
+                    </shadow>
                 </value>
             </block>
             <block type="servo_read_degrees"></block>
@@ -571,9 +571,9 @@
 		 <block type="stepper_configuration">
 		       
 				<value name="STEP_RPM">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">4096</field>
-                    </block>
+                    </shadow>
                 </value>
 				<field name="PIN_STEEPER1">21</field>
 				 <field name="PIN_STEEPER2">5</field>
@@ -583,16 +583,16 @@
 		 
 		   <block type="stepper_speed">
 				<value name="STEPPER_SPEED">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">20</field>
-                    </block>
+                    </shadow>
                 </value>
 		   </block>
 		   <block type="stepper_steps">
 				<value name="STEPPER_STEP">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">4096</field>
-                    </block>
+                    </shadow>
                 </value>
 		   
 		   </block>
@@ -656,9 +656,9 @@
 	  <block type="order_read_temeperature_ds18b20"></block>
 	  <block type="read_temeperature_ds18b20">
 				<value name="Sensor">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">0</field>
-                    </block>
+                    </shadow>
                 </value>
 	  </block>
 	</category>
@@ -674,9 +674,9 @@
 	 </block>
 	 <block type="RotaryEncoder_Write">
 				<value name="Writecounter">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">0</field>
-                    </block>
+                    </shadow>
                 </value>
 	 </block>
 	 <block type="RotaryEncoder_Read"></block>
@@ -688,9 +688,9 @@
 		<block type="actuator_led"></block>
 		<block type="actuator_ledlevel">
 		<value name="NUM">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">128</field>
-                    </block>
+                    </shadow>
                 </value>
 		</block>
 		<block type="actuator_rgbled">
@@ -703,14 +703,14 @@
 		<block type="actuator_rele"></block>
 		<block type="actuator_tonedure">
 				<value name="NUM">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">440</field>
-                    </block>
+                    </shadow>
                 </value>
                 <value name="DUR">
-                    <block type="math_number">
+                    <shadow type="math_number">
                         <field name="NUM">1000</field>
-                    </block>
+                    </shadow>
                 </value>
 		
 		</block>
@@ -726,14 +726,14 @@
                 <block type="lcdi2c_setup" x="38" y="138">
                     <field name="NAME">0x3F</field>
                     <value name="COLUMNS">
-                        <block type="math_number">
+                        <shadow type="math_number">
                             <field name="NUM">16</field>
-                        </block>
+                        </shadow>
                     </value>
                     <value name="ROWS">
-                        <block type="math_number">
+                        <shadow type="math_number">
                             <field name="NUM">2</field>
-                        </block>
+                        </shadow>
                     </value>
                 </block>
 				<block type="lcdi2c_bq_setup"></block>
@@ -743,19 +743,19 @@
 				<block type="lcdi2c_display"></block> 
                 <block type="lcdi2c_setcursor" x="38" y="113">
                     <value name="column">
-                        <block type="math_number">
+                        <shadow type="math_number">
                             <field name="NUM">1</field>
-                        </block>
+                        </shadow>
                     </value>
                     <value name="row">
-                        <block type="math_number">
+                        <shadow type="math_number">
                             <field name="NUM">1</field>
-                        </block>
+                        </shadow>
                     </value>
 					<value name="texttoprint">
-                        <block type="text">
+                        <shadow type="text">
                             <field name="TEXT">I am a Robot</field>
-                        </block>
+                        </shadow>
                     </value>
                 </block>
                 <block type="lcdi2c_scrollDisplay"></block>
