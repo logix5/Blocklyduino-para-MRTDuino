@@ -120,7 +120,17 @@ Blockly.String.flyoutCategory = function(workspace) {
     }
   //
   
-  for (var i = 1; i < stringList.length; i++) {
+  //OSCAR -->> Cuidado!!
+  //Para que no liste por cada string lo mismo, ya que dentro lleva el menu
+  
+  var loop;
+  if (stringList.length>2)
+   loop =2;
+ else
+   loop=stringList.length
+
+ //for (var i = 1; i < stringList.length; i++) {
+  for (var i = 1; i < loop; i++) {
     if (Blockly.Blocks['string_set']) {
       // <block type="variables_set" gap="8">
       //   <field name="VAR">item</field>
@@ -128,13 +138,15 @@ Blockly.String.flyoutCategory = function(workspace) {
       var block = goog.dom.createDom('block');
       block.setAttribute('type', 'string_set');
       if (Blockly.Blocks['string_get']) {
-        block.setAttribute('gap', 8);
+        block.setAttribute('gap',8);
       }
       var field = goog.dom.createDom('field', null, stringList[i]);
       field.setAttribute('name', 'VAR');
       block.appendChild(field);
       xmlList.push(block);
     }
+	
+	
     if (Blockly.Blocks['string_get']) {
       // <block type="variables_get" gap="24">
       //   <field name="VAR">item</field>
@@ -267,7 +279,8 @@ Blockly.String.generateUniqueName = function(workspace) {
   var newName = '';
   if (stringList.length) {
     var nameSuffix = 1;
-    var letters = 'ijkmnopqrstuvwxyzabcdefgh';  // No 'l'.
+  //  var letters = 'ijkmnopqrstuvwxyzabcdefgh';  // No 'l'.
+	var letters = 'abcdefgh';  // No 'l'.
     var letterIndex = 0;
     var potName = letters.charAt(letterIndex);
     while (!newName) {
@@ -298,7 +311,7 @@ Blockly.String.generateUniqueName = function(workspace) {
       }
     }
   } else {
-    newName = 'i';
+    newName = 'a';
   }
   return newName;
 };

@@ -70,8 +70,7 @@ Blockly.Blocks['string_get'] = {
     this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
     this.setColour(Blockly.Blocks.string.HUE);
     this.appendDummyInput()
-        .appendField(new Blockly.FieldString(
-        Blockly.Msg.VARIABLES_DEFAULT_NAME), 'VAR');
+        .appendField(new Blockly.FieldString(Blockly.Msg.VARIABLES_DEFAULT_NAME), 'VAR');
     this.setOutput(true);
     this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
     this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET;
@@ -81,7 +80,7 @@ Blockly.Blocks['string_get'] = {
    * @return {!Array.<string>} List of variable names.
    * @this Blockly.Block
    */
-  getString: function() {
+ getString: function() {
     return [this.getFieldValue('VAR')];
   },
   /**
@@ -114,12 +113,9 @@ Blockly.Blocks['string_get'] = {
     options.push(option);
   }
 };
-
+/*
 Blockly.Blocks['string_set'] = {
-  /**
-   * Block for variable setter.
-   * @this Blockly.Block
-   */
+  
   init: function() {
     this.jsonInit({
       "message0": Blockly.Msg.STRING_SET,
@@ -141,6 +137,51 @@ Blockly.Blocks['string_set'] = {
       "helpUrl": Blockly.Msg.STRING_SET_HELPURL
     });
     this.contextMenuMsg_ = Blockly.Msg.STRING_SET_CREATE_GET;
+  },
+  
+  getString: function() {
+    return [this.getFieldValue('VAR')];
+  },
+  
+  renameString: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
+      this.setFieldValue(newName, 'VAR');
+    }
+  },
+  contextMenuType_: 'string_get',
+  customContextMenu: Blockly.Blocks['string_get'].customContextMenu
+};*/
+
+Blockly.Blocks['string_set'] = {
+  /**
+   * Block for variable setter.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.VARIABLES_SET,
+      "args0": [
+        {
+         // "type": "field_variable",
+		  "type": "field_string",
+          "name": "VAR",
+          "variable": Blockly.Msg.VARIABLES_DEFAULT_NAME
+        },
+        {
+          "type": "input_value",
+          "name": "VALUE"
+        }
+      ],
+      "previousStatement": null,
+      "nextStatement": null,
+      "colour": Blockly.Blocks.string.HUE,
+      "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+      "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+    });
+	
+	
+	
+    this.contextMenuMsg_ = Blockly.Msg.VARIABLES_SET_CREATE_GET;
   },
   /**
    * Return all string referenced by this block.
@@ -165,6 +206,7 @@ Blockly.Blocks['string_set'] = {
   contextMenuType_: 'string_get',
   customContextMenu: Blockly.Blocks['string_get'].customContextMenu
 };
+
 
 Blockly.Blocks['string_charatnnn'] = {
   /**
@@ -217,7 +259,6 @@ Blockly.Blocks['string_charatnnn'] = {
   contextMenuType_: 'string_get',
   customContextMenu: Blockly.Blocks['string_get'].customContextMenu
 };
-
 
 Blockly.Blocks['string_charat'] = {
   /**
