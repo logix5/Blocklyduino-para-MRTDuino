@@ -707,6 +707,7 @@ Blockly.Msg.CONV_toString="Convert to String ";
 
 Blockly.Msg.Setup="Setup";
 Blockly.Msg.Loop="Main loop";
+Blockly.Msg.Writecode="Arduino Code";
 
 Blockly.Msg.sup=">";
 Blockly.Msg.supeg="=>";

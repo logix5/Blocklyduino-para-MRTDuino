@@ -42,3 +42,19 @@ Blockly.Blocks['arduino_setup'] = {
     this.setDeletable(true);
   }
 };
+
+Blockly.Blocks['arduino_codeall'] = {
+  init: function() {
+	this.setColour(150);
+    this.appendDummyInput()
+		.appendField(Blockly.Msg.Writecode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldTextInput('         '), 'TEXT')
+	this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+	this.setInputsInline(true);
+    this.setTooltip('');
+    this.setHelpUrl('');
+    
+  }
+};

@@ -11,3 +11,11 @@ Blockly.Arduino['arduino_setup'] = function(block) {
   var code = statements_loop;
   return code;
 };
+
+Blockly.Arduino['arduino_codeall'] = function(block) {
+    
+  var text_received = this.getFieldValue('TEXT');
+ 
+  var code = ''+text_received+'\n';
+  return code;
+};
