@@ -14,6 +14,8 @@ var MSG = {
   catMotorMRT:"Motor MRT",
   catStepper:"Stepper",
   catServo:"Servo",
+  catStorage:"Storage",
+  catEEprom:"EEPROM",
   catSimpleSensorsALL:"Simple Sensors",
   catSimpleSensors:"Sensors I",
   catSimpleSensors2: "Sensors II",

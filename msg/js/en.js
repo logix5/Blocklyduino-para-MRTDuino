@@ -571,6 +571,16 @@ Blockly.Msg.STEEPER_pin2="PIN-B";
 Blockly.Msg.STEEPER_pin3="PIN-C";
 Blockly.Msg.STEEPER_pin4="PIN-D";
 
+//EEPROM
+Blockly.Msg.STORAGE_EEPROM_WRITE_BYTE = "EEPROM write a byte in adress";
+Blockly.Msg.STORAGE_EEPROM_WRITE_VARIABLE = "EEPROM write in adress";
+Blockly.Msg.STORAGE_DATA_BYTE = "value(0-255)";
+Blockly.Msg.STORAGE_DATA_VARIABLE = "the variable";
+Blockly.Msg.STORAGE_DATA_VARIABLE2 = "and save in the variable";
+Blockly.Msg.STORAGE_EEPROM_READ_BYTE = "EEPROM read a byte in adress";
+Blockly.Msg.STORAGE_EEPROM_READ_VARIABLE = "EEPROM read from adress";
+
+
 //SERVO
 Blockly.Msg.SERVO_Servo="Servo";
 Blockly.Msg.PIN="PIN#";
