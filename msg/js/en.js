@@ -588,17 +588,8 @@ Blockly.Msg.ledstrip_WS2812B_Number_of_Leds = "Number of leds";
 Blockly.Msg.ledstrip_WS2812B_Show = "Show";
 Blockly.Msg.ledstrip_WS2812B_Clear = "Clear all leds";
 Blockly.Msg.ledstrip_WS2812B_Brightness = "Brightness";
-
-/*
-Blockly.Msg.ledstrip_WS2812B_DEFAULT_NAME = "RGB_LED";
-
-
-Blockly.Msg.ledstrip_WS2812B_setPixelColor = "Led RGB WS2812B. Send color :";
-Blockly.Msg.ledstrip_WS2812B_setPixelColor_Red = "Red (255 max) =";
-Blockly.Msg.ledstrip_WS2812B_setPixelColor_Green = "Green (255 max) =";
-Blockly.Msg.ledstrip_WS2812B_setPixelColor_Blue = "Blue (255 max) =";
-Blockly.Msg.ledstrip_WS2812B_setPixelColor_Pixel_Number = "for pixel number (0 first) =";
-*/
+Blockly.Msg.ledstrip_WS2812B_Led_Number = "for led number";
+Blockly.Msg.ledstrip_WS2812B_setPixelColor = "Set color";
 
 //SERVO
 Blockly.Msg.SERVO_Servo="Servo";

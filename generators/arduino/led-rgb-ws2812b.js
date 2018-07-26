@@ -1,5 +1,8 @@
-'use strict';
-
+/***************************************************************
+ *
+ *  This module was created by Oscar Ferruz. oferruz@logix5.com
+ *
+ ****************************************************************/
 goog.provide('Blockly.Blocks.led-rgb-ws2812b');
 
 goog.require('Blockly.Blocks');
@@ -45,17 +48,20 @@ Blockly.Arduino['LedStrip_WS2812B_clear'] = function(block) {
   return code;
 };
 
-/*
 
-Blockly.Arduino.lp2i_ledRGB_WS2812B_setPixelColor = function() {
-  var dropdown_name = this.getFieldValue('NEOPIXEL_NAME');
+
+Blockly.Arduino['LedStrip_WS2812B_setPixelColor'] = function(block) {
+  var numberstrip = this.getFieldValue('LEDSTRIP_NUMBER');
   var pixel_number = Blockly.Arduino.valueToCode(this, 'Pixel_number', Blockly.Arduino.ORDER_ATOMIC);
-  var red = Blockly.Arduino.valueToCode(this, 'Red', Blockly.Arduino.ORDER_ATOMIC);
-  var green = Blockly.Arduino.valueToCode(this, 'Green', Blockly.Arduino.ORDER_ATOMIC);
-  var blue = Blockly.Arduino.valueToCode(this, 'Blue', Blockly.Arduino.ORDER_ATOMIC);
+  
+  var colorall = block.getFieldValue('RGBCOLOR');
+  var red = parseInt(colorall.substring(1,3),16);
+  var green = parseInt(colorall.substring(3,5),16);
+  var blue = parseInt(colorall.substring(5,7),16)
+  
 
-  var code = 'pixels_'+dropdown_name+'.setPixelColor('+pixel_number+', pixels_'+dropdown_name+'.Color('+red+','+green+','+blue+'));\n'
-			+ 'pixels_'+dropdown_name+'.show();\n';
+  var code = 'pixels_'+numberstrip+'.setPixelColor('+pixel_number+'-1, pixels_'+numberstrip+'.Color('+red+','+green+','+blue+'));\n';
+
   return code;
 };
 
@@ -63,7 +69,6 @@ Blockly.Arduino.lp2i_ledRGB_WS2812B_setPixelColor = function() {
 
 
 
-*/
 
 
 
