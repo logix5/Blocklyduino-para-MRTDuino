@@ -30,6 +30,7 @@
 		<script src="../../blocks/Temp-ds18b20.js"></script>
 		<script src="../../blocks/RotaryEncoder.js"></script>
 		<script src="../../blocks/simpleActuators.js"></script>
+		<script src="../../blocks/RTC_DS3231.js"></script>
 		<script src="../../blocks/EEPROM.js"></script>
         <script src="../../blocks/logic.js"></script>
         <script src="../../blocks/loops.js"></script>
@@ -46,6 +47,7 @@
         <script src="../../core/string.js"></script>   
         <script src="../../core/flyout.js"></script> 
         <script src="../../core/field_string.js"></script> 
+		<script src="../../core/field_date.js"></script> 
         <script src="../../core/block.js"></script> 
         <script src="../../core/blockly.js"></script> 
         <script src="../../core/workspace.js"></script> 
@@ -65,6 +67,7 @@
         <script src="../../generators/arduino/seriallcd.js"></script>
         <script src="../../generators/arduino/seriallcdi2c.js"></script>
 		<script src="../../generators/arduino/led-rgb-ws2812b.js"></script>
+		<script src="../../generators/arduino/RTC_DS3231.js"></script>
 		<script src="../../generators/arduino/simpleSensors.js"></script>
 		<script src="../../generators/arduino/simpleActuators.js"></script>
 		<script src="../../generators/arduino/Temp-ds18b20.js"></script>
@@ -293,6 +296,47 @@
                 </value>
 			</block>
 		  </category>
+		  
+		  
+		    <category id="catRTCDS3231" colour="190">
+
+		     <block type="Init_RTC_ds3231">
+				<value name="DS3231_DAY">
+                    <shadow type="math_number">
+                        <field name="NUM">12</field>
+                    </shadow>
+                </value>
+				<value name="DS3231_MONTH">
+                    <shadow type="math_number">
+                        <field name="NUM">9</field>
+                    </shadow>
+                </value>
+				<value name="DS3231_YEAR">
+                    <shadow type="math_number">
+                        <field name="NUM">2018</field>
+                    </shadow>
+                </value>
+				<value name="DS3231_HOUR">
+                    <shadow type="math_number">
+                        <field name="NUM">23</field>
+                    </shadow>
+                </value>
+				<value name="DS3231_MINUTE">
+                    <shadow type="math_number">
+                        <field name="NUM">0</field>
+                    </shadow>
+                </value>	
+				<value name="DS3231_SECOND">
+                    <shadow type="math_number">
+                        <field name="NUM">0</field>
+                    </shadow>
+                </value>				
+			 </block>
+		  	  
+			  <block type="order_read_rtc_ds3231"></block>
+			  <block type="values_ds3231"></block>
+			  <block type="values_text_ds3231"></block>
+		   </category>
 		 </category>
 		 
 		 <category id="catDivers" colour="150">        

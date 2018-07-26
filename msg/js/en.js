@@ -472,6 +472,23 @@ Blockly.Msg.RE_WRITE="Write Value";
 Blockly.Msg.RE_Button="Button";
 Blockly.Msg.RE_Pressed="pressed?";
 
+
+//RTC DS3231
+Blockly.Msg.RTCDS3231_NAME="Init RTC DS3231.SDA-Port13 SCL-Port14.";
+Blockly.Msg.RTCDS3231_DAY="Day";
+Blockly.Msg.RTCDS3231_MONTH="Month";
+Blockly.Msg.RTCDS3231_YEAR="Year";
+Blockly.Msg.RTCDS3231_HOUR="Hour";
+Blockly.Msg.RTCDS3231_MINUTE="Minute";
+Blockly.Msg.RTCDS3231_SECOND="Second";
+Blockly.Msg.RTCDS3231_DOFWEEK="Day of week";
+Blockly.Msg.RTCDS3231_READ_RTC="RTC DS3231.Read the date and time";
+Blockly.Msg.RTCDS3231_VALUES="value";
+Blockly.Msg.RTCDS3231_Name2="RTC DS3231.";
+Blockly.Msg.RTCDS3231_TEXT_DOFWEEK="Day of week in string";
+Blockly.Msg.RTCDS3231_TEXT_MONTH="Month in string ";
+
+
 //IN OUT
 Blockly.Msg.INOUT_HIGH_LEVEL="High";
 Blockly.Msg.INOUT_LOW_LEVEL="Low";
