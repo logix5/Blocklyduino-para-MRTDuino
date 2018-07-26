@@ -585,6 +585,8 @@ Blockly.Msg.ledstrip_WS2812B_name = "Led Strip";
 Blockly.Msg.ledstrip_WS2812B_init = "WS2812B Init";
 Blockly.Msg.ledstrip_WS2812B_init_Pin = "Pin#";
 Blockly.Msg.ledstrip_WS2812B_Number_of_Leds = "Number of leds";
+Blockly.Msg.ledstrip_WS2812B_Show = "Show";
+Blockly.Msg.ledstrip_WS2812B_Clear = "Clear all leds";
 
 /*
 Blockly.Msg.ledstrip_WS2812B_DEFAULT_NAME = "RGB_LED";
