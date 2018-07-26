@@ -807,9 +807,28 @@
 				<block type="lcdi2c_blinkCursor"></block>				
             </category>
 			 <category id="catLedStrip" colour="140">
-			 <block type="LedStrip_WS2812B_init"></block>
-			 <block type="LedStrip_WS2812B_setBrightness"></block>
-			 <block type="LedStrip_WS2812B_setPixelColor"></block>
+			 <block type="LedStrip_WS2812B_init">
+			  <value name="Number_of_Leds">
+                        <shadow type="math_number">
+                            <field name="NUM">12</field>
+                        </shadow>
+                    </value>
+			 </block>
+			 <block type="LedStrip_WS2812B_setBrightness">
+			  <value name="Brightness">
+                        <shadow type="math_number">
+                            <field name="NUM">255</field>
+                        </shadow>
+                    </value>
+			 </block>
+			 
+			 <block type="LedStrip_WS2812B_setPixelColor">
+			   <value name="Pixel_number">
+                        <shadow type="math_number">
+                            <field name="NUM">1</field>
+                        </shadow>
+                    </value>
+			 </block>
 			 
 			 <block type="LedStrip_WS2812B_show"></block>
 			 <block type="LedStrip_WS2812B_clear"></block>

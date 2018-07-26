@@ -14,6 +14,7 @@ Blockly.Blocks['LedStrip_WS2812B_init'] = {
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
         .appendField(Blockly.Msg.ledstrip_WS2812B_name)
 		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "LEDSTRIP_NUMBER")
     this.appendDummyInput()
@@ -35,6 +36,7 @@ Blockly.Blocks['LedStrip_WS2812B_setBrightness'] = {
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
         .appendField(Blockly.Msg.ledstrip_WS2812B_name)
 		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "LEDSTRIP_NUMBER")
     this.appendValueInput("Brightness")
@@ -52,6 +54,7 @@ Blockly.Blocks['LedStrip_WS2812B_show'] = {
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
         .appendField(Blockly.Msg.ledstrip_WS2812B_name)
 		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "LEDSTRIP_NUMBER")
     this.appendDummyInput()
@@ -68,6 +71,7 @@ Blockly.Blocks['LedStrip_WS2812B_clear'] = {
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
         .appendField(Blockly.Msg.ledstrip_WS2812B_name)
 		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "LEDSTRIP_NUMBER")
     this.appendDummyInput()
@@ -85,6 +89,7 @@ Blockly.Blocks['LedStrip_WS2812B_setPixelColor'] = {
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
         .appendField(Blockly.Msg.ledstrip_WS2812B_name)
 		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "LEDSTRIP_NUMBER")
     this.appendDummyInput()

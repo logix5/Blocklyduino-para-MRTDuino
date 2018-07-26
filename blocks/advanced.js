@@ -30,7 +30,7 @@ goog.require('Blockly.Blocks');
 
 Blockly.Blocks['arduino_setup'] = {
   init: function() {
-	  this.setColour(150);
+	  this.setColour(50);
     this.appendDummyInput()
         .appendField(Blockly.Msg.Setup);
     this.appendStatementInput("MySetup");
@@ -45,7 +45,7 @@ Blockly.Blocks['arduino_setup'] = {
 
 Blockly.Blocks['arduino_codeall'] = {
   init: function() {
-	this.setColour(150);
+	this.setColour(50);
     this.appendDummyInput()
 		.appendField(Blockly.Msg.Writecode);
 	this.appendDummyInput()
