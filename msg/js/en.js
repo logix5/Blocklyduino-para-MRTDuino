@@ -580,6 +580,23 @@ Blockly.Msg.STORAGE_DATA_VARIABLE2 = "and save in the variable";
 Blockly.Msg.STORAGE_EEPROM_READ_BYTE = "EEPROM read a byte in adress";
 Blockly.Msg.STORAGE_EEPROM_READ_VARIABLE = "EEPROM read from adress";
 
+//STRIP LEDs
+Blockly.Msg.ledstrip_WS2812B_name = "Led Strip";
+Blockly.Msg.ledstrip_WS2812B_init = "WS2812B Init";
+Blockly.Msg.ledstrip_WS2812B_init_Pin = "Pin#";
+
+
+
+Blockly.Msg.ledstrip_WS2812B_init_Number_of_Pixels = "Number of leds";
+Blockly.Msg.ledstrip_WS2812B_DEFAULT_NAME = "RGB_LED";
+Blockly.Msg.ledstrip_WS2812B_Brightness = "Brightness =";
+Blockly.Msg.ledstrip_WS2812B_DEFAULT_NAME = "NeoPixels";
+Blockly.Msg.ledstrip_WS2812B_setPixelColor = "Led RGB WS2812B. Send color :";
+Blockly.Msg.ledstrip_WS2812B_setPixelColor_Red = "Red (255 max) =";
+Blockly.Msg.ledstrip_WS2812B_setPixelColor_Green = "Green (255 max) =";
+Blockly.Msg.ledstrip_WS2812B_setPixelColor_Blue = "Blue (255 max) =";
+Blockly.Msg.ledstrip_WS2812B_setPixelColor_Pixel_Number = "for pixel number (0 first) =";
+
 
 //SERVO
 Blockly.Msg.SERVO_Servo="Servo";

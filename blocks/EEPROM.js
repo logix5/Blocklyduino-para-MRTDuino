@@ -14,7 +14,7 @@ goog.require('Blockly.Types');
 Blockly.Blocks['eeprom_write_byte'] = {		
   helpUrl: '',
   init: function() {
-    this.setColour(200);
+    this.setColour(100);
     this.appendValueInput("ADDRESS")
 		.appendField(new Blockly.FieldImage("images/eeprom.png",37,25))
 		.setCheck("Number")
@@ -31,7 +31,7 @@ Blockly.Blocks['eeprom_write_byte'] = {
 
 Blockly.Blocks['eeprom_read_byte'] = {	
   init: function() {
-    this.setColour(200);
+    this.setColour(100);
     this.appendValueInput("ADDRESS")
 		.appendField(new Blockly.FieldImage("images/eeprom.png",37,25))
 		.setCheck("Number")
@@ -45,7 +45,7 @@ Blockly.Blocks['eeprom_read_byte'] = {
 Blockly.Blocks['eeprom_write_variable'] = {		
   helpUrl: '',
   init: function() {
-    this.setColour(200);
+    this.setColour(100);
     this.appendValueInput("ADDRESS")
 		.appendField(new Blockly.FieldImage("images/eeprom.png",37,25))
 		.setCheck("Number")
@@ -62,7 +62,7 @@ Blockly.Blocks['eeprom_write_variable'] = {
 
 Blockly.Blocks['eeprom_read_variable'] = {	
   init: function() {
-    this.setColour(200);
+    this.setColour(100);
     this.appendValueInput("ADDRESS")
 		.appendField(new Blockly.FieldImage("images/eeprom.png",37,25))
 		.setCheck("Number")
