@@ -21,6 +21,16 @@ Blockly.Arduino['LedStrip_WS2812B_init'] = function(block) {
    
 };
 
+Blockly.Arduino['LedStrip_WS2812B_setBrightness'] = function(block) {
+  var numberstrip = this.getFieldValue('LEDSTRIP_NUMBER'); 	
+  var lumin = Blockly.Arduino.valueToCode(this, 'Brightness', Blockly.Arduino.ORDER_ATOMIC);
+  
+  var code = 'pixels_'+numberstrip+'.setBrightness('+lumin+');\n';
+  return code;
+};
+
+
+
 Blockly.Arduino['LedStrip_WS2812B_show'] = function(block) {
   var numberstrip = this.getFieldValue('LEDSTRIP_NUMBER'); 	
      
@@ -46,14 +56,6 @@ Blockly.Arduino.lp2i_ledRGB_WS2812B_setPixelColor = function() {
 
   var code = 'pixels_'+dropdown_name+'.setPixelColor('+pixel_number+', pixels_'+dropdown_name+'.Color('+red+','+green+','+blue+'));\n'
 			+ 'pixels_'+dropdown_name+'.show();\n';
-  return code;
-};
-
-Blockly.Arduino.lp2i_ledRGB_WS2812B_setBrightness = function() {
-  var dropdown_name = this.getFieldValue('NEOPIXEL_NAME');
-  var lumin = Blockly.Arduino.valueToCode(this, 'Brightness', Blockly.Arduino.ORDER_ATOMIC);
-  
-  var code = 'pixels_'+dropdown_name+'.setBrightness('+lumin+');\n';
   return code;
 };
 
