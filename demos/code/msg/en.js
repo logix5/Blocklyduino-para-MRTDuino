@@ -15,6 +15,7 @@ var MSG = {
   catStepper:"Stepper",
   catServo:"Servo",
   catStorage:"Storage",
+  catLedStrip:"Led Strip",
   catEEprom:"EEPROM",
   catSimpleSensorsALL:"Simple Sensors",
   catSimpleSensors:"Sensors I",

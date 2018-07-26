@@ -25,6 +25,7 @@
 		<script src="../../blocks/serial1BT.js"></script>
         <script src="../../blocks/seriallcd.js"></script>
         <script src="../../blocks/seriallcdi2c.js"></script>
+		<script src="../../blocks/led-rgb-ws2812b.js"></script>
 		<script src="../../blocks/simpleSensors.js"></script>
 		<script src="../../blocks/Temp-ds18b20.js"></script>
 		<script src="../../blocks/RotaryEncoder.js"></script>
@@ -63,6 +64,7 @@
 		<script src="../../generators/arduino/serial1BT.js"></script>
         <script src="../../generators/arduino/seriallcd.js"></script>
         <script src="../../generators/arduino/seriallcdi2c.js"></script>
+		<script src="../../generators/arduino/led-rgb-ws2812b.js"></script>
 		<script src="../../generators/arduino/simpleSensors.js"></script>
 		<script src="../../generators/arduino/simpleActuators.js"></script>
 		<script src="../../generators/arduino/Temp-ds18b20.js"></script>
@@ -804,6 +806,9 @@
 				<block type="lcdi2c_showCursor"></block>
 				<block type="lcdi2c_blinkCursor"></block>				
             </category>
+			 <category id="catLedStrip" colour="140">
+			 <block type="LedStrip_WS2812B_init"></block>
+			 </category>
         </category>
       
 		
