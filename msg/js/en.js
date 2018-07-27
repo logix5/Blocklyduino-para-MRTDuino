@@ -501,7 +501,7 @@ Blockly.Msg.C2="2";
 Blockly.Msg.C3="3";
 Blockly.Msg.C4="4";
 Blockly.Msg.KEYPAD_KEYREADED="KeyPad. Key readed";
-Blockly.Msg.KEY="Key";
+Blockly.Msg.KEY="KeyPad. Key";
 
 
 //RTC DS3231
