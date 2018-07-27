@@ -34,7 +34,6 @@
 goog.provide('Blockly.Blocks.RTC_DS3231');
 goog.require('Blockly.Blocks');
 
-
 Blockly.Blocks['Init_RTC_ds3231'] = {
   helpUrl: '',
   init: function() {
@@ -42,6 +41,21 @@ Blockly.Blocks['Init_RTC_ds3231'] = {
 	this.appendDummyInput()
         .appendField(new Blockly.FieldImage("images/rtcds3231.png",51,38))
 		.appendField(Blockly.Msg.RTCDS3231_NAME)
+   	this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Init all to use the RTC_DS3231');
+  }
+};
+
+
+Blockly.Blocks['DateTime_RTC_ds3231'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(190);
+	this.appendDummyInput()
+        .appendField(new Blockly.FieldImage("images/rtcds3231.png",51,38))
+		.appendField(Blockly.Msg.RTCDS3231_RTC)
     this.appendValueInput("DS3231_DAY")
 			.setCheck("Number")
 			.appendField(Blockly.Msg.RTCDS3231_DAY);
@@ -63,7 +77,7 @@ Blockly.Blocks['Init_RTC_ds3231'] = {
 	this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('Init all to use the RTC_DS3231');
+    this.setTooltip('Init the date time in the RTC_DS3231');
   }
 };
 

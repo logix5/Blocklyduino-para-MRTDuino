@@ -474,7 +474,8 @@ Blockly.Msg.RE_Pressed="pressed?";
 
 
 //RTC DS3231
-Blockly.Msg.RTCDS3231_NAME="Init RTC DS3231.SDA-Port13 SCL-Port14.";
+Blockly.Msg.RTCDS3231_NAME="Init RTC DS3231.SDA-Port13 SCL-Port14";
+Blockly.Msg.RTCDS3231_RTC="Set DateTime DS3231";
 Blockly.Msg.RTCDS3231_DAY="Day";
 Blockly.Msg.RTCDS3231_MONTH="Month";
 Blockly.Msg.RTCDS3231_YEAR="Year";

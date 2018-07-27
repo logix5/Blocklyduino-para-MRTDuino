@@ -9,14 +9,6 @@ goog.provide('Blockly.Blocks.RTC_DS3231');
 goog.require('Blockly.Blocks');
 
 Blockly.Arduino['Init_RTC_ds3231'] = function(block) {
-	
-	
-  var day = Blockly.Arduino.valueToCode(this, 'DS3231_DAY', Blockly.Arduino.ORDER_ATOMIC);
-  var month = Blockly.Arduino.valueToCode(this, 'DS3231_MONTH', Blockly.Arduino.ORDER_ATOMIC);
-  var year = Blockly.Arduino.valueToCode(this, 'DS3231_YEAR', Blockly.Arduino.ORDER_ATOMIC);
-  var hour = Blockly.Arduino.valueToCode(this, 'DS3231_HOUR', Blockly.Arduino.ORDER_ATOMIC); 
-  var min = Blockly.Arduino.valueToCode(this, 'DS3231_MINUTE', Blockly.Arduino.ORDER_ATOMIC);
-  var sec = Blockly.Arduino.valueToCode(this, 'DS3231_SECOND', Blockly.Arduino.ORDER_ATOMIC);
    
   //Blockly.Arduino.definitions_['include_Wire'] = '#include <Wire.h>\n';
   Blockly.Arduino.definitions_['include_RTClib'] = '#include <RTClib.h>\n';
@@ -28,9 +20,25 @@ Blockly.Arduino['Init_RTC_ds3231'] = function(block) {
     
   Blockly.Arduino.setups_['setup_ds3232'] = 'rtc.begin();\n';
   	 	 
-  var code='rtc.adjust(DateTime('+year+','+month+','+day+','+hour+','+min+','+sec+'));\n';
+  var code='';
   return code;
 };
+
+Blockly.Arduino['DateTime_RTC_ds3231'] = function(block) {
+	
+	
+  var day = Blockly.Arduino.valueToCode(this, 'DS3231_DAY', Blockly.Arduino.ORDER_ATOMIC);
+  var month = Blockly.Arduino.valueToCode(this, 'DS3231_MONTH', Blockly.Arduino.ORDER_ATOMIC);
+  var year = Blockly.Arduino.valueToCode(this, 'DS3231_YEAR', Blockly.Arduino.ORDER_ATOMIC);
+  var hour = Blockly.Arduino.valueToCode(this, 'DS3231_HOUR', Blockly.Arduino.ORDER_ATOMIC); 
+  var min = Blockly.Arduino.valueToCode(this, 'DS3231_MINUTE', Blockly.Arduino.ORDER_ATOMIC);
+  var sec = Blockly.Arduino.valueToCode(this, 'DS3231_SECOND', Blockly.Arduino.ORDER_ATOMIC);
+   
+   var code='rtc.adjust(DateTime('+year+','+month+','+day+','+hour+','+min+','+sec+'));\n';
+  return code;
+};
+
+
 
 Blockly.Arduino['order_read_rtc_ds3231'] = function(block) {
   // TODO: Assemble Python into code variable.
