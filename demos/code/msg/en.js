@@ -24,6 +24,7 @@ var MSG = {
   catSimpleSensors2: "Sensors II",
   catSimpleSensors3: "Sensors III",
   catOtherSensors:"Other Sensors",
+  catKeypad:"Keypad",
   catds18b20:"DS18B20",
   catRotaryEncoder:"Rotary Encoder",
   catSimpleActuators:"Simple Actuators",

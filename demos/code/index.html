@@ -27,6 +27,7 @@
         <script src="../../blocks/seriallcdi2c.js"></script>
 		<script src="../../blocks/led-rgb-ws2812b.js"></script>
 		<script src="../../blocks/simpleSensors.js"></script>
+		<script src="../../blocks/keypad.js"></script>
 		<script src="../../blocks/Temp-ds18b20.js"></script>
 		<script src="../../blocks/RotaryEncoder.js"></script>
 		<script src="../../blocks/simpleActuators.js"></script>
@@ -72,6 +73,7 @@
 		<script src="../../generators/arduino/RTC_DS1302.js"></script>
 		<script src="../../generators/arduino/simpleSensors.js"></script>
 		<script src="../../generators/arduino/simpleActuators.js"></script>
+		<script src="../../generators/arduino/keypad.js"></script>
 		<script src="../../generators/arduino/Temp-ds18b20.js"></script>
 		<script src="../../generators/arduino/RotaryEncoder.js"></script>
 		<script src="../../generators/arduino/EEPROM.js"></script>
@@ -384,7 +386,7 @@
 		 <category id="catDivers" colour="150">        
 			<block type="arduino_setup"></block>
 			<block type="arduino_codeall"></block>
-			
+			<block type="arduino_waitforever"></block>
         </category>
 	  <sep></sep>	 
 
@@ -781,6 +783,31 @@
 </category>
 
 <category id="catOtherSensors" colour="220"> 
+
+	<category id="catKeypad" colour="220"> 
+	 <block type="Init_Keypad4x4">
+	  <field name="PIN_R2">15</field>
+	  <field name="PIN_R3">16</field>
+	  <field name="PIN_R4">14</field>
+	  <field name="PIN_C1">18</field>
+	  <field name="PIN_C2">19</field>
+	  <field name="PIN_C3">20</field>
+	  <field name="PIN_C4">21</field>
+	 </block>
+	 <block type="Init_Keypad4x3">
+	 <field name="PIN_R2">15</field>
+	  <field name="PIN_R3">16</field>
+	  <field name="PIN_R4">14</field>
+	  <field name="PIN_C1">18</field>
+	  <field name="PIN_C2">19</field>
+	  <field name="PIN_C3">20</field>
+
+	 </block>
+	 <block type="keypad_keyreaded"></block>
+	  <block type="keypad_key"></block>
+	 
+	</category>
+
 	<category id="catds18b20" colour="220"> 
 	  <block type="Init_Temp_ds18b20"></block>
 	  <block type="order_read_temeperature_ds18b20"></block>

@@ -39,7 +39,7 @@ Blockly.Blocks['Init_RTC_ds1302'] = {
   init: function() {
     this.setColour(190);
 	this.appendDummyInput()
-      //  .appendField(new Blockly.FieldImage("images/rtcds3231.png",51,38))
+		.appendField(new Blockly.FieldImage("images/ds1302.png",53,38))
 		.appendField(Blockly.Msg.RTCDS1302_NAME)
 	this.appendDummyInput()
         .appendField(Blockly.Msg.RTCDS1302_RST)
@@ -63,7 +63,7 @@ Blockly.Blocks['DateTime_RTC_ds1302'] = {
   init: function() {
     this.setColour(190);
 	this.appendDummyInput()
-       // .appendField(new Blockly.FieldImage("images/rtcds3231.png",51,38))
+        .appendField(new Blockly.FieldImage("images/ds1302.png",53,38))
 		.appendField(Blockly.Msg.RTCDS1302_RTC)
     this.appendValueInput("DS1302_DAY")
 			.setCheck("Number")
@@ -98,7 +98,7 @@ Blockly.Blocks['order_read_rtc_ds1302'] = {
   init: function() {
     this.setColour(190);
     this.appendDummyInput()
-	   //.appendField(new Blockly.FieldImage("images/rtcds3231.png",51,38))
+	    .appendField(new Blockly.FieldImage("images/ds1302.png",53,38))
         .appendField(Blockly.Msg.RTCDS1302_READ_RTC);
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
@@ -112,7 +112,7 @@ Blockly.Blocks['values_ds1302'] = {
   init: function() {
     this.setColour(190);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/rtcds3231.png",51,38))
+		.appendField(new Blockly.FieldImage("images/ds1302.png",53,38))
 		.appendField(Blockly.Msg.RTCDS1302_Name2)
 		.appendField(new Blockly.FieldDropdown([[Blockly.Msg.RTCDS1302_YEAR, "0"], [Blockly.Msg.RTCDS1302_MONTH, "1"],[Blockly.Msg.RTCDS1302_DAY, "2"],[Blockly.Msg.RTCDS1302_HOUR, "3"],[Blockly.Msg.RTCDS1302_MINUTE, "4"],[Blockly.Msg.RTCDS1302_SECOND, "5"]]), "OUTPUT_VALUE")
 	    .appendField(Blockly.Msg.RTCDS1302_VALUES)
@@ -127,7 +127,7 @@ Blockly.Blocks['values_text_ds1302'] = {
   init: function() {
     this.setColour(190);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/rtcds3231.png",51,38))
+		.appendField(new Blockly.FieldImage("images/ds1302.png",53,38))
 		.appendField(Blockly.Msg.RTCDS1302_Name2)
 		.appendField(new Blockly.FieldDropdown([[Blockly.Msg.RTCDS1302_TEXT_DOFWEEK, "0"], [Blockly.Msg.RTCDS1302_TEXT_MONTH, "1"],[Blockly.Msg.RTCDS1302_TEXT_DATE, "2"],[Blockly.Msg.RTCDS1302_TEXT_TIME, "3"]]), "OUTPUT_VALUE")
     this.setOutput(true, 'String');

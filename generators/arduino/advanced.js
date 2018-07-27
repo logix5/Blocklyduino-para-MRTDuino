@@ -19,3 +19,9 @@ Blockly.Arduino['arduino_codeall'] = function(block) {
   var code = ''+text_received+'\n';
   return code;
 };
+
+Blockly.Arduino['arduino_waitforever'] = function(block) {
+      
+  var code = 'while(1);\n';
+  return code;
+};

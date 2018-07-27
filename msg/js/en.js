@@ -489,6 +489,21 @@ Blockly.Msg.RTCDS3231_Name2="RTC DS3231.";
 Blockly.Msg.RTCDS3231_TEXT_DOFWEEK="Day of week in string";
 Blockly.Msg.RTCDS3231_TEXT_MONTH="Month in string ";
 
+//KEYPAD
+Blockly.Msg.KEYPAD_NAME="Init KeyPad(4x4).";
+Blockly.Msg.KEYPAD_NAME2="Init KeyPad(4x3).";
+Blockly.Msg.ROW1="Row 1";
+Blockly.Msg.ROW2="2";
+Blockly.Msg.ROW3="3";
+Blockly.Msg.ROW4="4";
+Blockly.Msg.C1="Column 1";
+Blockly.Msg.C2="2";
+Blockly.Msg.C3="3";
+Blockly.Msg.C4="4";
+Blockly.Msg.KEYPAD_KEYREADED="KeyPad. Key readed";
+Blockly.Msg.KEY="Key";
+
+
 //RTC DS3231
 Blockly.Msg.RTCDS1302_NAME="Init RTC DS1302.";
 Blockly.Msg.RTCDS1302_RTC="Set DateTime DS1302";
@@ -767,6 +782,8 @@ Blockly.Msg.CONV_toString="Convert to String ";
 Blockly.Msg.Setup="Setup";
 Blockly.Msg.Loop="Main loop";
 Blockly.Msg.Writecode="Arduino Code";
+Blockly.Msg.Waitforever="Wait forever";
+
 
 Blockly.Msg.sup=">";
 Blockly.Msg.supeg="=>";

@@ -58,3 +58,17 @@ Blockly.Blocks['arduino_codeall'] = {
     
   }
 };
+
+Blockly.Blocks['arduino_waitforever'] = {
+  init: function() {
+	this.setColour(50);
+    this.appendDummyInput()
+		.appendField(Blockly.Msg.Waitforever);
+	this.setPreviousStatement(true, null);
+    //this.setNextStatement(true, null);
+	this.setInputsInline(true);
+    this.setTooltip('');
+    this.setHelpUrl('');
+    
+  }
+};
