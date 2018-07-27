@@ -489,6 +489,27 @@ Blockly.Msg.RTCDS3231_Name2="RTC DS3231.";
 Blockly.Msg.RTCDS3231_TEXT_DOFWEEK="Day of week in string";
 Blockly.Msg.RTCDS3231_TEXT_MONTH="Month in string ";
 
+//RTC DS3231
+Blockly.Msg.RTCDS1302_NAME="Init RTC DS1302.";
+Blockly.Msg.RTCDS1302_RTC="Set DateTime DS1302";
+Blockly.Msg.RTCDS1302_DAY="Day";
+Blockly.Msg.RTCDS1302_MONTH="Month";
+Blockly.Msg.RTCDS1302_YEAR="Year";
+Blockly.Msg.RTCDS1302_HOUR="Hour";
+Blockly.Msg.RTCDS1302_MINUTE="Minute";
+Blockly.Msg.RTCDS1302_SECOND="Second";
+Blockly.Msg.RTCDS1302_DOFWEEK="Day of week";
+Blockly.Msg.RTCDS1302_READ_RTC="RTC DS1302.Read the date and time";
+Blockly.Msg.RTCDS1302_VALUES="value";
+Blockly.Msg.RTCDS1302_Name2="RTC DS1302.";
+Blockly.Msg.RTCDS1302_TEXT_DOFWEEK="Day of week in string";
+Blockly.Msg.RTCDS1302_TEXT_MONTH="Month in string ";
+Blockly.Msg.RTCDS1302_TEXT_DATE="Date in string";
+Blockly.Msg.RTCDS1302_TEXT_TIME="Time in string ";
+Blockly.Msg.RTCDS1302_RST="RST Pin";
+Blockly.Msg.RTCDS1302_CLK="CLK Pin";
+Blockly.Msg.RTCDS1302_DAT="DAT Pin";
+
 
 //IN OUT
 Blockly.Msg.INOUT_HIGH_LEVEL="High";

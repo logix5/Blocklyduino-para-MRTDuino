@@ -31,6 +31,7 @@
 		<script src="../../blocks/RotaryEncoder.js"></script>
 		<script src="../../blocks/simpleActuators.js"></script>
 		<script src="../../blocks/RTC_DS3231.js"></script>
+		<script src="../../blocks/RTC_DS1302.js"></script>
 		<script src="../../blocks/EEPROM.js"></script>
         <script src="../../blocks/logic.js"></script>
         <script src="../../blocks/loops.js"></script>
@@ -68,6 +69,7 @@
         <script src="../../generators/arduino/seriallcdi2c.js"></script>
 		<script src="../../generators/arduino/led-rgb-ws2812b.js"></script>
 		<script src="../../generators/arduino/RTC_DS3231.js"></script>
+		<script src="../../generators/arduino/RTC_DS1302.js"></script>
 		<script src="../../generators/arduino/simpleSensors.js"></script>
 		<script src="../../generators/arduino/simpleActuators.js"></script>
 		<script src="../../generators/arduino/Temp-ds18b20.js"></script>
@@ -296,8 +298,48 @@
                 </value>
 			</block>
 		  </category>
-		  
-		  
+		    <category id="catRTCDS1302" colour="190">
+			<block type="Init_RTC_ds1302">
+			 <field name="PIN_DAT">15</field>
+			  <field name="PIN_CLK">16</field>
+			</block>
+			 <block type="DateTime_RTC_ds1302">
+			 <value name="DS1302_DAY">
+                    <shadow type="math_number">
+                        <field name="NUM">12</field>
+                    </shadow>
+                </value>
+				<value name="DS1302_MONTH">
+                    <shadow type="math_number">
+                        <field name="NUM">9</field>
+                    </shadow>
+                </value>
+				<value name="DS1302_YEAR">
+                    <shadow type="math_number">
+                        <field name="NUM">2018</field>
+                    </shadow>
+                </value>
+				<value name="DS1302_HOUR">
+                    <shadow type="math_number">
+                        <field name="NUM">23</field>
+                    </shadow>
+                </value>
+				<value name="DS1302_MINUTE">
+                    <shadow type="math_number">
+                        <field name="NUM">0</field>
+                    </shadow>
+                </value>	
+				<value name="DS1302_SECOND">
+                    <shadow type="math_number">
+                        <field name="NUM">0</field>
+                    </shadow>
+                </value>				
+			 
+			 </block>
+			<block type="order_read_rtc_ds1302"></block>
+			<block type="values_ds1302"></block>
+			<block type="values_text_ds1302"></block>
+		   </category>
 		    <category id="catRTCDS3231" colour="190">
 			<block type="Init_RTC_ds3231"></block>
 		     <block type="DateTime_RTC_ds3231">
