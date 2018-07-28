@@ -525,6 +525,18 @@ Blockly.Msg.RTCDS1302_RST="RST Pin";
 Blockly.Msg.RTCDS1302_CLK="CLK Pin";
 Blockly.Msg.RTCDS1302_DAT="DAT Pin";
 
+//MAX7219-7segment panel
+Blockly.Msg.MAX7219_7D_NAME="Init MAX7219 7-Segment displays.";
+Blockly.Msg.MAX7219_7D_CS="CS Pin";
+Blockly.Msg.MAX7219_7D_CLK="CLK Pin";
+Blockly.Msg.MAX7219_7D_DAT="DAT Pin";
+Blockly.Msg.MAX7219_7D_Number="Number of displays";
+
+
+
+
+
+
 
 //IN OUT
 Blockly.Msg.INOUT_HIGH_LEVEL="High";

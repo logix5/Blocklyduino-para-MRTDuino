@@ -26,6 +26,7 @@
         <script src="../../blocks/seriallcd.js"></script>
         <script src="../../blocks/seriallcdi2c.js"></script>
 		<script src="../../blocks/led-rgb-ws2812b.js"></script>
+		<script src="../../blocks/MAX7219-7digit.js"></script>
 		<script src="../../blocks/simpleSensors.js"></script>
 		<script src="../../blocks/keypad.js"></script>
 		<script src="../../blocks/Temp-ds18b20.js"></script>
@@ -919,6 +920,9 @@
 				<block type="lcdi2c_showCursor"></block>
 				<block type="lcdi2c_blinkCursor"></block>				
             </category>
+			 <category id="catMAX7219_7D" colour="140">
+			 <block type="Init_MAX7219_7digit"></block>
+			 </category>
 			 <category id="catLedStrip" colour="140">
 			 <block type="LedStrip_WS2812B_init">
 			  <value name="Number_of_Leds">

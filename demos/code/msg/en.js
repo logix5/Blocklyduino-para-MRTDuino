@@ -18,6 +18,7 @@ var MSG = {
   catLedStrip:"Led Strip",
   catRTCDS3231:"RTC DS3231",
   catRTCDS1302:"RTC DS1302",
+  catMAX7219_7D:"MAX7219 7digit",
   catEEprom:"EEPROM",
   catSimpleSensorsALL:"Simple Sensors",
   catSimpleSensors:"Sensors I",
