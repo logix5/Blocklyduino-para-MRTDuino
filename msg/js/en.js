@@ -531,7 +531,15 @@ Blockly.Msg.MAX7219_7D_CS="CS Pin";
 Blockly.Msg.MAX7219_7D_CLK="CLK Pin";
 Blockly.Msg.MAX7219_7D_DAT="DAT Pin";
 Blockly.Msg.MAX7219_7D_Number="Number of displays";
-
+Blockly.Msg.MAX7219_7D_NAME2="MAX7219 7-Segment#";
+Blockly.Msg.MAX7219_7D_Brightness="brightness (0-15)";
+Blockly.Msg.MAX7219_7D_SHUTDOWN="Activate";
+Blockly.Msg.MAX7219_7D_CLEAR="Clear";
+Blockly.Msg.MAX7219_7D_DIGIT="Digit#";
+Blockly.Msg.MAX7219_7D_CHAR="paint char";
+Blockly.Msg.MAX7219_7D_VALUE="paint value(0-9)";
+Blockly.Msg.MAX7219_7D_DP="Point";
+Blockly.Msg.MAX7219_7D_CUSTOM="paint custom segments (bin or hex or dec)";
 
 
 

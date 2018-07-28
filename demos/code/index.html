@@ -70,6 +70,7 @@
         <script src="../../generators/arduino/seriallcd.js"></script>
         <script src="../../generators/arduino/seriallcdi2c.js"></script>
 		<script src="../../generators/arduino/led-rgb-ws2812b.js"></script>
+		<script src="../../generators/arduino/MAX7219-7digit.js"></script>
 		<script src="../../generators/arduino/RTC_DS3231.js"></script>
 		<script src="../../generators/arduino/RTC_DS1302.js"></script>
 		<script src="../../generators/arduino/simpleSensors.js"></script>
@@ -921,7 +922,28 @@
 				<block type="lcdi2c_blinkCursor"></block>				
             </category>
 			 <category id="catMAX7219_7D" colour="140">
-			 <block type="Init_MAX7219_7digit"></block>
+			 <block type="Init_MAX7219_7digit">
+				<field name="PIN_CLK">15</field>
+				<field name="PIN_CS">16</field>
+			 </block>
+			 <block type="MAX7219_7digit_shutdown"></block>
+			 <block type="MAX7219_7digit_brightness">
+				<value name="BRIGHTNESS">
+                        <shadow type="math_number">
+                            <field name="NUM">10</field>
+                        </shadow>
+                    </value>
+			 </block>
+			 <block type="MAX7219_7digit_clear"></block>
+			 <block type="MAX7219_7digit_digit">
+				<value name="VALUE">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+			 </block>
+			 <block type="MAX7219_7digit_char"></block>
+			 <block type="MAX7219_7digit_custom"></block>
 			 </category>
 			 <category id="catLedStrip" colour="140">
 			 <block type="LedStrip_WS2812B_init">
