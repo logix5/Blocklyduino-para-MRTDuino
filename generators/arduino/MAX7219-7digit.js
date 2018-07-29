@@ -48,7 +48,7 @@ Blockly.Arduino['MAX7219_7digit_clear'] = function(block) {
 Blockly.Arduino['MAX7219_7digit_digit'] = function(block) {
   
   var numberDisplays = this.getFieldValue('NumberDisplays'); 
-  var digit = this.getFieldValue('Digit');
+  var digit = Blockly.Arduino.valueToCode(this, 'Digit', Blockly.Arduino.ORDER_ATOMIC) || '0';
   var point = this.getFieldValue('dp');
   var value = Blockly.Arduino.valueToCode(this, 'VALUE', Blockly.Arduino.ORDER_ATOMIC) || '0';
      	 	 
@@ -59,7 +59,7 @@ Blockly.Arduino['MAX7219_7digit_digit'] = function(block) {
 Blockly.Arduino['MAX7219_7digit_char'] = function(block) {
   
   var numberDisplays = this.getFieldValue('NumberDisplays'); 
-  var digit = this.getFieldValue('Digit');
+  var digit = Blockly.Arduino.valueToCode(this, 'Digit', Blockly.Arduino.ORDER_ATOMIC) || '0';
   var chartopaint = this.getFieldValue('Chartopaint');
   var point = this.getFieldValue('dp');
  
@@ -71,8 +71,8 @@ Blockly.Arduino['MAX7219_7digit_char'] = function(block) {
 Blockly.Arduino['MAX7219_7digit_custom'] = function(block) {
   
   var numberDisplays = this.getFieldValue('NumberDisplays'); 
-  var digit = this.getFieldValue('Digit');
-  var value = this.getFieldValue('VALUE');
+  var digit = Blockly.Arduino.valueToCode(this, 'Digit', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var value = Blockly.Arduino.valueToCode(this, 'VALUE', Blockly.Arduino.ORDER_ATOMIC) || '0';
 
      	 	 
   var code='lc7d.setRow('+numberDisplays+','+digit+','+value+');\n';

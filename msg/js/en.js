@@ -535,7 +535,7 @@ Blockly.Msg.MAX7219_7D_NAME2="MAX7219 7-Segment#";
 Blockly.Msg.MAX7219_7D_Brightness="brightness (0-15)";
 Blockly.Msg.MAX7219_7D_SHUTDOWN="Activate";
 Blockly.Msg.MAX7219_7D_CLEAR="Clear";
-Blockly.Msg.MAX7219_7D_DIGIT="Digit#";
+Blockly.Msg.MAX7219_7D_DIGIT="Digit(0-7)";
 Blockly.Msg.MAX7219_7D_CHAR="paint char";
 Blockly.Msg.MAX7219_7D_VALUE="paint value(0-9)";
 Blockly.Msg.MAX7219_7D_DP="Point";
@@ -552,9 +552,9 @@ Blockly.Msg.MAX7219_LM_Brightness="brightness (0-15)";
 Blockly.Msg.MAX7219_LM_SHUTDOWN="Activate";
 Blockly.Msg.MAX7219_LM_CLEAR="Clear";
 Blockly.Msg.MAX7219_LM_PAINT="Draw this image";
-Blockly.Msg.MAX7219_LM_Row="Row";
+Blockly.Msg.MAX7219_LM_Row="Row(0-7)";
 Blockly.Msg.MAX7219_LM_value="Value (bin or hex or dec)";
-Blockly.Msg.MAX7219_LM_Column="Column";
+Blockly.Msg.MAX7219_LM_Column="Column(0-7)";
 Blockly.Msg.MAX7219_LM_Led="Set Led";
 
 

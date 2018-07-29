@@ -75,8 +75,8 @@ Blockly.Arduino['MAX7219_ledmatrix_draw'] = function(block) {
 Blockly.Arduino['MAX7219_ledmatrix_row'] = function(block) {
   
   var numberDisplays = this.getFieldValue('NumberDisplays'); 
-  var row = this.getFieldValue('Row');
-  var value = this.getFieldValue('VALUE');
+  var row = Blockly.Arduino.valueToCode(this, 'Row', Blockly.Arduino.ORDER_ATOMIC) || '0'; 
+  var value = Blockly.Arduino.valueToCode(this, 'VALUE', Blockly.Arduino.ORDER_ATOMIC) || '0';
    
      	 	 
   var code='lclm.setRow('+numberDisplays+','+row+','+value+');\n';
@@ -86,8 +86,8 @@ Blockly.Arduino['MAX7219_ledmatrix_row'] = function(block) {
 Blockly.Arduino['MAX7219_ledmatrix_column'] = function(block) {
   
   var numberDisplays = this.getFieldValue('NumberDisplays'); 
-  var Column = this.getFieldValue('Column');
-  var value = this.getFieldValue('VALUE');
+  var Column = Blockly.Arduino.valueToCode(this, 'Column', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var value = Blockly.Arduino.valueToCode(this, 'VALUE', Blockly.Arduino.ORDER_ATOMIC) || '0';
    
      	 	 
   var code='lclm.setColumn('+numberDisplays+','+Column+','+value+');\n';
@@ -97,8 +97,8 @@ Blockly.Arduino['MAX7219_ledmatrix_column'] = function(block) {
 Blockly.Arduino['MAX7219_ledmatrix_led'] = function(block) {
   
   var numberDisplays = this.getFieldValue('NumberDisplays'); 
-  var row = this.getFieldValue('Row');
-  var Column = this.getFieldValue('Column');
+  var row = Blockly.Arduino.valueToCode(this, 'Row', Blockly.Arduino.ORDER_ATOMIC) || '0'; 
+  var Column = Blockly.Arduino.valueToCode(this, 'Column', Blockly.Arduino.ORDER_ATOMIC) || '0';
   var value = this.getFieldValue('power');
    
      	 	 

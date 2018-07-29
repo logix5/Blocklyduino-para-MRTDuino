@@ -937,9 +937,44 @@
                     </value>
 			 </block>
 			  <block type="MAX7219_ledmatrix_clear"></block>
-			  <block type="MAX7219_ledmatrix_led"></block>
-			  <block type="MAX7219_ledmatrix_row"></block>
-			  <block type="MAX7219_ledmatrix_column"></block>
+			  <block type="MAX7219_ledmatrix_led">
+			  
+			  <value name="Row">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                </value>
+				<value name="Column">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                </value>
+			  
+			  </block>
+			  <block type="MAX7219_ledmatrix_row">
+			   <value name="Row">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                </value>
+				<value name="VALUE">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                </value>
+			  </block>
+			  <block type="MAX7219_ledmatrix_column">
+			  <value name="Column">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                </value>
+			  <value name="VALUE">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                </value>
+			  </block>
 			 <block type="MAX7219_ledmatrix_draw"></block>		
 		 
 			</category>
@@ -958,14 +993,37 @@
 			 </block>
 			 <block type="MAX7219_7digit_clear"></block>
 			 <block type="MAX7219_7digit_digit">
+			 <value name="Digit">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
 				<value name="VALUE">
                         <shadow type="math_number">
                             <field name="NUM">0</field>
                         </shadow>
                     </value>
 			 </block>
-			 <block type="MAX7219_7digit_char"></block>
-			 <block type="MAX7219_7digit_custom"></block>
+			 <block type="MAX7219_7digit_char">
+			 <value name="Digit">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+			 
+			 </block>
+			 <block type="MAX7219_7digit_custom">
+			 <value name="Digit">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+			 <value name="VALUE">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+			 </block>
 			 </category>
 			 <category id="catLedStrip" colour="140">
 			 <block type="LedStrip_WS2812B_init">
