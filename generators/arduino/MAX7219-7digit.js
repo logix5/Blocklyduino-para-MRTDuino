@@ -25,7 +25,7 @@ Blockly.Arduino['MAX7219_7digit_shutdown'] = function(block) {
   var power = this.getFieldValue('power'); 
   var numberDisplays = this.getFieldValue('NumberDisplays'); 
      	 	 
-  var code='lc7d.shutdown('+numberDisplays+'-1,'+power+');\n';
+  var code='lc7d.shutdown('+numberDisplays+','+power+');\n';
   return code;
 };
 
@@ -33,7 +33,7 @@ Blockly.Arduino['MAX7219_7digit_brightness'] = function(block) {
   var brightness = Blockly.Arduino.valueToCode(this, 'BRIGHTNESS', Blockly.Arduino.ORDER_ATOMIC) || '0';
   var numberDisplays = this.getFieldValue('NumberDisplays'); 
      	 	 
-  var code='lc7d.setIntensity('+numberDisplays+'-1,'+brightness+');\n';
+  var code='lc7d.setIntensity('+numberDisplays+','+brightness+');\n';
   return code;
 };
 
@@ -41,7 +41,7 @@ Blockly.Arduino['MAX7219_7digit_clear'] = function(block) {
   
   var numberDisplays = this.getFieldValue('NumberDisplays'); 
      	 	 
-  var code='lc7d.clearDisplay('+numberDisplays+'-1);\n';
+  var code='lc7d.clearDisplay('+numberDisplays+');\n';
   return code;
 };
 
@@ -52,7 +52,7 @@ Blockly.Arduino['MAX7219_7digit_digit'] = function(block) {
   var point = this.getFieldValue('dp');
   var value = Blockly.Arduino.valueToCode(this, 'VALUE', Blockly.Arduino.ORDER_ATOMIC) || '0';
      	 	 
-  var code='lc7d.setDigit('+numberDisplays+'-1,'+digit+'-1,'+value+','+point+');\n';
+  var code='lc7d.setDigit('+numberDisplays+','+digit+','+value+','+point+');\n';
   return code;
 };
 
@@ -64,7 +64,7 @@ Blockly.Arduino['MAX7219_7digit_char'] = function(block) {
   var point = this.getFieldValue('dp');
  
      	 	 
-  var code='lc7d.setChar('+numberDisplays+'-1,'+digit+'-1,\''+chartopaint+'\','+point+');\n';
+  var code='lc7d.setChar('+numberDisplays+','+digit+',\''+chartopaint+'\','+point+');\n';
   return code;
 };
 
@@ -73,10 +73,9 @@ Blockly.Arduino['MAX7219_7digit_custom'] = function(block) {
   var numberDisplays = this.getFieldValue('NumberDisplays'); 
   var digit = this.getFieldValue('Digit');
   var value = this.getFieldValue('VALUE');
-  var point = this.getFieldValue('dp');
- 
+
      	 	 
-  var code='lc7d.setRow('+numberDisplays+'-1,'+digit+'-1,'+value+');\n';
+  var code='lc7d.setRow('+numberDisplays+','+digit+','+value+');\n';
   return code;
 };
 

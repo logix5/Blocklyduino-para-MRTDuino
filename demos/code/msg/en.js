@@ -19,6 +19,7 @@ var MSG = {
   catRTCDS3231:"RTC DS3231",
   catRTCDS1302:"RTC DS1302",
   catMAX7219_7D:"MAX7219 7digit",
+  catMAX7219_LM:"MAX7219 Led Matrix",
   catEEprom:"EEPROM",
   catSimpleSensorsALL:"Simple Sensors",
   catSimpleSensors:"Sensors I",

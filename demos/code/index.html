@@ -27,6 +27,7 @@
         <script src="../../blocks/seriallcdi2c.js"></script>
 		<script src="../../blocks/led-rgb-ws2812b.js"></script>
 		<script src="../../blocks/MAX7219-7digit.js"></script>
+		<script src="../../blocks/MAX7219-ledmatrix.js"></script>
 		<script src="../../blocks/simpleSensors.js"></script>
 		<script src="../../blocks/keypad.js"></script>
 		<script src="../../blocks/Temp-ds18b20.js"></script>
@@ -71,6 +72,7 @@
         <script src="../../generators/arduino/seriallcdi2c.js"></script>
 		<script src="../../generators/arduino/led-rgb-ws2812b.js"></script>
 		<script src="../../generators/arduino/MAX7219-7digit.js"></script>
+		<script src="../../generators/arduino/MAX7219-ledmatrix.js"></script>
 		<script src="../../generators/arduino/RTC_DS3231.js"></script>
 		<script src="../../generators/arduino/RTC_DS1302.js"></script>
 		<script src="../../generators/arduino/simpleSensors.js"></script>
@@ -921,6 +923,26 @@
 				<block type="lcdi2c_showCursor"></block>
 				<block type="lcdi2c_blinkCursor"></block>				
             </category>
+			 <category id="catMAX7219_LM" colour="140">
+			 <block type="Init_MAX7219_ledmatrix">
+				<field name="PIN_CLK">15</field>
+				<field name="PIN_CS">16</field>
+			 </block>
+			 <block type="MAX7219_ledmatrix_shutdown"></block>
+			 <block type="MAX7219_ledmatrix_brightness">
+				<value name="BRIGHTNESS">
+                        <shadow type="math_number">
+                            <field name="NUM">10</field>
+                        </shadow>
+                    </value>
+			 </block>
+			  <block type="MAX7219_ledmatrix_clear"></block>
+			  <block type="MAX7219_ledmatrix_led"></block>
+			  <block type="MAX7219_ledmatrix_row"></block>
+			  <block type="MAX7219_ledmatrix_column"></block>
+			 <block type="MAX7219_ledmatrix_draw"></block>		
+		 
+			</category>
 			 <category id="catMAX7219_7D" colour="140">
 			 <block type="Init_MAX7219_7digit">
 				<field name="PIN_CLK">15</field>
