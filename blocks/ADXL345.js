@@ -31,62 +31,62 @@
  
 'use strict';
 
-goog.provide('Blockly.Blocks.ADXL354');
+goog.provide('Blockly.Blocks.ADXL345');
 
 goog.require('Blockly.Blocks');
 
-Blockly.Blocks['Init_Accel_ADXL354'] = {
+Blockly.Blocks['Init_Accel_ADXL345'] = {
   helpUrl: '',
   init: function() {
     this.setColour(220);
 	this.appendDummyInput()
        // .appendField(new Blockly.FieldImage("images/ds18b20.png",52,38))
-		.appendField(Blockly.Msg.ADXL354)
-		.appendField(Blockly.Msg.ADXL354_2);
+		.appendField(Blockly.Msg.ADXL345)
+		.appendField(Blockly.Msg.ADXL345_2);
 	this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('Init the libraries to read the accel values in the ADXL354 sensors');
+    this.setTooltip('Init the libraries to read the accel values in the ADXL345 sensors');
   }
 };
 
-Blockly.Blocks['config_adxl354_range'] = {
+Blockly.Blocks['config_adxl345_range'] = {
   helpUrl: '',
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
 	   // .appendField(new Blockly.FieldImage("images/ds18b20.png",52,38))
-        .appendField(Blockly.Msg.ADXL354_config)
-		.appendField(new Blockly.FieldDropdown([['2g','ADXL345_RANGE_2_G'],['4g','ADXL345_RANGE_4_G'],['8g','ADXL345_RANGE_8_G'],['16g','ADXL345_RANGE_16_G']]), "ADXL354_RANGE");
+        .appendField(Blockly.Msg.ADXL345_config)
+		.appendField(new Blockly.FieldDropdown([['2g','ADXL345_RANGE_2_G'],['4g','ADXL345_RANGE_4_G'],['8g','ADXL345_RANGE_8_G'],['16g','ADXL345_RANGE_16_G']]), "ADXL345_RANGE");
 	this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip("Config the range of the ADXL354 sensor");
+    this.setTooltip("Config the range of the ADXL345 sensor");
   }
 };
 
-Blockly.Blocks['order_to_read_adxl354_values'] = {
+Blockly.Blocks['order_to_read_adxl345_values'] = {
   helpUrl: '',
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
 	   // .appendField(new Blockly.FieldImage("images/ds18b20.png",52,38))
-        .appendField(Blockly.Msg.ADXL354_read)
+        .appendField(Blockly.Msg.ADXL345_read)
 	this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip("Read the values of the ADXL354 sensor. The values are store in internal variable");
+    this.setTooltip("Read the values of the ADXL345 sensor. The values are store in internal variable");
   }
 };
 
-Blockly.Blocks['adxl354_values'] = {
+Blockly.Blocks['adxl345_values'] = {
   helpUrl: '',
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
 		//.appendField(new Blockly.FieldImage("images/ds18b20.png",52,38))
 		.appendField(new Blockly.FieldDropdown([['Ax','0'],['Ay','1'],['Az','2']]), "TypeAccel")
-	    .appendField(Blockly.Msg.ADXL354_values);
+	    .appendField(Blockly.Msg.ADXL345_values);
     this.setOutput(true, 'Number');
 	this.setInputsInline(true);
     this.setTooltip('Refund the parameter selected. Ax, Ay, Az, Roll and Pitch');

@@ -471,11 +471,11 @@ Blockly.Msg.RE_READ="Read Value";
 Blockly.Msg.RE_WRITE="Write Value";
 Blockly.Msg.RE_Button="Button";
 Blockly.Msg.RE_Pressed="pressed?";
-Blockly.Msg.ADXL354="Init ADXL354 acceleration sensor";
-Blockly.Msg.ADXL354_2="- SDA Port13 - SCL Port14";
-Blockly.Msg.ADXL354_config="Config ADXL354 acceleration.Range";
-Blockly.Msg.ADXL354_read="ADXL354 acceleration sensor.Read values";
-Blockly.Msg.ADXL354_values="raw value";
+Blockly.Msg.ADXL345="Init ADXL345 acceleration sensor";
+Blockly.Msg.ADXL345_2="- SDA Port13 - SCL Port14";
+Blockly.Msg.ADXL345_config="Config ADXL345 acceleration.Range";
+Blockly.Msg.ADXL345_read="ADXL345 acceleration sensor.Read values";
+Blockly.Msg.ADXL345_values="raw value";
 
 
 
