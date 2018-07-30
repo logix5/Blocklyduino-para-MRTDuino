@@ -28,6 +28,7 @@ var MSG = {
   catOtherSensors:"Other Sensors",
   catKeypad:"Keypad",
   catds18b20:"DS18B20",
+  catADXL354:"ADXL354 Accel",
   catRotaryEncoder:"Rotary Encoder",
   catSimpleActuators:"Simple Actuators",
   catDisplay:"Displays",

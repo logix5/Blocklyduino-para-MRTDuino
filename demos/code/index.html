@@ -31,6 +31,7 @@
 		<script src="../../blocks/simpleSensors.js"></script>
 		<script src="../../blocks/keypad.js"></script>
 		<script src="../../blocks/Temp-ds18b20.js"></script>
+		<script src="../../blocks/ADXL354.js"></script>
 		<script src="../../blocks/RotaryEncoder.js"></script>
 		<script src="../../blocks/simpleActuators.js"></script>
 		<script src="../../blocks/RTC_DS3231.js"></script>
@@ -79,6 +80,7 @@
 		<script src="../../generators/arduino/simpleActuators.js"></script>
 		<script src="../../generators/arduino/keypad.js"></script>
 		<script src="../../generators/arduino/Temp-ds18b20.js"></script>
+		<script src="../../generators/arduino/ADXL354.js"></script>
 		<script src="../../generators/arduino/RotaryEncoder.js"></script>
 		<script src="../../generators/arduino/EEPROM.js"></script>
         <script src="../../generators/arduino/math.js"></script>
@@ -792,6 +794,27 @@
 
 <category id="catOtherSensors" colour="220"> 
 
+	
+	<category id="catRotaryEncoder" colour="220"> 
+	 <block type="Init_RotaryEncoderInterrupt">
+				 <field name="PINDT">0</field>
+				 <field name="PINCLK">1</field>
+	 </block>
+	 <block type="Init_RotaryEncoder">
+				 <field name="PINDT">15</field>
+				 <field name="PINCLK">16</field>
+	 
+	 </block>
+	 <block type="RotaryEncoder_Write">
+				<value name="Writecounter">
+                    <shadow type="math_number">
+                        <field name="NUM">0</field>
+                    </shadow>
+                </value>
+	 </block>
+	 <block type="RotaryEncoder_Read"></block>
+	 <block type="rotaryencoder_button_sensor"></block>
+	</category>
 	<category id="catKeypad" colour="220"> 
 	 <block type="Init_Keypad4x4">
 	  <field name="PIN_R2">15</field>
@@ -813,9 +836,13 @@
 	 </block>
 	 <block type="keypad_keyreaded"></block>
 	  <block type="keypad_key"></block>
-	 
 	</category>
-
+	<category id="catADXL354" colour="220"> 
+	<block type="Init_Accel_ADXL354"></block>
+	<block type="config_adxl354_range"></block>
+	<block type="order_to_read_adxl354_values"></block>
+	<block type="adxl354_values"></block>
+	</category>
 	<category id="catds18b20" colour="220"> 
 	  <block type="Init_Temp_ds18b20"></block>
 	  <block type="order_read_temeperature_ds18b20"></block>
@@ -826,26 +853,6 @@
                     </shadow>
                 </value>
 	  </block>
-	</category>
-	<category id="catRotaryEncoder" colour="220"> 
-	 <block type="Init_RotaryEncoderInterrupt">
-				 <field name="PINDT">0</field>
-				 <field name="PINCLK">1</field>
-	 </block>
-	 <block type="Init_RotaryEncoder">
-				 <field name="PINDT">15</field>
-				 <field name="PINCLK">16</field>
-	 
-	 </block>
-	 <block type="RotaryEncoder_Write">
-				<value name="Writecounter">
-                    <shadow type="math_number">
-                        <field name="NUM">0</field>
-                    </shadow>
-                </value>
-	 </block>
-	 <block type="RotaryEncoder_Read"></block>
-	 <block type="rotaryencoder_button_sensor"></block>
 	</category>
 </category>
 
