@@ -809,6 +809,8 @@ Blockly.Msg.CONV_toint="Convert to Int ";
 Blockly.Msg.CONV_tounsigendint="Convert to unsigned Int ";
 Blockly.Msg.CONV_tofloat="Convert to Float ";
 Blockly.Msg.CONV_toString="Convert to String ";
+Blockly.Msg.CONV_toBinary="Convert to number the binary number";
+Blockly.Msg.CONV_toHex="Convert to number the hex number";
     
 //ADVANCED I/O
 

@@ -212,7 +212,18 @@ var value_name = Blockly.Arduino.valueToCode(block, 'NAME', Blockly.Arduino.ORDE
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 }
 
+Blockly.Arduino['math_binary_number'] = function(block) {
+  // Numeric value.
+  var code = this.getFieldValue('NUM');
+  
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
 
-
+Blockly.Arduino['math_hex_number'] = function(block) {
+  // Numeric value.
+  var code = this.getFieldValue('NUM');
+  
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
 
 

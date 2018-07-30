@@ -635,3 +635,32 @@ Blockly.Blocks['conversion_tofloat'] = {
   }
 };
 
+Blockly.Blocks['math_binary_number'] = {
+  /**
+   * Block for numeric binary value.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.setHelpUrl('');
+    this.setColour(Blockly.Blocks.math.HUE);
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldTextInput('B10000001',Blockly.FieldTextInput), 'NUM');
+    this.setOutput(true, 'Number');
+    this.setTooltip('BinaryNumber');
+  }
+};
+
+Blockly.Blocks['math_hex_number'] = {
+  /**
+   * Block for numeric binary value.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.setHelpUrl('');
+    this.setColour(Blockly.Blocks.math.HUE);
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldTextInput('0xFF',Blockly.FieldTextInput), 'NUM');
+    this.setOutput(true, 'Number');
+    this.setTooltip('HexNumber');
+  }
+};
