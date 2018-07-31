@@ -946,9 +946,82 @@
 				<block type="lcdi2c_blinkCursor"></block>				
             </category>
 			 <category id="catTM1637" colour="140">
-			 <block type="DisplayTM1637_init"></block>
-			 <block type="DisplayTM1637_setBrightness"></block>
-			
+			 <block type="DisplayTM1637_init">
+				<field name="PIN_DIO">15</field>
+				 <value name="Britghness">
+                        <shadow type="math_number">
+                            <field name="NUM">4</field>
+                        </shadow>
+                    </value>
+			 
+			 </block>
+			 <block type="DisplayTM1637_activate"></block>
+			 <block type="DisplayTM1637_clear"></block>
+			 <block type="DisplayTM1637_setBrightness">
+			 <value name="Brightness">
+                        <shadow type="math_number">
+                            <field name="NUM">4</field>
+                        </shadow>
+                    </value>
+			 </block>
+			 <block type="DisplayTM1637_set_segment">
+			 <value name="Value">
+                        <shadow type="math_number">
+                            <field name="NUM">8</field>
+                        </shadow>
+                    </value>
+			 <value name="Digit">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+			 </block>
+			 <block type="DisplayTM1637_set_digit">
+			 <value name="valuenumber">
+                        <shadow type="math_number">
+                            <field name="NUM">4</field>
+                        </shadow>
+                    </value>
+					
+					<value name="Digit">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+			 </block>
+			 <block type="DisplayTM1637_set_completenumber">
+			 <value name="completenumber">
+                        <shadow type="math_number">
+                            <field name="NUM">1234</field>
+                        </shadow>
+                    </value>
+			 </block>
+			 <block type="DisplayTM1637_set_hourmin">
+			 <value name="hour">
+                        <shadow type="math_number">
+                            <field name="NUM">12</field>
+                        </shadow>
+                    </value>
+			<value name="min">
+                        <shadow type="math_number">
+                            <field name="NUM">42</field>
+                        </shadow>
+                    </value>
+			 </block>
+			 <block type="DisplayTM1637_set_minsecond">
+			 <value name="min">
+                        <shadow type="math_number">
+                            <field name="NUM">16</field>
+                        </shadow>
+                    </value>
+			<value name="second">
+                        <shadow type="math_number">
+                            <field name="NUM">4</field>
+                        </shadow>
+                    </value>
+			 
+			 </block>
+		
 			 </category>
 			
 			 <category id="catMAX7219_LM" colour="140">

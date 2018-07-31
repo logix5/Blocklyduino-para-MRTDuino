@@ -10,7 +10,7 @@ goog.provide('Blockly.Blocks.DisplayTM1637');
 goog.require('Blockly.Blocks');
 
 Blockly.Blocks['DisplayTM1637_init'] = {
-  helpUrl: '',
+  helpUrl: 'https://polaridad.es/libreria-arduino-display-led-7-segmentos-tm1637/',
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
@@ -33,8 +33,28 @@ Blockly.Blocks['DisplayTM1637_init'] = {
   }
 };
 
+Blockly.Blocks['DisplayTM1637_activate'] = {
+  helpUrl: 'https://polaridad.es/libreria-arduino-display-led-7-segmentos-tm1637/',
+  init: function() {
+	this.setColour(140);
+	this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
+        .appendField(Blockly.Msg.TM1637_name)
+		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.M1637_turnOFF_ON)
+		.appendField(new Blockly.FieldDropdown([['ON','1'],['OFF','2']]), "TM1637_POWER")
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+  }
+};
+
+
+
 Blockly.Blocks['DisplayTM1637_setBrightness'] = {
-  helpUrl: '',
+  helpUrl: 'https://polaridad.es/libreria-arduino-display-led-7-segmentos-tm1637/',
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
@@ -51,80 +71,37 @@ Blockly.Blocks['DisplayTM1637_setBrightness'] = {
   }
 };
 
-
-
-
-
-
-/*
-
-Blockly.Blocks['LedStrip_WS2812B_setBrightness'] = {
-  helpUrl: '',
+Blockly.Blocks['DisplayTM1637_clear'] = {
+  helpUrl: 'https://polaridad.es/libreria-arduino-display-led-7-segmentos-tm1637/',
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
-        .appendField(Blockly.Msg.ledstrip_WS2812B_name)
-		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "LEDSTRIP_NUMBER")
-    this.appendValueInput("Brightness")
+		//.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
+        .appendField(Blockly.Msg.TM1637_name)
+		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
+    this.appendDummyInput()
+        .appendField(Blockly.Msg.M1637_Clear)
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+  }
+};
+
+Blockly.Blocks['DisplayTM1637_set_segment'] = {
+  helpUrl: 'https://polaridad.es/libreria-arduino-display-led-7-segmentos-tm1637/',
+  init: function() {
+	this.setColour(140);
+	this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
+        .appendField(Blockly.Msg.TM1637_name)
+		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
+	this.appendValueInput("Value")
 		.setCheck('Number')
-		.appendField(Blockly.Msg.ledstrip_WS2812B_Brightness);		
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip('');
-  }
-};
-
-Blockly.Blocks['LedStrip_WS2812B_show'] = {
-  helpUrl: '',
-  init: function() {
-	this.setColour(140);
-	this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
-        .appendField(Blockly.Msg.ledstrip_WS2812B_name)
-		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "LEDSTRIP_NUMBER")
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.ledstrip_WS2812B_Show)
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip('');
-  }
-};
-
-Blockly.Blocks['LedStrip_WS2812B_clear'] = {
-  helpUrl: '',
-  init: function() {
-	this.setColour(140);
-	this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
-        .appendField(Blockly.Msg.ledstrip_WS2812B_name)
-		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "LEDSTRIP_NUMBER")
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.ledstrip_WS2812B_Clear)
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip('');
-  }
-};
-
-Blockly.Blocks['LedStrip_WS2812B_setPixelColor'] = {
-  helpUrl: '',
-  
-  init: function() {
-	this.setColour(140);
-	this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
-        .appendField(Blockly.Msg.ledstrip_WS2812B_name)
-		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "LEDSTRIP_NUMBER")
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.ledstrip_WS2812B_setPixelColor)
-		.appendField(new Blockly.FieldColour('#ff0000'), 'RGBCOLOR');	
-    this.appendValueInput("Pixel_number")
+		.appendField(Blockly.Msg.M1637_Segment);
+	this.appendValueInput("Digit")
 		.setCheck('Number')
-		.appendField(Blockly.Msg.ledstrip_WS2812B_Led_Number);
+		.appendField(Blockly.Msg.M1637_Digit);
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -132,6 +109,93 @@ Blockly.Blocks['LedStrip_WS2812B_setPixelColor'] = {
   }
 };
 
-*/
+Blockly.Blocks['DisplayTM1637_set_digit'] = {
+  helpUrl: 'https://polaridad.es/libreria-arduino-display-led-7-segmentos-tm1637/',
+  init: function() {
+	this.setColour(140);
+	this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
+        .appendField(Blockly.Msg.TM1637_name)
+		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
+	this.appendValueInput("valuenumber")
+		.setCheck('Number')
+		.appendField(Blockly.Msg.M1637_number);
+	this.appendValueInput("Digit")
+		.setCheck('Number')
+		.appendField(Blockly.Msg.M1637_Digit);
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.M1637_dpOFF_ON)
+		.appendField(new Blockly.FieldDropdown([['OFF','false'],['ON','true']]), "TM1637_POINT")	
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+  }
+};
 
+Blockly.Blocks['DisplayTM1637_set_completenumber'] = {
+  helpUrl: 'https://polaridad.es/libreria-arduino-display-led-7-segmentos-tm1637/',
+  init: function() {
+	this.setColour(140);
+	this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
+        .appendField(Blockly.Msg.TM1637_name)
+		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
+	this.appendValueInput("completenumber")
+		.setCheck('Number')
+		.appendField(Blockly.Msg.M1637_completenumber);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+  }
+};
+
+Blockly.Blocks['DisplayTM1637_set_hourmin'] = {
+  helpUrl: 'https://polaridad.es/libreria-arduino-display-led-7-segmentos-tm1637/',
+  init: function() {
+	this.setColour(140);
+	this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
+        .appendField(Blockly.Msg.TM1637_name)
+		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
+	this.appendValueInput("hour")
+		.setCheck('Number')
+		.appendField(Blockly.Msg.M1637_Hour);
+	this.appendValueInput("min")
+		.setCheck('Number')
+		.appendField(Blockly.Msg.M1637_Min);
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.M1637_dpOFF_ON_2)
+		.appendField(new Blockly.FieldDropdown([['OFF','false'],['ON','true']]), "TM1637_POINT")	
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+  }
+};
+
+Blockly.Blocks['DisplayTM1637_set_minsecond'] = {
+  helpUrl: 'https://polaridad.es/libreria-arduino-display-led-7-segmentos-tm1637/',
+  init: function() {
+	this.setColour(140);
+	this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
+        .appendField(Blockly.Msg.TM1637_name)
+		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
+	this.appendValueInput("min")
+		.setCheck('Number')
+		.appendField(Blockly.Msg.M1637_Min);
+	this.appendValueInput("second")
+		.setCheck('Number')
+		.appendField(Blockly.Msg.M1637_Second);
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.M1637_dpOFF_ON_2)
+		.appendField(new Blockly.FieldDropdown([['OFF','false'],['ON','true']]), "TM1637_POINT")	
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+  }
+};
 

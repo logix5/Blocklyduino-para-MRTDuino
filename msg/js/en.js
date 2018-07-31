@@ -690,13 +690,22 @@ Blockly.Msg.ledstrip_WS2812B_Led_Number = "for led number";
 Blockly.Msg.ledstrip_WS2812B_setPixelColor = "Set color";
 
 //DISPALY 7 SEGMENT TM1637
-Blockly.Msg.TM1637_name = "TM1637 Display 7 segment.";
+Blockly.Msg.TM1637_name = "TM1637 Display 7 segment";
 Blockly.Msg.TM1637_init = "Init TM1637 Display 7 segment";
 Blockly.Msg.TM1637_PinCLK = "Pin CLK";
 Blockly.Msg.TM1637_PinDIO = "Pin DIO";
 Blockly.Msg.M1637_Brightness = "Set brightness(0-7)";
-
-
+Blockly.Msg.M1637_turnOFF_ON = "Turn";
+Blockly.Msg.M1637_Clear = "Clear";
+Blockly.Msg.M1637_Digit = "in digit(0-3)";
+Blockly.Msg.M1637_Segment="Set segments(bin or hex or dec)";
+Blockly.Msg.M1637_number="Set number(0-9)";
+Blockly.Msg.M1637_dpOFF_ON = "Show point";
+Blockly.Msg.M1637_dpOFF_ON_2 = "Show two point";
+Blockly.Msg.M1637_completenumber="Set complete number(0-9999)";
+Blockly.Msg.M1637_Hour="Set hour";
+Blockly.Msg.M1637_Min="Set minute";
+Blockly.Msg.M1637_Second="Set second";
 
 
 
