@@ -16,6 +16,7 @@ var MSG = {
   catServo:"Servo",
   catStorage:"Storage",
   catLedStrip:"Led Strip",
+  catTM1637:"TM1637 display",
   catRTCDS3231:"RTC DS3231",
   catRTCDS1302:"RTC DS1302",
   catMAX7219_7D:"MAX7219 7digit",

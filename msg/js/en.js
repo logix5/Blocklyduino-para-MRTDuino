@@ -689,6 +689,17 @@ Blockly.Msg.ledstrip_WS2812B_Brightness = "Brightness";
 Blockly.Msg.ledstrip_WS2812B_Led_Number = "for led number";
 Blockly.Msg.ledstrip_WS2812B_setPixelColor = "Set color";
 
+//DISPALY 7 SEGMENT TM1637
+Blockly.Msg.TM1637_name = "TM1637 Display 7 segment.";
+Blockly.Msg.TM1637_init = "Init TM1637 Display 7 segment";
+Blockly.Msg.TM1637_PinCLK = "Pin CLK";
+Blockly.Msg.TM1637_PinDIO = "Pin DIO";
+Blockly.Msg.M1637_Brightness = "Set brightness(0-7)";
+
+
+
+
+
 //SERVO
 Blockly.Msg.SERVO_Servo="Servo";
 Blockly.Msg.PIN="PIN#";

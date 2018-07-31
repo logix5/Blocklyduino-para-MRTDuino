@@ -26,6 +26,7 @@
         <script src="../../blocks/seriallcd.js"></script>
         <script src="../../blocks/seriallcdi2c.js"></script>
 		<script src="../../blocks/led-rgb-ws2812b.js"></script>
+		<script src="../../blocks/DisplayTM1637.js"></script>
 		<script src="../../blocks/MAX7219-7digit.js"></script>
 		<script src="../../blocks/MAX7219-ledmatrix.js"></script>
 		<script src="../../blocks/simpleSensors.js"></script>
@@ -73,6 +74,7 @@
         <script src="../../generators/arduino/seriallcd.js"></script>
         <script src="../../generators/arduino/seriallcdi2c.js"></script>
 		<script src="../../generators/arduino/led-rgb-ws2812b.js"></script>
+		<script src="../../generators/arduino/DisplayTM1637.js"></script>
 		<script src="../../generators/arduino/MAX7219-7digit.js"></script>
 		<script src="../../generators/arduino/MAX7219-ledmatrix.js"></script>
 		<script src="../../generators/arduino/RTC_DS3231.js"></script>
@@ -943,6 +945,12 @@
 				<block type="lcdi2c_showCursor"></block>
 				<block type="lcdi2c_blinkCursor"></block>				
             </category>
+			 <category id="catTM1637" colour="140">
+			 <block type="DisplayTM1637_init"></block>
+			 <block type="DisplayTM1637_setBrightness"></block>
+			
+			 </category>
+			
 			 <category id="catMAX7219_LM" colour="140">
 			 <block type="Init_MAX7219_ledmatrix">
 				<field name="PIN_CLK">15</field>
@@ -1044,7 +1052,7 @@
                         </shadow>
                     </value>
 			 </block>
-			 </category>
+			 </category>		 
 			 <category id="catLedStrip" colour="140">
 			 <block type="LedStrip_WS2812B_init">
 			  <value name="Number_of_Leds">

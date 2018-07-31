@@ -644,7 +644,7 @@ Blockly.Blocks['math_binary_number'] = {
     this.setHelpUrl('');
     this.setColour(Blockly.Blocks.math.HUE);
     this.appendDummyInput()
-        .appendField(new Blockly.FieldTextInput('B10000001',Blockly.FieldTextInput), 'NUM');
+        .appendField(new Blockly.FieldTextInput('B10000001'), 'NUM');
     this.setOutput(true, 'Number');
     this.setTooltip('BinaryNumber');
   }
@@ -659,8 +659,11 @@ Blockly.Blocks['math_hex_number'] = {
     this.setHelpUrl('');
     this.setColour(Blockly.Blocks.math.HUE);
     this.appendDummyInput()
-        .appendField(new Blockly.FieldTextInput('0xFF',Blockly.FieldTextInput), 'NUM');
+        .appendField(new Blockly.FieldTextInput('0xFF'), 'NUM');
     this.setOutput(true, 'Number');
     this.setTooltip('HexNumber');
   }
 };
+
+
+ 
