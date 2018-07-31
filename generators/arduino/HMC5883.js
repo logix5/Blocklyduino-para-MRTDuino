@@ -55,6 +55,4 @@ Blockly.Arduino['HMC5883_values'] = function(block) {
 return [code, Blockly.Arduino.ORDER_ATOMIC];
  
 };
-
-
-
+	

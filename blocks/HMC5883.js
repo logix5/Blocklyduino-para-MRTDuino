@@ -77,7 +77,3 @@ Blockly.Blocks['HMC5883_values'] = {
     this.setTooltip('Refund the parameter selected. x, y, z, and Orientation magnetic in degree(Heading).You must then add your Declination Angle. http://www.magnetic-declination.com/');
   }
 };
-
-
-
-
