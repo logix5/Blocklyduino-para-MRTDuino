@@ -16,7 +16,7 @@ var text_name = block.getFieldValue('NAME');  // TODO: Assemble Arduino into cod
   //var value_rows = Blockly.Arduino.valueToCode(block, 'ROWS', Blockly.Arduino.ORDER_ATOMIC);
   // TODO: Assemble Arduino into code variable.
    //Blockly.Arduino.setups_['setup_lcd_normal']='lcd.begin('+value_columns+','+ value_rows+');\n'
-   Blockly.Arduino.setups_['setup_lcdi2c']='lcd.begin();\n'
+   Blockly.Arduino.setups_['setup_lcdi2c']='lcd.init();\n'
 
   var code = '';
   return code;

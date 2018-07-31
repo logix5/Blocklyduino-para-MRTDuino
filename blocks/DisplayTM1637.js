@@ -14,7 +14,7 @@ Blockly.Blocks['DisplayTM1637_init'] = {
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
+		.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
         .appendField(Blockly.Msg.TM1637_init)
 		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
     this.appendDummyInput()
@@ -38,7 +38,7 @@ Blockly.Blocks['DisplayTM1637_activate'] = {
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
+		.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
         .appendField(Blockly.Msg.TM1637_name)
 		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
 	this.appendDummyInput()
@@ -58,7 +58,7 @@ Blockly.Blocks['DisplayTM1637_setBrightness'] = {
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
+		.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
         .appendField(Blockly.Msg.TM1637_name)
 		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
     this.appendValueInput("Brightness")
@@ -76,7 +76,7 @@ Blockly.Blocks['DisplayTM1637_clear'] = {
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
+		.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
         .appendField(Blockly.Msg.TM1637_name)
 		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
     this.appendDummyInput()
@@ -93,7 +93,7 @@ Blockly.Blocks['DisplayTM1637_set_segment'] = {
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
+		.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
         .appendField(Blockly.Msg.TM1637_name)
 		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
 	this.appendValueInput("Value")
@@ -114,7 +114,7 @@ Blockly.Blocks['DisplayTM1637_set_digit'] = {
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
+		.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
         .appendField(Blockly.Msg.TM1637_name)
 		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
 	this.appendValueInput("valuenumber")
@@ -138,7 +138,7 @@ Blockly.Blocks['DisplayTM1637_set_completenumber'] = {
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
+		.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
         .appendField(Blockly.Msg.TM1637_name)
 		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
 	this.appendValueInput("completenumber")
@@ -156,7 +156,7 @@ Blockly.Blocks['DisplayTM1637_set_hourmin'] = {
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
+		.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
         .appendField(Blockly.Msg.TM1637_name)
 		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
 	this.appendValueInput("hour")
@@ -180,7 +180,7 @@ Blockly.Blocks['DisplayTM1637_set_minsecond'] = {
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
+		.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
         .appendField(Blockly.Msg.TM1637_name)
 		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
 	this.appendValueInput("min")
