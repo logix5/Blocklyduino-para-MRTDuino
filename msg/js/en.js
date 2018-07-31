@@ -477,6 +477,11 @@ Blockly.Msg.ADXL345_config="Config ADXL345 acceleration.Range";
 Blockly.Msg.ADXL345_read="ADXL345 acceleration sensor.Read values";
 Blockly.Msg.ADXL345_values="raw value";
 
+Blockly.Msg.HMC5883="Init HMC5883 compass sensor";
+Blockly.Msg.HMC5883_2="- SDA Port13 - SCL Port14";
+Blockly.Msg.HMC5883_read="HMC5883 compass sensor.Read values";
+Blockly.Msg.HMC5883_values="value";
+
 
 
 //RTC DS3231

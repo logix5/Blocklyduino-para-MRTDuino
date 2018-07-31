@@ -32,6 +32,7 @@
 		<script src="../../blocks/keypad.js"></script>
 		<script src="../../blocks/Temp-ds18b20.js"></script>
 		<script src="../../blocks/ADXL345.js"></script>
+		<script src="../../blocks/HMC5883.js"></script>
 		<script src="../../blocks/RotaryEncoder.js"></script>
 		<script src="../../blocks/simpleActuators.js"></script>
 		<script src="../../blocks/RTC_DS3231.js"></script>
@@ -81,6 +82,7 @@
 		<script src="../../generators/arduino/keypad.js"></script>
 		<script src="../../generators/arduino/Temp-ds18b20.js"></script>
 		<script src="../../generators/arduino/ADXL345.js"></script>
+		<script src="../../generators/arduino/HMC5883.js"></script>
 		<script src="../../generators/arduino/RotaryEncoder.js"></script>
 		<script src="../../generators/arduino/EEPROM.js"></script>
         <script src="../../generators/arduino/math.js"></script>
@@ -843,6 +845,13 @@
 	<block type="order_to_read_adxl345_values"></block>
 	<block type="adxl345_values"></block>
 	</category>
+	
+	<category id="catHMC5883" colour="220"> 
+		<block type="Init_Compass_HMC5883"></block>
+		<block type="order_to_read_HMC5883_values"></block>
+		<block type="HMC5883_values"></block>
+	</category>
+	
 	<category id="catds18b20" colour="220"> 
 	  <block type="Init_Temp_ds18b20"></block>
 	  <block type="order_read_temeperature_ds18b20"></block>

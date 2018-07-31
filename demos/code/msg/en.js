@@ -29,6 +29,7 @@ var MSG = {
   catKeypad:"Keypad",
   catds18b20:"DS18B20",
   catADXL345:"ADXL345 Accel",
+  catHMC5883:"HMC5883 Compass",
   catRotaryEncoder:"Rotary Encoder",
   catSimpleActuators:"Simple Actuators",
   catDisplay:"Displays",
