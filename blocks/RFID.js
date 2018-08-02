@@ -15,7 +15,7 @@ Blockly.Blocks['rfid_init'] = {
    init: function() {
     this.setColour(220);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
+		.appendField(new Blockly.FieldImage("images/RFIDreader.png",41,38))
         .appendField(Blockly.Msg.RFID_init)
 		.appendField(Blockly.Msg.RFID_init2);
 	this.appendDummyInput()	
@@ -35,7 +35,7 @@ Blockly.Blocks['rfid_validationcard'] = {
    init: function() {
     this.setColour(220);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
+		.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
         .appendField(Blockly.Msg.RFID_name)
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.RFID_VALID_VAR)
@@ -65,7 +65,7 @@ Blockly.Blocks['RFID_detected'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/knock.png",54,38))
+		.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
 		.appendField(Blockly.Msg.RFID_name)
 	    .appendField(Blockly.Msg.RFID_DETECTED)
 	this.setOutput(true, 'Boolean');
@@ -80,7 +80,7 @@ Blockly.Blocks['RFID_readed'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/knock.png",54,38))
+		.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
 		.appendField(Blockly.Msg.RFID_name)
 	    .appendField(Blockly.Msg.RFID_READED)
 	this.setOutput(true, 'Boolean');
@@ -95,7 +95,7 @@ Blockly.Blocks['RFID_card_readed'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/knock.png",54,38))
+		.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
 		.appendField(Blockly.Msg.RFID_name)
 	    .appendField(Blockly.Msg.RFID_CARD_READED)
 	this.setOutput(true, 'String');
@@ -110,7 +110,7 @@ Blockly.Blocks['RFID_check_card'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/knock.png",54,38))
+		.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
 		.appendField(Blockly.Msg.RFID_name)
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.RFID_CHECK_CARD)

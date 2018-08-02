@@ -58,7 +58,7 @@ Blockly.Arduino['RFID_card_readed'] = function(block) {
 	
   Blockly.Arduino.definitions_['define_card_readed'] = 'String cardreaded(byte *buffer,byte bufferSize) \n'+
 ' {\n'+
-'	String card=\'\';\n'+
+'	String card="";\n'+
 '	for (byte i=0; i<bufferSize; i++)\n'+
 '		{\n'+
 '		card+=String(buffer[i]<0x10 ? \" 0\" : \" \");\n'+
@@ -77,7 +77,7 @@ Blockly.Arduino['RFID_check_card'] = function(block) {
 	
  var Var_NAME = block.getFieldValue('NAME');	
 	
-  Blockly.Arduino.definitions_['define_card_readed'] = 'bool isEqualArray(byte arrayA[],byte arrayB[],int length)\n'+
+  Blockly.Arduino.definitions_['compare_card_readed'] = 'bool isEqualArray(byte arrayA[],byte arrayB[],int length)\n'+
 ' {\n'+
 '	for (int index=0; index<length; index++)\n'+
 '		{\n'+

@@ -14,7 +14,7 @@ Blockly.Blocks['RadioTEA5767_init'] = {
   init: function() {
 	this.setColour(220);
 	this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
+		.appendField(new Blockly.FieldImage("images/radio.png",53,38))
         .appendField(Blockly.Msg.TEA5767_init)
 	this.setInputsInline(true);
     this.setPreviousStatement(true, null);
@@ -28,7 +28,7 @@ Blockly.Blocks['RadioTEA5767_activate'] = {
   init: function() {
 	this.setColour(220);
 	this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
+		.appendField(new Blockly.FieldImage("images/radio-2.png",25,25))
         .appendField(Blockly.Msg.TEA5767_name)
 		.appendField(Blockly.Msg.TEA5767_turnOFF_ON)
 		.appendField(new Blockly.FieldDropdown([['ON','1'],['OFF','2']]), "TEA5767_POWER")
@@ -44,7 +44,7 @@ Blockly.Blocks['RadioTEA5767_mute'] = {
   init: function() {
 	this.setColour(220);
 	this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
+		.appendField(new Blockly.FieldImage("images/radio-2.png",25,25))
         .appendField(Blockly.Msg.TEA5767_name)
 		.appendField(Blockly.Msg.TEA5767_muteOFF_ON)
 		.appendField(new Blockly.FieldDropdown([['OFF','2'],['ON','1']]), "TEA5767_MUTE")
@@ -60,7 +60,7 @@ Blockly.Blocks['RadioTEA5767_LevelSignal'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-	 //   .appendField(new Blockly.FieldImage("images/LM35_temperature.png",52,38))
+		.appendField(new Blockly.FieldImage("images/radio-2.png",25,25))
         .appendField(Blockly.Msg.TEA5767_name)
         .appendField(Blockly.Msg.TEA5767_Level)
 	this.setInputsInline(true);
@@ -74,7 +74,7 @@ Blockly.Blocks['RadioTEA5767_Stereo'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-	 //   .appendField(new Blockly.FieldImage("images/LM35_temperature.png",52,38))
+		.appendField(new Blockly.FieldImage("images/radio-2.png",25,25))
         .appendField(Blockly.Msg.TEA5767_name)
         .appendField(Blockly.Msg.TEA5767_Stereo)
 	this.setInputsInline(true);
@@ -88,7 +88,7 @@ Blockly.Blocks['RadioTEA5767_setFrequency'] = {
   init: function() {
 	this.setColour(220);
 	this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
+		.appendField(new Blockly.FieldImage("images/radio-2.png",25,25))
         .appendField(Blockly.Msg.TEA5767_name)
 		.appendField(Blockly.Msg.TEA5767_RadioStation)
 	this.appendValueInput("Value")
@@ -106,7 +106,7 @@ Blockly.Blocks['frequenciesMadrid'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/notas.png",62,38))
+		.appendField(new Blockly.FieldImage("images/radio-3.png",25,25))
 	    .appendField(Blockly.Msg.TEA5767_MadridFrequency)
         .appendField(new Blockly.FieldDropdown([['RNE Radio Nacional','88.20'],['M80 Radio','89.00'],['SER Madrid Norte','89.60'],
 		['RNE Radio 5 Todo Noticias','90.30'],['Europa FM','91.00'],['Cadena Dial','91.70'],['RNE Radio 3','93.20'],['Los 40 Principales ','93.90'],
