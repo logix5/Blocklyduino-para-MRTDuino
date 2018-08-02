@@ -30,6 +30,7 @@
 		<script src="../../blocks/MAX7219-7digit.js"></script>
 		<script src="../../blocks/MAX7219-ledmatrix.js"></script>
 		<script src="../../blocks/simpleSensors.js"></script>
+		<script src="../../blocks/RadioTEA5767.js"></script>
 		<script src="../../blocks/keypad.js"></script>
 		<script src="../../blocks/Temp-ds18b20.js"></script>
 		<script src="../../blocks/ADXL345.js"></script>
@@ -80,6 +81,7 @@
 		<script src="../../generators/arduino/RTC_DS3231.js"></script>
 		<script src="../../generators/arduino/RTC_DS1302.js"></script>
 		<script src="../../generators/arduino/simpleSensors.js"></script>
+		<script src="../../generators/arduino/RadioTEA5767.js"></script>
 		<script src="../../generators/arduino/simpleActuators.js"></script>
 		<script src="../../generators/arduino/keypad.js"></script>
 		<script src="../../generators/arduino/Temp-ds18b20.js"></script>
@@ -903,7 +905,25 @@
 		<block type="duration"></block>
 		
 	</category> 
-	     
+	
+	<category id="catOtherActuators" colour="220"> 
+	     <category id="catRadioTEA5767" colour="220"> 
+			<block type="RadioTEA5767_init"></block>
+		 	<block type="RadioTEA5767_activate"></block>
+			<block type="RadioTEA5767_mute"></block>
+			<block type="RadioTEA5767_LevelSignal"></block>
+			<block type="RadioTEA5767_Stereo"></block>
+			<block type="RadioTEA5767_setFrequency">
+			 <value name="Value">
+                        <shadow type="math_number">
+                            <field name="NUM">88.20</field>
+                        </shadow>
+                    </value>
+			</block>
+			<block type="frequenciesMadrid"></block>
+		 </category> 
+		 
+	</category> 
         <sep></sep>
         <category id="catDisplay" colour="150">
             <category id="catSerialLCD_I2C" colour="140">

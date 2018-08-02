@@ -158,7 +158,7 @@ Blockly.Blocks['Analog_temperature_sensor'] = {
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.analog), "PIN");
     this.setOutput(true, 'Number');
-    this.setTooltip('return number of ambient temperature in ºC');
+    this.setTooltip('return number of ambient temperature in ?C');
   }
 };
 

@@ -707,6 +707,16 @@ Blockly.Msg.M1637_Hour="Set hour";
 Blockly.Msg.M1637_Min="Set minute";
 Blockly.Msg.M1637_Second="Set second";
 
+//RADIO TEA5767
+Blockly.Msg.TEA5767_name = "Radio TEA5767.";
+Blockly.Msg.TEA5767_init = "Init Radio TEA5767.SDA-Port13 SCL-Port14";
+Blockly.Msg.TEA5767_turnOFF_ON = "Turn";
+Blockly.Msg.TEA5767_muteOFF_ON = "Mute";
+Blockly.Msg.TEA5767_Level = "Level of the signal";
+Blockly.Msg.TEA5767_Stereo = "Is stereo the signal?";
+Blockly.Msg.TEA5767_RadioStation = "Radio Station.";
+Blockly.Msg.TEA5767_SetFrequency = "Frequency(Mhz)";
+Blockly.Msg.TEA5767_MadridFrequency = "Madrid Radio Station:";
 
 
 //SERVO
