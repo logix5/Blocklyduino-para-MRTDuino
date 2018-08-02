@@ -33,6 +33,7 @@
 		<script src="../../blocks/RadioTEA5767.js"></script>
 		<script src="../../blocks/keypad.js"></script>
 		<script src="../../blocks/Temp-ds18b20.js"></script>
+		<script src="../../blocks/RFID.js"></script>
 		<script src="../../blocks/ADXL345.js"></script>
 		<script src="../../blocks/HMC5883.js"></script>
 		<script src="../../blocks/RotaryEncoder.js"></script>
@@ -85,6 +86,7 @@
 		<script src="../../generators/arduino/simpleActuators.js"></script>
 		<script src="../../generators/arduino/keypad.js"></script>
 		<script src="../../generators/arduino/Temp-ds18b20.js"></script>
+		<script src="../../generators/arduino/RFID.js"></script>
 		<script src="../../generators/arduino/ADXL345.js"></script>
 		<script src="../../generators/arduino/HMC5883.js"></script>
 		<script src="../../generators/arduino/RotaryEncoder.js"></script>
@@ -820,6 +822,17 @@
 	 </block>
 	 <block type="RotaryEncoder_Read"></block>
 	 <block type="rotaryencoder_button_sensor"></block>
+	</category>
+	<category id="catRFID" colour="220"> 
+		 <block type="rfid_init">
+				 <field name="PIN_RST">15</field>
+		</block>
+		<block type="rfid_validationcard"></block>
+		<block type="RFID_detected"></block>
+		<block type="RFID_readed"></block>
+		<block type="RFID_card_readed"></block>
+		<block type="RFID_check_card"></block>
+		
 	</category>
 	<category id="catKeypad" colour="220"> 
 	 <block type="Init_Keypad4x4">

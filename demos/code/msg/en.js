@@ -36,6 +36,7 @@ var MSG = {
   catRotaryEncoder:"Rotary Encoder",
   catSimpleActuators:"Simple Actuators",
   catDisplay:"Displays",
+  catRFID:"RFID MFRC522",
   catSerialLCD:"Serial LCD",
   catSerialLCD_I2C:"LCD I2C",
   catLCD:"LCD",

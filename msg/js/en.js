@@ -718,6 +718,25 @@ Blockly.Msg.TEA5767_RadioStation = "Radio Station.";
 Blockly.Msg.TEA5767_SetFrequency = "Frequency(Mhz)";
 Blockly.Msg.TEA5767_MadridFrequency = "Madrid Radio Station:";
 
+//RFID MFRC522
+Blockly.Msg.RFID_name = "RFID MFRC522.";
+Blockly.Msg.RFID_init = "Init RFID MFRC522.";
+Blockly.Msg.RFID_init2 = "Pins:SCK Port2 MOSI Port3 and MISO Port4.";
+Blockly.Msg.RFID_PIN_SDA = "SDA Pin";
+Blockly.Msg.RFID_PIN_RST = "RST Pin";
+Blockly.Msg.RFID_VALID_VAR = "Define Validation card name:";
+Blockly.Msg.RFID_C1 = "Value1";
+Blockly.Msg.RFID_C2 = "Value2";
+Blockly.Msg.RFID_C3 = "Value3";
+Blockly.Msg.RFID_C4 = "Value4";
+Blockly.Msg.RFID_DETECTED = "Is RFID card detected?";
+Blockly.Msg.RFID_READED = "Is RFID card readed?";
+Blockly.Msg.RFID_CARD_READED = "Value of the read card";
+Blockly.Msg.RFID_CHECK_CARD = "Is RFID card read equal to the validation card";
+Blockly.Msg.RFID_CHECK_CARD2 = "?";
+
+
+
 
 //SERVO
 Blockly.Msg.SERVO_Servo="Servo";
