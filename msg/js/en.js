@@ -477,6 +477,21 @@ Blockly.Msg.ADXL345_config="Config ADXL345 acceleration.Range";
 Blockly.Msg.ADXL345_read="ADXL345 acceleration sensor.Read values";
 Blockly.Msg.ADXL345_values="raw value";
 
+Blockly.Msg.TCS3200="Init TCS3200 color sensor";
+Blockly.Msg.TCS3200_name="TCS3200 color sensor";
+Blockly.Msg.TCS3200_S0PIN="S0 Pin";
+Blockly.Msg.TCS3200_S1PIN="S1 Pin";
+Blockly.Msg.TCS3200_S2PIN="S2 Pin";
+Blockly.Msg.TCS3200_S3PIN="S3 Pin";
+Blockly.Msg.TCS3200_OUTPIN="OUT Pin";
+Blockly.Msg.TCS3200_config="Frequency escale";
+Blockly.Msg.TCS3200_read="Read color";
+Blockly.Msg.TCS3200_values="Value";
+
+
+
+
+
 Blockly.Msg.HMC5883="Init HMC5883 compass sensor";
 Blockly.Msg.HMC5883_2="- SDA Port13 - SCL Port14";
 Blockly.Msg.HMC5883_read="HMC5883 compass sensor.Read values";

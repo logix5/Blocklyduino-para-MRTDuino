@@ -545,7 +545,7 @@ Code.initLanguage = function() {
 
   var categories = ['catInOut','catSerialAll','catSerial','catSerial1','catSoftSerial','catBTAll','catBTSerial1','catBTSoftSerial','catMotors','catMotorMRT','catServo','catSimpleSensorsALL','catSimpleSensors','catSimpleSensors2','catSimpleSensors3','catSimpleActuators','catSerialLCD_I2C','catDisplay','catADXL345','catHMC5883','catDigital','catAnalog', 
                     'catString','catDivers','catStorage','catMAX7219_7D','catMAX7219_LM','catEEprom','catStepper','catRTCDS3231','catRTCDS1302','catLedStrip','catTM1637','catLogic','catLoops','catTime','catGenericTime', 'catMath', 'catText','catRotaryEncoder','catVariables', 'catFunctions','catRemoteIR','catKeypad',
-					'catOtherSensors','catRFID','catRadioTEA5767','catOtherActuators','catds18b20','catArray'];
+					'catOtherSensors','catRFID','catRadioTEA5767','catOtherActuators','catTCS3200','catds18b20','catArray'];
   for (var i = 0, cat; cat = categories[i]; i++) {
     document.getElementById(cat).setAttribute('name', MSG[cat]);
   }

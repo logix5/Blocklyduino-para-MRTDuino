@@ -35,6 +35,7 @@
 		<script src="../../blocks/Temp-ds18b20.js"></script>
 		<script src="../../blocks/RFID.js"></script>
 		<script src="../../blocks/ADXL345.js"></script>
+		<script src="../../blocks/TCS3200.js"></scr
 		<script src="../../blocks/HMC5883.js"></script>
 		<script src="../../blocks/RotaryEncoder.js"></script>
 		<script src="../../blocks/simpleActuators.js"></script>
@@ -88,6 +89,7 @@
 		<script src="../../generators/arduino/Temp-ds18b20.js"></script>
 		<script src="../../generators/arduino/RFID.js"></script>
 		<script src="../../generators/arduino/ADXL345.js"></script>
+		<script src="../../generators/arduino/TCS3200.js"></script>
 		<script src="../../generators/arduino/HMC5883.js"></script>
 		<script src="../../generators/arduino/RotaryEncoder.js"></script>
 		<script src="../../generators/arduino/EEPROM.js"></script>
@@ -833,6 +835,18 @@
 		<block type="RFID_card_readed"></block>
 		<block type="RFID_check_card"></block>
 		
+	</category>
+	<category id="catTCS3200" colour="220">
+	
+	<block type="Init_ColorSensor_TCS3200">
+	 <field name="S1">15</field>
+	  <field name="S2">16</field>
+	  <field name="S3">14</field>
+	  <field name="OUT">18</field>
+	</block>
+	<block type="order_to_read_tcs3200_values"></block>
+	<block type="tcs3200_values"></block>
+	
 	</category>
 	<category id="catKeypad" colour="220"> 
 	 <block type="Init_Keypad4x4">
