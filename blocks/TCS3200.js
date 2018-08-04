@@ -40,6 +40,7 @@ Blockly.Blocks['Init_ColorSensor_TCS3200'] = {
   init: function() {
     this.setColour(220);
 	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/tcs3200.png",49,38))
 		.appendField(Blockly.Msg.TCS3200)
         .appendField(new Blockly.FieldDropdown([['1','1'],['2','2']]), "SC_NUMBER")
 	this.appendDummyInput()
@@ -73,6 +74,7 @@ Blockly.Blocks['order_to_read_tcs3200_values'] = {
   init: function() {
     this.setColour(220);
     this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/tcs3200.png",49,38))
 		.appendField(Blockly.Msg.TCS3200_name)
         .appendField(new Blockly.FieldDropdown([['1','1'],['2','2']]), "SC_NUMBER")
 	 this.appendDummyInput()
@@ -89,7 +91,7 @@ Blockly.Blocks['tcs3200_values'] = {
   init: function() {
     this.setColour(220);
 	 this.appendDummyInput()
-	 //.appendField(new Blockly.FieldImage("images/ADXL345.png",50,38))
+		.appendField(new Blockly.FieldImage("images/tcs3200.png",49,38))
 		.appendField(Blockly.Msg.TCS3200_name)
         .appendField(new Blockly.FieldDropdown([['1','1'],['2','2']]), "SC_NUMBER")
     this.appendDummyInput()

@@ -25,11 +25,11 @@ Blockly.Arduino.definitions_['readcolor'+number] ='void readcolor_'+number+'()\n
 '  { \n'+   
 '  digitalWrite('+s2_pin+', LOW); \n'+ 
 '  digitalWrite('+s3_pin+', LOW); \n'+  
-'  rojo_'+number+' = pulseIn(out, digitalRead(out) == HIGH ? LOW : HIGH); \n'+ 
+'  red_'+number+' = pulseIn('+out_pin+', digitalRead('+out_pin+') == HIGH ? LOW : HIGH); \n'+ 
 '  digitalWrite('+s3_pin+', HIGH); \n'+  
-'  azul_'+number+' = pulseIn(out, digitalRead(out) == HIGH ? LOW : HIGH); \n'+ 
+'  blue_'+number+' = pulseIn('+out_pin+', digitalRead('+out_pin+') == HIGH ? LOW : HIGH); \n'+ 
 '  digitalWrite('+s2_pin+', HIGH); \n'+   
-'  verde_'+number+' = pulseIn(out, digitalRead(out) == HIGH ? LOW : HIGH); \n'+ 
+'  green_'+number+' = pulseIn('+out_pin+', digitalRead('+out_pin+') == HIGH ? LOW : HIGH); \n'+ 
 '}\n';
       
   Blockly.Arduino.setups_['setup_output_'+s0_pin] = 'pinMode('+s0_pin+', OUTPUT);';  
@@ -56,7 +56,7 @@ Blockly.Arduino['order_to_read_tcs3200_values'] = function(block) {
 	
   var number = this.getFieldValue('SC_NUMBER');
     
-  var code = 'redcolor_'+number+'();\n'
+  var code = 'readcolor_'+number+'();\n'
    
   return code;
 };
