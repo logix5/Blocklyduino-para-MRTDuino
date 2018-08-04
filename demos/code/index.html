@@ -35,6 +35,7 @@
 		<script src="../../blocks/Temp-ds18b20.js"></script>
 		<script src="../../blocks/RFID.js"></script>
 		<script src="../../blocks/ADXL345.js"></script>
+		<script src="../../blocks/ST7735.js"></script>
 		<script src="../../blocks/TCS3200.js"></script>
 		<script src="../../blocks/HMC5883.js"></script>
 		<script src="../../blocks/RotaryEncoder.js"></script>
@@ -89,6 +90,7 @@
 		<script src="../../generators/arduino/Temp-ds18b20.js"></script>
 		<script src="../../generators/arduino/RFID.js"></script>
 		<script src="../../generators/arduino/ADXL345.js"></script>
+		<script src="../../generators/arduino/ST7735.js"></script>
 		<script src="../../generators/arduino/TCS3200.js"></script>
 		<script src="../../generators/arduino/HMC5883.js"></script>
 		<script src="../../generators/arduino/RotaryEncoder.js"></script>
@@ -1070,6 +1072,41 @@
 			 </block>
 		
 			 </category>
+			 
+			  <category id="catST7735" colour="140">
+			   <block type="st7735_init">
+				 <field name="PIN_DC">15</field>
+				 <field name="PIN_RST">16</field>
+				</block>
+			   <block type="st7735_backgroundcolor"></block>
+			   <block type="st7735_rotatedisplay"></block>
+			   <block type="st7735_invertdisplay"></block>
+			  <block type="st7735_setcursor">
+					<value name="x0">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+					<value name="y0">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+			  </block>
+			  <block type="st7735_settextcolor"></block>
+			  <block type="st7735_settextsize"></block>
+			  <block type="st7735_wraptext"></block>
+			  <block type="st7735_printTextln">
+			  <value name="text_to_print">
+                        <shadow type="text">
+                            <field name="TEXT">I am a Robot</field>
+                        </shadow>
+                    </value>
+			  </block>
+				
+				
+			  
+			  </category>
 			
 			 <category id="catMAX7219_LM" colour="140">
 			 <block type="Init_MAX7219_ledmatrix">

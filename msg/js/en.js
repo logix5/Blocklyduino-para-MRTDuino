@@ -747,7 +747,25 @@ Blockly.Msg.RFID_CHECK_CARD = "Is RFID card read equal to the validation card";
 Blockly.Msg.RFID_CHECK_CARD2 = "?";
 
 
-
+//RFID ST7735
+Blockly.Msg.ST7735_name = "TFT ST7735.";
+Blockly.Msg.ST7735_init = "Init TFT ST7735 1.8\".";
+Blockly.Msg.ST7735_init2 = "Pins:SCK Port2 MOSI Port3.";
+Blockly.Msg.ST7735_PIN_CS = "CS Pin";
+Blockly.Msg.ST7735_PIN_RST = "RST Pin";
+Blockly.Msg.ST7735_PIN_DC = "DC Pin";
+Blockly.Msg.ST7735_WRAP = "Tab color";
+Blockly.Msg.ST7735_FILLBACKGROUND = "Fill backgroundColor";
+Blockly.Msg.ST7735_Rotate = "Rotate display";
+Blockly.Msg.ST7735_Invert = "Invert display";
+Blockly.Msg.ST7735_SetCursor = "Set cursor";
+Blockly.Msg.ST7735_X0 = "x0";
+Blockly.Msg.ST7735_Y0 = "y0";
+Blockly.Msg.ST7735_TEXTCOLOR = "Set text color";
+Blockly.Msg.ST7735_TEXTsize = "Set text size";
+Blockly.Msg.ST7735_TEXTwrap = "Set text wrap";
+Blockly.Msg.ST7735_PrintTextLN = "Print the text";
+Blockly.Msg.ST7735_PrintTextLN2 = "line feed";
 
 //SERVO
 Blockly.Msg.SERVO_Servo="Servo";
