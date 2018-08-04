@@ -488,10 +488,6 @@ Blockly.Msg.TCS3200_config="Frequency escale";
 Blockly.Msg.TCS3200_read="Read color";
 Blockly.Msg.TCS3200_values="Value";
 
-
-
-
-
 Blockly.Msg.HMC5883="Init HMC5883 compass sensor";
 Blockly.Msg.HMC5883_2="- SDA Port13 - SCL Port14";
 Blockly.Msg.HMC5883_read="HMC5883 compass sensor.Read values";

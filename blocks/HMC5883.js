@@ -42,6 +42,7 @@ Blockly.Blocks['Init_Compass_HMC5883'] = {
 	this.appendDummyInput()
 		.appendField(new Blockly.FieldImage("images/HMC5883.png",42,38))
 		.appendField(Blockly.Msg.HMC5883)
+	this.appendDummyInput()
 		.appendField(Blockly.Msg.HMC5883_2);
 	this.setInputsInline(true);
     this.setPreviousStatement(true, null);
