@@ -230,12 +230,12 @@ Blockly.Arduino['math_constant'] = function() {
   // Constants: PI, E, the Golden Ratio, sqrt(2), 1/sqrt(2), INFINITY.
   var CONSTANTS = {
     'PI': ['PI', Blockly.Arduino.ORDER_MEMBER],
-    'E': ['E', Blockly.Arduino.ORDER_MEMBER],
+    'E': ['EULER', Blockly.Arduino.ORDER_MEMBER],
     'GOLDEN_RATIO':
         ['(1 + sqrt(5)) / 2', Blockly.Arduino.ORDER_DIVISION],
-    'SQRT2': ['SQRT2', Blockly.Arduino.ORDER_MEMBER],
-    'SQRT1_2': ['SQRT1_2', Blockly.Arduino.ORDER_MEMBER],
-    'INFINITY': ['Infinity', Blockly.Arduino.ORDER_ATOMIC]
+    'SQRT2': ['sqrt(2)', Blockly.Arduino.ORDER_MEMBER],
+    'SQRT1_2': ['sqrt(0.5)', Blockly.Arduino.ORDER_MEMBER],
+    'INFINITY': ['INFINITY', Blockly.Arduino.ORDER_ATOMIC]
   };
   return CONSTANTS[this.getFieldValue('CONSTANT')];
 };
@@ -296,4 +296,134 @@ Blockly.Arduino['math_number_property'] = function() {
       break;
   }
   return [code, Blockly.Arduino.ORDER_EQUALITY];
+};
+
+Blockly.Arduino['math_on_list'] = function() {
+  // Math functions for lists.
+  var func = this.getFieldValue('OP');
+  var list, code;
+  switch (func) {
+    case 'SUM':
+      list = Blockly.Arduino.valueToCode(this, 'LIST',
+          Blockly.Arduino.ORDER_MEMBER) || '[]';
+      code = list + '.reduce(function(x, y) {return x + y;})';
+      break;
+    case 'MIN':
+      list = Blockly.Arduino.valueToCode(this, 'LIST',
+          Blockly.Arduino.ORDER_COMMA) || '[]';
+      code = 'min.apply(null, ' + list + ')';
+      break;
+    case 'MAX':
+      list = Blockly.Arduino.valueToCode(this, 'LIST',
+          Blockly.Arduino.ORDER_COMMA) || '[]';
+      code = 'max.apply(null, ' + list + ')';
+      break;
+    case 'AVERAGE':
+      // math_median([null,null,1,3]) == 2.0.
+      var functionName = Blockly.Arduino.provideFunction_(
+          'math_mean',
+          [ 'function ' + Blockly.Arduino.FUNCTION_NAME_PLACEHOLDER_ +
+              '(myList) {',
+            '  return myList.reduce(function(x, y) {return x + y;}) / ' +
+                  'myList.length;',
+            '}']);
+      list = Blockly.Arduino.valueToCode(this, 'LIST',
+          Blockly.Arduino.ORDER_NONE) || '[]';
+      code = functionName + '(' + list + ')';
+      break;
+    case 'MEDIAN':
+      // math_median([null,null,1,3]) == 2.0.
+      var functionName = Blockly.Arduino.provideFunction_(
+          'math_median',
+          [ 'function ' + Blockly.Arduino.FUNCTION_NAME_PLACEHOLDER_ +
+              '(myList) {',
+            '  var localList = myList.filter(function (x) ' +
+              '{return typeof x == \'number\';});',
+            '  if (!localList.length) return null;',
+            '  localList.sort(function(a, b) {return b - a;});',
+            '  if (localList.length % 2 == 0) {',
+            '    return (localList[localList.length / 2 - 1] + ' +
+              'localList[localList.length / 2]) / 2;',
+            '  } else {',
+            '    return localList[(localList.length - 1) / 2];',
+            '  }',
+            '}']);
+      list = Blockly.Arduino.valueToCode(this, 'LIST',
+          Blockly.Arduino.ORDER_NONE) || '[]';
+      code = functionName + '(' + list + ')';
+      break;
+    case 'MODE':
+      // As a list of numbers can contain more than one mode,
+      // the returned result is provided as an array.
+      // Mode of [3, 'x', 'x', 1, 1, 2, '3'] -> ['x', 1].
+      var functionName = Blockly.Arduino.provideFunction_(
+          'math_modes',
+          [ 'function ' + Blockly.Arduino.FUNCTION_NAME_PLACEHOLDER_ +
+              '(values) {',
+            '  var modes = [];',
+            '  var counts = [];',
+            '  var maxCount = 0;',
+            '  for (var i = 0; i < values.length; i++) {',
+            '    var value = values[i];',
+            '    var found = false;',
+            '    var thisCount;',
+            '    for (var j = 0; j < counts.length; j++) {',
+            '      if (counts[j][0] === value) {',
+            '        thisCount = ++counts[j][1];',
+            '        found = true;',
+            '        break;',
+            '      }',
+            '    }',
+            '    if (!found) {',
+            '      counts.push([value, 1]);',
+            '      thisCount = 1;',
+            '    }',
+            '    maxCount = max(thisCount, maxCount);',
+            '  }',
+            '  for (var j = 0; j < counts.length; j++) {',
+            '    if (counts[j][1] == maxCount) {',
+            '        modes.push(counts[j][0]);',
+            '    }',
+            '  }',
+            '  return modes;',
+            '}']);
+      list = Blockly.Arduino.valueToCode(this, 'LIST',
+          Blockly.Arduino.ORDER_NONE) || '[]';
+      code = functionName + '(' + list + ')';
+      break;
+    case 'STD_DEV':
+      var functionName = Blockly.Arduino.provideFunction_(
+          'math_standard_deviation',
+          [ 'function ' + Blockly.Arduino.FUNCTION_NAME_PLACEHOLDER_ +
+              '(numbers) {',
+            '  var n = numbers.length;',
+            '  if (!n) return null;',
+            '  var mean = numbers.reduce(function(x, y) {return x + y;}) / n;',
+            '  var variance = 0;',
+            '  for (var j = 0; j < n; j++) {',
+            '    variance += pow(numbers[j] - mean, 2);',
+            '  }',
+            '  variance = variance / n;',
+            '  return sqrt(variance);',
+            '}']);
+      list = Blockly.Arduino.valueToCode(this, 'LIST',
+          Blockly.Arduino.ORDER_NONE) || '[]';
+      code = functionName + '(' + list + ')';
+      break;
+    case 'RANDOM':
+      var functionName = Blockly.Arduino.provideFunction_(
+          'math_random_list',
+          [ 'function ' + Blockly.Arduino.FUNCTION_NAME_PLACEHOLDER_ +
+              '(list) {',
+            '  var x = floor(random() * list.length);',
+            '  return list[x];',
+            '}']);
+      list = Blockly.Arduino.valueToCode(this, 'LIST',
+          Blockly.Arduino.ORDER_NONE) || '[]';
+      code = functionName + '(' + list + ')';
+      break;
+    default:
+      throw 'Unknown operator: ' + func;
+  }
+  return [code, Blockly.Arduino.ORDER_FUNCTION_CALL];
 };

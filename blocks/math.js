@@ -705,7 +705,7 @@ Blockly.Blocks['math_number_property'] = {
     var PROPERTIES =
         [[Blockly.Msg.MATH_IS_EVEN, 'EVEN'],
          [Blockly.Msg.MATH_IS_ODD, 'ODD'],
-         [Blockly.Msg.MATH_IS_PRIME, 'PRIME'],
+       //  [Blockly.Msg.MATH_IS_PRIME, 'PRIME'],
          [Blockly.Msg.MATH_IS_WHOLE, 'WHOLE'],
          [Blockly.Msg.MATH_IS_POSITIVE, 'POSITIVE'],
          [Blockly.Msg.MATH_IS_NEGATIVE, 'NEGATIVE'],
@@ -760,6 +760,81 @@ Blockly.Blocks['math_number_property'] = {
     } else if (inputExists) {
       this.removeInput('DIVISOR');
     }
+  }
+};
+
+Blockly.Blocks['math_on_list'] = {
+  /**
+   * Block for evaluating a list of numbers to return sum, average, min, max,
+   * etc.  Some functions also work on text (min, max, mode, median).
+   * @this Blockly.Block
+   */
+  init: function() {
+    var OPERATORS =
+        [[Blockly.Msg.MATH_ONLIST_OPERATOR_SUM, 'SUM'],
+         [Blockly.Msg.MATH_ONLIST_OPERATOR_MIN, 'MIN'],
+         [Blockly.Msg.MATH_ONLIST_OPERATOR_MAX, 'MAX'],
+         [Blockly.Msg.MATH_ONLIST_OPERATOR_AVERAGE, 'AVERAGE'],
+         [Blockly.Msg.MATH_ONLIST_OPERATOR_MEDIAN, 'MEDIAN'],
+         [Blockly.Msg.MATH_ONLIST_OPERATOR_MODE, 'MODE'],
+         [Blockly.Msg.MATH_ONLIST_OPERATOR_STD_DEV, 'STD_DEV'],
+         [Blockly.Msg.MATH_ONLIST_OPERATOR_RANDOM, 'RANDOM']];
+    // Assign 'this' to a variable for use in the closures below.
+    var thisBlock = this;
+    this.setHelpUrl(Blockly.Msg.MATH_ONLIST_HELPURL);
+    this.setColour(Blockly.Blocks.math.HUE);
+    this.setOutput(true, 'Number');
+    var dropdown = new Blockly.FieldDropdown(OPERATORS, function(newOp) {
+      thisBlock.updateType_(newOp);
+    });
+    this.appendValueInput('LIST')
+        .setCheck('Array')
+        .appendField(dropdown, 'OP');
+    this.setTooltip(function() {
+      var mode = thisBlock.getFieldValue('OP');
+      var TOOLTIPS = {
+        'SUM': Blockly.Msg.MATH_ONLIST_TOOLTIP_SUM,
+        'MIN': Blockly.Msg.MATH_ONLIST_TOOLTIP_MIN,
+        'MAX': Blockly.Msg.MATH_ONLIST_TOOLTIP_MAX,
+        'AVERAGE': Blockly.Msg.MATH_ONLIST_TOOLTIP_AVERAGE,
+        'MEDIAN': Blockly.Msg.MATH_ONLIST_TOOLTIP_MEDIAN,
+        'MODE': Blockly.Msg.MATH_ONLIST_TOOLTIP_MODE,
+        'STD_DEV': Blockly.Msg.MATH_ONLIST_TOOLTIP_STD_DEV,
+        'RANDOM': Blockly.Msg.MATH_ONLIST_TOOLTIP_RANDOM
+      };
+      return TOOLTIPS[mode];
+    });
+  },
+  /**
+   * Modify this block to have the correct output type.
+   * @param {string} newOp Either 'MODE' or some op than returns a number.
+   * @private
+   * @this Blockly.Block
+   */
+  updateType_: function(newOp) {
+    if (newOp == 'MODE') {
+      this.outputConnection.setCheck('Array');
+    } else {
+      this.outputConnection.setCheck('Number');
+    }
+  },
+  /**
+   * Create XML to represent the output type.
+   * @return {Element} XML storage element.
+   * @this Blockly.Block
+   */
+  mutationToDom: function() {
+    var container = document.createElement('mutation');
+    container.setAttribute('op', this.getFieldValue('OP'));
+    return container;
+  },
+  /**
+   * Parse XML to restore the output type.
+   * @param {!Element} xmlElement XML storage element.
+   * @this Blockly.Block
+   */
+  domToMutation: function(xmlElement) {
+    this.updateType_(xmlElement.getAttribute('op'));
   }
 };
 
