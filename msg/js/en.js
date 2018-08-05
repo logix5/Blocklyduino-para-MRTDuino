@@ -940,3 +940,22 @@ Blockly.Msg.Math_fromLow="fromLow";
 Blockly.Msg.Math_fromHigh="fromHigh";
 Blockly.Msg.Math_toLow="toLow";
 Blockly.Msg.Math_toHigh="toHigh";
+
+//ESK 6/13/2015 SWITCH CASE
+Blockly.Msg.CONTROLS_SWITCH_CASEBREAK_TOOLTIP = "Add a condition to the case block.";
+Blockly.Msg.CONTROLS_SWITCH_DEFAULT_TOOLTIP = "Add a final, catch-all condition to the if block.";
+Blockly.Msg.CONTROLS_SWITCH_HELPURL = "https://en.wikipedia.org/wiki/Switch_statement";
+Blockly.Msg.CONTROLS_SWITCH_SWITCH_TOOLTIP = "Add, remove, or reorder sections to reconfigure this if block.";
+Blockly.Msg.CONTROLS_SWITCH_VAR_TITLE = "Switch (";
+Blockly.Msg.CONTROLS_SWITCH_VAR_TAIL = ")";
+Blockly.Msg.CONTROLS_SWITCH_MSG_DEFAULT = "default";
+Blockly.Msg.CONTROLS_SWITCH_MSG_CASEBREAK = "case";
+Blockly.Msg.CONTROLS_SWITCH_MSG_SWITCHVAR = "Switch (var)";
+Blockly.Msg.CONTROLS_SWITCH_MSG_DO = "do";
+Blockly.Msg.CONTROLS_SWITCH_TOOLTIP_1 = "If a value is true, then do some statements.";
+Blockly.Msg.CONTROLS_SWITCH_TOOLTIP_2 = "If a value is true, then do the first block of statements. Otherwise, do the second block of statements.";
+Blockly.Msg.CONTROLS_SWITCH_TOOLTIP_3 = "If the first value is true, then do the first block of statements. Otherwise, if the second value is true, do the second block of statements.";
+Blockly.Msg.CONTROLS_SWITCH_TOOLTIP_4 = "If the first value is true, then do the first block of statements. Otherwise, if the second value is true, do the second block of statements. If none of the values are true, do the last block of statements.";
+Blockly.Msg.CONTROLS_SWITCH_VAR_TOOLTIP = "Drag from the left into here to add";
+Blockly.Msg.CONTROLS_SWITCH_CASEBREAK_TOOLTIP = "Add additional case break do";
+Blockly.Msg.CONTROLS_SWITCH_DEFAULT_TOOLTIP ="Add optional default action";
