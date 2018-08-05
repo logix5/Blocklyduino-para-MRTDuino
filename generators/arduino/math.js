@@ -226,4 +226,74 @@ Blockly.Arduino['math_hex_number'] = function(block) {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino['math_constant'] = function() {
+  // Constants: PI, E, the Golden Ratio, sqrt(2), 1/sqrt(2), INFINITY.
+  var CONSTANTS = {
+    'PI': ['PI', Blockly.Arduino.ORDER_MEMBER],
+    'E': ['E', Blockly.Arduino.ORDER_MEMBER],
+    'GOLDEN_RATIO':
+        ['(1 + sqrt(5)) / 2', Blockly.Arduino.ORDER_DIVISION],
+    'SQRT2': ['SQRT2', Blockly.Arduino.ORDER_MEMBER],
+    'SQRT1_2': ['SQRT1_2', Blockly.Arduino.ORDER_MEMBER],
+    'INFINITY': ['Infinity', Blockly.Arduino.ORDER_ATOMIC]
+  };
+  return CONSTANTS[this.getFieldValue('CONSTANT')];
+};
 
+Blockly.Arduino['math_number_property'] = function() {
+  // Check if a number is even, odd, prime, whole, positive, or negative
+  // or if it is divisible by certain number. Returns true or false.
+  var number_to_check = Blockly.Arduino.valueToCode(this, 'NUMBER_TO_CHECK',
+      Blockly.Arduino.ORDER_MODULUS) || '0';
+  var dropdown_property = this.getFieldValue('PROPERTY');
+  var code;
+  if (dropdown_property == 'PRIME') {
+    // Prime is a special case as it is not a one-liner test.
+    var functionName = Blockly.Arduino.provideFunction_(
+        'math_isPrime',
+        [ 'function ' + Blockly.Arduino.FUNCTION_NAME_PLACEHOLDER_ + '(n) {',
+          '  // https://en.wikipedia.org/wiki/Primality_test#Naive_methods',
+          '  if (n == 2 || n == 3) {',
+          '    return true;',
+          '  }',
+          '  // False if n is NaN, negative, is 1, or not whole.',
+          '  // And false if n is divisible by 2 or 3.',
+          '  if (isNaN(n) || n <= 1 || n % 1 != 0 || n % 2 == 0 ||' +
+            ' n % 3 == 0) {',
+          '    return false;',
+          '  }',
+          '  // Check all the numbers of form 6k +/- 1, up to sqrt(n).',
+          '  for (var x = 6; x <= sqrt(n) + 1; x += 6) {',
+          '    if (n % (x - 1) == 0 || n % (x + 1) == 0) {',
+          '      return false;',
+          '    }',
+          '  }',
+          '  return true;',
+          '}']);
+    code = functionName + '(' + number_to_check + ')';
+    return [code, Blockly.Arduino.ORDER_FUNCTION_CALL];
+  }
+  switch (dropdown_property) {
+    case 'EVEN':
+      code = number_to_check + ' % 2 == 0';
+      break;
+    case 'ODD':
+      code = number_to_check + ' % 2 == 1';
+      break;
+    case 'WHOLE':
+      code = number_to_check + ' % 1 == 0';
+      break;
+    case 'POSITIVE':
+      code = number_to_check + ' > 0';
+      break;
+    case 'NEGATIVE':
+      code = number_to_check + ' < 0';
+      break;
+    case 'DIVISIBLE_BY':
+      var divisor = Blockly.Arduino.valueToCode(this, 'DIVISOR',
+          Blockly.Arduino.ORDER_MODULUS) || '0';
+      code = number_to_check + ' % ' + divisor + ' == 0';
+      break;
+  }
+  return [code, Blockly.Arduino.ORDER_EQUALITY];
+};

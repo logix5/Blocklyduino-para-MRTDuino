@@ -665,5 +665,103 @@ Blockly.Blocks['math_hex_number'] = {
   }
 };
 
+Blockly.Blocks['math_constant'] = {
+  /**
+   * Block for constants: PI, E, the Golden Ratio, sqrt(2), 1/sqrt(2), INFINITY.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": "%1",
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "CONSTANT",
+          "options": [
+            ['\u03c0', 'PI'],
+            ['e', 'E'],
+            ['\u03c6', 'GOLDEN_RATIO'],
+            ['sqrt(2)', 'SQRT2'],
+            ['sqrt(\u00bd)', 'SQRT1_2'],
+            ['\u221e', 'INFINITY']
+          ]
+        }
+      ],
+      "output": "Number",
+      "colour": Blockly.Blocks.math.HUE,
+      "tooltip": Blockly.Msg.MATH_CONSTANT_TOOLTIP,
+      "helpUrl": Blockly.Msg.MATH_CONSTANT_HELPURL
+    });
+  }
+};
+
+Blockly.Blocks['math_number_property'] = {
+  /**
+   * Block for checking if a number is even, odd, prime, whole, positive,
+   * negative or if it is divisible by certain number.
+   * @this Blockly.Block
+   */
+  init: function() {
+    var PROPERTIES =
+        [[Blockly.Msg.MATH_IS_EVEN, 'EVEN'],
+         [Blockly.Msg.MATH_IS_ODD, 'ODD'],
+         [Blockly.Msg.MATH_IS_PRIME, 'PRIME'],
+         [Blockly.Msg.MATH_IS_WHOLE, 'WHOLE'],
+         [Blockly.Msg.MATH_IS_POSITIVE, 'POSITIVE'],
+         [Blockly.Msg.MATH_IS_NEGATIVE, 'NEGATIVE'],
+         [Blockly.Msg.MATH_IS_DIVISIBLE_BY, 'DIVISIBLE_BY']];
+    this.setColour(Blockly.Blocks.math.HUE);
+    this.appendValueInput('NUMBER_TO_CHECK')
+        .setCheck('Number');
+    var dropdown = new Blockly.FieldDropdown(PROPERTIES, function(option) {
+      var divisorInput = (option == 'DIVISIBLE_BY');
+      this.sourceBlock_.updateShape_(divisorInput);
+    });
+    this.appendDummyInput()
+        .appendField(dropdown, 'PROPERTY');
+    this.setInputsInline(true);
+    this.setOutput(true, 'Boolean');
+    this.setTooltip(Blockly.Msg.MATH_IS_TOOLTIP);
+  },
+  /**
+   * Create XML to represent whether the 'divisorInput' should be present.
+   * @return {Element} XML storage element.
+   * @this Blockly.Block
+   */
+  mutationToDom: function() {
+    var container = document.createElement('mutation');
+    var divisorInput = (this.getFieldValue('PROPERTY') == 'DIVISIBLE_BY');
+    container.setAttribute('divisor_input', divisorInput);
+    return container;
+  },
+  /**
+   * Parse XML to restore the 'divisorInput'.
+   * @param {!Element} xmlElement XML storage element.
+   * @this Blockly.Block
+   */
+  domToMutation: function(xmlElement) {
+    var divisorInput = (xmlElement.getAttribute('divisor_input') == 'true');
+    this.updateShape_(divisorInput);
+  },
+  /**
+   * Modify this block to have (or not have) an input for 'is divisible by'.
+   * @param {boolean} divisorInput True if this block has a divisor input.
+   * @private
+   * @this Blockly.Block
+   */
+  updateShape_: function(divisorInput) {
+    // Add or remove a Value Input.
+    var inputExists = this.getInput('DIVISOR');
+    if (divisorInput) {
+      if (!inputExists) {
+        this.appendValueInput('DIVISOR')
+            .setCheck('Number');
+      }
+    } else if (inputExists) {
+      this.removeInput('DIVISOR');
+    }
+  }
+};
+
 
  
