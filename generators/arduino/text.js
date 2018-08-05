@@ -55,5 +55,31 @@ Blockly.Arduino['conversion_toString'] = function(block) {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino['text_join'] = function(block) {
+  var code;
+  if (block.itemCount_ == 0) {
+    return ['""', Blockly.Arduino.ORDER_ATOMIC];
+  } else if (block.itemCount_ == 1) {
+    var argument0 = Blockly.Arduino.valueToCode(block, 'ADD0',
+        Blockly.Arduino.ORDER_UNARY_POSTFIX) || '""';
+    code = 'String(' + argument0 + ')';
+    return [code, Blockly.Arduino.ORDER_UNARY_POSTFIX];
+  } else {
+    var argument;
+    code = [];
+    for (var n = 0; n < block.itemCount_; n++) {
+      argument = Blockly.Arduino.valueToCode(
+          block, 'ADD' + n, Blockly.Arduino.ORDER_NONE);
+      if (argument == '') {
+        code[n] = '""';
+      } else {
+        code[n] = 'String(' + argument + ')';
+      }
+    }
+    code = code.join(' + ');
+    return [code, Blockly.Arduino.ORDER_UNARY_POSTFIX];
+  }
+};
+
 
 
