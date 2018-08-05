@@ -771,6 +771,12 @@ Blockly.Msg.ST7735_PrintTextLN2 = "line feed";
 Blockly.Msg.ST7735_DrawPixel = "Draw pixel";
 Blockly.Msg.ST7735_Drawlinefrom = "Draw line from";
 Blockly.Msg.ST7735_Drawlineto = "to";
+Blockly.Msg.ST7735_Drawrectangle = "Draw rectangle";
+Blockly.Msg.ST7735_Drawroundrectangle = "Draw round rectangle";
+Blockly.Msg.ST7735_Drawroundrectangleradius = "rounding radius";
+Blockly.Msg.ST7735_Drawrectanglewidth = "width";
+Blockly.Msg.ST7735_Drawrectangleheight = "height";
+
 
 
 //SERVO

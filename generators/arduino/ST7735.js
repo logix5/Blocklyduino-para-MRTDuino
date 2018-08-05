@@ -122,6 +122,34 @@ Blockly.Arduino['st7735_drawline'] = function(block) {
   return code;
 };
 
+Blockly.Arduino['st7735_drawrectangle'] = function(block) {
+
+  var x0 = Blockly.Arduino.valueToCode(this, 'x0', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var y0 = Blockly.Arduino.valueToCode(this, 'y0', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var width = Blockly.Arduino.valueToCode(this, 'width', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var height = Blockly.Arduino.valueToCode(this, 'height', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var Color = block.getFieldValue('COLOR');
+	   
+  var code = 'tft1.drawRect('+x0+','+y0+','+width+','+height+','+Color+');\n';
+  return code;
+};
+
+Blockly.Arduino['st7735_drawroundrectangle'] = function(block) {
+
+  var x0 = Blockly.Arduino.valueToCode(this, 'x0', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var y0 = Blockly.Arduino.valueToCode(this, 'y0', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var width = Blockly.Arduino.valueToCode(this, 'width', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var height = Blockly.Arduino.valueToCode(this, 'height', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var round = Blockly.Arduino.valueToCode(this, 'round', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var Color = block.getFieldValue('COLOR');
+	   
+  var code = 'tft1.drawRoundRect('+x0+','+y0+','+width+','+height+','+round+','+Color+');\n';
+  return code;
+};
+
+
+
+
 /*
 
 Blockly.Arduino['rfid_validationcard'] = function(block) {

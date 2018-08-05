@@ -235,6 +235,68 @@ Blockly.Blocks['st7735_drawline'] = {
   }
 };
 
+Blockly.Blocks['st7735_drawrectangle'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+	//	.appendField(new Blockly.FieldImage("images/RFIDreader.png",41,38))
+        .appendField(Blockly.Msg.ST7735_name)
+		.appendField(Blockly.Msg.ST7735_Drawrectangle)
+	this.appendValueInput("x0")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_X0);
+	this.appendValueInput("y0")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_Y0);
+	this.appendValueInput("width")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_Drawrectanglewidth);
+	this.appendValueInput("height")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_Drawrectangleheight);
+	this.appendDummyInput()	
+        .appendField(Blockly.Msg.ST7735_TEXTCOLOR)
+		.appendField(new Blockly.FieldDropdown([["Black","ST7735_BLACK"],["Green", "ST7735_GREEN"],["Red", "ST7735_RED"],["Blue","ST7735_BLUE"],["Cyan", "ST7735_CYAN"],["Magenta", "ST7735_MAGENTA"],["Yellow", "ST7735_YELLOW"],["White", "ST7735_WHITE"]]), "COLOR")	
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Draw a rectangle');
+    this.setHelpUrl('');
+  }
+};
+
+Blockly.Blocks['st7735_drawroundrectangle'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+	//	.appendField(new Blockly.FieldImage("images/RFIDreader.png",41,38))
+        .appendField(Blockly.Msg.ST7735_name)
+		.appendField(Blockly.Msg.ST7735_Drawroundrectangle)
+	this.appendValueInput("x0")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_X0);
+	this.appendValueInput("y0")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_Y0);
+	this.appendValueInput("width")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_Drawrectanglewidth);
+	this.appendValueInput("height")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_Drawrectangleheight);
+	this.appendValueInput("round")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_Drawroundrectangleradius);
+	this.appendDummyInput()	
+        .appendField(Blockly.Msg.ST7735_TEXTCOLOR)
+		.appendField(new Blockly.FieldDropdown([["Black","ST7735_BLACK"],["Green", "ST7735_GREEN"],["Red", "ST7735_RED"],["Blue","ST7735_BLUE"],["Cyan", "ST7735_CYAN"],["Magenta", "ST7735_MAGENTA"],["Yellow", "ST7735_YELLOW"],["White", "ST7735_WHITE"]]), "COLOR")	
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Draw a round rectangle');
+    this.setHelpUrl('');
+  }
+};
 
 
 /*
