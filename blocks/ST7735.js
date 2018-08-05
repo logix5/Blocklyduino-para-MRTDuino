@@ -15,7 +15,7 @@ Blockly.Blocks['st7735_init'] = {
    init: function() {
     this.setColour(140);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/RFIDreader.png",41,38))
+		.appendField(new Blockly.FieldImage("images/tft7735.png",53,38))
         .appendField(Blockly.Msg.ST7735_init)
 		.appendField(Blockly.Msg.ST7735_init2);
 	this.appendDummyInput()	
@@ -40,7 +40,7 @@ Blockly.Blocks['st7735_backgroundcolor'] = {
    init: function() {
     this.setColour(140);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/RFIDreader.png",41,38))
+		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
         .appendField(Blockly.Msg.ST7735_name)
 	this.appendDummyInput()	
         .appendField(Blockly.Msg.ST7735_FILLBACKGROUND)
@@ -57,7 +57,7 @@ Blockly.Blocks['st7735_rotatedisplay'] = {
    init: function() {
     this.setColour(140);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/RFIDreader.png",41,38))
+		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
         .appendField(Blockly.Msg.ST7735_name)
 	this.appendDummyInput()	
         .appendField(Blockly.Msg.ST7735_Rotate)
@@ -74,7 +74,7 @@ Blockly.Blocks['st7735_invertdisplay'] = {
    init: function() {
     this.setColour(140);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/RFIDreader.png",41,38))
+		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
         .appendField(Blockly.Msg.ST7735_name)
 	this.appendDummyInput()	
         .appendField(Blockly.Msg.ST7735_Invert)
@@ -91,7 +91,7 @@ Blockly.Blocks['st7735_setcursor'] = {
    init: function() {
     this.setColour(140);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/RFIDreader.png",41,38))
+		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
         .appendField(Blockly.Msg.ST7735_name)
 		.appendField(Blockly.Msg.ST7735_SetCursor)
 	this.appendValueInput("x0")
@@ -112,7 +112,7 @@ Blockly.Blocks['st7735_settextcolor'] = {
    init: function() {
     this.setColour(140);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/RFIDreader.png",41,38))
+		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
         .appendField(Blockly.Msg.ST7735_name)
 	this.appendDummyInput()	
         .appendField(Blockly.Msg.ST7735_TEXTCOLOR)
@@ -129,7 +129,7 @@ Blockly.Blocks['st7735_settextsize'] = {
    init: function() {
     this.setColour(140);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/RFIDreader.png",41,38))
+		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
         .appendField(Blockly.Msg.ST7735_name)
 	this.appendDummyInput()	
         .appendField(Blockly.Msg.ST7735_TEXTsize)
@@ -146,7 +146,7 @@ Blockly.Blocks['st7735_wraptext'] = {
    init: function() {
     this.setColour(140);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/RFIDreader.png",41,38))
+		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
         .appendField(Blockly.Msg.ST7735_name)
 	this.appendDummyInput()	
         .appendField(Blockly.Msg.ST7735_TEXTwrap)
@@ -163,7 +163,7 @@ Blockly.Blocks['st7735_printTextln'] = {
    init: function() {
     this.setColour(140);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/RFIDreader.png",41,38))
+		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
         .appendField(Blockly.Msg.ST7735_name)
 		.appendField(Blockly.Msg.ST7735_PrintTextLN)
 	this.appendValueInput("text_to_print")
@@ -183,7 +183,7 @@ Blockly.Blocks['st7735_drawpixel'] = {
    init: function() {
     this.setColour(140);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/RFIDreader.png",41,38))
+		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
         .appendField(Blockly.Msg.ST7735_name)
 		.appendField(Blockly.Msg.ST7735_DrawPixel)
 	this.appendValueInput("x0")
@@ -193,7 +193,7 @@ Blockly.Blocks['st7735_drawpixel'] = {
         .setCheck("Number")
         .appendField(Blockly.Msg.ST7735_Y0);
 	this.appendDummyInput()	
-        .appendField(Blockly.Msg.ST7735_TEXTCOLOR)
+        .appendField(Blockly.Msg.ST7735_TEXTCOLOR2)
 		.appendField(new Blockly.FieldDropdown([["Black","ST7735_BLACK"],["Green", "ST7735_GREEN"],["Red", "ST7735_RED"],["Blue","ST7735_BLUE"],["Cyan", "ST7735_CYAN"],["Magenta", "ST7735_MAGENTA"],["Yellow", "ST7735_YELLOW"],["White", "ST7735_WHITE"]]), "COLOR")	
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
@@ -207,7 +207,7 @@ Blockly.Blocks['st7735_drawline'] = {
    init: function() {
     this.setColour(140);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/RFIDreader.png",41,38))
+		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
         .appendField(Blockly.Msg.ST7735_name)
 		.appendField(Blockly.Msg.ST7735_Drawlinefrom)
 	this.appendValueInput("x0")
@@ -225,7 +225,7 @@ Blockly.Blocks['st7735_drawline'] = {
         .setCheck("Number")
         .appendField(Blockly.Msg.ST7735_Y1);
 	this.appendDummyInput()	
-        .appendField(Blockly.Msg.ST7735_TEXTCOLOR)
+        .appendField(Blockly.Msg.ST7735_TEXTCOLOR2)
 		.appendField(new Blockly.FieldDropdown([["Black","ST7735_BLACK"],["Green", "ST7735_GREEN"],["Red", "ST7735_RED"],["Blue","ST7735_BLUE"],["Cyan", "ST7735_CYAN"],["Magenta", "ST7735_MAGENTA"],["Yellow", "ST7735_YELLOW"],["White", "ST7735_WHITE"]]), "COLOR")	
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
@@ -239,7 +239,7 @@ Blockly.Blocks['st7735_drawrectangle'] = {
    init: function() {
     this.setColour(140);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/RFIDreader.png",41,38))
+		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
         .appendField(Blockly.Msg.ST7735_name)
 		.appendField(Blockly.Msg.ST7735_Drawrectangle)
 	this.appendValueInput("x0")
@@ -255,9 +255,12 @@ Blockly.Blocks['st7735_drawrectangle'] = {
         .setCheck("Number")
         .appendField(Blockly.Msg.ST7735_Drawrectangleheight);
 	this.appendDummyInput()	
-        .appendField(Blockly.Msg.ST7735_TEXTCOLOR)
+        .appendField(Blockly.Msg.ST7735_TEXTCOLOR2)
 		.appendField(new Blockly.FieldDropdown([["Black","ST7735_BLACK"],["Green", "ST7735_GREEN"],["Red", "ST7735_RED"],["Blue","ST7735_BLUE"],["Cyan", "ST7735_CYAN"],["Magenta", "ST7735_MAGENTA"],["Yellow", "ST7735_YELLOW"],["White", "ST7735_WHITE"]]), "COLOR")	
-    this.setInputsInline(true);
+    this.appendDummyInput()
+	    .appendField(Blockly.Msg.ST7735_Drawfill)
+        .appendField(new Blockly.FieldCheckbox('FALSE'), 'LOGIC');	
+	this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Draw a rectangle');
@@ -269,7 +272,7 @@ Blockly.Blocks['st7735_drawroundrectangle'] = {
    init: function() {
     this.setColour(140);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/RFIDreader.png",41,38))
+		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
         .appendField(Blockly.Msg.ST7735_name)
 		.appendField(Blockly.Msg.ST7735_Drawroundrectangle)
 	this.appendValueInput("x0")
@@ -288,9 +291,12 @@ Blockly.Blocks['st7735_drawroundrectangle'] = {
         .setCheck("Number")
         .appendField(Blockly.Msg.ST7735_Drawroundrectangleradius);
 	this.appendDummyInput()	
-        .appendField(Blockly.Msg.ST7735_TEXTCOLOR)
+        .appendField(Blockly.Msg.ST7735_TEXTCOLOR2)
 		.appendField(new Blockly.FieldDropdown([["Black","ST7735_BLACK"],["Green", "ST7735_GREEN"],["Red", "ST7735_RED"],["Blue","ST7735_BLUE"],["Cyan", "ST7735_CYAN"],["Magenta", "ST7735_MAGENTA"],["Yellow", "ST7735_YELLOW"],["White", "ST7735_WHITE"]]), "COLOR")	
-    this.setInputsInline(true);
+    this.appendDummyInput()
+	    .appendField(Blockly.Msg.ST7735_Drawfill)
+        .appendField(new Blockly.FieldCheckbox('FALSE'), 'LOGIC');	
+	this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Draw a round rectangle');
@@ -298,72 +304,91 @@ Blockly.Blocks['st7735_drawroundrectangle'] = {
   }
 };
 
+Blockly.Blocks['st7735_drawcircle'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
+        .appendField(Blockly.Msg.ST7735_name)
+		.appendField(Blockly.Msg.ST7735_Drawcircle)
+	this.appendValueInput("x0")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_X0);
+	this.appendValueInput("y0")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_Y0);
+	this.appendValueInput("radius")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_Drawcircleradius);
+	this.appendDummyInput()	
+        .appendField(Blockly.Msg.ST7735_TEXTCOLOR2)
+		.appendField(new Blockly.FieldDropdown([["Black","ST7735_BLACK"],["Green", "ST7735_GREEN"],["Red", "ST7735_RED"],["Blue","ST7735_BLUE"],["Cyan", "ST7735_CYAN"],["Magenta", "ST7735_MAGENTA"],["Yellow", "ST7735_YELLOW"],["White", "ST7735_WHITE"]]), "COLOR")	
+	this.appendDummyInput()
+	    .appendField(Blockly.Msg.ST7735_Drawfill)
+        .appendField(new Blockly.FieldCheckbox('FALSE'), 'LOGIC');	
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Draw a circle');
+    this.setHelpUrl('');
+  }
+};
 
-/*
+Blockly.Blocks['st7735_drawtriangle'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
+        .appendField(Blockly.Msg.ST7735_name)
+		.appendField(Blockly.Msg.ST7735_Drawtriangle)
+	this.appendValueInput("x0")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_X0);
+	this.appendValueInput("y0")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_Y0);
+	this.appendValueInput("x1")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_X1);
+	this.appendValueInput("y1")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_Y1);
+	this.appendValueInput("x2")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_X2);
+	this.appendValueInput("y2")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_Y2);		
+	this.appendDummyInput()	
+        .appendField(Blockly.Msg.ST7735_TEXTCOLOR2)
+		.appendField(new Blockly.FieldDropdown([["Black","ST7735_BLACK"],["Green", "ST7735_GREEN"],["Red", "ST7735_RED"],["Blue","ST7735_BLUE"],["Cyan", "ST7735_CYAN"],["Magenta", "ST7735_MAGENTA"],["Yellow", "ST7735_YELLOW"],["White", "ST7735_WHITE"]]), "COLOR")	
+    this.appendDummyInput()
+	    .appendField(Blockly.Msg.ST7735_Drawfill)
+        .appendField(new Blockly.FieldCheckbox('FALSE'), 'LOGIC');	
+	this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Draw a line');
+    this.setHelpUrl('');
+  }
+};
 
-
-
-Blockly.Blocks['RFID_detected'] = {
+Blockly.Blocks['st7735_properties'] = {
   helpUrl: '',
   init: function() {
-    this.setColour(220);
+    this.setColour(140);
     this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
-		.appendField(Blockly.Msg.RFID_name)
-	    .appendField(Blockly.Msg.RFID_DETECTED)
-	this.setOutput(true, 'Boolean');
+		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
+		.appendField(Blockly.Msg.ST7735_name)
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ST7735_properties)
+        .appendField(new Blockly.FieldDropdown([["Width", "1"], ["Height", "2"],["X cursor position", "3"],["Y cursor position", "4"],["Rotatation value", "5"]]), "Property")   
+	this.setOutput(true, 'Number');
 	this.appendDummyInput()
 	this.setInputsInline(true);
     this.setTooltip('');
   }
 };
 
-Blockly.Blocks['RFID_readed'] = {
-  helpUrl: '',
-  init: function() {
-    this.setColour(220);
-    this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
-		.appendField(Blockly.Msg.RFID_name)
-	    .appendField(Blockly.Msg.RFID_READED)
-	this.setOutput(true, 'Boolean');
-	this.appendDummyInput()
-	this.setInputsInline(true);
-    this.setTooltip('');
-  }
-};
 
-Blockly.Blocks['RFID_card_readed'] = {
-  helpUrl: '',
-  init: function() {
-    this.setColour(220);
-    this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
-		.appendField(Blockly.Msg.RFID_name)
-	    .appendField(Blockly.Msg.RFID_CARD_READED)
-	this.setOutput(true, 'String');
-	this.appendDummyInput()
-	this.setInputsInline(true);
-    this.setTooltip('');
-  }
-};
-
-Blockly.Blocks['RFID_check_card'] = {
-  helpUrl: '',
-  init: function() {
-    this.setColour(220);
-    this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
-		.appendField(Blockly.Msg.RFID_name)
-	this.appendDummyInput()
-		.appendField(Blockly.Msg.RFID_CHECK_CARD)
-        .appendField(new Blockly.FieldTextInput("cardx"), "NAME")
-		.appendField(Blockly.Msg.RFID_CHECK_CARD2)
-	this.setOutput(true, 'Boolean');
-	this.appendDummyInput()
-	this.setInputsInline(true);
-    this.setTooltip('');
-  }
-};
-	*/
 

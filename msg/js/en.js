@@ -748,7 +748,7 @@ Blockly.Msg.RFID_CHECK_CARD2 = "?";
 
 
 //RFID ST7735
-Blockly.Msg.ST7735_name = "TFT ST7735.";
+Blockly.Msg.ST7735_name = "TFT";
 Blockly.Msg.ST7735_init = "Init TFT ST7735 1.8\".";
 Blockly.Msg.ST7735_init2 = "Pins:SCK Port2 MOSI Port3.";
 Blockly.Msg.ST7735_PIN_CS = "CS Pin";
@@ -763,7 +763,10 @@ Blockly.Msg.ST7735_X0 = "x0";
 Blockly.Msg.ST7735_Y0 = "y0";
 Blockly.Msg.ST7735_X1 = "x1";
 Blockly.Msg.ST7735_Y1 = "y1";
+Blockly.Msg.ST7735_X2 = "x2";
+Blockly.Msg.ST7735_Y2 = "y2";
 Blockly.Msg.ST7735_TEXTCOLOR = "Set text color";
+Blockly.Msg.ST7735_TEXTCOLOR2 = "Set color";
 Blockly.Msg.ST7735_TEXTsize = "Set text size";
 Blockly.Msg.ST7735_TEXTwrap = "Set text wrap";
 Blockly.Msg.ST7735_PrintTextLN = "Print the text/value";
@@ -772,11 +775,15 @@ Blockly.Msg.ST7735_DrawPixel = "Draw pixel";
 Blockly.Msg.ST7735_Drawlinefrom = "Draw line from";
 Blockly.Msg.ST7735_Drawlineto = "to";
 Blockly.Msg.ST7735_Drawrectangle = "Draw rectangle";
+Blockly.Msg.ST7735_Drawtriangle = "Draw triangle.Corner points";
 Blockly.Msg.ST7735_Drawroundrectangle = "Draw round rectangle";
 Blockly.Msg.ST7735_Drawroundrectangleradius = "rounding radius";
 Blockly.Msg.ST7735_Drawrectanglewidth = "width";
 Blockly.Msg.ST7735_Drawrectangleheight = "height";
-
+Blockly.Msg.ST7735_Drawcircle = "Draw circle.Center in";
+Blockly.Msg.ST7735_Drawcircleradius = "radius";
+Blockly.Msg.ST7735_Drawfill = "Fill";
+Blockly.Msg.ST7735_properties = "Return property:";
 
 
 //SERVO

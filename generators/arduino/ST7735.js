@@ -129,8 +129,14 @@ Blockly.Arduino['st7735_drawrectangle'] = function(block) {
   var width = Blockly.Arduino.valueToCode(this, 'width', Blockly.Arduino.ORDER_ATOMIC) || '0';
   var height = Blockly.Arduino.valueToCode(this, 'height', Blockly.Arduino.ORDER_ATOMIC) || '0';
   var Color = block.getFieldValue('COLOR');
-	   
-  var code = 'tft1.drawRect('+x0+','+y0+','+width+','+height+','+Color+');\n';
+
+	var logic = this.getFieldValue('LOGIC');
+  
+   if(logic=='TRUE')
+    var code = 'tft1.fillRect('+x0+','+y0+','+width+','+height+','+Color+');\n';
+  else
+     var code = 'tft1.drawRect('+x0+','+y0+','+width+','+height+','+Color+');\n';
+ 
   return code;
 };
 
@@ -142,80 +148,67 @@ Blockly.Arduino['st7735_drawroundrectangle'] = function(block) {
   var height = Blockly.Arduino.valueToCode(this, 'height', Blockly.Arduino.ORDER_ATOMIC) || '0';
   var round = Blockly.Arduino.valueToCode(this, 'round', Blockly.Arduino.ORDER_ATOMIC) || '0';
   var Color = block.getFieldValue('COLOR');
-	   
-  var code = 'tft1.drawRoundRect('+x0+','+y0+','+width+','+height+','+round+','+Color+');\n';
+  var logic = this.getFieldValue('LOGIC');
+  
+   if(logic=='TRUE')
+    var code = 'tft1.fillRoundRect('+x0+','+y0+','+width+','+height+','+round+','+Color+');\n';
+  else
+    var code = 'tft1.drawRoundRect('+x0+','+y0+','+width+','+height+','+round+','+Color+');\n';
+    
   return code;
 };
 
+Blockly.Arduino['st7735_drawcircle'] = function(block) {
 
-
-
-/*
-
-Blockly.Arduino['rfid_validationcard'] = function(block) {
-
-   var pin_C1 = block.getFieldValue('C1');  
-   var pin_C2 = block.getFieldValue('C2');  
-   var pin_C3 = block.getFieldValue('C3');  
-   var pin_C4 = block.getFieldValue('C4');  
-   var Var_NAME = block.getFieldValue('NAME');
+  var x0 = Blockly.Arduino.valueToCode(this, 'x0', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var y0 = Blockly.Arduino.valueToCode(this, 'y0', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var radius = Blockly.Arduino.valueToCode(this, 'radius', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var Color = block.getFieldValue('COLOR');
+  var logic = this.getFieldValue('LOGIC');
+  
+   if(logic=='TRUE')
+    var code = 'tft1.fillCircle('+x0+','+y0+','+radius+','+Color+');\n';
+  else
+    var code = 'tft1.drawCircle('+x0+','+y0+','+radius+','+Color+');\n';	   
 	   
-   Blockly.Arduino.definitions_['define_validation_car_'+Var_NAME+''] = 'byte '+Var_NAME+'[4]= {'+pin_C1+','+pin_C2+','+pin_C3+','+pin_C4+'};\n';
+  return code;
+};
+
+Blockly.Arduino['st7735_drawtriangle'] = function(block) {
+
+  var x0 = Blockly.Arduino.valueToCode(this, 'x0', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var y0 = Blockly.Arduino.valueToCode(this, 'y0', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var x1 = Blockly.Arduino.valueToCode(this, 'x1', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var y1 = Blockly.Arduino.valueToCode(this, 'y1', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var x2 = Blockly.Arduino.valueToCode(this, 'x2', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var y2 = Blockly.Arduino.valueToCode(this, 'y2', Blockly.Arduino.ORDER_ATOMIC) || '0';
  
-  var code = '';
+  var Color = block.getFieldValue('COLOR');
+
+  var logic = this.getFieldValue('LOGIC');
+  
+   if(logic=='TRUE')
+    var code = 'tft1.fillTriangle('+x0+','+y0+','+x1+','+y1+','+x2+','+y2+','+Color+');\n';
+  else
+    var code = 'tft1.drawTriangle('+x0+','+y0+','+x1+','+y1+','+x2+','+y2+','+Color+');\n';
+ 
   return code;
 };
 
-Blockly.Arduino['RFID_detected'] = function(block) {
-  
-  var code = 'mfrc522.PICC_IsNewCardPresent()';
-  
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
-};
-
-Blockly.Arduino['RFID_readed'] = function(block) {
-  
-  var code = 'mfrc522.PICC_ReadCardSerial()';
-  
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
-};
-
-Blockly.Arduino['RFID_card_readed'] = function(block) {
+Blockly.Arduino['st7735_properties'] = function(block) {
 	
-  Blockly.Arduino.definitions_['define_card_readed'] = 'String cardreaded(byte *buffer,byte bufferSize) \n'+
-' {\n'+
-'	String card="";\n'+
-'	for (byte i=0; i<bufferSize; i++)\n'+
-'		{\n'+
-'		card+=String(buffer[i]<0x10 ? \" 0\" : \" \");\n'+
-'		card+=String(buffer[i],HEX);\n'+
-'		}\n'+
-'	return card;\n'+	
-' }\n';
-  
-  var code = 'cardreaded(mfrc522.uid.uidByte, mfrc522.uid.size)';
-  
+	var property = block.getFieldValue('Property');  
+	
+  if (property==1)	
+	var code = 'tft1.width()';  
+	else if (property==2)
+		var code = 'tft1.height()';		
+		else if (property==3)
+		  var code = 'tft1.getCursorX()';
+			else if (property==4)
+				var code = 'tft1.getCursorY()';
+				 else
+					var code = 'tft1.getRotation()';
+				
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
-
-
-Blockly.Arduino['RFID_check_card'] = function(block) {
-	
- var Var_NAME = block.getFieldValue('NAME');	
-	
-  Blockly.Arduino.definitions_['compare_card_readed'] = 'bool isEqualArray(byte arrayA[],byte arrayB[],int length)\n'+
-' {\n'+
-'	for (int index=0; index<length; index++)\n'+
-'		{\n'+
-'		  if (arrayA[index]!=arrayB[index])\n'+
-'		   return false;\n'+
-'		}\n'+
-'	return true;\n'+	
-' }\n';
-  
-  var code = 'isEqualArray(mfrc522.uid.uidByte,'+Var_NAME+',4)';
-  
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
-};
-
-*/
