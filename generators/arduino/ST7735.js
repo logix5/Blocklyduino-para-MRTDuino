@@ -89,12 +89,38 @@ Blockly.Arduino['st7735_wraptext'] = function(block) {
 Blockly.Arduino['st7735_printTextln'] = function(block) {
 
   var texttoprint = Blockly.Arduino.valueToCode(block, 'text_to_print', Blockly.Arduino.ORDER_ATOMIC);
-
-	   
-  var code = 'tft1.println('+texttoprint+');\n';
+  var logic = this.getFieldValue('LOGIC');
+  
+  if(logic=='TRUE')
+     var code = 'tft1.println('+texttoprint+');\n';
+  else
+    var code = 'tft1.print('+texttoprint+');\n';	   
+ 
   return code;
 };
 
+Blockly.Arduino['st7735_drawpixel'] = function(block) {
+
+  var x0 = Blockly.Arduino.valueToCode(this, 'x0', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var y0 = Blockly.Arduino.valueToCode(this, 'y0', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var Color = block.getFieldValue('COLOR');
+	   
+  var code = 'tft1.drawPixel('+x0+','+y0+','+Color+');\n';
+  return code;
+};
+
+
+Blockly.Arduino['st7735_drawline'] = function(block) {
+
+  var x0 = Blockly.Arduino.valueToCode(this, 'x0', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var y0 = Blockly.Arduino.valueToCode(this, 'y0', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var x1 = Blockly.Arduino.valueToCode(this, 'x1', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var y1 = Blockly.Arduino.valueToCode(this, 'y1', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var Color = block.getFieldValue('COLOR');
+	   
+  var code = 'tft1.drawLine('+x0+','+y0+','+x1+','+y1+','+Color+');\n';
+  return code;
+};
 
 /*
 

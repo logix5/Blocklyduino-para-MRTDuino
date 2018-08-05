@@ -761,11 +761,17 @@ Blockly.Msg.ST7735_Invert = "Invert display";
 Blockly.Msg.ST7735_SetCursor = "Set cursor";
 Blockly.Msg.ST7735_X0 = "x0";
 Blockly.Msg.ST7735_Y0 = "y0";
+Blockly.Msg.ST7735_X1 = "x1";
+Blockly.Msg.ST7735_Y1 = "y1";
 Blockly.Msg.ST7735_TEXTCOLOR = "Set text color";
 Blockly.Msg.ST7735_TEXTsize = "Set text size";
 Blockly.Msg.ST7735_TEXTwrap = "Set text wrap";
-Blockly.Msg.ST7735_PrintTextLN = "Print the text";
+Blockly.Msg.ST7735_PrintTextLN = "Print the text/value";
 Blockly.Msg.ST7735_PrintTextLN2 = "line feed";
+Blockly.Msg.ST7735_DrawPixel = "Draw pixel";
+Blockly.Msg.ST7735_Drawlinefrom = "Draw line from";
+Blockly.Msg.ST7735_Drawlineto = "to";
+
 
 //SERVO
 Blockly.Msg.SERVO_Servo="Servo";
