@@ -427,3 +427,13 @@ Blockly.Arduino['math_on_list'] = function() {
   }
   return [code, Blockly.Arduino.ORDER_FUNCTION_CALL];
 };
+
+Blockly.Arduino['math_modulo'] = function() {
+  // Remainder computation.
+  var argument0 = Blockly.Arduino.valueToCode(this, 'DIVIDEND',
+      Blockly.Arduino.ORDER_MODULUS) || '0';
+  var argument1 = Blockly.Arduino.valueToCode(this, 'DIVISOR',
+      Blockly.Arduino.ORDER_MODULUS) || '0';
+  var code ='(int)'+ argument0 + ' % (int)' + argument1;
+  return [code, Blockly.Arduino.ORDER_MODULUS];
+};

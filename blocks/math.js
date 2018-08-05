@@ -838,5 +838,34 @@ Blockly.Blocks['math_on_list'] = {
   }
 };
 
+Blockly.Blocks['math_modulo'] = {
+  /**
+   * Block for remainder of a division.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.MATH_MODULO_TITLE,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "DIVIDEND",
+          "check": "Number"
+        },
+        {
+          "type": "input_value",
+          "name": "DIVISOR",
+          "check": "Number"
+        }
+      ],
+      "inputsInline": true,
+      "output": "Number",
+      "colour": Blockly.Blocks.math.HUE,
+      "tooltip": Blockly.Msg.MATH_MODULO_TOOLTIP,
+      "helpUrl": Blockly.Msg.MATH_MODULO_HELPURL
+    });
+  }
+};
+
 
  
