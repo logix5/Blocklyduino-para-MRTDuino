@@ -432,10 +432,10 @@ Blockly.Blocks['controls_switch'] = {
 		
 	this.appendValueInput('SWVAR')
 	    .appendField(Blockly.Msg.CONTROLS_SWITCH_VAR_TITLE)
-        .appendField(Blockly.Msg.CONTROLS_SWITCH_VAR_TAIL);
+       // .appendField(Blockly.Msg.CONTROLS_SWITCH_VAR_TAIL);
 		
-	this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET;
-    this.contextMenuType_ = 'variables_set';
+//	this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET;
+//    this.contextMenuType_ = 'variables_set';
     this.appendValueInput('CASE0')
         .setAlign(Blockly.ALIGN_RIGHT)
 		.appendField(Blockly.Msg.CONTROLS_SWITCH_MSG_CASEBREAK);
@@ -462,13 +462,13 @@ Blockly.Blocks['controls_switch'] = {
     this.casebreakCount_ = 0;
     this.defaultCount_ = 0;
   },
- 
+ /*
   renameVar: function(oldName, newName) {
     if (Blockly.Names.equals(oldName, this.getFieldValue('SWVAR'))) {
       this.setFieldValue(newName, 'SWVAR');
     }
   } ,
-  //do I need a custom context menu like from 'variables_get' ? yes
+  //do I need a custom context menu like from 'variables_get' ? yes */
 
   mutationToDom: function() {
     if (!this.casebreakCount_ && !this.defaultCount_) {
@@ -538,7 +538,7 @@ Blockly.Blocks['controls_switch'] = {
         case 'controls_case_break':
           this.casebreakCount_++;
           var ifInput = this.appendValueInput('CASE' + this.casebreakCount_)
-              .setCheck('Number')
+              //.setCheck('Number')
               .appendField(Blockly.Msg.CONTROLS_SWITCH_MSG_CASEBREAK);
           var doInput = this.appendStatementInput('DO' + this.casebreakCount_);
           doInput.appendField(Blockly.Msg.CONTROLS_SWITCH_MSG_DO);
