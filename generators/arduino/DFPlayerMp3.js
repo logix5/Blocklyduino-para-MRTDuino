@@ -74,4 +74,44 @@ Blockly.Arduino['DFPplayerMp3_get_values'] = function(block) {
    return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino['DFPplayerMp3_operation'] = function(block) {
+ 		
+ var mp3_operation = this.getFieldValue('MP3_OPERATION'); 	
+ 
+ 
+ if (mp3_operation==0) 
+    var code = 'myDFPlayer.volumeUp();\n';
+	else if (mp3_operation==1) 
+		var code = 'myDFPlayer.volumeDown();\n';
+		else if (mp3_operation==2) 
+			 var code = 'myDFPlayer.next();\n';
+			 else if (mp3_operation==3) 
+				  var code = 'myDFPlayer.previous();\n';
+				  else if (mp3_operation==4) 
+						var code = 'myDFPlayer.pause();\n';
+						else if (mp3_operation==5) 
+							var code = 'myDFPlayer.start();\n';
+							else 
+								var code = 'myDFPlayer.randomAll();\n';
+ 
+   return code;
+};
+
+Blockly.Arduino['DFPplayerMp3_repeatoperation'] = function(block) {
+ 		
+ var mp3_repeatoperation = this.getFieldValue('MP3_REPEATOPERATION'); 	
+ 
+ 
+ if (mp3_repeatoperation==1) 
+    var code = 'myDFPlayer.enableLoop();\n';
+	else if (mp3_repeatoperation==2) 
+		var code = 'myDFPlayer.disableLoop();\n';
+		else if (mp3_repeatoperation==3) 
+			 var code = 'myDFPlayer.enableLoopAll();\n';
+			 else 
+			  var code = 'myDFPlayer.disableLoopAll();\n';
+ 
+   return code;
+};
+
 

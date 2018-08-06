@@ -739,6 +739,9 @@ Blockly.Msg.MP3_RX="Port RX#";
 Blockly.Msg.MP3_equalizer = "Set equalizer";
 Blockly.Msg.MP3_volumen = "Set volumen(0-15)";
 Blockly.Msg.MP3_property = "Return property:";
+Blockly.Msg.MP3_operation = "Operation:";
+Blockly.Msg.MP3_repeatoperation = "Repeat mode:";
+
 
 
 //RFID MFRC522

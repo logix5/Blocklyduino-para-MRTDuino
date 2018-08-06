@@ -84,31 +84,50 @@ Blockly.Blocks['DFPplayerMp3_get_values'] = {
 	this.appendDummyInput()
 	//	.appendField(new Blockly.FieldImage("images/radio-2.png",25,25))
         .appendField(Blockly.Msg.MP3_name)
+		.appendField(Blockly.Msg.MP3_property)
 		.appendField(new Blockly.FieldDropdown([['Volumen Level','0'],['Equalizer value','1'],['MP3 status','2']]), "MP3_PROPERTY")
     this.setInputsInline(true);
 	this.setOutput(true, 'Number');
-    this.setTooltip('Set the volumen of MP3');
+    this.setTooltip('Get mp3 property');
+  }
+};
+
+Blockly.Blocks['DFPplayerMp3_operation'] = {
+  helpUrl: '',
+  init: function() {
+	this.setColour(220);
+	this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/radio-2.png",25,25))
+        .appendField(Blockly.Msg.MP3_name)
+		.appendField(Blockly.Msg.MP3_operation)
+		.appendField(new Blockly.FieldDropdown([['Increase Volumen','0'],['Decrease Volumen','1'],['Reproduce next Song','2'],['Reproduce before Song','3'],['Pause Song','4'],['Resume Song','5'],['Reproduce random all songs','6']]), "MP3_OPERATION");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Make an operation');
+  }
+};
+
+Blockly.Blocks['DFPplayerMp3_repeatoperation'] = {
+  helpUrl: '',
+  init: function() {
+	this.setColour(220);
+	this.appendDummyInput()
+		//.appendField(new Blockly.FieldImage("images/radio-2.png",25,25))
+        .appendField(Blockly.Msg.MP3_name)
+		.appendField(Blockly.Msg.MP3_repeatoperation)
+		.appendField(new Blockly.FieldDropdown([['Enable repeat one song','1'],['Disable repeat one song','2'],['Enable repeat all songs','3'],['Disable repeat all songs','4']]), "MP3_REPEATOPERATION");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Set repeat mode');
   }
 };
 
 
 /*
 
-Blockly.Blocks['RadioTEA5767_activate'] = {
-  helpUrl: '',
-  init: function() {
-	this.setColour(220);
-	this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/radio-2.png",25,25))
-        .appendField(Blockly.Msg.TEA5767_name)
-		.appendField(Blockly.Msg.TEA5767_turnOFF_ON)
-		.appendField(new Blockly.FieldDropdown([['ON','1'],['OFF','2']]), "TEA5767_POWER")
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip('option to activae/deactivate the radio module');
-  }
-};
+,
 
 Blockly.Blocks['RadioTEA5767_mute'] = {
   helpUrl: '',
