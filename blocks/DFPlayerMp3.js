@@ -14,7 +14,7 @@ Blockly.Blocks['DFPplayerMp3_init_ss'] = {
   init: function() {
 	this.setColour(220);
 	this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/radio.png",53,38))
+		.appendField(new Blockly.FieldImage("images/dfplayer.png",43,38))
         .appendField(Blockly.Msg.MP3_init)
 	 this.appendDummyInput()
 		.appendField(Blockly.Msg.MP3_TX)
@@ -34,7 +34,7 @@ Blockly.Blocks['DFPplayerMp3_init_serial1'] = {
   init: function() {
 	this.setColour(220);
 	this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/radio.png",53,38))
+	.appendField(new Blockly.FieldImage("images/dfplayer.png",43,38))
         .appendField(Blockly.Msg.MP3_init2)
 		.appendField(Blockly.Msg.MP3_init3);
 	this.setInputsInline(true);
@@ -49,7 +49,7 @@ Blockly.Blocks['DFPplayerMp3_set_equalizator'] = {
   init: function() {
 	this.setColour(220);
 	this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/radio-2.png",25,25))
+		.appendField(new Blockly.FieldImage("images/mp3.png",25,25))
         .appendField(Blockly.Msg.MP3_name)
 		.appendField(Blockly.Msg.MP3_equalizer)
 		.appendField(new Blockly.FieldDropdown([['Normal','0'],['Pop','1'],['Rock','2'],['Jazz','3'],['Classic','4'],['Bass','5']]), "MP3_EQ")
@@ -65,7 +65,7 @@ Blockly.Blocks['DFPplayerMp3_set_volumen'] = {
   init: function() {
 	this.setColour(220);
 	this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/radio-2.png",25,25))
+		.appendField(new Blockly.FieldImage("images/mp3.png",25,25))
         .appendField(Blockly.Msg.MP3_name)
 		.appendField(Blockly.Msg.MP3_volumen)
 	this.appendValueInput("Volumen")
@@ -82,7 +82,7 @@ Blockly.Blocks['DFPplayerMp3_get_values'] = {
   init: function() {
 	this.setColour(220);
 	this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/radio-2.png",25,25))
+		.appendField(new Blockly.FieldImage("images/mp3.png",25,25))
         .appendField(Blockly.Msg.MP3_name)
 		.appendField(Blockly.Msg.MP3_property)
 		.appendField(new Blockly.FieldDropdown([['Volumen Level','0'],['Equalizer value','1'],['MP3 status','2']]), "MP3_PROPERTY")
@@ -97,7 +97,7 @@ Blockly.Blocks['DFPplayerMp3_operation'] = {
   init: function() {
 	this.setColour(220);
 	this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/radio-2.png",25,25))
+		.appendField(new Blockly.FieldImage("images/mp3.png",25,25))
         .appendField(Blockly.Msg.MP3_name)
 		.appendField(Blockly.Msg.MP3_operation)
 		.appendField(new Blockly.FieldDropdown([['Increase Volumen','0'],['Decrease Volumen','1'],['Reproduce next Song','2'],['Reproduce before Song','3'],['Pause Song','4'],['Resume Song','5'],['Reproduce random all songs','6']]), "MP3_OPERATION");
@@ -113,7 +113,7 @@ Blockly.Blocks['DFPplayerMp3_repeatoperation'] = {
   init: function() {
 	this.setColour(220);
 	this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/radio-2.png",25,25))
+		.appendField(new Blockly.FieldImage("images/mp3.png",25,25))
         .appendField(Blockly.Msg.MP3_name)
 		.appendField(Blockly.Msg.MP3_repeatoperation)
 		.appendField(new Blockly.FieldDropdown([['Enable repeat one song','1'],['Disable repeat one song','2'],['Enable repeat all songs','3'],['Disable repeat all songs','4']]), "MP3_REPEATOPERATION");
@@ -129,7 +129,7 @@ Blockly.Blocks['DFPplayerMp3_playsong'] = {
   init: function() {
 	this.setColour(220);
 	this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/radio-2.png",25,25))
+		.appendField(new Blockly.FieldImage("images/mp3.png",25,25))
         .appendField(Blockly.Msg.MP3_name)
 		.appendField(Blockly.Msg.MP3_playsong)
 	this.appendValueInput("Song")
@@ -146,7 +146,7 @@ Blockly.Blocks['DFPplayerMp3_playsongdirectiry'] = {
   init: function() {
 	this.setColour(220);
 	this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/radio-2.png",25,25))
+		.appendField(new Blockly.FieldImage("images/mp3.png",25,25))
         .appendField(Blockly.Msg.MP3_name)
 	this.appendValueInput("Song")
 		.appendField(Blockly.Msg.MP3_playsong)
@@ -166,7 +166,7 @@ Blockly.Blocks['DFPplayerMp3_repeatsong'] = {
   init: function() {
 	this.setColour(220);
 	this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/radio-2.png",25,25))
+		.appendField(new Blockly.FieldImage("images/mp3.png",25,25))
         .appendField(Blockly.Msg.MP3_name)
 		.appendField(Blockly.Msg.MP3_repeatsong)
 	this.appendValueInput("Song")
