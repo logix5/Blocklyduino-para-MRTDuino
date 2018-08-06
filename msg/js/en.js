@@ -729,6 +729,18 @@ Blockly.Msg.TEA5767_RadioStation = "Radio Station.";
 Blockly.Msg.TEA5767_SetFrequency = "Frequency(Mhz)";
 Blockly.Msg.TEA5767_MadridFrequency = "Madrid Radio Station:";
 
+//DFPlayer MP3
+Blockly.Msg.MP3_name = "Mp3 DFPlayer";
+Blockly.Msg.MP3_init = "Init Mp3 DFPlayer using software serial";
+Blockly.Msg.MP3_init2 = "Init Mp3 DFPlayer using serial1";
+Blockly.Msg.MP3_init3 = "RX# Port15 TX# Port16";
+Blockly.Msg.MP3_TX="Port TX#";
+Blockly.Msg.MP3_RX="Port RX#";
+Blockly.Msg.MP3_equalizer = "Set equalizer";
+Blockly.Msg.MP3_volumen = "Set volumen(0-15)";
+Blockly.Msg.MP3_property = "Return property:";
+
+
 //RFID MFRC522
 Blockly.Msg.RFID_name = "RFID MFRC522.";
 Blockly.Msg.RFID_init = "Init RFID MFRC522.";

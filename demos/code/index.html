@@ -31,6 +31,7 @@
 		<script src="../../blocks/MAX7219-ledmatrix.js"></script>
 		<script src="../../blocks/simpleSensors.js"></script>
 		<script src="../../blocks/RadioTEA5767.js"></script>
+		<script src="../../blocks/DFPlayerMP3.js"></script>
 		<script src="../../blocks/keypad.js"></script>
 		<script src="../../blocks/Temp-ds18b20.js"></script>
 		<script src="../../blocks/RFID.js"></script>
@@ -85,6 +86,7 @@
 		<script src="../../generators/arduino/RTC_DS1302.js"></script>
 		<script src="../../generators/arduino/simpleSensors.js"></script>
 		<script src="../../generators/arduino/RadioTEA5767.js"></script>
+		<script src="../../generators/arduino/DFPlayerMP3.js"></script>
 		<script src="../../generators/arduino/simpleActuators.js"></script>
 		<script src="../../generators/arduino/keypad.js"></script>
 		<script src="../../generators/arduino/Temp-ds18b20.js"></script>
@@ -959,6 +961,26 @@
 			<block type="frequenciesMadrid"></block>
 		 </category> 
 		 
+		 <category id="catDFPlayerMP3" colour="220"> 
+			 <block type="DFPplayerMp3_init_ss">
+			  <field name="PIN1">9</field>
+			  <field name="PIN2">11</field>
+			 </block>
+			<block type="DFPplayerMp3_init_serial1"></block>
+			<block type="DFPplayerMp3_set_equalizator"></block>
+			<block type="DFPplayerMp3_set_volumen">
+				<value name="Volumen">
+                        <shadow type="math_number">
+                            <field name="NUM">15</field>
+                        </shadow>
+                    </value>
+			
+			</block>
+			<block type="DFPplayerMp3_get_values"></block>
+			
+			
+			
+		  </category> 
 	</category> 
         <sep></sep>
         <category id="catDisplay" colour="150">
