@@ -741,7 +741,9 @@ Blockly.Msg.MP3_volumen = "Set volumen(0-15)";
 Blockly.Msg.MP3_property = "Return property:";
 Blockly.Msg.MP3_operation = "Operation:";
 Blockly.Msg.MP3_repeatoperation = "Repeat mode:";
-
+Blockly.Msg.MP3_playsong = "Play song number";
+Blockly.Msg.MP3_playsongdirectory = "in directory number";
+Blockly.Msg.MP3_repeatsong = "Repeat song number";
 
 
 //RFID MFRC522

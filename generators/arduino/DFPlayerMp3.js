@@ -114,4 +114,32 @@ Blockly.Arduino['DFPplayerMp3_repeatoperation'] = function(block) {
    return code;
 };
 
+Blockly.Arduino['DFPplayerMp3_playsong'] = function(block) {
+ 		
+ var song = Blockly.Arduino.valueToCode(this, 'Song', Blockly.Arduino.ORDER_ATOMIC); 	
+  
+  var code = 'myDFPlayer.play('+song+');\n';
+ 
+  return code;
+};
+
+Blockly.Arduino['DFPplayerMp3_playsongdirectiry'] = function(block) {
+ 		
+ var song = Blockly.Arduino.valueToCode(this, 'Song', Blockly.Arduino.ORDER_ATOMIC); 
+ var directory = Blockly.Arduino.valueToCode(this, 'Directory', Blockly.Arduino.ORDER_ATOMIC); 
+  
+  var code = 'myDFPlayer.playFolder('+directory+','+song+');\n';
+ 
+  return code;
+};
+
+Blockly.Arduino['DFPplayerMp3_repeatsong'] = function(block) {
+ 		
+ var song = Blockly.Arduino.valueToCode(this, 'Song', Blockly.Arduino.ORDER_ATOMIC); 	
+  
+  var code = 'myDFPlayer.loop('+song+');\n';
+ 
+  return code;
+};
+
 
