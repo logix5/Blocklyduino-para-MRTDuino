@@ -20,6 +20,7 @@
 		<script src="../../blocks/motorMRT.js"></script>
 		<script src="../../blocks/stepper.js"></script>
         <script src="../../blocks/servo.js"></script>
+		<script src="../../blocks/rotationservo.js"></script>
 		<script src="../../blocks/softBT.js"></script>
 		<script src="../../blocks/remoteControlMRT.js"></script>
 		<script src="../../blocks/serial1BT.js"></script>
@@ -73,6 +74,7 @@
 		<script src="../../generators/arduino/stepper.js"></script>
 		<script src="../../generators/arduino/genericTime.js"></script>
         <script src="../../generators/arduino/servo.js"></script>
+		<script src="../../generators/arduino/rotationservo.js"></script>
 		<script src="../../generators/arduino/softBT.js"></script>
 		<script src="../../generators/arduino/remoteControlMRT.js"></script>
 		<script src="../../generators/arduino/serial1BT.js"></script>
@@ -731,6 +733,18 @@
             <block type="servo_read_degrees"></block>
             <block type="servo_attached"></block>
             <block type="servo_detach"></block>
+        </category>
+		
+		<category id="catServoRot" colour="80">        
+            <block type="servo_continuos_move">
+                <value name="SpeedServo">
+                    <shadow type="math_number">
+                        <field name="NUM">90</field>
+                    </shadow>
+                </value>
+            </block>
+            <block type="servo_continuos_stop"></block>
+            
         </category>
 		 <category id="catStepper" colour="80">
 		 

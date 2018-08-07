@@ -670,6 +670,13 @@ Blockly.Msg.MOTOR_Direction="Direction";
 Blockly.Msg.MOTOR_speed="Speed(0-255)";
 Blockly.Msg.MOTOR_Stop="Stop";
 
+//ROTATION SERVO
+ Blockly.Msg.ROTSERVO_Servo="Continuous Rotation Servo";
+ Blockly.Msg.ROTSERVO_PIN="PIN#";
+ Blockly.Msg.ROTSERVO_Speed="Speed (0-90)";
+ Blockly.Msg.ROTSERVO_Direction="Direction";
+ Blockly.Msg.ROTSERVO_Stop="Stop";
+
 //STEPPER
 Blockly.Msg.STEEPER_name="Init Stepper ID";
 Blockly.Msg.STEEPER2_name="Stepper ID";

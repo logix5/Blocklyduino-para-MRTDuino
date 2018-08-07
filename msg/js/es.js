@@ -440,7 +440,12 @@ Blockly.Msg.SSERIAL_Avai="SoftwareSerial.¿Datos Recibidos?";
  Blockly.Msg.SERVO_Attached="Servo Conectado?";
  Blockly.Msg.SERVO_Detach="Desconecta Servo PIN#";
 
-
+//ROTATION SERVO
+ Blockly.Msg.ROTSERVO_Servo="Rotation Servo";
+ Blockly.Msg.ROTSERVO_PIN="PIN#";
+ Blockly.Msg.ROTSERVO_Speed="Speed (0-90)";
+ Blockly.Msg.ROTSERVO_Direction="Direction";
+ Blockly.Msg.ROTSERVO_Stop="Stop";
 
 
 //SERIAL LCD

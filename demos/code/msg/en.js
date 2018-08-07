@@ -12,6 +12,7 @@ var MSG = {
   catRemoteIR:"IR Remote Control",
   catMotors:"Motors",
   catMotorMRT:"Motor MRT",
+  catServoRot:"Rotation Servo",
   catStepper:"Stepper",
   catServo:"Servo",
   catStorage:"Storage",
