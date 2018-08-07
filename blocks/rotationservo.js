@@ -8,7 +8,7 @@ Blockly.Blocks['servo_continuos_move'] = {
     this.setColour(80);
 	this.setInputsInline(true);
     this.appendDummyInput()
-        .appendField(new Blockly.FieldImage("images/Servo.png",50,38))
+        .appendField(new Blockly.FieldImage("images/servorot.png",41,38))
 		.appendField(Blockly.Msg.ROTSERVO_Servo)
         .appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
@@ -31,7 +31,7 @@ Blockly.Blocks['servo_continuos_stop'] = {
     this.setColour(80);
 	this.setInputsInline(true);
     this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/Servo.png",50,38))
+		.appendField(new Blockly.FieldImage("images/servorot.png",41,38))
         .appendField(Blockly.Msg.ROTSERVO_Servo)
 		.appendField(Blockly.Msg.PIN)
         .appendField(new Blockly.FieldDropdown(profile.default.digital), "PIN");
