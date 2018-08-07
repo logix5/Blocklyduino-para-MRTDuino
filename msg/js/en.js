@@ -668,6 +668,7 @@ Blockly.Msg.Serial1_BT_Print_Format="BTSerial1 Print  Format";
 Blockly.Msg.MOTOR_Connector="Motor";
 Blockly.Msg.MOTOR_Direction="Direction";
 Blockly.Msg.MOTOR_speed="Speed(0-255)";
+Blockly.Msg.MOTOR_Stop="Stop";
 
 //STEPPER
 Blockly.Msg.STEEPER_name="Init Stepper ID";
