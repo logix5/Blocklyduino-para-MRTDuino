@@ -771,6 +771,18 @@ Blockly.Msg.RFID_CARD_READED = "Value of the read card";
 Blockly.Msg.RFID_CHECK_CARD = "Is RFID card read equal to the validation card";
 Blockly.Msg.RFID_CHECK_CARD2 = "?";
 
+//SD CARD
+Blockly.Msg.SD_name = "Micro SD";
+Blockly.Msg.SD_init = "Init Micro SD.";
+Blockly.Msg.SD_init2 = "Pins:SCK Port2 MOSI Port3 and MISO Port4.";
+Blockly.Msg.SD_PIN_CS= "CS Pin";
+Blockly.Msg.SD_Makedir= "Makedir name:";
+Blockly.Msg.SD_Removedir= "Remove dir name:";
+Blockly.Msg.SD_removefile= "Remove file:";
+
+
+
+
 
 //RFID ST7735
 Blockly.Msg.ST7735_name = "TFT";

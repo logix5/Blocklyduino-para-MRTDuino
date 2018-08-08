@@ -24,6 +24,7 @@ var MSG = {
   catMAX7219_7D:"MAX7219 7digit",
   catMAX7219_LM:"MAX7219 Led Matrix",
   catEEprom:"EEPROM",
+  catmicroSD:"Micro SD",
   catSimpleSensorsALL:"Simple Sensors",
   catSimpleSensors:"Sensors I",
   catSimpleSensors2: "Sensors II",

@@ -20,6 +20,7 @@
 		<script src="../../blocks/motorMRT.js"></script>
 		<script src="../../blocks/stepper.js"></script>
         <script src="../../blocks/servo.js"></script>
+		<script src="../../blocks/SD.js"></script>
 		<script src="../../blocks/rotationservo.js"></script>
 		<script src="../../blocks/softBT.js"></script>
 		<script src="../../blocks/remoteControlMRT.js"></script>
@@ -74,6 +75,7 @@
 		<script src="../../generators/arduino/stepper.js"></script>
 		<script src="../../generators/arduino/genericTime.js"></script>
         <script src="../../generators/arduino/servo.js"></script>
+		<script src="../../generators/arduino/SD.js"></script>
 		<script src="../../generators/arduino/rotationservo.js"></script>
 		<script src="../../generators/arduino/softBT.js"></script>
 		<script src="../../generators/arduino/remoteControlMRT.js"></script>
@@ -699,6 +701,34 @@
                 </value>
 			 </block>		 
 		   </category>
+		   
+		    <category id="catmicroSD" colour="100">
+				<block type="sd_init"></block> 
+				<block type="sd_mkdir">
+					<value name="dirname">
+                        <shadow type="text">
+                            <field name="TEXT">dir name</field>
+                        </shadow>
+                    </value>
+				
+				</block> 
+				<block type="sd_removedir">
+					<value name="dirname">
+                        <shadow type="text">
+                            <field name="TEXT">dir name</field>
+                        </shadow>
+                    </value>
+				
+				</block> 
+				<block type="sd_removefile">
+					<value name="filename">
+                        <shadow type="text">
+                            <field name="TEXT">filename.txt</field>
+                        </shadow>
+                    </value>
+				
+				</block> 
+		   	</category>   
 	    </category>   
 	   <sep></sep>
 	  <category id="catMotors" colour="80"> 
