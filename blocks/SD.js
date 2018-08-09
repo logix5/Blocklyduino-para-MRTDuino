@@ -80,102 +80,120 @@ Blockly.Blocks['sd_removefile'] = {
   }
 };
 
-
-
-
-
-/*
-
-Blockly.Blocks['rfid_validationcard'] = {
-   init: function() {
-    this.setColour(220);
+Blockly.Blocks['sd_fileexists'] = {
+  helpUrl: 'https://www.arduino.cc/en/Reference/SD',
+  init: function() {
+    this.setColour(100);
     this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
-        .appendField(Blockly.Msg.RFID_name)
+	//	.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
+		.appendField(Blockly.Msg.SD_name)
+	    .appendField(Blockly.Msg.SD_fileexist)
+	this.appendValueInput("filename")
+        .setCheck('String')
+		.appendField(Blockly.Msg.SD_fileexist2)
+	this.setOutput(true, 'Boolean');
 	this.appendDummyInput()
-		.appendField(Blockly.Msg.RFID_VALID_VAR)
-        .appendField(new Blockly.FieldTextInput("cardx"), "NAME");	
+	this.setInputsInline(true);
+    this.setTooltip('');
+  }
+};
+
+Blockly.Blocks['sd_printfile'] = {
+  init: function() {
+    this.setColour(100);
+    this.appendDummyInput()
+	//	.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
+		.appendField(Blockly.Msg.SD_name)
+        .appendField(Blockly.Msg.SD_print);
+	this.appendValueInput("texttoprint")
+        .setCheck('String')	
+	this.appendValueInput("filename")
+		.appendField(Blockly.Msg.SD_infile)
+        .setCheck('String')
 	this.appendDummyInput()
-		.appendField(Blockly.Msg.RFID_C1)
-        .appendField(new Blockly.FieldTextInput("0x3F"), "C1");
-	this.appendDummyInput()
-		.appendField(Blockly.Msg.RFID_C2)
-        .appendField(new Blockly.FieldTextInput("0x01"), "C2");
-	this.appendDummyInput()
-		.appendField(Blockly.Msg.RFID_C3)
-        .appendField(new Blockly.FieldTextInput("0x23"), "C3");
-		this.appendDummyInput()
-		.appendField(Blockly.Msg.RFID_C4)
-        .appendField(new Blockly.FieldTextInput("0x44"), "C4");
+	    .appendField(Blockly.Msg.SD_linefeed)
+        .appendField(new Blockly.FieldCheckbox('FALSE'), 'LOGIC');	
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('Write validation cards or keys');
-    this.setHelpUrl('');
+    this.setTooltip('');
+    this.setHelpUrl('https://www.arduino.cc/en/Reference/SD');
   }
 };
 
-Blockly.Blocks['RFID_detected'] = {
-  helpUrl: '',
+Blockly.Blocks['sd_filesize'] = {
+  helpUrl: 'https://www.arduino.cc/en/Reference/SD',
   init: function() {
-    this.setColour(220);
+    this.setColour(100);
     this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
-		.appendField(Blockly.Msg.RFID_name)
-	    .appendField(Blockly.Msg.RFID_DETECTED)
-	this.setOutput(true, 'Boolean');
+	//	.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
+		.appendField(Blockly.Msg.SD_name)
+	    .appendField(Blockly.Msg.SD_size)
+	this.appendValueInput("filename")
+        .setCheck('String')
+	this.setOutput(true, 'Number');
 	this.appendDummyInput()
 	this.setInputsInline(true);
     this.setTooltip('');
   }
 };
 
-Blockly.Blocks['RFID_readed'] = {
-  helpUrl: '',
+Blockly.Blocks['sd_writefile'] = {
   init: function() {
-    this.setColour(220);
+    this.setColour(100);
     this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
-		.appendField(Blockly.Msg.RFID_name)
-	    .appendField(Blockly.Msg.RFID_READED)
-	this.setOutput(true, 'Boolean');
+	//	.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
+		.appendField(Blockly.Msg.SD_name)
+        .appendField(Blockly.Msg.SD_write);
+	this.appendValueInput("variable")	
+	this.appendValueInput("filename")
+		.appendField(Blockly.Msg.SD_infile)
+        .setCheck('String')
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('https://www.arduino.cc/en/Reference/SD');
+  }
+};
+
+Blockly.Blocks['sd_filereadbyte'] = {
+  helpUrl: 'https://www.arduino.cc/en/Reference/SD',
+  init: function() {
+    this.setColour(100);
+    this.appendDummyInput()
+	//	.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
+		.appendField(Blockly.Msg.SD_name)
+	    .appendField(Blockly.Msg.SD_readbyte)
+	this.appendValueInput("position")
+        .setCheck('Number')		
+	this.appendValueInput("filename")
+		.appendField(Blockly.Msg.SD_infile)
+        .setCheck('String')
+	this.setOutput(true, 'Number');
 	this.appendDummyInput()
 	this.setInputsInline(true);
     this.setTooltip('');
   }
 };
 
-Blockly.Blocks['RFID_card_readed'] = {
-  helpUrl: '',
+Blockly.Blocks['sd_filereadall'] = {
   init: function() {
-    this.setColour(220);
-    this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
-		.appendField(Blockly.Msg.RFID_name)
-	    .appendField(Blockly.Msg.RFID_CARD_READED)
-	this.setOutput(true, 'String');
-	this.appendDummyInput()
+    this.setColour(100);
+    this.setHelpUrl('https://www.arduino.cc/en/Reference/SD');
 	this.setInputsInline(true);
+	this.appendValueInput("filename")
+	//	.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
+		.appendField(Blockly.Msg.SD_name)
+	    .appendField(Blockly.Msg.SD_readbytes)
+        .setCheck('String')
+	this.appendValueInput("variable")
+		.appendField(Blockly.Msg.SD_storereadbyte)
+    this.appendStatementInput("STATNAME")
+        .appendField(Blockly.Msg.SD_do);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
     this.setTooltip('');
   }
 };
 
-Blockly.Blocks['RFID_check_card'] = {
-  helpUrl: '',
-  init: function() {
-    this.setColour(220);
-    this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
-		.appendField(Blockly.Msg.RFID_name)
-	this.appendDummyInput()
-		.appendField(Blockly.Msg.RFID_CHECK_CARD)
-        .appendField(new Blockly.FieldTextInput("cardx"), "NAME")
-		.appendField(Blockly.Msg.RFID_CHECK_CARD2)
-	this.setOutput(true, 'Boolean');
-	this.appendDummyInput()
-	this.setInputsInline(true);
-    this.setTooltip('');
-  }
-};
-	
-*/

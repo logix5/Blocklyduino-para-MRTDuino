@@ -779,7 +779,17 @@ Blockly.Msg.SD_PIN_CS= "CS Pin";
 Blockly.Msg.SD_Makedir= "Makedir name:";
 Blockly.Msg.SD_Removedir= "Remove dir name:";
 Blockly.Msg.SD_removefile= "Remove file:";
-
+Blockly.Msg.SD_fileexist= "Filename:";
+Blockly.Msg.SD_fileexist2= "exists?";
+Blockly.Msg.SD_print= "Print the text";
+Blockly.Msg.SD_infile= "in file";
+Blockly.Msg.SD_linefeed= "line feed";
+Blockly.Msg.SD_size= "Size of the file:";
+Blockly.Msg.SD_write= "Write the byte or char";
+Blockly.Msg.SD_readbyte= "Read byte in pos";
+Blockly.Msg.SD_readbytes= "Read each byte of file:";
+Blockly.Msg.SD_storereadbyte= "and each byte saved in the variable";
+Blockly.Msg.SD_do= "DO";
 
 
 

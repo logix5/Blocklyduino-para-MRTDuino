@@ -342,9 +342,10 @@
 			  <field name="PIN_CLK">16</field>
 			</block>
 			 <block type="DateTime_RTC_ds1302">
+			 
 			 <value name="DS1302_DAY">
                     <shadow type="math_number">
-                        <field name="NUM">12</field>
+					 <field name="NUM">12 </field>
                     </shadow>
                 </value>
 				<value name="DS1302_MONTH">
@@ -710,7 +711,6 @@
                             <field name="TEXT">dir name</field>
                         </shadow>
                     </value>
-				
 				</block> 
 				<block type="sd_removedir">
 					<value name="dirname">
@@ -728,6 +728,76 @@
                     </value>
 				
 				</block> 
+				<block type="sd_fileexists">
+					<value name="filename">
+                        <shadow type="text">
+                            <field name="TEXT">filename.txt</field>
+                        </shadow>
+                    </value>
+				
+				</block> 
+				<block type="sd_printfile">
+					<value name="filename">
+                        <shadow type="text">
+                            <field name="TEXT">filename.txt</field>
+                        </shadow>
+                    </value>
+					<value name="texttoprint">
+                        <shadow type="text">
+                            <field name="TEXT">text to write in the file</field>
+                        </shadow>
+                    </value>
+				</block> 
+				
+				<block type="sd_filesize">
+					<value name="filename">
+                        <shadow type="text">
+                            <field name="TEXT">filename.txt</field>
+                        </shadow>
+                    </value>				
+				</block> 
+				
+				<block type="sd_writefile">
+					<value name="filename">
+                        <shadow type="text">
+                            <field name="TEXT">filename.txt</field>
+                        </shadow>
+                    </value>	
+					<value name="variable">
+                        <shadow type="text">
+                            <field name="TEXT">var</field>
+                        </shadow>
+                    </value>					
+				</block> 
+				
+				<block type="sd_filereadbyte">
+					<value name="filename">
+                        <shadow type="text">
+                            <field name="TEXT">filename.txt</field>
+                        </shadow>
+                    </value>	
+					<value name="position">
+                        <shadow type="math_number">
+                            <field name="TEXT">0</field>
+                        </shadow>
+                    </value>						
+				</block> 
+				
+				  <block type="sd_filereadall">
+				  <value name="filename">
+                        <shadow type="text">
+                            <field name="TEXT">filename.txt</field>
+                        </shadow>
+                    </value>	
+				 <value name="variable">
+                        <shadow type="text">
+                            <field name="TEXT">var</field>
+                        </shadow>
+                    </value>	
+				  </block>
+				
+				
+				
 		   	</category>   
 	    </category>   
 	   <sep></sep>

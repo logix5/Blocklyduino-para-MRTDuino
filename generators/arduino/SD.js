@@ -46,72 +46,124 @@ Blockly.Arduino['sd_removefile'] = function(block) {
   return code;
 };
 
-/*
+Blockly.Arduino['sd_fileexists'] = function(block) {
+	
+  var filename = Blockly.Arduino.valueToCode(block, 'filename', Blockly.Arduino.ORDER_ATOMIC);
+  
+  var code = 'SD.exists('+filename+')';
+  
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
 
-Blockly.Arduino['rfid_validationcard'] = function(block) {
+Blockly.Arduino['sd_printfile'] = function(block) {
 
-   var pin_C1 = block.getFieldValue('C1');  
-   var pin_C2 = block.getFieldValue('C2');  
-   var pin_C3 = block.getFieldValue('C3');  
-   var pin_C4 = block.getFieldValue('C4');  
-   var Var_NAME = block.getFieldValue('NAME');
-	   
-   Blockly.Arduino.definitions_['define_validation_car_'+Var_NAME+''] = 'byte '+Var_NAME+'[4]= {'+pin_C1+','+pin_C2+','+pin_C3+','+pin_C4+'};\n';
+  var texttoprint = Blockly.Arduino.valueToCode(block, 'texttoprint', Blockly.Arduino.ORDER_ATOMIC);
+  var filename = Blockly.Arduino.valueToCode(block, 'filename', Blockly.Arduino.ORDER_ATOMIC);
+  var logic = this.getFieldValue('LOGIC');
+  
+   Blockly.Arduino.definitions_['define_sd_print'] = 'void sd_print(String file, String texttoprint, boolean lf)\n'+
+'	{\n'+
+'  	sd_file = SD.open(file, FILE_WRITE);\n'+
+'	if(sd_file){\n'+
+'		if(lf)sd_file.println(texttoprint);\n'+
+'		else sd_file.print(texttoprint);\n'+
+'		sd_file.close();\n'+
+'	}\n'+
+'}\n';
+
+ if(logic=='TRUE')
+	var code = 'sd_print('+filename+','+texttoprint+',true);\n';
+ else
+	 var code = 'sd_print('+filename+','+texttoprint+',false);\n';
  
-  var code = '';
+   return code;
+};
+
+Blockly.Arduino['sd_filesize'] = function(block) {
+	
+  var filename = Blockly.Arduino.valueToCode(block, 'filename', Blockly.Arduino.ORDER_ATOMIC);
+  
+   Blockly.Arduino.definitions_['define_sd_filesize'] = 'unsigned long sd_filesize(String file)\n'+
+'{\n'+
+'	unsigned long s=0;\n'+
+'	sd_file = SD.open(file, FILE_READ);\n'+
+'	if(sd_file){\n'+
+'		s=sd_file.size();\n'+
+'		sd_file.close();\n'+
+'	}\n'+
+'	return s;\n'+
+'}\n';
+     
+  
+  var code = 'sd_filesize('+filename+')';
+  
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['sd_writefile'] = function(block) {
+
+  var variable = Blockly.Arduino.valueToCode(block, 'variable', Blockly.Arduino.ORDER_ATOMIC);
+  var filename = Blockly.Arduino.valueToCode(block, 'filename', Blockly.Arduino.ORDER_ATOMIC);
+ 
+   Blockly.Arduino.definitions_['define_sd_write'] = 'void sd_write(String file,uint8_t value)\n'+
+'	{\n'+
+'  	sd_file = SD.open(file, FILE_WRITE);\n'+
+'	if(sd_file){\n'+
+'		sd_file.write(value);\n'+
+'		sd_file.close();\n'+
+'	}\n'+
+'}\n';
+
+
+   var code = 'sd_write('+filename+','+variable+');\n';
+ 
+   return code;
+};
+
+Blockly.Arduino['sd_filereadbyte'] = function(block) {
+	
+  var filename = Blockly.Arduino.valueToCode(block, 'filename', Blockly.Arduino.ORDER_ATOMIC);
+  var position = Blockly.Arduino.valueToCode(this, 'position', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  
+  Blockly.Arduino.definitions_['define_sd_readbyte'] = 'int sd_readbyte(String file, unsigned long pos)\n'+
+'	{\n'+
+'	int s=-1;\n'+
+'  	sd_file = SD.open(file, FILE_READ);\n'+
+'	if(sd_file){\n'+
+'	if(sd_file.seek(pos)){\n'+
+'			s=sd_file.peek();\n'+
+'		}\n'+
+'		sd_file.close();\n'+
+'	}\n'+
+'	return s;\n'+
+'}\n';
+
+ 
+  var code = 'sd_readbyte('+filename+','+position+')';
+  
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['sd_filereadall'] = function(block) {
+  var filename = Blockly.Arduino.valueToCode(block, 'filename', Blockly.Arduino.ORDER_ATOMIC);
+  var variable = Blockly.Arduino.valueToCode(block, 'variable', Blockly.Arduino.ORDER_ATOMIC);
+  var statements_name = Blockly.Arduino.statementToCode(this, 'STATNAME');
+  
+  
+  var code = 'sd_file = SD.open('+filename+', FILE_READ);\n'+
+'if(sd_file)\n'+
+' {\n'+
+'  while(sd_file.available())\n'+
+'   {\n'+
+' 	  '+variable+'=sd_file.read();\n'+
+'	  '+statements_name+' '+
+'   }\n'+
+'  sd_file.close();\n'+
+' }\n';
+  
   return code;
 };
 
-Blockly.Arduino['RFID_detected'] = function(block) {
-  
-  var code = 'mfrc522.PICC_IsNewCardPresent()';
-  
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
-};
-
-Blockly.Arduino['RFID_readed'] = function(block) {
-  
-  var code = 'mfrc522.PICC_ReadCardSerial()';
-  
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
-};
-
-Blockly.Arduino['RFID_card_readed'] = function(block) {
-	
-  Blockly.Arduino.definitions_['define_card_readed'] = 'String cardreaded(byte *buffer,byte bufferSize) \n'+
-' {\n'+
-'	String card="";\n'+
-'	for (byte i=0; i<bufferSize; i++)\n'+
-'		{\n'+
-'		card+=String(buffer[i]<0x10 ? \" 0\" : \" \");\n'+
-'		card+=String(buffer[i],HEX);\n'+
-'		}\n'+
-'	return card;\n'+	
-' }\n';
-  
-  var code = 'cardreaded(mfrc522.uid.uidByte, mfrc522.uid.size)';
-  
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
-};
+ 
 
 
-Blockly.Arduino['RFID_check_card'] = function(block) {
-	
- var Var_NAME = block.getFieldValue('NAME');	
-	
-  Blockly.Arduino.definitions_['compare_card_readed'] = 'bool isEqualArray(byte arrayA[],byte arrayB[],int length)\n'+
-' {\n'+
-'	for (int index=0; index<length; index++)\n'+
-'		{\n'+
-'		  if (arrayA[index]!=arrayB[index])\n'+
-'		   return false;\n'+
-'		}\n'+
-'	return true;\n'+	
-' }\n';
-  
-  var code = 'isEqualArray(mfrc522.uid.uidByte,'+Var_NAME+',4)';
-  
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
-};
-
-*/
