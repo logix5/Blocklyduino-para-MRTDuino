@@ -14,7 +14,7 @@ Blockly.Arduino['sd_init'] = function(block) {
     
    Blockly.Arduino.definitions_['define_spi'] = '#include <SPI.h>\n';
    Blockly.Arduino.definitions_['define_SD'] = '#include <SD.h>\n';
-   Blockly.Arduino.definitions_['define_dataFile'] = 'File dataFile;\n';
+  // Blockly.Arduino.definitions_['define_dataFile'] = 'File dataFile;\n';
  
    Blockly.Arduino.setups_['setup_sd']='SD.begin('+pin_CS+');\n'
  
@@ -63,6 +63,7 @@ Blockly.Arduino['sd_printfile'] = function(block) {
   
    Blockly.Arduino.definitions_['define_sd_print'] = 'void sd_print(String file, String texttoprint, boolean lf)\n'+
 '	{\n'+
+'   File sd_file;\n'+
 '  	sd_file = SD.open(file, FILE_WRITE);\n'+
 '	if(sd_file){\n'+
 '		if(lf)sd_file.println(texttoprint);\n'+
@@ -86,6 +87,7 @@ Blockly.Arduino['sd_filesize'] = function(block) {
    Blockly.Arduino.definitions_['define_sd_filesize'] = 'unsigned long sd_filesize(String file)\n'+
 '{\n'+
 '	unsigned long s=0;\n'+
+'   File sd_file;\n'+
 '	sd_file = SD.open(file, FILE_READ);\n'+
 '	if(sd_file){\n'+
 '		s=sd_file.size();\n'+
@@ -107,6 +109,7 @@ Blockly.Arduino['sd_writefile'] = function(block) {
  
    Blockly.Arduino.definitions_['define_sd_write'] = 'void sd_write(String file,uint8_t value)\n'+
 '	{\n'+
+'   	File sd_file;\n'+
 '  	sd_file = SD.open(file, FILE_WRITE);\n'+
 '	if(sd_file){\n'+
 '		sd_file.write(value);\n'+
@@ -128,6 +131,7 @@ Blockly.Arduino['sd_filereadbyte'] = function(block) {
   Blockly.Arduino.definitions_['define_sd_readbyte'] = 'int sd_readbyte(String file, unsigned long pos)\n'+
 '	{\n'+
 '	int s=-1;\n'+
+'   File sd_file;\n'+
 '  	sd_file = SD.open(file, FILE_READ);\n'+
 '	if(sd_file){\n'+
 '	if(sd_file.seek(pos)){\n'+
@@ -149,6 +153,7 @@ Blockly.Arduino['sd_filereadall'] = function(block) {
   var variable = Blockly.Arduino.valueToCode(block, 'variable', Blockly.Arduino.ORDER_ATOMIC);
   var statements_name = Blockly.Arduino.statementToCode(this, 'STATNAME');
   
+  Blockly.Arduino.definitions_['define_sd_File'] = 'File sd_file;\n';
   
   var code = 'sd_file = SD.open('+filename+', FILE_READ);\n'+
 'if(sd_file)\n'+

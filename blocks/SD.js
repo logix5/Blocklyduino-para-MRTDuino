@@ -15,7 +15,7 @@ Blockly.Blocks['sd_init'] = {
    init: function() {
     this.setColour(100);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/RFIDreader.png",41,38))
+		.appendField(new Blockly.FieldImage("images/microsd.png",41,38))
         .appendField(Blockly.Msg.SD_init)
 		.appendField(Blockly.Msg.SD_init2);
 	this.appendDummyInput()	
@@ -33,7 +33,7 @@ Blockly.Blocks['sd_mkdir'] = {
   init: function() {
     this.setColour(100);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
+		.appendField(new Blockly.FieldImage("images/microsd_card.png",34,25))
 		.appendField(Blockly.Msg.SD_name)
         .appendField(Blockly.Msg.SD_Makedir);
     this.appendValueInput("dirname")
@@ -50,7 +50,7 @@ Blockly.Blocks['sd_removedir'] = {
   init: function() {
     this.setColour(100);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
+		.appendField(new Blockly.FieldImage("images/microsd_card.png",34,25))
 		.appendField(Blockly.Msg.SD_name)
         .appendField(Blockly.Msg.SD_Removedir);
     this.appendValueInput("dirname")
@@ -67,7 +67,7 @@ Blockly.Blocks['sd_removefile'] = {
   init: function() {
     this.setColour(100);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
+		.appendField(new Blockly.FieldImage("images/microsd_card.png",34,25))
 		.appendField(Blockly.Msg.SD_name)
         .appendField(Blockly.Msg.SD_removefile);
     this.appendValueInput("filename")
@@ -85,7 +85,7 @@ Blockly.Blocks['sd_fileexists'] = {
   init: function() {
     this.setColour(100);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
+		.appendField(new Blockly.FieldImage("images/microsd_card.png",34,25))
 		.appendField(Blockly.Msg.SD_name)
 	    .appendField(Blockly.Msg.SD_fileexist)
 	this.appendValueInput("filename")
@@ -102,7 +102,7 @@ Blockly.Blocks['sd_printfile'] = {
   init: function() {
     this.setColour(100);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
+		.appendField(new Blockly.FieldImage("images/microsd_card.png",34,25))
 		.appendField(Blockly.Msg.SD_name)
         .appendField(Blockly.Msg.SD_print);
 	this.appendValueInput("texttoprint")
@@ -126,7 +126,7 @@ Blockly.Blocks['sd_filesize'] = {
   init: function() {
     this.setColour(100);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
+		.appendField(new Blockly.FieldImage("images/microsd_card.png",34,25))
 		.appendField(Blockly.Msg.SD_name)
 	    .appendField(Blockly.Msg.SD_size)
 	this.appendValueInput("filename")
@@ -142,7 +142,7 @@ Blockly.Blocks['sd_writefile'] = {
   init: function() {
     this.setColour(100);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
+		.appendField(new Blockly.FieldImage("images/microsd_card.png",34,25))
 		.appendField(Blockly.Msg.SD_name)
         .appendField(Blockly.Msg.SD_write);
 	this.appendValueInput("variable")	
@@ -162,7 +162,7 @@ Blockly.Blocks['sd_filereadbyte'] = {
   init: function() {
     this.setColour(100);
     this.appendDummyInput()
-	//	.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
+		.appendField(new Blockly.FieldImage("images/microsd_card.png",34,25))
 		.appendField(Blockly.Msg.SD_name)
 	    .appendField(Blockly.Msg.SD_readbyte)
 	this.appendValueInput("position")
@@ -183,12 +183,14 @@ Blockly.Blocks['sd_filereadall'] = {
     this.setHelpUrl('https://www.arduino.cc/en/Reference/SD');
 	this.setInputsInline(true);
 	this.appendValueInput("filename")
-	//	.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
+		.appendField(new Blockly.FieldImage("images/microsd_card.png",34,25))
 		.appendField(Blockly.Msg.SD_name)
 	    .appendField(Blockly.Msg.SD_readbytes)
         .setCheck('String')
 	this.appendValueInput("variable")
 		.appendField(Blockly.Msg.SD_storereadbyte)
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.SD_storereadbyte2)
     this.appendStatementInput("STATNAME")
         .appendField(Blockly.Msg.SD_do);
     this.setPreviousStatement(true);

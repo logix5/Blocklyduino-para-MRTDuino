@@ -787,8 +787,9 @@ Blockly.Msg.SD_linefeed= "line feed";
 Blockly.Msg.SD_size= "Size of the file:";
 Blockly.Msg.SD_write= "Write the byte or char";
 Blockly.Msg.SD_readbyte= "Read byte in pos";
-Blockly.Msg.SD_readbytes= "Read each byte of file:";
-Blockly.Msg.SD_storereadbyte= "and each byte saved in the variable";
+Blockly.Msg.SD_readbytes= "Read the file:";
+Blockly.Msg.SD_storereadbyte= "and each byte readed (saved in the variable";
+Blockly.Msg.SD_storereadbyte2= ")";
 Blockly.Msg.SD_do= "DO";
 
 
