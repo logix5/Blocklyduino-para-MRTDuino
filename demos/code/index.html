@@ -21,6 +21,7 @@
 		<script src="../../blocks/stepper.js"></script>
         <script src="../../blocks/servo.js"></script>
 		<script src="../../blocks/SD.js"></script>
+		<script src="../../blocks/IOT.js"></script>
 		<script src="../../blocks/rotationservo.js"></script>
 		<script src="../../blocks/softBT.js"></script>
 		<script src="../../blocks/remoteControlMRT.js"></script>
@@ -76,6 +77,7 @@
 		<script src="../../generators/arduino/genericTime.js"></script>
         <script src="../../generators/arduino/servo.js"></script>
 		<script src="../../generators/arduino/SD.js"></script>
+		<script src="../../generators/arduino/IOT.js"></script>
 		<script src="../../generators/arduino/rotationservo.js"></script>
 		<script src="../../generators/arduino/softBT.js"></script>
 		<script src="../../generators/arduino/remoteControlMRT.js"></script>
@@ -152,7 +154,7 @@
                             <td class="tabmin">&nbsp;</td>
                             <td id="tab_xml" class="taboff">XML</td>
                             <td class="tabmax">
-                                <a href="http://easycoding.tn">easycoding.tn</a>
+                               
                                 <button id="copyButton" class="btn1" data-clipboard-target="#fool">
                                     <img src='../../media/iconecopy.png' class="run icon21">
                                 </button>
@@ -664,7 +666,116 @@
 	   <block type="IR_Remote_Key"></block>
 	   <block type="Init_generalremotecontrol"></block>
 	   </category>
-	    <sep></sep>
+	   
+ <category id="catWIFI" colour="200"> 
+	<category id="catIOT" colour="200"> 
+	<block type="iot_init_iot"></block>
+	<block type="iot_init_ifttt">
+			<value name="APIwrite">
+                    <shadow type="text">
+                        <field name="TEXT">7MWRTNYIWQ3T3E0X</field>
+                    </shadow>
+                </value>
+	</block>
+	<block type="iot_init_thinkspeak">
+		<value name="APIwrite">
+                    <shadow type="text">
+                        <field name="TEXT">7MWRTNYIWQ3T3E0X</field>
+                    </shadow>
+                </value>
+	
+	</block>
+	
+	<block type="iot_reset_esp8266">
+		<value name="delaytime">
+                    <shadow type="math_number">
+                         <field name="NUM">3000</field>
+                    </shadow>
+                </value>
+	
+	</block>
+	<block type="iot_configbaudios_esp8266">
+		<value name="delaytime">
+                    <shadow type="math_number">
+                         <field name="NUM">3000</field>
+                    </shadow>
+                </value>
+	
+	</block>
+	
+	<block type="iot_configmode_esp8266">
+		<value name="delaytime">
+                    <shadow type="math_number">
+                         <field name="NUM">3000</field>
+                    </shadow>
+                </value>
+	
+	</block>
+	
+	<block type="iot_confignetwork_esp8266">
+				<value name="ssid">
+                    <shadow type="text">
+                        <field name="TEXT">name net</field>
+                    </shadow>
+                </value>
+				<value name="password">
+                    <shadow type="text">
+                        <field name="TEXT">******</field>
+                    </shadow>
+                </value>
+				<value name="delaytime">
+                    <shadow type="math_number">
+                         <field name="NUM">3000</field>
+                    </shadow>
+                </value>
+	</block>
+	
+	<block type="iot_sendifttt_esp8266">
+				<value name="event">
+                    <shadow type="text">
+                        <field name="TEXT">my event</field>
+                    </shadow>
+                </value>
+				<value name="value1">
+                    <shadow type="math_number">
+                         <field name="NUM">1</field>
+                    </shadow>
+                </value>
+				<value name="value2">
+                    <shadow type="math_number">
+                         <field name="NUM">2</field>
+                    </shadow>
+                </value>
+				<value name="value3">
+                    <shadow type="math_number">
+                         <field name="NUM">3</field>
+                    </shadow>
+                </value>
+	</block>
+	<block type="iot_sendthinkspeak_esp8266">
+				<value name="field">
+                    <shadow type="text">
+                        <field name="TEXT">my field</field>
+                    </shadow>
+                </value>
+				<value name="value">
+                    <shadow type="math_number">
+                         <field name="NUM">1</field>
+                    </shadow>
+                </value>
+				
+	</block>
+	
+	</category>
+ <category id="catMakeblock" colour="200"> 
+	
+	</category>
+ 
+ 
+ 
+  </category>
+
+	   <sep></sep>
 	     <category id="catStorage" colour="100"> 
 		 
 		   <category id="catEEprom" colour="100"> 

@@ -792,7 +792,29 @@ Blockly.Msg.SD_storereadbyte= "and each byte readed (saved in the variable";
 Blockly.Msg.SD_storereadbyte2= ")";
 Blockly.Msg.SD_do= "DO";
 
-
+//IOT
+Blockly.Msg.IOT_name = "Wifi IOT ESP8266.";
+Blockly.Msg.IOT_name_init = "Init Wifi IOT ESP8266.";
+Blockly.Msg.IOT_name_init2 = "Serial1 RX# Port15 TX# Port16";
+Blockly.Msg.IOT_name_initIFTTT = "Init IFTTT.";
+Blockly.Msg.IOT_name_initThinkspeak = "Init Thinkspeak";
+Blockly.Msg.IOT_APIKEY = "API write:";
+Blockly.Msg.IOT_Reset = "Reset Wifi.Wait time(ms)";
+Blockly.Msg.IOT_logs = "Enable logs";
+Blockly.Msg.IOT_delaytime = "Wait time(ms)";
+Blockly.Msg.IOT_Baudios = "Speed in baudios";
+Blockly.Msg.IOT_Password = "password";
+Blockly.Msg.IOT_ssid = "ssid";
+Blockly.Msg.IOT_config_network = "Config network";
+Blockly.Msg.IOT_sendifft = "Send IFTTT";
+Blockly.Msg.IOT_sendthinkspeak = "Send Thinkspeak";
+Blockly.Msg.IOT_eventname = "event name";
+Blockly.Msg.IOT_field = "field name";
+Blockly.Msg.IOT_value = "Value";
+Blockly.Msg.IOT_value1 = "Value1";
+Blockly.Msg.IOT_value2 = "Value2";
+Blockly.Msg.IOT_value3 = "Value3";
+Blockly.Msg.IOT_config_mode = "Config mode";
 
 
 //RFID ST7735
