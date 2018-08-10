@@ -3,7 +3,7 @@
  *  This module was created by Oscar Ferruz. oferruz@logix5.com
  *
  ****************************************************************/
-goog.provide('Blockly.Blocks.DFPlayerMp3');
+goog.provide('Blockly.Blocks.DFPlayerMP3');
 
 goog.require('Blockly.Blocks');
 
