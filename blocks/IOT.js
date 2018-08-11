@@ -29,7 +29,7 @@ Blockly.Blocks['iot_init_ifttt'] = {
    init: function() {
     this.setColour(200);
     this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/logowifi.png",34,25))
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
         .appendField(Blockly.Msg.IOT_name)
 		.appendField(Blockly.Msg.IOT_name_initIFTTT);
 	this.appendValueInput("APIwrite")
@@ -47,7 +47,7 @@ Blockly.Blocks['iot_init_thinkspeak'] = {
    init: function() {
     this.setColour(200);
     this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/logowifi.png",34,25))
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
         .appendField(Blockly.Msg.IOT_name)
 		.appendField(Blockly.Msg.IOT_name_initThinkspeak);
 	this.appendValueInput("APIwrite")
@@ -65,7 +65,7 @@ Blockly.Blocks['iot_reset_esp8266'] = {
    init: function() {
     this.setColour(200);
     this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/logowifi.png",34,25))
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
         .appendField(Blockly.Msg.IOT_name)
 		.appendField(Blockly.Msg.IOT_Reset);
 	this.appendValueInput("delaytime")
@@ -85,7 +85,7 @@ Blockly.Blocks['iot_configbaudios_esp8266'] = {
    init: function() {
     this.setColour(200);
     this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/logowifi.png",34,25))
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
         .appendField(Blockly.Msg.IOT_name)
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.IOT_Baudios)
@@ -109,7 +109,7 @@ Blockly.Blocks['iot_confignetwork_esp8266'] = {
    init: function() {
     this.setColour(200);
     this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/logowifi.png",34,25))
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
         .appendField(Blockly.Msg.IOT_name)
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.IOT_config_network)
@@ -137,7 +137,7 @@ Blockly.Blocks['iot_configmode_esp8266'] = {
    init: function() {
     this.setColour(200);
     this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/logowifi.png",34,25))
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
         .appendField(Blockly.Msg.IOT_name)
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.IOT_config_mode)
@@ -160,7 +160,7 @@ Blockly.Blocks['iot_sendifttt_esp8266'] = {
    init: function() {
     this.setColour(200);
     this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/logowifi.png",34,25))
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
         .appendField(Blockly.Msg.IOT_name)
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.IOT_sendifft)
@@ -191,7 +191,7 @@ Blockly.Blocks['iot_sendthinkspeak_esp8266'] = {
    init: function() {
     this.setColour(200);
     this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/logowifi.png",34,25))
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
         .appendField(Blockly.Msg.IOT_name)
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.IOT_sendthinkspeak)

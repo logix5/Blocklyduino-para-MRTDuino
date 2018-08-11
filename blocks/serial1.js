@@ -98,7 +98,7 @@ Blockly.Blocks['serial1_read'] = {
 	this.appendDummyInput("")
 	    .appendTitle(Blockly.Msg.SERIAL1_Read);
     this.setInputsInline(true);
-    this.setOutput(true, 'String');
+    this.setOutput(true, 'Number');
     this.setTooltip('');
   }
 };

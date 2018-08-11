@@ -22,9 +22,16 @@
  * @fileoverview Colour blocks for Blockly.
  * @author fraser@google.com (Neil Fraser)
  */
+ 
+ /***************************************************************
+ *
+ *  This module was created by Oscar Ferruz. oferruz@logix5.com
+ *
+ ****************************************************************/
+ 
 'use strict';
 
-goog.provide('Blockly.Blocks.serial1BT');
+goog.provide('Blockly.Blocks.softWIFI');
 
 goog.require('Blockly.Blocks');
 
@@ -33,16 +40,21 @@ goog.require('Blockly.Blocks');
  * Common HSV hue for all blocks in this category.
  */
 
-Blockly.Blocks['serial1_bt_init'] = {
-  helpUrl: 'http://arduino.cc/en/Reference/AnalogWrite',
+Blockly.Blocks['soft_wifi_init'] = {
+  helpUrl: '',
   init: function() {
-    this.setColour(185);
+    this.setColour(200);
 	this.appendDummyInput()
-	.appendField(new Blockly.FieldImage("images/bt.png", 20,25 ))
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
     this.appendDummyInput()
-	.appendField(Blockly.Msg.SERIAL1_BT_Init)
+	.appendField(Blockly.Msg.SSERIAL_WIFI_Init)
+    .appendField(Blockly.Msg.SSERIAL_WIFI_TX)
+	.appendField(new Blockly.FieldDropdown([['Port2', '15'],['Port3', '16'],['Port4', '14'],['Port10', '9'],['Port11', '11']]), "PIN1");
     this.appendDummyInput()
-    .appendField(Blockly.Msg.SERIAL1_BT_BAUD)
+    .appendField(Blockly.Msg.SSERIAL_WIFI_RX)
+	.appendField(new Blockly.FieldDropdown([['Port2', '15'],['Port3', '16'],['Port4', '14'],['Port10', '9'],['Port11', '11']]), "PIN2");
+	 this.appendDummyInput()
+    .appendField(Blockly.Msg.SSERIAL_WIFI_BAUD)
 	.appendField(new Blockly.FieldDropdown([['1200', '1200'],['2400', '2400'],['4800', '4800'],['9600', '9600'],['19200', '19200'],['38400', '38400'],['57600', '57600'],['115200', '115200']]), "PINBAUDIOS");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
@@ -51,59 +63,59 @@ Blockly.Blocks['serial1_bt_init'] = {
   }
 };
 
-Blockly.Blocks['serial1_bt_printfor'] = {
+Blockly.Blocks['soft_wifi_printfor'] = {
   helpUrl: 'http://arduino.cc/en/Serial/Println',
   init: function() {
-    this.setColour(185);
+    this.setColour(200);
 	this.appendDummyInput()
-	.appendField(new Blockly.FieldImage("images/bt.png", 20,25 ))
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
 	this.setInputsInline(true);
     this.appendValueInput("CONTENT", 'Number')
         .setCheck('Number')
-        .appendTitle(Blockly.Msg.Serial1_BT_Print_Format)
-     	.appendTitle(new Blockly.FieldDropdown([[Blockly.Msg.Serial1_Print_ForDecimal, "DEC"],[Blockly.Msg.Serial1_Print_ForHexa, "HEX"],[Blockly.Msg.Serial1_Print_ForBin, "BIN"],[Blockly.Msg.Serial1_Print_ForOct, "OCT"]]), "TYPE");
+        .appendTitle(Blockly.Msg.SSerial_WIFI_Print_Format)
+     	.appendTitle(new Blockly.FieldDropdown([[Blockly.Msg.SSerial_Print_ForDecimal, "DEC"],[Blockly.Msg.SSerial_Print_ForHexa, "HEX"],[Blockly.Msg.SSerial_Print_ForBin, "BIN"],[Blockly.Msg.SSerial_Print_ForOct, "OCT"]]), "TYPE");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Prints data to the console/serial port with a specific format.');
   }
 };
 
-Blockly.Blocks['serial1_bt_available'] = {
+Blockly.Blocks['soft_wifi_available'] = {
 	helpUrl: '',
   init: function() {
-    this.setColour(185);
+    this.setColour(200);
 	this.appendDummyInput()
-	.appendField(new Blockly.FieldImage("images/bt.png", 20,25 ))
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
 	this.appendDummyInput("")
-	    .appendTitle(Blockly.Msg.SERIAL1_BT_Avai);
+	    .appendTitle(Blockly.Msg.SSERIAL_WIFI_Avai);
     this.setInputsInline(true);
     this.setOutput(true, 'Boolean');
     this.setTooltip('');
   }
 };
 
-Blockly.Blocks['serial1_bt_read'] = {
+Blockly.Blocks['soft_wifi_read'] = {
 	helpUrl: '',
   init: function() {
-    this.setColour(185);
+    this.setColour(200);
 	this.appendDummyInput()
-	.appendField(new Blockly.FieldImage("images/bt.png", 20,25 ))
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
 	this.appendDummyInput("")
-	    .appendTitle(Blockly.Msg.SERIAL1_BT_Read);
+	    .appendTitle(Blockly.Msg.SSERIAL_WIFI_Read);
     this.setInputsInline(true);
     this.setOutput(true, 'Number');
     this.setTooltip('');
   }
 };
 
-Blockly.Blocks['serial1_bt_println'] = {
+Blockly.Blocks['soft_wifi_println'] = {
   helpUrl: 'http://www.arduino.cc/en/Serial/Print',
   init: function() {
-    this.setColour(185);
+    this.setColour(200);
 	this.appendDummyInput()
-	.appendField(new Blockly.FieldImage("images/bt.png", 20,25 ))
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
     this.appendValueInput("CONTENT", 'String')
-        .appendField(Blockly.Msg.SERIAL1_BT_Println);
+        .appendField(Blockly.Msg.SSERIAL_WIFI_Println);
 	this.setInputsInline(true);	
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -111,14 +123,14 @@ Blockly.Blocks['serial1_bt_println'] = {
   }
 };
 
-Blockly.Blocks['serial1_bt_print'] = {
+Blockly.Blocks['soft_wifi_print'] = {
   helpUrl: 'http://www.arduino.cc/en/Serial/Print',
   init: function() {
-    this.setColour(185);
+    this.setColour(200);
 	this.appendDummyInput()
-	.appendField(new Blockly.FieldImage("images/bt.png", 20,25 ))
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
     this.appendValueInput("CONTENT", 'String')
-        .appendField(Blockly.Msg.SERIAL1_BT_Print);
+        .appendField(Blockly.Msg.SSERIAL_WIFI_Print);
 	this.setInputsInline(true);	
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -126,14 +138,14 @@ Blockly.Blocks['serial1_bt_print'] = {
   }
 };
 
-Blockly.Blocks['serial1_bt_write'] = {
+Blockly.Blocks['soft_wifi_write'] = {
   helpUrl: '',
   init: function() {
-    this.setColour(185);
+    this.setColour(200);
 	this.appendDummyInput()
-	.appendField(new Blockly.FieldImage("images/bt.png", 20,25 ))
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
     this.appendValueInput("CONTENT", String)
-        .appendTitle(Blockly.Msg.SERIAL1_BT_Write);
+        .appendTitle(Blockly.Msg.SSERIAL_WIFI_Write);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
 	this.setInputsInline(true);
@@ -141,19 +153,6 @@ Blockly.Blocks['serial1_bt_write'] = {
   }
 };
 
-Blockly.Blocks['serial1_bt_flush'] = {
-	helpUrl: 'http://arduino.cc/en/Serial/Flush',
-  init: function() {
-    this.setColour(185);
-	this.appendDummyInput()
-	.appendField(new Blockly.FieldImage("images/bt.png", 20,25 ))
-	this.appendDummyInput("")
-	    .appendTitle(Blockly.Msg.Serial1_BT_flush);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-	this.setInputsInline(true);
-    this.setTooltip('Waits for the transmission of outgoing serial data to complete.');
-  }
-};
+
 
 

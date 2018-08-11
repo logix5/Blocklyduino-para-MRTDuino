@@ -661,7 +661,30 @@ Blockly.Msg.SERIAL1_BT_Println="BT Serial1 Print on new line";
 Blockly.Msg.SERIAL1_BT_Print="BT Serial1 Print on same line";
 Blockly.Msg.SERIAL1_BT_Avai="BT Serial1 Available?";
 Blockly.Msg.Serial1_BT_flush="BT Serial1 flush";
-Blockly.Msg.Serial1_BT_Print_Format="BTSerial1 Print  Format";
+Blockly.Msg.Serial1_BT_Print_Format="BT Serial1 Print Format";
+
+// SERIAL1 FOR WIFI
+Blockly.Msg.SERIAL1_WIFI_Init="Init WiFi Serial1 RX# Port15 TX# Port16 ";
+Blockly.Msg.SERIAL1_WIFI_BAUD="Baudios";
+Blockly.Msg.SERIAL1_WIFI_Read="WiFi Serial1 Read";
+Blockly.Msg.SERIAL1_WIFI_Write="WiFi Serial1 write";
+Blockly.Msg.SERIAL1_WIFI_Println="WiFi Serial1 Print on new line";
+Blockly.Msg.SERIAL1_WIFI_Print="WiFi Serial1 Print on same line";
+Blockly.Msg.SERIAL1_WIFI_Avai="WiFi Serial1 Available?";
+Blockly.Msg.Serial1_WIFI_flush="WiFi Serial1 flush";
+Blockly.Msg.Serial1_WIFI_Print_Format="WiFi Serial1 Print Format";
+
+// SOFTWARE SERIAL FOR BT
+Blockly.Msg.SSERIAL_WIFI_Init="Init WiFi";
+Blockly.Msg.SSERIAL_WIFI_TX="Port TX#";
+Blockly.Msg.SSERIAL_WIFI_RX="Port RX#";
+Blockly.Msg.SSERIAL_WIFI_BAUD="Baudios";
+Blockly.Msg.SSERIAL_WIFI_Read="SoftwareSerial WiFi Read";
+Blockly.Msg.SSERIAL_WIFI_Println="SoftwareSerial WiFi Print on new line";
+Blockly.Msg.SSERIAL_WIFI_Print="SoftwareSerial WiFi Print on same line";
+Blockly.Msg.SSERIAL_WIFI_Write="SoftwareSerial WiFi write"
+Blockly.Msg.SSERIAL_WIFI_Avai="SoftwareSerial WiFi Available?";
+Blockly.Msg.SSerial_WIFI_Print_Format="SoftwareSerial WiFi Print  Format";
 
 
 //MOTOR MRT

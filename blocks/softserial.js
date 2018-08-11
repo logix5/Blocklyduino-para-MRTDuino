@@ -103,7 +103,7 @@ Blockly.Blocks['soft_read'] = {
 	this.appendDummyInput("")
 	    .appendTitle(Blockly.Msg.SSERIAL_Read);
     this.setInputsInline(true);
-    this.setOutput(true, 'String');
+    this.setOutput(true, 'Number');
     this.setTooltip('');
   }
 };

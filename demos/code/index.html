@@ -24,8 +24,10 @@
 		<script src="../../blocks/IOT.js"></script>
 		<script src="../../blocks/rotationservo.js"></script>
 		<script src="../../blocks/softBT.js"></script>
+		<script src="../../blocks/softWIFI.js"></script>
 		<script src="../../blocks/remoteControlMRT.js"></script>
 		<script src="../../blocks/serial1BT.js"></script>
+		<script src="../../blocks/serial1WIFI.js"></script>
         <script src="../../blocks/seriallcd.js"></script>
         <script src="../../blocks/seriallcdi2c.js"></script>
 		<script src="../../blocks/led-rgb-ws2812b.js"></script>
@@ -80,8 +82,10 @@
 		<script src="../../generators/arduino/IOT.js"></script>
 		<script src="../../generators/arduino/rotationservo.js"></script>
 		<script src="../../generators/arduino/softBT.js"></script>
+		<script src="../../generators/arduino/softWIFI.js"></script>
 		<script src="../../generators/arduino/remoteControlMRT.js"></script>
 		<script src="../../generators/arduino/serial1BT.js"></script>
+		<script src="../../generators/arduino/serial1WIFI.js"></script>
         <script src="../../generators/arduino/seriallcd.js"></script>
         <script src="../../generators/arduino/seriallcdi2c.js"></script>
 		<script src="../../generators/arduino/led-rgb-ws2812b.js"></script>
@@ -668,6 +672,84 @@
 	   </category>
 	   
  <category id="catWIFI" colour="200"> 
+	<category id="catWIFISerial1" colour="200"> 
+		<block type="serial1_wifi_init">
+			  <field name="PINBAUDIOS">115200</field>
+			</block>
+			 <block type="serial1_wifi_printfor" >
+                <field name="TYPE">DEC</field>
+                <value name="CONTENT">
+                    <shadow type="math_number">
+                        <field name="NUM">0</field>
+                    </shadow>
+                </value>
+            </block>
+			<block type="serial1_wifi_available"></block> 
+            <block type="serial1_wifi_read"></block>
+            <block type="serial1_wifi_print">
+			    <value name="CONTENT">
+                    <shadow type="text">
+                        <field name="TEXT">text</field>
+                    </shadow>
+                </value>
+			</block>
+            <block type="serial1_wifi_println">
+			 <value name="CONTENT">
+                    <shadow type="text">
+                        <field name="TEXT">text</field>
+                    </shadow>
+                </value>
+			</block>
+			<block type="serial1_wifi_write" >
+                <value name="CONTENT">
+                    <shadow type="text">
+                        <field name="TEXT">A</field>
+                    </shadow>
+                </value>
+            </block>
+            
+			<block type="serial1_wifi_flush"></block>
+				
+		</category>
+	<category id="catWIFISoftSerial" colour="200"> 
+		 <block type="soft_wifi_init">
+			 <field name="PIN1">9</field>
+			 <field name="PIN2">11</field>
+			  <field name="PINBAUDIOS">115200</field>
+			</block>
+			<block type="soft_wifi_printfor" x="13" y="38">
+                <field name="TYPE">DEC</field>
+                <value name="CONTENT">
+                    <shadow type="math_number">
+                        <field name="NUM">0</field>
+                    </shadow>
+                </value>
+            </block>
+			<block type="soft_wifi_available"></block>  
+            <block type="soft_wifi_read"></block>
+            <block type="soft_wifi_print">
+			    <value name="CONTENT">
+                    <shadow type="text">
+                        <field name="TEXT">text</field>
+                    </shadow>
+                </value>
+			</block>
+            <block type="soft_wifi_println">
+			 <value name="CONTENT">
+                    <shadow type="text">
+                        <field name="TEXT">text</field>
+                    </shadow>
+                </value>
+			</block>
+			<block type="soft_wifi_write" x="38" y="38">
+                <value name="CONTENT">
+                    <shadow type="text">
+                        <field name="TEXT">A</field>
+                    </shadow>
+                </value>
+            </block>
+		</category>
+ 
 	<category id="catIOT" colour="200"> 
 	<block type="iot_init_iot"></block>
 	<block type="iot_init_ifttt">
