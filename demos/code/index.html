@@ -44,6 +44,7 @@
 		<script src="../../blocks/ST7735.js"></script>
 		<script src="../../blocks/TCS3200.js"></script>
 		<script src="../../blocks/HMC5883.js"></script>
+		<script src="../../blocks/APDS9960.js"></script>
 		<script src="../../blocks/RotaryEncoder.js"></script>
 		<script src="../../blocks/simpleActuators.js"></script>
 		<script src="../../blocks/RTC_DS3231.js"></script>
@@ -105,6 +106,7 @@
 		<script src="../../generators/arduino/ST7735.js"></script>
 		<script src="../../generators/arduino/TCS3200.js"></script>
 		<script src="../../generators/arduino/HMC5883.js"></script>
+		<script src="../../generators/arduino/APDS9960.js"></script>
 		<script src="../../generators/arduino/RotaryEncoder.js"></script>
 		<script src="../../generators/arduino/EEPROM.js"></script>
         <script src="../../generators/arduino/math.js"></script>
@@ -1158,6 +1160,21 @@
 		<block type="RFID_check_card"></block>
 		
 	</category>
+	<category id="catAPDS9960" colour="220">
+	<block type="APDS9960_init"></block>
+	<block type="APDS9960_gesture_init"></block>
+	<block type="APDS9960_gesture_gain"></block>
+	<block type="APDS9960_gesture_detected"></block>
+	<block type="APDS9960_readgesture"></block>
+	<block type="APDS9960_gesture"></block>
+	<block type="APDS9960_color_init"></block>
+	<block type="APDS9960_color_gain"></block>
+	<block type="APDS9960_read_colors"></block>
+	<block type="APDS9960_color"></block>
+	
+	
+	</category>
+		
 	<category id="catTCS3200" colour="220">
 	
 	<block type="Init_ColorSensor_TCS3200">

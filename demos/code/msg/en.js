@@ -11,6 +11,7 @@ var MSG = {
   catWIFISerial1:"WiFi Serial1",
   catBTSoftSerial:"BT Software Serial",
   catWIFISoftSerial:"WiFi Soft Serial",
+  catAPDS9960:"APDS9960",
   catRemoteIR:"IR Remote Control",
   catMotors:"Motors",
   catMotorMRT:"Motor MRT",
