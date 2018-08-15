@@ -138,17 +138,19 @@
 				 <td>
 				  <img src='../../demos/code/images/logoBeduino.jpg'>
 				  </td>
-				   <td>
-                    <h1> BlocklyDuino for MRTDuino board </h1>        
-					<div id="dialogShadow" class="dialogAnimate"></div>
+				  <td>
+				    <h1 align="center" > BlocklyDuino for MRTDuino board </h1>        
+				 <!--	<div id="dialogShadow" class="dialogAnimate"></div>
                     <div id="dialogBorder"></div>
-                    <div id="dialog"></div>  
+                    <div id="dialog"></div>  -->
+					
+					</td>
+					<td class="farSide">
+						<select id="languageMenu"></select>
 					</td>
 				</table>
                 </td>
-                <td class="farSide">
-                    <select id="languageMenu"></select>
-                </td>
+                
             </tr>
             <tr>
                 <td colspan=2>
@@ -157,26 +159,28 @@
                             <td id="tab_blocks" class="tabon">...</td>
                             <td class="tabmin">&nbsp;</td>
                             <td id="tab_arduino" class="taboff">Arduino</td>
-                            <td class="tabmin">&nbsp;</td>
-                            <td id="tab_xml" class="taboff">XML</td>
+							<td class="tabmin">&nbsp;</td>
+							<td id="tab_xml" class="taboff">XML</td> 
                             <td class="tabmax">
                                
-                                <button id="copyButton" class="btn1" data-clipboard-target="#fool">
-                                    <img src='../../media/iconecopy.png' class="run icon21">
-                                </button>
-                                 <a href="https://www.logix5.com/roboticaeducativa/categoria-producto/my-robot-time/">Buy </a>
-                                <button id="trashButton" class="notext" title="...">
-                                    <img src='../../media/1x1.gif' class="trash icon21">
-                                </button>
-                                 <a href="https://www.logix5.com/roboticaeducativa/kit-beduino/">Tutorial</a>
-                                <button id="linkButton" class="notext" title="...">
-                                    <img src='../../media/1x1.gif' class="link icon21">
-                                </button>
-                                <button id="runButton" class="notext primary" title="..." onclick="saveCode()">
-                                    <img src='../../media/1x1.gif' class="run icon21">
-                                </button>
-                                <button onclick="save()" id="savexmlButton"><img src='../../media/SAVEXML.png' class="run icon21"></button>
-                                <button id="fakeload"><img src='../../media/loadxml.jpg' class="run icon21"></button>
+                            <button id="copyButton" class="btn1" data-clipboard-target="#fool">
+									<img src='../../media/iconecopy.png' class="icon21"> Copy to clipboard
+                            </button>
+							                               
+                            <button id="trashButton" class="btn1" title="...">
+                                    <img src='../../media/trash.png' class="icon21"> Delete all blocks
+                            </button>
+                                 
+                            <button id="linkButton" class="btn1" title="...">
+                                    <img src='../../media/1x1.gif' class="icon21">
+                            </button>
+                            <button id="runButton" class="btn1" title="..." onclick="saveCode()">
+                                    <img src='../../media/arduino.png' class="icon21"> Save as arduino file
+                            </button> 
+                            <button onclick="save()" id="savexmlButton"><img src='../../media/saveXML.png' class="run icon21"> Save XML</button>
+                            <button id="fakeload"><img src='../../media/loadXML.png' class="run icon21"> Load XML</button>
+								&nbsp; <a target="_blank" href="https://www.logix5.com/roboticaeducativa/kit-beduino/">Description kit</a> &nbsp;
+								&nbsp; <a target="_blank" href="https://www.logix5.com/roboticaeducativa/producto/beduino/">Buy Beduino</a>&nbsp; 
                                 <input type="file" id="load" style="display: none;"/>
                             </td>
                         </tr>
@@ -197,7 +201,7 @@
         </table>
         <div id="content_blocks" class="content"></div>
         <pre id="content_arduino" class="content"></pre>
-        <textarea id="content_xml" class="content" wrap="off"></textarea>
+        <textarea id="content_xml" class="content" wrap="off"></textarea> 
 
     <xml id="toolbox" style="display: none">
 	

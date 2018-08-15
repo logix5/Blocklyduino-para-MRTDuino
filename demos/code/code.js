@@ -36,7 +36,7 @@ var rtl;
 Code.LANGUAGE_NAME = {
  // 'ar': 'العربية',
   'en': 'English',
-  'es':'Español'
+ // 'es':'Español'
   //'fr': 'Français'
 };
 
@@ -377,9 +377,9 @@ Code.yes = function() {
     var myb = Code.workspace.getAllBlocks();
     
     document.getElementById('capacity').innerHTML = Code.workspace.getAllBlocks();
-    document.getElementById('test').innerHTML = ko.length - 1;
+	document.getElementById('test').innerHTML = ko.length - 1;
     
-    //
+/*   //
     var toolbox = '<xml id="toolbox" >';
       toolbox += '<category id="catInOut" colour="10">';
   toolbox += '   <block type="inout_digital_read"></block>';
@@ -389,7 +389,7 @@ Code.yes = function() {
    if (ko.length>2){
        //Code.workspace.updateToolbox(toolbox);
    }
-    //
+    //*/
 }
 
 Code.init = function() {
