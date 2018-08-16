@@ -135,22 +135,23 @@
             <tr>
                 <td>
 				 <table width="100%" height="100%" >
-				 <td  style="width: 20%;">
+				 <td  align="left" style="width: 30%;">
 					<!--	  <img src='../../demos/code/images/logoBeduino.jpg'>  -->
-				  <img align="left" src='../../media/logo_transp.png'>
+					 <img align="center" src='../../media/blockylogo.png'>
+					
 				  </td>
 				<!--   <td >
 					 <img align="right" src='../../media/mrtduino.png'>
 				  </td>-->
-				  <td >
-				   
-				    <h1 align="center" ><b>BlocklyDuino for MRTDuino board</b></h1>        
+				  <td align="center" >
+				    <img src='../../media/logo_transp.png'>
+				 <!--	   <h1 align="center" ><b><font color="000080">BlocklyDuino for MRTDuino board</font></b></h1>     -->   
 				 <!--	<div id="dialogShadow" class="dialogAnimate"></div>
                     <div id="dialogBorder"></div>
                     <div id="dialog"></div>  -->
 					
 					</td>
-					<td align="right" class="farSide">
+					<td align="right" style="width: 15%;" class="farSide">
 						<select id="languageMenu"></select>
 					</td>
 				</table>
@@ -173,19 +174,28 @@
                             </button>
 							                               
                             <button id="trashButton" class="btn1" title="...">
-                                    <img src='../../media/trash.png' class="icon21"> Delete all blocks
+                                    <img src='../../media/trash.png' class="icon21">Delete all blocks
                             </button>
                                  
                             <button id="linkButton" class="btn1" title="...">
                                     <img src='../../media/1x1.gif' class="icon21">
                             </button>
                             <button id="runButton" class="btn1" title="..." onclick="saveCode()">
-                                    <img src='../../media/arduino.png' class="icon21"> Save as arduino file
+                                    <img src='../../media/arduino.png' class="icon21">Save as arduino file
                             </button> 
-                            <button onclick="save()" id="savexmlButton"><img src='../../media/saveXML.png' class="run icon21"> Save XML</button>
-                            <button id="fakeload"><img src='../../media/loadXML.png' class="run icon21"> Load XML</button>
-							&nbsp; <a target="_blank" href="https://www.logix5.com/roboticaeducativa/kit-beduino/">Kit Description</a> &nbsp;
-						 	&nbsp; <a target="_blank" href="https://www.logix5.com/roboticaeducativa/producto/beduino/">Buy Beduino</a>&nbsp;
+							
+                            <button onclick="save()" id="savexmlButton"><img src='../../media/saveXML.png' class="run icon21">Save XML
+							</button>
+							
+                            <button id="fakeload"><img src='../../media/loadXML.png' class="run icon21">Load XML
+							</button>
+							
+							<button  onClick="parent.open('https://www.logix5.com/roboticaeducativa/kit-beduino/')" class="btn1"><img src='../../media/help.png' class="icon21">Kit Description
+							</button>
+							
+							<button  onClick="parent.open('https://www.logix5.com/roboticaeducativa/producto/beduino/')" class="btn1"><img src='../../media/shop.png' class="icon21">Buy Beduino
+							</button>
+							
                             <input type="file" id="load" style="display: none;"/>
                             </td>
                         </tr>
