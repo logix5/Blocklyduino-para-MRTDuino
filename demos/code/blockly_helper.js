@@ -85,8 +85,8 @@ function saveCode() {
     
     }
  //
-    var d = new Date();
-  var fileName = window.prompt('What would you like to name your file?', 'BlocklyDuinoEnhanced_'+'_'+d.getMinutes()+d.getMilliseconds())
+  var d = new Date();
+  var fileName = window.prompt('What would you like to name your file?', 'BlocklyDuino_MRTDuino_'+'_'+d.getMinutes()+d.getMilliseconds())
   //doesn't save if the user quits the save prompt
   if(fileName){
     var blob = new Blob([Blockly.Arduino.workspaceToCode()], {type: 'text/ino;charset=utf-8'});
@@ -307,7 +307,9 @@ function uploadCode(code, callback) {
 }
 
 function uploadClick() {
-    var code = document.getElementById('content_arduino').value;
+   // var code = document.getElementById('content_arduino').value;
+	
+	var code = Blockly.Arduino.workspaceToCode();
 
     alert("Ready to upload to Arduino.");
     
