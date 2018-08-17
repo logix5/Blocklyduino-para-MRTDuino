@@ -64,7 +64,7 @@ def guess_port_name():
         # We'll guess it's the first non-bluetooth tty. or cu. prefixed device
         ttys = [filename for filename in os.listdir("/dev")
                 if (filename.startswith("tty.") or filename.startswith("cu."))
-                and not "luetooth" in filename]
+                and not "bluetooth" in filename]
         ttys.sort(key=lambda k:(k.startswith("cu."), k))
         if ttys:
             portname = "/dev/" + ttys[0]
