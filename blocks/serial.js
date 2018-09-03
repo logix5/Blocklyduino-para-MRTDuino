@@ -36,7 +36,7 @@ goog.require('Blockly.Blocks');
  Blockly.Blocks['serial_init'] = {
   helpUrl: 'http://arduino.cc/en/Reference/AnalogWrite',
   init: function() {
-    this.setColour(20);
+    this.setColour(170);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
     this.appendDummyInput()
@@ -54,7 +54,7 @@ goog.require('Blockly.Blocks');
 Blockly.Blocks['serial_printfor'] = {
   helpUrl: 'http://arduino.cc/en/Serial/Println',
   init: function() {
-    this.setColour(20);
+    this.setColour(170);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
 	this.setInputsInline(true);
@@ -71,7 +71,7 @@ Blockly.Blocks['serial_printfor'] = {
 Blockly.Blocks['serial_read'] = {
 	helpUrl: 'http://arduino.cc/en/Serial/read',
   init: function() {
-    this.setColour(20);
+    this.setColour(170);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
 	this.appendDummyInput("")
@@ -85,7 +85,7 @@ Blockly.Blocks['serial_read'] = {
 Blockly.Blocks['serial_available'] = {
 	helpUrl: 'http://arduino.cc/en/Serial/available',
   init: function() {
-    this.setColour(20);
+    this.setColour(170);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
 	this.appendDummyInput("")
@@ -99,7 +99,7 @@ Blockly.Blocks['serial_available'] = {
 Blockly.Blocks['serial_print'] = {
   helpUrl: 'http://www.arduino.cc/en/Serial/Print',
   init: function() {
-    this.setColour(20);
+    this.setColour(170);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
     this.appendValueInput("CONTENT", 'String')
@@ -114,7 +114,7 @@ Blockly.Blocks['serial_print'] = {
 Blockly.Blocks['serial_write'] = {
   helpUrl: '',
   init: function() {
-    this.setColour(20);
+    this.setColour(170);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
     this.appendValueInput("CONTENT", String)
@@ -145,7 +145,7 @@ Blockly.Blocks['serial_write'] = {
 Blockly.Blocks['serial_flush'] = {
 	helpUrl: 'http://arduino.cc/en/Serial/Flush',
   init: function() {
-    this.setColour(20);
+    this.setColour(170);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
 	this.appendDummyInput("")
@@ -160,7 +160,7 @@ Blockly.Blocks['serial_flush'] = {
 Blockly.Blocks['serial_printL'] = {
   helpUrl: 'http://www.arduino.cc/en/Serial/Print',
   init: function() {
-    this.setColour(20);
+    this.setColour(170);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
     this.appendValueInput("CONTENT", 'String')

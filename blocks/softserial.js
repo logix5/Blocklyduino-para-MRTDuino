@@ -43,7 +43,7 @@ goog.require('Blockly.Blocks');
 Blockly.Blocks['soft_init'] = {
   helpUrl: 'http://arduino.cc/en/Reference/AnalogWrite',
   init: function() {
-    this.setColour(20);
+    this.setColour(170);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
     this.appendDummyInput()
@@ -66,7 +66,7 @@ Blockly.Blocks['soft_init'] = {
 Blockly.Blocks['soft_printfor'] = {
   helpUrl: 'http://arduino.cc/en/Serial/Println',
   init: function() {
-    this.setColour(20);
+    this.setColour(170);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
 	this.setInputsInline(true);
@@ -83,7 +83,7 @@ Blockly.Blocks['soft_printfor'] = {
 Blockly.Blocks['soft_available'] = {
 	helpUrl: '',
   init: function() {
-    this.setColour(20);
+    this.setColour(170);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
 	this.appendDummyInput("")
@@ -97,7 +97,7 @@ Blockly.Blocks['soft_available'] = {
 Blockly.Blocks['soft_read'] = {
 	helpUrl: '',
   init: function() {
-    this.setColour(20);
+    this.setColour(170);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
 	this.appendDummyInput("")
@@ -111,7 +111,7 @@ Blockly.Blocks['soft_read'] = {
 Blockly.Blocks['soft_println'] = {
   helpUrl: 'http://www.arduino.cc/en/Serial/Print',
   init: function() {
-    this.setColour(20);
+    this.setColour(170);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
     this.appendValueInput("CONTENT", 'String')
@@ -126,7 +126,7 @@ Blockly.Blocks['soft_println'] = {
 Blockly.Blocks['soft_print'] = {
   helpUrl: 'http://www.arduino.cc/en/Serial/Print',
   init: function() {
-    this.setColour(20);
+    this.setColour(170);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
     this.appendValueInput("CONTENT", 'String')
@@ -141,7 +141,7 @@ Blockly.Blocks['soft_print'] = {
 Blockly.Blocks['soft_write'] = {
   helpUrl: '',
   init: function() {
-    this.setColour(20);
+    this.setColour(170);
 	this.appendDummyInput()
 	.appendField(new Blockly.FieldImage("images/Serial.png", 21, 18))
     this.appendValueInput("CONTENT", String)
