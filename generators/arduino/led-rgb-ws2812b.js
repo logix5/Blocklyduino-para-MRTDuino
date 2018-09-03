@@ -66,7 +66,19 @@ Blockly.Arduino['LedStrip_WS2812B_setPixelColor'] = function(block) {
 };
 
 
+Blockly.Arduino['LedStrip_WS2812B_setPixelColor2'] = function(block) {
+  var numberstrip = this.getFieldValue('LEDSTRIP_NUMBER');
+  var pixel_number = Blockly.Arduino.valueToCode(this, 'Pixel_number', Blockly.Arduino.ORDER_ATOMIC);
+  
+  var red = Blockly.Arduino.valueToCode(this, 'Pixel_R', Blockly.Arduino.ORDER_ATOMIC);
+  var green = Blockly.Arduino.valueToCode(this, 'Pixel_G', Blockly.Arduino.ORDER_ATOMIC);
+  var blue = Blockly.Arduino.valueToCode(this, 'Pixel_B', Blockly.Arduino.ORDER_ATOMIC);
+  
 
+  var code = 'pixels_'+numberstrip+'.setPixelColor('+pixel_number+'-1, pixels_'+numberstrip+'.Color('+red+','+green+','+blue+'));\n';
+
+  return code;
+};
 
 
 

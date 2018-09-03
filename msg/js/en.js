@@ -730,6 +730,9 @@ Blockly.Msg.ledstrip_WS2812B_Clear = "Clear all leds";
 Blockly.Msg.ledstrip_WS2812B_Brightness = "Brightness";
 Blockly.Msg.ledstrip_WS2812B_Led_Number = "for led number";
 Blockly.Msg.ledstrip_WS2812B_setPixelColor = "Set color";
+Blockly.Msg.ledstrip_WS2812B_R = "R(0-255)";
+Blockly.Msg.ledstrip_WS2812B_G = "G(0-255)";
+Blockly.Msg.ledstrip_WS2812B_B = "B(0-255)";
 
 //DISPALY 7 SEGMENT TM1637
 Blockly.Msg.TM1637_name = "TM1637 Display 7 segment";

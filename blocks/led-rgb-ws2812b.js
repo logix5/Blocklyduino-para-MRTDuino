@@ -105,5 +105,31 @@ Blockly.Blocks['LedStrip_WS2812B_setPixelColor'] = {
   }
 };
 
-
+Blockly.Blocks['LedStrip_WS2812B_setPixelColor2'] = {
+  helpUrl: '',
+  
+  init: function() {
+	this.setColour(140);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/ledstrip.png",46,38))
+        .appendField(Blockly.Msg.ledstrip_WS2812B_name)
+		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "LEDSTRIP_NUMBER")
+    this.appendValueInput("Pixel_R")
+		.setCheck('Number')
+		.appendField(Blockly.Msg.ledstrip_WS2812B_R);
+	this.appendValueInput("Pixel_G")
+		.setCheck('Number')
+		.appendField(Blockly.Msg.ledstrip_WS2812B_G);
+	this.appendValueInput("Pixel_B")
+		.setCheck('Number')
+		.appendField(Blockly.Msg.ledstrip_WS2812B_B);
+    this.appendValueInput("Pixel_number")
+		.setCheck('Number')
+		.appendField(Blockly.Msg.ledstrip_WS2812B_Led_Number);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+  }
+};
 
