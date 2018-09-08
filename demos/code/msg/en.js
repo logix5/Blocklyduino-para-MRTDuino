@@ -43,6 +43,7 @@ var MSG = {
   catTCS3200:"TCS3200 Color",
   catHMC5883:"HMC5883 Compass",
   catRotaryEncoder:"Rotary Encoder",
+  catGPS:"GPS NEO-6",
   catSimpleActuators:"Simple Actuators",
   catDisplay:"Displays",
   catRFID:"RFID MFRC522",

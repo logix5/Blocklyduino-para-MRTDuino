@@ -779,6 +779,20 @@ Blockly.Msg.MP3_playsong = "Play song number";
 Blockly.Msg.MP3_playsongdirectory = "in directory number";
 Blockly.Msg.MP3_repeatsong = "Repeat song number";
 
+//GPS
+Blockly.Msg.GPS_name = "GPS NEO-6";
+Blockly.Msg.GPS_init = "Init GPS using software serial";
+Blockly.Msg.GPS_init2 = "Init GPS using serial1";
+Blockly.Msg.GPS_init3 = "RX# Port15 TX# Port16";
+Blockly.Msg.GPS_TX="Port TX#";
+Blockly.Msg.GPS_RX="Port RX#";
+Blockly.Msg.GPS_readvalues = "Read and save values using software serial";
+Blockly.Msg.GPS_readvalues2 = "Read and save values using serial1";
+Blockly.Msg.GPS_paramter = "Location Parameters:";
+Blockly.Msg.GPS_paramter3 = "DateTime:";
+
+
+
 //APDS9960
 Blockly.Msg.APDS9960_name_gesture = "APDS9960 Gesture";
 Blockly.Msg.APDS9960_name_color = "APDS9960 Color";

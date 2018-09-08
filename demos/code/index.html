@@ -19,6 +19,7 @@
 		<script src="../../blocks/genericTime.js"></script>
 		<script src="../../blocks/motorMRT.js"></script>
 		<script src="../../blocks/stepper.js"></script>
+		<script src="../../blocks/GPS.js"></script>
         <script src="../../blocks/servo.js"></script>
 		<script src="../../blocks/SD.js"></script>
 		<script src="../../blocks/IOT.js"></script>
@@ -77,6 +78,7 @@
         <script src="../../generators/arduino/softserial.js"></script>
 		<script src="../../generators/arduino/motorMRT.js"></script>
 		<script src="../../generators/arduino/stepper.js"></script>
+		<script src="../../generators/arduino/GPS.js"></script>
 		<script src="../../generators/arduino/genericTime.js"></script>
         <script src="../../generators/arduino/servo.js"></script>
 		<script src="../../generators/arduino/SD.js"></script>
@@ -1201,7 +1203,21 @@
 	
 	
 	</category>
-		
+	
+	<category id="catGPS" colour="220">
+	 <block type="GPS_init_ss">
+			  <field name="PIN1">9</field>
+			  <field name="PIN2">11</field>
+			 </block>
+	<block type="GPS_init_serial1"></block>
+	<block type="GPS_read_save_values"></block>
+	<block type="GPS_read_save_values2"></block>
+	<block type="GPS_location"></block>
+	<block type="GPS_speed"></block>
+	<block type="GPS_datetime"></block>
+	</category>	
+	
+	
 	<category id="catTCS3200" colour="220">
 	
 	<block type="Init_ColorSensor_TCS3200">
