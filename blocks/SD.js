@@ -157,6 +157,33 @@ Blockly.Blocks['sd_writefile'] = {
   }
 };
 
+
+Blockly.Blocks['sd_writefile2'] = {
+  init: function() {
+    this.setColour(100);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/microsd_card.png",34,25))
+		.appendField(Blockly.Msg.SD_name)
+        .appendField(Blockly.Msg.SD_write2);
+	this.appendValueInput("variable")	
+	this.appendValueInput("filename")
+		.appendField(Blockly.Msg.SD_infile)
+        .setCheck('String')
+	this.appendValueInput("numberbytes")
+		.appendField(Blockly.Msg.SD_lenght)
+        .setCheck('Number')
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('https://www.arduino.cc/en/Reference/SD');
+  }
+};
+
+
+
+
+
 Blockly.Blocks['sd_filereadbyte'] = {
   helpUrl: 'https://www.arduino.cc/en/Reference/SD',
   init: function() {

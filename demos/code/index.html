@@ -20,6 +20,7 @@
 		<script src="../../blocks/motorMRT.js"></script>
 		<script src="../../blocks/stepper.js"></script>
 		<script src="../../blocks/GPS.js"></script>
+		<script src="../../blocks/CameraSerial.js"></script>
         <script src="../../blocks/servo.js"></script>
 		<script src="../../blocks/SD.js"></script>
 		<script src="../../blocks/IOT.js"></script>
@@ -79,6 +80,7 @@
 		<script src="../../generators/arduino/motorMRT.js"></script>
 		<script src="../../generators/arduino/stepper.js"></script>
 		<script src="../../generators/arduino/GPS.js"></script>
+		<script src="../../generators/arduino/CameraSerial.js"></script>
 		<script src="../../generators/arduino/genericTime.js"></script>
         <script src="../../generators/arduino/servo.js"></script>
 		<script src="../../generators/arduino/SD.js"></script>
@@ -995,6 +997,24 @@
                     </value>					
 				</block> 
 				
+				<block type="sd_writefile2">
+					<value name="filename">
+                        <shadow type="text">
+                            <field name="TEXT">filename.txt</field>
+                        </shadow>
+                    </value>	
+					<value name="variable">
+                        <shadow type="text">
+                            <field name="TEXT">var</field>
+                        </shadow>
+                    </value>	
+				<value name="numberbytes">
+                    <shadow type="math_number">
+                        <field name="NUM">32</field>
+                    </shadow>
+                </value>					
+				</block> 
+				
 				<block type="sd_filereadbyte">
 					<value name="filename">
                         <shadow type="text">
@@ -1215,6 +1235,36 @@
 	<block type="GPS_location"></block>
 	<block type="GPS_speed"></block>
 	<block type="GPS_datetime"></block>
+	</category>	
+	
+	<category id="catCamera" colour="220">
+	        <block type="Camera_init_ss">
+			  <field name="PIN1">9</field>
+			  <field name="PIN2">11</field>
+			 </block>
+	        <block type="Camera_init_serial1"></block>
+			<block type="Camera_Resolution"></block>
+			<block type="Camera_SetMotionDetect"></block>
+			<block type="Camera_OutputTV"></block>
+			<block type="Camera_begin"></block>
+			<block type="Camera_takepicture"></block>
+			<block type="Camera_SavePicture">
+				<value name="filename">
+                        <shadow type="text">
+                            <field name="TEXT">filename.txt</field>
+                        </shadow>
+                    </value>	
+			</block>
+			<block type="Camera_resumevideo"></block>
+			<block type="Camera_MotionDetected"></block>
+			<block type="Camera_SizePicture"></block>
+			<block type="Camera_Readbytes">
+				<value name="NUMBYTES">
+                    <shadow type="math_number">
+                        <field name="NUM">32</field>
+                    </shadow>
+                </value>
+			</block>
 	</category>	
 	
 	

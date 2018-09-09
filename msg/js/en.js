@@ -791,7 +791,25 @@ Blockly.Msg.GPS_readvalues2 = "Read and save values using serial1";
 Blockly.Msg.GPS_paramter = "Location Parameters:";
 Blockly.Msg.GPS_paramter3 = "DateTime:";
 
-
+//CAMERA VC0706
+Blockly.Msg.Camera_name = "Camera VC0706.";
+Blockly.Msg.Camera_init = "Init Camera VC0706 using software serial";
+Blockly.Msg.Camera_init2 = "Init Camera VC0706 using serial1";
+Blockly.Msg.Camera_init3 = "RX# Port15 TX# Port16";
+Blockly.Msg.Camera_TX="Port TX#";
+Blockly.Msg.Camera_RX="Port RX#";
+Blockly.Msg.Camera_Begin="Activate Camera";
+Blockly.Msg.Camera_Resolution="Set resolution:";
+Blockly.Msg.Camera_Takepicture="Take picture";
+Blockly.Msg.Camera_ResumeVideo="Resume video";
+Blockly.Msg.Camera_ActivateTV="TV output";
+Blockly.Msg.Camera_Motion="Set motion detect";
+Blockly.Msg.Camera_SizePicture="Size of picture taken";
+Blockly.Msg.Camera_MotionDetected="Motion detected?";
+Blockly.Msg.Camera_Read="Read(1-32)";
+Blockly.Msg.Camera_Read2="bytes of the picture taken";
+Blockly.Msg.Camera_SaveFile="Save in a filename";
+Blockly.Msg.Camera_SaveFile2="the picture taken.Logs enabled";
 
 //APDS9960
 Blockly.Msg.APDS9960_name_gesture = "APDS9960 Gesture";
@@ -835,9 +853,11 @@ Blockly.Msg.SD_fileexist= "Filename:";
 Blockly.Msg.SD_fileexist2= "exists?";
 Blockly.Msg.SD_print= "Print the text";
 Blockly.Msg.SD_infile= "in file";
+Blockly.Msg.SD_lenght= "lenght";
 Blockly.Msg.SD_linefeed= "line feed";
 Blockly.Msg.SD_size= "Size of the file:";
 Blockly.Msg.SD_write= "Write the byte or char";
+Blockly.Msg.SD_write2= "Write the bytes";
 Blockly.Msg.SD_readbyte= "Read byte in pos";
 Blockly.Msg.SD_readbytes= "Read the file:";
 Blockly.Msg.SD_storereadbyte= "and each byte readed (saved in the variable";

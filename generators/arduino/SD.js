@@ -123,6 +123,32 @@ Blockly.Arduino['sd_writefile'] = function(block) {
    return code;
 };
 
+Blockly.Arduino['sd_writefile2'] = function(block) {
+
+  var variable = Blockly.Arduino.valueToCode(block, 'variable', Blockly.Arduino.ORDER_ATOMIC);
+  var filename = Blockly.Arduino.valueToCode(block, 'filename', Blockly.Arduino.ORDER_ATOMIC);
+  var bytes = Blockly.Arduino.valueToCode(block, 'numberbytes', Blockly.Arduino.ORDER_ATOMIC);
+ 
+   Blockly.Arduino.definitions_['define_sd_write'] = 'void sd_write2(String file,uint8_t *value,uint8_t lenght)\n'+
+'	{\n'+
+'   	File sd_file;\n'+
+'  	sd_file = SD.open(file, FILE_WRITE);\n'+
+'	if(sd_file){\n'+
+'		sd_file.write(value,lenght);\n'+
+'		sd_file.close();\n'+
+'	}\n'+
+'}\n';
+
+
+   var code = 'sd_write2('+filename+','+variable+','+bytes+');\n';
+ 
+   return code;
+};
+
+
+
+
+
 Blockly.Arduino['sd_filereadbyte'] = function(block) {
 	
   var filename = Blockly.Arduino.valueToCode(block, 'filename', Blockly.Arduino.ORDER_ATOMIC);
