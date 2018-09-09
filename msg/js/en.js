@@ -808,7 +808,7 @@ Blockly.Msg.Camera_SizePicture="Size of picture taken";
 Blockly.Msg.Camera_MotionDetected="Motion detected?";
 Blockly.Msg.Camera_Read="Read(1-32)";
 Blockly.Msg.Camera_Read2="bytes of the picture taken";
-Blockly.Msg.Camera_SaveFile="Save in a filename";
+Blockly.Msg.Camera_SaveFile="Save in the SD";
 Blockly.Msg.Camera_SaveFile2="the picture taken.Logs enabled";
 
 //APDS9960
