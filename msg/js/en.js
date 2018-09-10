@@ -864,6 +864,20 @@ Blockly.Msg.SD_storereadbyte= "and each byte readed (saved in the variable";
 Blockly.Msg.SD_storereadbyte2= ")";
 Blockly.Msg.SD_do= "DO";
 
+//RF24L01
+Blockly.Msg.RF24L01_name = "NRF24L01 2.4Ghz.";
+Blockly.Msg.RF24L01_init = "Init NRF24L01 2.4Ghz.";
+Blockly.Msg.RF24L01_init2 = "Pins:SCK Port2 MOSI Port3 and MISO Port4.";
+Blockly.Msg.RF24L01_PIN_CE= "CE Pin";
+Blockly.Msg.RF24L01_PIN_CS= "CS Pin";
+Blockly.Msg.RF24L01_writepipe = "Write PIPE (5 chars)";
+Blockly.Msg.RF24L01_readpipe = "Read PIPE (5 chars)";
+Blockly.Msg.RF24L01_startlistening = "Start Listening";
+Blockly.Msg.RF24L01_stoplistening = "Stop Listening";
+Blockly.Msg.RF24L01_sendvar = "Send the variable";
+Blockly.Msg.RF24L01_recvvar = "Receive in the variable";
+Blockly.Msg.RF24L01_datavailable = "is there available data?";
+
 //IOT
 Blockly.Msg.IOT_name = "Wifi IOT ESP8266.";
 Blockly.Msg.IOT_name_init = "Init Wifi IOT ESP8266.";
