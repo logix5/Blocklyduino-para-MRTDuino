@@ -446,7 +446,7 @@ Blockly.Blocks['procedures_mutatorarg'] = {
     this.appendDummyInput()
         .appendField(Blockly.Msg.PROCEDURES_MUTATORARG_TITLE)
 //ADEL
-     	.appendTitle(new Blockly.FieldDropdown([["long", "long"],["float", "float"],["String", "String"],["byte", "byte"],["unsigned int", "unsigned int"],["int", "int"],["char", "char"]]), "TYPEVAR")
+     	.appendTitle(new Blockly.FieldDropdown([["long", "long"],["float", "float"],["String", "String"],["byte", "byte"],["unsigned int", "unsigned int"],["int", "int"],["char", "char"],["AdafruitIO","AdafruitIO_Data"]]), "TYPEVAR")
         .appendField(new Blockly.FieldTextInput('x', this.validator_), 'NAME');
     this.setPreviousStatement(true);
     this.setNextStatement(true);
