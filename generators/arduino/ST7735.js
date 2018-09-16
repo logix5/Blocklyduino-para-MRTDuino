@@ -36,6 +36,18 @@ Blockly.Arduino['st7735_backgroundcolor'] = function(block) {
   return code;
 };
 
+Blockly.Arduino['st7735_icon'] = function(block) {
+
+   var IconName = block.getFieldValue('NAME');  
+   var Var_Codes = block.getFieldValue('CODES');
+
+   Blockly.Arduino.definitions_['define_pgmspace'] = '#include <avr/pgmspace.h>\n';   
+   Blockly.Arduino.definitions_['define_iconvalus_'+IconName+''] = 'const unsigned char '+IconName+'[] PROGMEM= {'+Var_Codes+'};\n';
+ 
+  var code = '';
+  return code;
+};
+
 Blockly.Arduino['st7735_rotatedisplay'] = function(block) {
 
   var Degree = block.getFieldValue('DEGREE');
@@ -211,4 +223,20 @@ Blockly.Arduino['st7735_properties'] = function(block) {
 					var code = 'tft1.getRotation()';
 				
   return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['st7735_drawicon'] = function(block) {
+
+  var x0 = Blockly.Arduino.valueToCode(this, 'x0', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var y0 = Blockly.Arduino.valueToCode(this, 'y0', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var width = Blockly.Arduino.valueToCode(this, 'width', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var height = Blockly.Arduino.valueToCode(this, 'height', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var IconName = block.getFieldValue('NAME');
+  var Color = block.getFieldValue('COLOR');
+
+
+  
+  var code = 'tft1.drawBitmap('+x0+','+y0+','+IconName+','+width+','+height+','+Color+');\n';
+ 
+  return code;
 };

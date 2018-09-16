@@ -940,6 +940,10 @@ Blockly.Msg.ST7735_Drawcircle = "Draw circle.Center in";
 Blockly.Msg.ST7735_Drawcircleradius = "radius";
 Blockly.Msg.ST7735_Drawfill = "Fill";
 Blockly.Msg.ST7735_properties = "Return property:";
+Blockly.Msg.ST7735_IconName = "Icon name(bmp):";
+Blockly.Msg.ST7735_ValueList = "Values(hex array)";
+Blockly.Msg.ST7735_DrawiconName = "Draw Icon(bmp) name";
+
 
 
 //SERVO

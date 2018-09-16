@@ -1601,9 +1601,11 @@
 			 
 			  <category id="catST7735" colour="140">
 			   <block type="st7735_init">
-				 <field name="PIN_DC">15</field>
-				 <field name="PIN_RST">16</field>
+			    <field name="PIN_CS">14</field>
+				 <field name="PIN_DC">18</field>
+				 <field name="PIN_RST">19</field>
 				</block>
+			   <block type="st7735_icon"></block>
 			   <block type="st7735_backgroundcolor"></block>
 			   <block type="st7735_rotatedisplay"></block>
 			   <block type="st7735_invertdisplay"></block>
@@ -1759,6 +1761,28 @@
 					<value name="y2">
                         <shadow type="math_number">
                             <field name="NUM">100</field>
+                        </shadow>
+                    </value>
+			  </block>
+			    <block type="st7735_drawicon">
+					<value name="x0">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+					<value name="y0">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+					<value name="width">
+                        <shadow type="math_number">
+                            <field name="NUM">160</field>
+                        </shadow>
+                    </value>
+					<value name="height">
+                        <shadow type="math_number">
+                            <field name="NUM">128</field>
                         </shadow>
                     </value>
 			  </block>

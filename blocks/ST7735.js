@@ -53,6 +53,28 @@ Blockly.Blocks['st7735_backgroundcolor'] = {
   }
 };
 
+
+Blockly.Blocks['st7735_icon'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
+         .appendField(Blockly.Msg.ST7735_name)
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ST7735_IconName)
+        .appendField(new Blockly.FieldTextInput("IconName"), "NAME");	
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.ST7735_ValueList)
+        .appendField(new Blockly.FieldTextInput("0x00,0xff,0xaf,0x00"), "CODES");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Write icon bmp image in memory');
+    this.setHelpUrl('');
+  }
+};
+
+
 Blockly.Blocks['st7735_rotatedisplay'] = {
    init: function() {
     this.setColour(140);
@@ -353,12 +375,11 @@ Blockly.Blocks['st7735_drawtriangle'] = {
 	this.appendValueInput("y1")
         .setCheck("Number")
         .appendField(Blockly.Msg.ST7735_Y1);
-	this.appendValueInput("x2")
+	this.appendValueInput("width")
         .setCheck("Number")
-        .appendField(Blockly.Msg.ST7735_X2);
-	this.appendValueInput("y2")
-        .setCheck("Number")
-        .appendField(Blockly.Msg.ST7735_Y2);		
+        .appendField(Blockly.Msg.ST7735_Drawrectanglewidth);
+	this.appendValueInput("height")
+        .setCheck("Number")	
 	this.appendDummyInput()	
         .appendField(Blockly.Msg.ST7735_TEXTCOLOR2)
 		.appendField(new Blockly.FieldDropdown([["Black","ST7735_BLACK"],["Green", "ST7735_GREEN"],["Red", "ST7735_RED"],["Blue","ST7735_BLUE"],["Cyan", "ST7735_CYAN"],["Magenta", "ST7735_MAGENTA"],["Yellow", "ST7735_YELLOW"],["White", "ST7735_WHITE"]]), "COLOR")	
@@ -387,6 +408,38 @@ Blockly.Blocks['st7735_properties'] = {
 	this.appendDummyInput()
 	this.setInputsInline(true);
     this.setTooltip('');
+  }
+};
+
+Blockly.Blocks['st7735_drawicon'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
+        .appendField(Blockly.Msg.ST7735_name)
+		.appendField(Blockly.Msg.ST7735_DrawiconName)
+	this.appendDummyInput()
+        .appendField(new Blockly.FieldTextInput("IconName"), "NAME");	
+	this.appendValueInput("x0")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_X0);
+	this.appendValueInput("y0")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_Y0);
+    this.appendValueInput("width")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_Drawrectanglewidth);
+	this.appendValueInput("height")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_Drawrectangleheight);
+	this.appendDummyInput()	
+        .appendField(Blockly.Msg.ST7735_TEXTCOLOR2)
+		.appendField(new Blockly.FieldDropdown([["Black","ST7735_BLACK"],["Green", "ST7735_GREEN"],["Red", "ST7735_RED"],["Blue","ST7735_BLUE"],["Cyan", "ST7735_CYAN"],["Magenta", "ST7735_MAGENTA"],["Yellow", "ST7735_YELLOW"],["White", "ST7735_WHITE"]]), "COLOR")	
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Draw a bmp icon');
+    this.setHelpUrl('');
   }
 };
 
