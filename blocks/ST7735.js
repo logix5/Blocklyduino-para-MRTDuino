@@ -375,11 +375,12 @@ Blockly.Blocks['st7735_drawtriangle'] = {
 	this.appendValueInput("y1")
         .setCheck("Number")
         .appendField(Blockly.Msg.ST7735_Y1);
-	this.appendValueInput("width")
+	this.appendValueInput("x2")
         .setCheck("Number")
-        .appendField(Blockly.Msg.ST7735_Drawrectanglewidth);
-	this.appendValueInput("height")
-        .setCheck("Number")	
+        .appendField(Blockly.Msg.ST7735_X2);
+	this.appendValueInput("y2")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.ST7735_Y2);
 	this.appendDummyInput()	
         .appendField(Blockly.Msg.ST7735_TEXTCOLOR2)
 		.appendField(new Blockly.FieldDropdown([["Black","ST7735_BLACK"],["Green", "ST7735_GREEN"],["Red", "ST7735_RED"],["Blue","ST7735_BLUE"],["Cyan", "ST7735_CYAN"],["Magenta", "ST7735_MAGENTA"],["Yellow", "ST7735_YELLOW"],["White", "ST7735_WHITE"]]), "COLOR")	
