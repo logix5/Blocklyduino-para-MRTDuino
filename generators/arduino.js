@@ -148,7 +148,11 @@ Blockly.Arduino.finish = function(code) {
   for (var name in Blockly.Arduino.setups_) {
     setups.push(Blockly.Arduino.setups_[name]);
   }
-  var allDefs = imports.join('\n') + '\n\n' + definitions.join('\n') + '\nvoid setup() \n{\n  '+setups.join('\n  ') + '\n}'+ '\n\n';
+  var allDefs ='/*******************************************\n'+ 
+  '***    ARDUINO CODE -- MRTDUINO BOARD    ***\n'+
+  '***       Logix5 -- www.logix5.com       ***\n'+
+  '********************************************/\n'+
+  imports.join('\n') + '\n\n' + definitions.join('\n') + '\nvoid setup() \n{\n  '+setups.join('\n  ') + '\n}'+ '\n\n';
   //var allDefs = imports.join('\n') + '\n\n' + definitions.join('\n\n');
   return allDefs.replace(/\n\n+/g, '\n\n').replace(/\n*$/, '\n\n\n') + code;
 };
