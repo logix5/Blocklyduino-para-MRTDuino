@@ -11,8 +11,8 @@ goog.require('Blockly.Blocks');
 Blockly.Arduino['Init_Temp_ds18b20'] = function(block) {
   var dropdown_pin = this.getFieldValue('PIN');
    
-  Blockly.Arduino.definitions_['include_oneWire'] = '#include <OneWire.h>\n';
-  Blockly.Arduino.definitions_['include_DallasTemperature'] = '#include <DallasTemperature.h>\n';
+  Blockly.Arduino.definitions_['include_oneWire'] = '#include <OneWire.h>';
+  Blockly.Arduino.definitions_['include_DallasTemperature'] = '#include <DallasTemperature.h>';
   Blockly.Arduino.definitions_['init_ds18b20'] = 'OneWire oneWireBus('+dropdown_pin+');\nDallasTemperature sensors(&oneWireBus);\n';
   Blockly.Arduino.setups_['setup_ds18b20'] = 'sensors.begin();\n';
   	 	 

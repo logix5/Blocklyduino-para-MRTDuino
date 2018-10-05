@@ -10,9 +10,9 @@ goog.require('Blockly.Blocks');
 
 Blockly.Arduino['Init_Accel_ADXL345'] = function(block) {
    
-  Blockly.Arduino.definitions_['include_Wire'] = '#include <Wire.h>\n';
-  Blockly.Arduino.definitions_['include_Adafruit_Sensor'] = '#include <Adafruit_Sensor.h>\n';
-  Blockly.Arduino.definitions_['include_Adafruit_ADXL345_U'] = '#include <Adafruit_ADXL345_U.h>\n';
+  Blockly.Arduino.definitions_['include_Wire'] = '#include <Wire.h>';
+  Blockly.Arduino.definitions_['include_Adafruit_Sensor'] = '#include <Adafruit_Sensor.h>';
+  Blockly.Arduino.definitions_['include_Adafruit_ADXL345_U'] = '#include <Adafruit_ADXL345_U.h>';
   
   Blockly.Arduino.definitions_['init_ADXL345'] = 'Adafruit_ADXL345_Unified accel = Adafruit_ADXL345_Unified(12345);\n';
   Blockly.Arduino.definitions_['init_var1_ADXL345'] = 'sensors_event_t event;\n';
