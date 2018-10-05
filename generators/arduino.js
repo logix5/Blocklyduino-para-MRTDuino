@@ -101,7 +101,7 @@ Blockly.Arduino.init = function(workspace) {
   Blockly.Arduino.setups_ = Object.create(null);
   // Create a dictionary mapping desired function names in definitions_
   // to actual function names (to avoid collisions with user functions).
-  Blockly.Arduino.functionNames_ = Object.create(null);
+  Blockly.Arduino.functionNamesIOT_ = Object.create(null);
 
   if (Blockly.Variables) {
     if (!Blockly.Arduino.variableDB_) {
@@ -143,12 +143,37 @@ Blockly.Arduino.finish = function(code) {
       definitions.push(def);
     }
   }
+  
+  var lfunctions = [];
+  for (var name in Blockly.Arduino.functionNamesIOT_) {
+    lfunctions.push(Blockly.Arduino.functionNamesIOT_[name]);
+  }
+  
   // Convert the setups dictionary into a list.
   var setups = [];
   for (var name in Blockly.Arduino.setups_) {
     setups.push(Blockly.Arduino.setups_[name]);
   }
-  var allDefs = imports.join('\n') + '\n\n' + definitions.join('\n') + '\nvoid setup() \n{\n  '+setups.join('\n  ') + '\n}'+ '\n\n';
+  
+ 
+  if (lfunctions.length > 0 )
+  {
+  
+  var allDefs ='/*******************************************\n'+ 
+  '***    ARDUINO CODE -- MRTDUINO BOARD    ***\n'+
+  '***       Logix5 -- www.logix5.com       ***\n'+
+  '********************************************/\n'+
+  imports.join('\n') + '\n\n' + 'void xxxxxxx()\n{\n  '+ lfunctions.join('\n') +'}\n\n' + definitions.join('\n') + '\nvoid setup() \n{\n  '+setups.join('\n  ') + '\n}'+ '\n\n';
+  }
+  else
+	{  
+	  var allDefs ='/*******************************************\n'+ 
+	  '***    ARDUINO CODE -- MRTDUINO BOARD    ***\n'+
+	  '***       Logix5 -- www.logix5.com       ***\n'+
+	  '********************************************/\n'+
+	  imports.join('\n') + '\n\n' + definitions.join('\n') + '\nvoid setup() \n{\n  '+setups.join('\n  ') + '\n}'+ '\n\n';
+  
+  }
   //var allDefs = imports.join('\n') + '\n\n' + definitions.join('\n\n');
   return allDefs.replace(/\n\n+/g, '\n\n').replace(/\n*$/, '\n\n\n') + code;
 };

@@ -20,7 +20,11 @@ Blockly.Arduino['stepper_configuration'] = function(block) {
   
   Blockly.Arduino.definitions_['define_stepper'] = '#include <Stepper.h>\n';
   Blockly.Arduino.definitions_['define_stepper_'+steeper_number] = 'Stepper stepper_'+steeper_number+'('+stepper_steprev+','+steeper_pin1+','+steeper_pin2+','+steeper_pin3+','+steeper_pin4+');\n';
+<<<<<<< HEAD
     
+=======
+   
+>>>>>>> 553abbb3162d705c03648c0069831111196ebdc5
   var code = '';
   
   return code;
