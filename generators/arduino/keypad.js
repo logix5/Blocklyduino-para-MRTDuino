@@ -18,7 +18,7 @@ Blockly.Arduino['Init_Keypad4x4'] = function(block) {
   var pin_c3 = this.getFieldValue('PIN_C3');
   var pin_c4 = this.getFieldValue('PIN_C4');
    
-  Blockly.Arduino.definitions_['include_keypad'] = '#include <Keypad.h>\n';
+  Blockly.Arduino.definitions_['include_keypad'] = '#include <Keypad.h>';
   Blockly.Arduino.definitions_['init_keypad'] = 'byte Pins_Rows[]={'+pin_r4+','+pin_r3+','+pin_r2+','+pin_r1+'};\n'+
   'byte Pins_Columns[]={'+pin_c4+','+pin_c3+','+pin_c2+','+pin_c1+'};\n'+
   'char keys[4][4]={{\'1\',\'2\',\'3\',\'A\'},{\'4\',\'5\',\'6\',\'B\'},{\'7\',\'8\',\'9\',\'C\'},{\'*\',\'0\',\'#\',\'D\'}};\n'+
@@ -36,7 +36,7 @@ Blockly.Arduino['Init_Keypad4x3'] = function(block) {
   var pin_c2 = this.getFieldValue('PIN_C2');
   var pin_c3 = this.getFieldValue('PIN_C3');
    
-  Blockly.Arduino.definitions_['include_keypad'] = '#include <Keypad.h>\n';
+  Blockly.Arduino.definitions_['include_keypad'] = '#include <Keypad.h>';
   Blockly.Arduino.definitions_['init_keypad'] = 'byte Pins_Rows[]={'+pin_r4+','+pin_r3+','+pin_r2+','+pin_r1+'};\n'+
   'byte Pins_Columns[]={'+pin_c3+','+pin_c2+','+pin_c1+'};\n'+
   'char keys[4][3]={{\'1\',\'2\',\'3\'},{\'4\',\'5\',\'6\'},{\'7\',\'8\',\'9\'},{\'*\',\'0\',\'#\'}};\n'+

@@ -10,9 +10,9 @@ goog.require('Blockly.Blocks');
 
 Blockly.Arduino['Init_Compass_HMC5883'] = function(block) {
    
-  Blockly.Arduino.definitions_['include_Wire'] = '#include <Wire.h>\n';
-  Blockly.Arduino.definitions_['include_Adafruit_Sensor'] = '#include <Adafruit_Sensor.h>\n';
-  Blockly.Arduino.definitions_['include_Adafruit_HMC5883_U'] = '#include <Adafruit_HMC5883_U.h>\n';
+  Blockly.Arduino.definitions_['include_Wire'] = '#include <Wire.h>';
+  Blockly.Arduino.definitions_['include_Adafruit_Sensor'] = '#include <Adafruit_Sensor.h>';
+  Blockly.Arduino.definitions_['include_Adafruit_HMC5883_U'] = '#include <Adafruit_HMC5883_U.h>';
   
   Blockly.Arduino.definitions_['init_HMC5883'] = 'Adafruit_HMC5883_Unified mag = Adafruit_HMC5883_Unified(12345);\n';
   Blockly.Arduino.definitions_['init_var1_HMC5883'] = 'sensors_event_t eventmag;\n';

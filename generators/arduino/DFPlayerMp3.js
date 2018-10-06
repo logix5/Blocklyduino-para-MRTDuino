@@ -18,7 +18,7 @@ Blockly.Arduino['DFPplayerMp3_init_ss'] = function(block) {
  Blockly.Arduino.definitions_['define_DFPlayerMP3'] = 'DFRobotDFPlayerMini myDFPlayer;\n';
  
  Blockly.Arduino.setups_['setup_sserial_baudios'] = 'mySoftwareSerialmp3.begin(9600);\n';
- Blockly.Arduino.setups_['setup_dfplayermp3'] = 'myDFPlayer.begin(mySoftwareSerialmp3);\nmyDFPlayer.setTimeOut(500);\nmyDFPlayer.outputDevice(DFPLAYER_DEVICE_SD);\n';
+ Blockly.Arduino.setups_['setup_dfplayermp3'] = 'myDFPlayer.begin(mySoftwareSerialmp3);\n  myDFPlayer.setTimeOut(500);\n  myDFPlayer.outputDevice(DFPLAYER_DEVICE_SD);\n';
 
   
   var code='';
@@ -33,7 +33,7 @@ Blockly.Arduino['DFPplayerMp3_init_serial1'] = function(block) {
  Blockly.Arduino.definitions_['define_DFPlayerMP3'] = 'DFRobotDFPlayerMini myDFPlayer;\n';
  
  Blockly.Arduino.setups_['setup_serial1_baudios'] = 'Serial1.begin(9600);\n';
- Blockly.Arduino.setups_['setup_dfplayermp3'] = 'myDFPlayer.begin(Serial1);\nmyDFPlayer.setTimeOut(500);\nmyDFPlayer.outputDevice(DFPLAYER_DEVICE_SD);\n';
+ Blockly.Arduino.setups_['setup_dfplayermp3'] = 'myDFPlayer.begin(Serial1);\n  myDFPlayer.setTimeOut(500);\n  myDFPlayer.outputDevice(DFPLAYER_DEVICE_SD);\n';
 
   
   var code='';

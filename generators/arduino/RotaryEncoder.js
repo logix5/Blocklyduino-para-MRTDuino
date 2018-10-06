@@ -13,7 +13,7 @@ Blockly.Arduino['Init_RotaryEncoderInterrupt'] = function(block) {
   var dropdown_pinDT = this.getFieldValue('PINDT');
   var dropdown_pinCLK = this.getFieldValue('PINCLK');
    
-  Blockly.Arduino.definitions_['include_encoder'] = '#include <Encoder.h>\n';
+  Blockly.Arduino.definitions_['include_encoder'] = '#include <Encoder.h>';
   Blockly.Arduino.definitions_['rotaryencoder_'+number] = 'Encoder encoder_'+number+'('+dropdown_pinDT+','+dropdown_pinCLK+');\n';
   	 	 
   var code='';
@@ -25,7 +25,7 @@ Blockly.Arduino['Init_RotaryEncoder'] = function(block) {
   var dropdown_pinDT = this.getFieldValue('PINDT');
   var dropdown_pinCLK = this.getFieldValue('PINCLK');
    
-  Blockly.Arduino.definitions_['include_encoder'] = '#include <Encoder.h>\n';
+  Blockly.Arduino.definitions_['include_encoder'] = '#include <Encoder.h>';
   Blockly.Arduino.definitions_['rotaryencoder_'+number] = 'Encoder encoder_'+number+'('+dropdown_pinDT+','+dropdown_pinCLK+');\n';
    	 	 
   var code='';

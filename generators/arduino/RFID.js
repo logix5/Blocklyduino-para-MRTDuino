@@ -14,8 +14,8 @@ Blockly.Arduino['rfid_init'] = function(block) {
    var pin_SDA = block.getFieldValue('PIN_SDA');  
     
 	
-   Blockly.Arduino.definitions_['define_spi'] = '#include <SPI.h>\n';
-   Blockly.Arduino.definitions_['define_MRFC522'] = '#include <MFRC522.h>\n';
+   Blockly.Arduino.definitions_['define_spi'] = '#include <SPI.h>';
+   Blockly.Arduino.definitions_['define_MRFC522'] = '#include <MFRC522.h>';
     
    Blockly.Arduino.definitions_['define_mrfc522'] = 'MFRC522 mfrc522('+pin_SDA+','+pin_RST+');\n';
  
