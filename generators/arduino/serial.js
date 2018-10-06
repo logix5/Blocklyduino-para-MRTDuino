@@ -21,7 +21,7 @@ Blockly.Arduino['serial_read'] = function(block) {
 Blockly.Arduino['serial_available'] = function(block) {
   // TODO: Assemble Python into code variable.
   var code = 'Serial.available()';
-   Blockly.Arduino.setups_['setup_serial'] = 'Serial.begin(9600);';
+ //  Blockly.Arduino.setups_['setup_serial'] = 'Serial.begin(9600);';
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
@@ -73,7 +73,7 @@ Blockly.Arduino['serial_printL'] = function(block) {
   var content = Blockly.Arduino.valueToCode(this, 'CONTENT', Blockly.Arduino.ORDER_ATOMIC) || '0';
   //content = content.replace('(','').replace(')','');
 
-  Blockly.Arduino.setups_['setup_serial_'+profile.default.serial] = 'Serial.begin('+profile.default.serial+');\n';
+ //Blockly.Arduino.setups_['setup_serial_'+profile.default.serial] = 'Serial.begin('+profile.default.serial+');\n';
 
   var code = 'Serial.print('+content+');\n';
   return code;
