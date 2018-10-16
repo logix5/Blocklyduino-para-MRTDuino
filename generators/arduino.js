@@ -163,7 +163,7 @@ Blockly.Arduino.finish = function(code) {
   '***    ARDUINO CODE -- MRTDUINO BOARD    ***\n'+
   '***       Logix5 -- www.logix5.com       ***\n'+
   '********************************************/\n'+
-  imports.join('\n') + '\n\n' + 'void xxxxxxx()\n{\n  '+ lfunctions.join('\n') +'}\n\n' + definitions.join('\n') + '\nvoid setup() \n{\n  '+setups.join('\n  ') + '\n}'+ '\n\n';
+  imports.join('\n') + '\n\n' + 'void xxxxxxx()\n{\n  '+ lfunctions.join('\n') +'}\n\n' + definitions.join('\n') + '\n\nvoid setup() \n{\n  '+setups.join('\n  ') + '\n}'+ '\n\n';
   }
   else
 	{  
@@ -171,7 +171,7 @@ Blockly.Arduino.finish = function(code) {
 	  '***    ARDUINO CODE -- MRTDUINO BOARD    ***\n'+
 	  '***       Logix5 -- www.logix5.com       ***\n'+
 	  '********************************************/\n'+
-	  imports.join('\n') + '\n\n' + definitions.join('\n') + '\nvoid setup() \n{\n  '+setups.join('\n  ') + '\n}'+ '\n\n';
+	  imports.join('\n') + '\n\n' + definitions.join('\n') + '\n\nvoid setup() \n{\n  '+setups.join('\n  ') + '\n}'+ '\n\n';
   
   }
   //var allDefs = imports.join('\n') + '\n\n' + definitions.join('\n\n');

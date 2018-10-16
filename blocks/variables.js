@@ -44,7 +44,7 @@ Blockly.Blocks['variables_declare'] = {
         .appendField(new Blockly.FieldVariable(
         Blockly.LANG_VARIABLES_SET_ITEM), 'VAR')
         .appendField(Blockly.Msg.Var_As)
-     	.appendTitle(new Blockly.FieldDropdown([["long", "long"],["float", "float"],["String", "String"],["byte", "byte"],["unsigned int", "unsigned int"],["int", "int"],["char", "char"]]), "TYPE")
+     	.appendTitle(new Blockly.FieldDropdown([["long", "long"],["float", "float"],["String", "String"],["byte", "byte"],["unsigned int", "unsigned int"],["int", "int"],["volatile int", "volatile int"],["char", "char"]]), "TYPE")
 	.appendField(Blockly.Msg.INOUT_VALUE);
     this.setPreviousStatement(true);
     this.setNextStatement(true);

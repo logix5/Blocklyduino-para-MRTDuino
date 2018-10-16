@@ -53,6 +53,7 @@ var MSG = {
   catLCD:"LCD",
   catOLED:"OLED",
   catString:"String", 
+  catInterruptExt:"External Interrupts",
   catDivers:"Various",
   title: "Code",
   blocks: "Blocks",

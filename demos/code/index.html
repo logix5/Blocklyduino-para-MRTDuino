@@ -42,6 +42,7 @@
 		<script src="../../blocks/DFPlayerMP3.js"></script>
 		<script src="../../blocks/keypad.js"></script>
 		<script src="../../blocks/Temp-ds18b20.js"></script>
+		<script src="../../blocks/InterruptExt.js"></script>
 		<script src="../../blocks/RFID.js"></script>
 		<script src="../../blocks/ADXL345.js"></script>
 		<script src="../../blocks/ST7735.js"></script>
@@ -107,6 +108,7 @@
 		<script src="../../generators/arduino/simpleActuators.js"></script>
 		<script src="../../generators/arduino/keypad.js"></script>
 		<script src="../../generators/arduino/Temp-ds18b20.js"></script>
+		<script src="../../generators/arduino/InterruptExt.js"></script>
 		<script src="../../generators/arduino/RFID.js"></script>
 		<script src="../../generators/arduino/ADXL345.js"></script>
 		<script src="../../generators/arduino/ST7735.js"></script>
@@ -455,11 +457,21 @@
 		   </category>
 		 </category>
 		 
+		  <category id="catInterruptExt" colour="50">        
+			<block type="interrupts_attach"></block>
+			<block type="interrupts_detach"></block>
+			<block type="interrupts"></block>
+			<block type="interrupts_no"></block>
+        </category>
+		
+		 
 		 <category id="catDivers" colour="50">        
 			<block type="arduino_setup"></block>
 			<block type="arduino_codeall"></block>
 			<block type="arduino_waitforever"></block>
         </category>
+		
+		
 	  <sep></sep>	 
     
 		<category id="catAllVar" colour="330" >
