@@ -66,6 +66,26 @@ Blockly.Arduino['lcdi2c_setcursor'] = function(block) {
   return code;
 };
 
+Blockly.Arduino['lcdi2c_setcursoralone'] = function(block) {
+  var value_column = Blockly.JavaScript.valueToCode(block, 'column', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_row = Blockly.JavaScript.valueToCode(block, 'row', Blockly.JavaScript.ORDER_ATOMIC);
+   
+  if (value_column<=0)
+	  value_column=1;
+  else
+	  value_column-=1;
+  
+   if (value_row<=0)
+	  value_row=1;
+  else
+	  value_row-=1;
+  
+ 
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'lcd.setCursor('+value_column+', '+value_row+ ');\n';
+  return code;
+};
+
 Blockly.Arduino['lcdi2c_display'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
    var OptionDisplay = this.getFieldValue('OUTPUT_DISPLAY'); 

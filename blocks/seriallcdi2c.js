@@ -91,6 +91,26 @@ Blockly.Blocks['lcdi2c_setcursor'] = {
   }
 };
 
+Blockly.Blocks['lcdi2c_setcursoralone'] = {
+  init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/LCD_I2C.png",53,38))
+        .appendField(Blockly.Msg.LCDP_SetCursor);
+    this.appendValueInput("column")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.LCDP_Column2);
+    this.appendValueInput("row")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.LCDP_Row2);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('https://www.arduino.cc/en/Reference/LiquidCrystalSetCursor');
+  }
+};
+
 Blockly.Blocks['lcdi2c_display'] = {
   init: function() {
     this.setColour(140);
