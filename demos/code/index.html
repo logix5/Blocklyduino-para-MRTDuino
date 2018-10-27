@@ -19,6 +19,7 @@
 		<script src="../../blocks/genericTime.js"></script>
 		<script src="../../blocks/motorMRT.js"></script>
 		<script src="../../blocks/stepper.js"></script>
+		<script src="../../blocks/stepper28BYJ.js"></script>
 		<script src="../../blocks/GPS.js"></script>
 		<script src="../../blocks/CameraSerial.js"></script>
         <script src="../../blocks/servo.js"></script>
@@ -81,6 +82,7 @@
         <script src="../../generators/arduino/softserial.js"></script>
 		<script src="../../generators/arduino/motorMRT.js"></script>
 		<script src="../../generators/arduino/stepper.js"></script>
+		<script src="../../generators/arduino/stepper28BYJ.js"></script>
 		<script src="../../generators/arduino/GPS.js"></script>
 		<script src="../../generators/arduino/CameraSerial.js"></script>
 		<script src="../../generators/arduino/genericTime.js"></script>
@@ -1149,6 +1151,35 @@
             <block type="servo_continuos_stop"></block>
             
         </category>
+		
+		  <category id="catStepper28BYJ" colour="80">
+		 
+		 <block type="stepper28BYJ_configuration">
+		       
+				 <field name="PIN_STEEPER1">21</field>
+				 <field name="PIN_STEEPER2">5</field>
+				 <field name="PIN_STEEPER3">9</field>
+				 <field name="PIN_STEEPER4">11</field>
+		  </block>
+		 
+		   <block type="stepper28BYJ_speed">
+				<value name="STEPPER_SPEED">
+                    <shadow type="math_number">
+                        <field name="NUM">5</field>
+                    </shadow>
+                </value>
+		   </block>
+		   <block type="stepper28BYJ_steps">
+				<value name="STEPPER_STEP">
+                    <shadow type="math_number">
+                        <field name="NUM">4096</field>
+                    </shadow>
+                </value>
+		   
+		   </block>
+		  		   
+		 </category>
+		
 		 <category id="catStepper" colour="80">
 		 
 		 <block type="stepper_configuration">

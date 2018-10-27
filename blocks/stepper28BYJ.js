@@ -30,7 +30,7 @@
  ****************************************************************/
 'use strict';
 
-goog.provide('Blockly.Blocks.stepper');
+goog.provide('Blockly.Blocks.stepper28BYJ');
 
 goog.require('Blockly.Blocks');
 
@@ -39,17 +39,14 @@ goog.require('Blockly.Blocks');
  * Common HSV hue for all blocks in this category.
  */
 
-Blockly.Blocks['stepper_configuration'] = {
+Blockly.Blocks['stepper28BYJ_configuration'] = {
   helpUrl: '',
   init: function() {
     this.setColour(80);
 	this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/stepper.png",38,38))
-		.appendField(Blockly.Msg.STEEPER_name)
+		.appendField(new Blockly.FieldImage("images/stepper28BYJ.png",60,38))
+		.appendField(Blockly.Msg.STEEPER_name2)
 		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "STEEPER_NUMBER")
-	this.appendValueInput("STEP_RPM", 'Number')
-        .setCheck('Number')
-		.appendField(Blockly.Msg.STEEPER_steprev)
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.STEEPER_pin1)
         .appendField(new Blockly.FieldDropdown(profile.default.digital_input), "PIN_STEEPER1")
@@ -65,17 +62,17 @@ Blockly.Blocks['stepper_configuration'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('A call to Stepper library with the configuration');
+    this.setTooltip('A call to Cheap Stepper library with the configuration');
   }
 };
 
-Blockly.Blocks['stepper_speed'] = {
+Blockly.Blocks['stepper28BYJ_speed'] = {
   helpUrl: '',
   init: function() {
     this.setColour(80);
 	this.appendDummyInput()
-	.appendField(new Blockly.FieldImage("images/stepper.png",38,38))
-	.appendField(Blockly.Msg.STEEPER2_name)
+	.appendField(new Blockly.FieldImage("images/stepper28BYJ.png",60,38))
+	.appendField(Blockly.Msg.STEEPER2_name2)
 	.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "STEEPER_NUMBER")
 	this.appendValueInput("STEPPER_SPEED", 'Number')
         .setCheck('Number')
@@ -83,25 +80,29 @@ Blockly.Blocks['stepper_speed'] = {
 	this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('Speed configuration');
+    this.setTooltip('Speed configuration.10RPM (safe, high torque) - 22RPM (fast, low torque).Is useful to power the stepper with external power supply');
   }
 };
 
-Blockly.Blocks['stepper_steps'] = {
+Blockly.Blocks['stepper28BYJ_steps'] = {
   helpUrl: '',
   init: function() {
     this.setColour(80);
 	this.appendDummyInput()
-	.appendField(new Blockly.FieldImage("images/stepper.png",38,38))
-	.appendField(Blockly.Msg.STEEPER2_name)
+	.appendField(new Blockly.FieldImage("images/stepper28BYJ.png",60,38))
+	.appendField(Blockly.Msg.STEEPER2_name2)
 	.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "STEEPER_NUMBER")
 	this.appendValueInput("STEPPER_STEP", 'Number')
         .setCheck('Number')
-		.appendField(Blockly.Msg.STEEPER_step)
+		.appendField(Blockly.Msg.STEEPER_Move)
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.STEEPER_Steps)
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldDropdown([['Clockwise','1'],['Counter-Clockwise','2']]), "STEEPER_WAY")	
 	this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('Speed configuration');
+    this.setTooltip('Step configuration.4096 total mini-steps / revolution');
   }
 };
 

@@ -700,9 +700,11 @@ Blockly.Msg.MOTOR_Stop="Stop";
  Blockly.Msg.ROTSERVO_Direction="Direction";
  Blockly.Msg.ROTSERVO_Stop="Stop";
 
-//STEPPER
+//STEPPERS
 Blockly.Msg.STEEPER_name="Init Stepper ID";
+Blockly.Msg.STEEPER_name2="Init Stepper28BYJ ID";
 Blockly.Msg.STEEPER2_name="Stepper ID";
+Blockly.Msg.STEEPER2_name2="Stepper28BYJ ID";
 Blockly.Msg.STEEPER_steprev="Steps/Rev.";
 Blockly.Msg.STEEPER_step="Steps";
 Blockly.Msg.STEEPER_speed="Speed (rpm)";
@@ -710,6 +712,12 @@ Blockly.Msg.STEEPER_pin1="PIN-A";
 Blockly.Msg.STEEPER_pin2="PIN-B";
 Blockly.Msg.STEEPER_pin3="PIN-C";
 Blockly.Msg.STEEPER_pin4="PIN-D";
+Blockly.Msg.STEEPER_Move="Move";
+Blockly.Msg.STEEPER_MoveTo="Move to step(0-4096)";
+Blockly.Msg.STEEPER_Degree="degrees";
+Blockly.Msg.STEEPER_Steps="steps";
+Blockly.Msg.STEEPER_DegreeTo="Move to degree";
+
 
 //EEPROM
 Blockly.Msg.STORAGE_EEPROM_WRITE_BYTE = "EEPROM write a byte in adress";
