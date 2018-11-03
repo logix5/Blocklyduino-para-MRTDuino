@@ -911,6 +911,31 @@ Blockly.Msg.IOT_value3 = "Value3";
 Blockly.Msg.IOT_config_mode = "Config mode";
 
 
+//MQTT
+Blockly.Msg.MQTT_name = "MQTT.";
+Blockly.Msg.MQTT_name_init = "Init MQTT using ESP8266.";
+Blockly.Msg.MQTT_name_init2 = "Serial1 RX# Port15 TX# Port16.";
+Blockly.Msg.MQTT_name_init3 = "9600 baudios";
+Blockly.Msg.MQTT_password = "password:";
+Blockly.Msg.MQTT_ssid = "Wifi ssid:";
+Blockly.Msg.MQTT_server = "Server (broker):";
+Blockly.Msg.MQTT_port = "port:";
+Blockly.Msg.MQTT_user = "User:";
+Blockly.Msg.MQTT_APIkey = "API Key:";
+Blockly.Msg.MQTT_client = "ID client:";
+Blockly.Msg.MQTT_topicattend = "Attention to subscribed topics";
+Blockly.Msg.MQTT_topicreset = "Attended topic";
+Blockly.Msg.MQTT_topicsubscribe = "Subscribe to the";
+Blockly.Msg.MQTT_topicsubscribe2 = "topic";
+Blockly.Msg.MQTT_topicpublish = "Publish the topic";
+Blockly.Msg.MQTT_topicpublish2 = "Value";
+Blockly.Msg.MQTT_topicreceived = "Received topic is = ";
+Blockly.Msg.MQTT_topicreceived2 = "?";
+Blockly.Msg.MQTT_topicValueNum = "Numerical value of the topic";
+Blockly.Msg.MQTT_topicValueString = "String value of the topic";
+
+
+
 //RFID ST7735
 Blockly.Msg.ST7735_name = "TFT";
 Blockly.Msg.ST7735_init = "Init TFT ST7735 1.8\".";

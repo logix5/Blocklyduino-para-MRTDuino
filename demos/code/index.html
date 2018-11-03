@@ -25,6 +25,7 @@
         <script src="../../blocks/servo.js"></script>
 		<script src="../../blocks/SD.js"></script>
 		<script src="../../blocks/IOT.js"></script>
+		<script src="../../blocks/MQTT.js"></script>
 		<script src="../../blocks/rotationservo.js"></script>
 		<script src="../../blocks/softBT.js"></script>
 		<script src="../../blocks/softWIFI.js"></script>
@@ -89,6 +90,7 @@
         <script src="../../generators/arduino/servo.js"></script>
 		<script src="../../generators/arduino/SD.js"></script>
 		<script src="../../generators/arduino/IOT.js"></script>
+		<script src="../../generators/arduino/MQTT.js"></script>
 		<script src="../../generators/arduino/rotationservo.js"></script>
 		<script src="../../generators/arduino/softBT.js"></script>
 		<script src="../../generators/arduino/softWIFI.js"></script>
@@ -896,9 +898,16 @@
 	</block>
 	
 	</category>
- <category id="catMakeblock" colour="200"> 
-	
-	</category>
+ <category id="catMQTTWifi" colour="200"> 
+	<block type="mqtt_init"> </block> 
+	<block type="mqtt_subscribe"> </block> 
+	<block type="mqtt_publish"> </block>
+	<block type="mqtt_loop"> </block> 
+	<block type="mqtt_TopicReceived"> </block> 
+	<block type="mqtt_topicReset"> </block> 
+	<block type="mqtt_TopicValueNum"> </block> 
+	<block type="mqtt_TopicValueString"> </block> 
+</category>
  
  
  

@@ -70,7 +70,7 @@ var MSG = {
   catLogic: "Logic",
   catWIFI:"WiFi",
   catIOT:"IOT",
-  catMakeblock:"Cloud Makeblock",
+  catMQTTWifi:"MQTT",
   catRF:"Radio Frequency",
   catRF24L01:"NRF24L01",
   catLoops: "Loops",
