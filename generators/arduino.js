@@ -243,7 +243,7 @@ Blockly.Arduino.scrub_ = function(block, code) {
         if (childBlock) {
           var comment = this.allNestedComments(childBlock);
           if (comment) {
-            commentCode += this.prefixLines(comment, '# ');
+            commentCode += this.prefixLines(comment, '// ');
           }
         }
       }
