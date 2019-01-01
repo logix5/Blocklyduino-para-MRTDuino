@@ -144,6 +144,31 @@ Blockly.Arduino['Init_remotecontrolMRT'] = function(block) {
   return code;
 };
 
+Blockly.Arduino['Init_remotecontrolMRT_pindedicated'] = function(block) {
+  
+  Blockly.Arduino.definitions_['include_mrtremote'] = '#include <MrtDuino.h>\n';
+  Blockly.Arduino.definitions_['mrtremote_variables'] = 'IRrecv irrecv1(10);\n' +
+'int ir_id;\n' +
+'MrtIdSetting ir_id_set;\n' +
+'int remote_button;\n';
+	
+  Blockly.Arduino.setups_['setup_mrtremote'] = 'irrecv1.enableIRIn();\n';	
+		
+	 var code ='';	
+  return code;
+};
+
+Blockly.Arduino['Read_remotecontrolMRT_pindedicated'] = function(block) {
+  
+  	 
+  var code = 'ir_id = ir_id_set.ReadId(5);\n'+
+  'remote_button = irrecv1.mrtRemoteLoop(ir_id);\n';
+  
+  
+  return code;
+};
+
+
 
 Blockly.Arduino['IR_Remote_Key'] = function(block) {
   var key_detected = this.getFieldValue('KEY');
@@ -151,6 +176,16 @@ Blockly.Arduino['IR_Remote_Key'] = function(block) {
   var code = 'RC('+key_detected+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
+
+Blockly.Arduino['IR_Remote_Key_pindedicated'] = function(block) {
+  var key_detected = this.getFieldValue('KEY');
+    
+  var code = 'irrecv1.mrtRemoteStateCheck(remote_button, '+key_detected+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+
+
 
 Blockly.Arduino['Init_generalremotecontrol'] = function(block) {
   var dropdown_pin = this.getFieldValue('PIN');
