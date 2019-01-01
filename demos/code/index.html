@@ -715,12 +715,12 @@
 		</category>
 	  </category>
 	  <category id="catRemoteIR" colour="200"> 
+	   <block type="Init_generalremotecontrol"></block>
 	   <block type="Init_remotecontrolMRT"></block>
+	   <block type="IR_Remote_Key"></block>
 	   <block type="Init_remotecontrolMRT_pindedicated"></block>
 	   <block type="Read_remotecontrolMRT_pindedicated"></block>
-	   <block type="IR_Remote_Key"></block>
 	   <block type="IR_Remote_Key_pindedicated"></block>
-	   <block type="Init_generalremotecontrol"></block>
 	   </category>
 	   
  <category id="catWIFI" colour="200"> 
@@ -1230,7 +1230,8 @@
  <category id="catSimpleSensorsALL" colour="220"> 
  
 	<category id="catSimpleSensors" colour="220"> 
-	 <block type="button_sensor"></block>
+		 <block type="button_sensor"></block>
+		 <block type="internal_button_sensor"></block>
 		 <block type="potentiometer_ranger_sensor"></block>	
 		 <block type="IR_sensor"></block>	
 		 <block type="IR_status_sensor"></block>	

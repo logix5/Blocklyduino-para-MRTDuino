@@ -57,6 +57,24 @@ Blockly.Blocks['button_sensor'] = {
   }
 };
 
+Blockly.Blocks['internal_button_sensor'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/button.png",65,38))
+	    .appendField(Blockly.Msg.INTERNAL_BUTTON_NAME)    
+	this.setOutput(true, 'Boolean');
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.BUTTON_PRESSED)
+	this.appendDummyInput()
+	this.setInputsInline(true);
+    this.setTooltip('');
+  }
+};
+
+
+
 Blockly.Blocks['button_touch_sensor'] = {
   helpUrl: '',
   init: function() {

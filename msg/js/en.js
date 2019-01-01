@@ -387,6 +387,7 @@ Blockly.Msg.PIN="PIN#";
 
 //SIMPLE SENSORS
 Blockly.Msg.BUTTON_NAME="Button";
+Blockly.Msg.INTERNAL_BUTTON_NAME="Start button MRTduino board";
 Blockly.Msg.BUTTON_LOGIC="Logic inverse";
 Blockly.Msg.BUTTON_PRESSED="pressed?";
 Blockly.Msg.BUTTON_TOUCH_NAME="Capacity Touch";

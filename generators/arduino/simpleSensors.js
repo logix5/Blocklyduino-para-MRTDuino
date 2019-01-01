@@ -20,6 +20,16 @@ Blockly.Arduino['button_sensor'] = function(block) {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino['internal_button_sensor'] = function(block) {
+ 
+ Blockly.Arduino.definitions_['include_mrtremote'] = '#include <MrtDuino.h>\n';
+ Blockly.Arduino.definitions_['mrtremote_ir_id_set'] = 'MrtIdSetting ir_id_set;\n';
+  var code= 'ir_id_set.isStartPressed()';
+  
+  
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
 Blockly.Arduino['button_touch_sensor'] = function(block) {
   var dropdown_pin = this.getFieldValue('PIN_BUTTON');
   var logic = this.getFieldValue('LOGIC');

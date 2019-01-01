@@ -149,10 +149,11 @@ Blockly.Arduino['Init_remotecontrolMRT_pindedicated'] = function(block) {
   Blockly.Arduino.definitions_['include_mrtremote'] = '#include <MrtDuino.h>\n';
   Blockly.Arduino.definitions_['mrtremote_variables'] = 'IRrecv irrecv1(10);\n' +
 'int ir_id;\n' +
-'MrtIdSetting ir_id_set;\n' +
 'int remote_button;\n';
+
+Blockly.Arduino.definitions_['mrtremote_ir_id_set'] = 'MrtIdSetting ir_id_set;\n';
 	
-  Blockly.Arduino.setups_['setup_mrtremote'] = 'irrecv1.enableIRIn();\n';	
+Blockly.Arduino.setups_['setup_mrtremote'] = 'irrecv1.enableIRIn();\n';	
 		
 	 var code ='';	
   return code;
