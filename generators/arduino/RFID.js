@@ -92,4 +92,13 @@ Blockly.Arduino['RFID_check_card'] = function(block) {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino['rfid_stopread'] = function(block) {
+
+var code = 'mfrc522.PICC_HaltA();\n'+
+'mfrc522.PCD_StopCrypto1();\n';
+	 
+	 
+  return code;
+};
+
 

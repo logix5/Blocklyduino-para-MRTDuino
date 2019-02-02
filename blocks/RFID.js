@@ -122,5 +122,21 @@ Blockly.Blocks['RFID_check_card'] = {
     this.setTooltip('');
   }
 };
+
+Blockly.Blocks['rfid_stopread'] = {
+   init: function() {
+    this.setColour(220);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/cardRFID.png",49,38))
+        .appendField(Blockly.Msg.RFID_name)
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.RFID_STOP)	
+	this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Stop the current reading');
+    this.setHelpUrl('');
+  }
+};
 	
 

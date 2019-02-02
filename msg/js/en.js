@@ -840,6 +840,7 @@ Blockly.Msg.RFID_init2 = "Pins:SCK Port2 MOSI Port3 and MISO Port4.";
 Blockly.Msg.RFID_PIN_SDA = "SDA Pin";
 Blockly.Msg.RFID_PIN_RST = "RST Pin";
 Blockly.Msg.RFID_VALID_VAR = "Define Validation card name:";
+Blockly.Msg.RFID_STOP = "Stop the current reading";
 Blockly.Msg.RFID_C1 = "Value1";
 Blockly.Msg.RFID_C2 = "Value2";
 Blockly.Msg.RFID_C3 = "Value3";
