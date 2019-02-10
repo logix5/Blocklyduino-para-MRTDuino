@@ -941,10 +941,10 @@ Blockly.Msg.MQTT_topicValueString = "String value of the topic";
 //RFID ST7735
 Blockly.Msg.ST7735_name = "TFT";
 Blockly.Msg.ST7735_init = "Init TFT ST7735 1.8\".";
-Blockly.Msg.ST7735_init2 = "Pins:SCK Port2 MOSI Port3.";
+Blockly.Msg.ST7735_init2 = "Pins:SCK Port2 SDA Port3.";
 Blockly.Msg.ST7735_PIN_CS = "CS Pin";
 Blockly.Msg.ST7735_PIN_RST = "RST Pin";
-Blockly.Msg.ST7735_PIN_DC = "DC Pin";
+Blockly.Msg.ST7735_PIN_DC = "A0 Pin";
 Blockly.Msg.ST7735_WRAP = "Tab color";
 Blockly.Msg.ST7735_FILLBACKGROUND = "Fill backgroundColor";
 Blockly.Msg.ST7735_Rotate = "Rotate display";
