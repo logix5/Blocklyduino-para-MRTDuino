@@ -25,7 +25,7 @@ Blockly.Arduino['motor_run'] = function(block) {
 	//   if (motor_direction == 'STOP') 
 	//	   var code = 'pinMode(3,OUTPUT);\ndigitalWrite(3,LOW);\n'+'SoftPWMSet(7,0);\n';
 	//   else
-	       var code = 'pinMode(3,OUTPUT);\ndigitalWrite(3,'+motor_direction+');\n'+'SoftPWMSet(7,'+motor_speed+');\n';
+	       var code = 'pinMode(3,OUTPUT);\ndigitalWrite(3,'+motor_direction+');\n'+'SoftPWMSet(7,'+motor_speed+');\ndelay(100);\n';
   }
   else
    if(motor_pin == 'ML2')
@@ -36,7 +36,7 @@ Blockly.Arduino['motor_run'] = function(block) {
 	  // if (motor_direction == 'STOP') 
 	//	   var code = 'pinMode(1,OUTPUT);\ndigitalWrite(1,LOW);\n'+'SoftPWMSet(8,0);\n';
 	//   else
-	       var code = 'pinMode(1,OUTPUT);\ndigitalWrite(1,'+motor_direction+');\n'+'SoftPWMSet(8,'+motor_speed+');\n';
+	       var code = 'pinMode(1,OUTPUT);\ndigitalWrite(1,'+motor_direction+');\n'+'SoftPWMSet(8,'+motor_speed+');\ndelay(100);\n';
     }
 	else
 	  if(motor_pin == 'MR1')
@@ -47,7 +47,7 @@ Blockly.Arduino['motor_run'] = function(block) {
 		//	if (motor_direction == 'STOP') 
 		//	   var code = 'pinMode(2,OUTPUT);\ndigitalWrite(2,LOW);\n'+'SoftPWMSet(4,0);\n';
 		//	else
-			   var code = 'pinMode(2,OUTPUT);\ndigitalWrite(2,'+motor_direction+');\n'+'SoftPWMSet(4,'+motor_speed+');\n';
+			   var code = 'pinMode(2,OUTPUT);\ndigitalWrite(2,'+motor_direction+');\n'+'SoftPWMSet(4,'+motor_speed+');\ndelay(100);\n';
 		}
 		else
 			if(motor_pin == 'MR2')
@@ -58,7 +58,7 @@ Blockly.Arduino['motor_run'] = function(block) {
 				//	if (motor_direction == 'STOP') 
 				//		var code = 'pinMode(0,OUTPUT);\ndigitalWrite(0,LOW);\n'+'SoftPWMSet(6,0);\n';
 				//	else
-						var code = 'pinMode(0,OUTPUT);\ndigitalWrite(0,'+motor_direction+');\n'+'SoftPWMSet(6,'+motor_speed+');\n';
+						var code = 'pinMode(0,OUTPUT);\ndigitalWrite(0,'+motor_direction+');\n'+'SoftPWMSet(6,'+motor_speed+');\ndelay(100);\n';
 				}
 			else
 				var code = '';
