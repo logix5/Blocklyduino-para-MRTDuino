@@ -916,7 +916,7 @@ Blockly.Msg.IOT_config_mode = "Config mode";
 //MQTT
 Blockly.Msg.MQTT_name = "MQTT.";
 Blockly.Msg.MQTT_name_init = "Init MQTT using ESP8266.";
-Blockly.Msg.MQTT_name_init2 = "Serial1 RX# Port15 TX# Port16.";
+Blockly.Msg.MQTT_name_init2 = "Serial1 TX# Port15 RX# Port16.";
 Blockly.Msg.MQTT_name_init3 = "9600 baudios";
 Blockly.Msg.MQTT_password = "password:";
 Blockly.Msg.MQTT_ssid = "Wifi ssid:";
