@@ -979,7 +979,10 @@ Blockly.Msg.ST7735_IconName = "Icon name(bmp):";
 Blockly.Msg.ST7735_ValueList = "Values(hex array)";
 Blockly.Msg.ST7735_DrawiconName = "Draw Icon(bmp) name";
 
-
+//PIXY2 
+Blockly.Msg.PIXY2_name = "Pixy2";
+Blockly.Msg.PIXY2_init = "Init Pixy2. Pins:";
+Blockly.Msg.PIXY2_init2 = "SCK Port2 MOSI Port3, MISO Port4 and RESET pin";
 
 //SERVO
 Blockly.Msg.SERVO_Servo="Servo";
