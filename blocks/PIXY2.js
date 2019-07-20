@@ -15,7 +15,7 @@ Blockly.Blocks['pixy2_init'] = {
    init: function() {
     this.setColour(140);
     this.appendDummyInput()
-		//.appendField(new Blockly.FieldImage("images/tft7735.png",53,38))
+		.appendField(new Blockly.FieldImage("images/pixy2.png",53,38))
         .appendField(Blockly.Msg.PIXY2_init)
 		.appendField(Blockly.Msg.PIXY2_init2);
 	this.setInputsInline(true);
@@ -26,24 +26,26 @@ Blockly.Blocks['pixy2_init'] = {
   }
 };
 
-/*
-
-Blockly.Blocks['st7735_backgroundcolor'] = {
+Blockly.Blocks['pixy2_mode'] = {
    init: function() {
     this.setColour(140);
     this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
-        .appendField(Blockly.Msg.ST7735_name)
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+        .appendField(Blockly.Msg.PIXY2_name)
 	this.appendDummyInput()	
-        .appendField(Blockly.Msg.ST7735_FILLBACKGROUND)
-		.appendField(new Blockly.FieldDropdown([["Black","ST7735_BLACK"],["Green", "ST7735_GREEN"],["Red", "ST7735_RED"],["Blue","ST7735_BLUE"],["Cyan", "ST7735_CYAN"],["Magenta", "ST7735_MAGENTA"],["Yellow", "ST7735_YELLOW"],["White", "ST7735_WHITE"]]), "COLOR")
+        .appendField(Blockly.Msg.PIXY2_mode)
+		.appendField(new Blockly.FieldDropdown([["Color Connected Components","color_connected_components"],["Detect lines, intersections and barcodes", "line_tracking"],["Video", "video"]]), "MODE_OF_USE")
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('Fill the background of the color attached.');
+    this.setTooltip('Select the mode to use');
     this.setHelpUrl('');
   }
 };
+
+/*
+
+
 
 
 Blockly.Blocks['st7735_icon'] = {

@@ -20,15 +20,18 @@ Blockly.Arduino['pixy2_init'] = function(block) {
   return code;
 };
 
-/*
+Blockly.Arduino['pixy2_mode'] = function(block) {
 
-Blockly.Arduino['st7735_backgroundcolor'] = function(block) {
-
-  var Color = block.getFieldValue('COLOR');
+  var ModeOfUse = block.getFieldValue('MODE_OF_USE');
 	   
-  var code = 'tft1.fillScreen('+Color+');\n';
+  var code = 'pixy.changeProg("'+ModeOfUse+'");\n';
+  
   return code;
 };
+
+/*
+
+
 
 Blockly.Arduino['st7735_icon'] = function(block) {
 
