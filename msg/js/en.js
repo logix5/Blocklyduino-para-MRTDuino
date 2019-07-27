@@ -984,6 +984,22 @@ Blockly.Msg.PIXY2_name = "Pixy2";
 Blockly.Msg.PIXY2_init = "Init Pixy2.";
 Blockly.Msg.PIXY2_init2 = "SCK Port2, MOSI Port3, MISO Port4 and RESET pin";
 Blockly.Msg.PIXY2_mode = "Usage mode:";
+Blockly.Msg.PIXY2_SetServos = "Set Servos";
+Blockly.Msg.SERVO_PAN="Pan Position(0-1000)";
+Blockly.Msg.SERVO_TILT="Tilt Position(0-1000)";
+Blockly.Msg.PIXY2_SetBrightness = "Set Brightness(0-255)";
+Blockly.Msg.PIXY2_SetLed = "Set Led";
+Blockly.Msg.PIXY2_RED_LED = "Red(0-255)";
+Blockly.Msg.PIXY2_GREEN_LED = "Green(0-255)";
+Blockly.Msg.PIXY2_BLUE_LED = "Blue(0-255)";
+Blockly.Msg.PIXY2_SetLamp="Set Lamp.";
+Blockly.Msg.LAMP_UP="UP";
+Blockly.Msg.LED_DOWN="DOWN";
+
+
+
+
+
 
 //SERVO
 Blockly.Msg.SERVO_Servo="Servo";

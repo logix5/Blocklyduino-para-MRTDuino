@@ -22,7 +22,7 @@ Blockly.Blocks['pixy2_init'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Init the Pixy2.Important the Reset pin must be connected to Reset pinout of mrtduino board.You need a male dupont connector');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
   }
 };
 
@@ -39,9 +39,97 @@ Blockly.Blocks['pixy2_mode'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Select the mode to use');
-    this.setHelpUrl('');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
   }
 };
+
+Blockly.Blocks['pixy2_setservos'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+        .appendField(Blockly.Msg.PIXY2_name)
+		.appendField(Blockly.Msg.PIXY2_SetServos)
+	this.appendValueInput("servoPAN")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.SERVO_PAN);
+	this.appendValueInput("servoTILT")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.SERVO_TILT);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Set Pan and Tilt servo position (0-1000)');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
+  }
+};
+
+Blockly.Blocks['pixy2_SetBrightness'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+        .appendField(Blockly.Msg.PIXY2_name)
+		.appendField(Blockly.Msg.PIXY2_SetBrightness)
+	this.appendValueInput("Brightness")
+        .setCheck("Number")
+	this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('SetBrightness of the camera(0-255)');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
+  }
+};
+
+Blockly.Blocks['pixy2_setLed'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+        .appendField(Blockly.Msg.PIXY2_name)
+		.appendField(Blockly.Msg.PIXY2_SetLed)
+	this.appendValueInput("RedLed")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.PIXY2_RED_LED);
+	this.appendValueInput("GreenLed")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.PIXY2_GREEN_LED);
+	this.appendValueInput("BlueLed")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.PIXY2_BLUE_LED);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Set RGB LED (0-255) every led');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
+  }
+};
+
+Blockly.Blocks['pixy2_setLamp'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+        .appendField(Blockly.Msg.PIXY2_name)
+		.appendField(Blockly.Msg.PIXY2_SetLamp)
+	this.appendDummyInput()	
+        .appendField(Blockly.Msg.LAMP_UP)
+		.appendField(new Blockly.FieldDropdown([["OFF","0"],["ON", "1"]]), "Lamp_up")
+	this.appendDummyInput()	
+        .appendField(Blockly.Msg.LED_DOWN)
+		.appendField(new Blockly.FieldDropdown([["OFF","0"],["ON", "1"]]), "Led_down")
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('turns on/off Pixy2 integrated light source. The upper argument controls the two white LEDs. The lower argument sets the RGB LED, causing it to turn on all three color channels at full brightness, resulting in white light.');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
+  }
+};
+
+
+
+
+
 
 /*
 
@@ -86,43 +174,9 @@ Blockly.Blocks['st7735_rotatedisplay'] = {
   }
 };
 
-Blockly.Blocks['st7735_invertdisplay'] = {
-   init: function() {
-    this.setColour(140);
-    this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
-        .appendField(Blockly.Msg.ST7735_name)
-	this.appendDummyInput()	
-        .appendField(Blockly.Msg.ST7735_Invert)
-		.appendField(new Blockly.FieldDropdown([["OFF","0"],["ON", "1"]]), "INVERT_DISPLAY")
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip('Invert the display');
-    this.setHelpUrl('');
-  }
-};
 
-Blockly.Blocks['st7735_setcursor'] = {
-   init: function() {
-    this.setColour(140);
-    this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
-        .appendField(Blockly.Msg.ST7735_name)
-		.appendField(Blockly.Msg.ST7735_SetCursor)
-	this.appendValueInput("x0")
-        .setCheck("Number")
-        .appendField(Blockly.Msg.ST7735_X0);
-	this.appendValueInput("y0")
-        .setCheck("Number")
-        .appendField(Blockly.Msg.ST7735_Y0);
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip('Set cursor in a position');
-    this.setHelpUrl('');
-  }
-};
+
+
 
 Blockly.Blocks['st7735_settextcolor'] = {
    init: function() {

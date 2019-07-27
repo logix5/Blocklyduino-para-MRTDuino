@@ -2022,8 +2022,49 @@
 		
 		    <block type="pixy2_init"></block>
 		    <block type="pixy2_mode"></block>
+		    <block type="pixy2_setservos">
+					<value name="servoPAN">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+					<value name="servoTILT">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+			</block>
+		    <block type="pixy2_SetBrightness">
+					<value name="Brightness">
+                        <shadow type="math_number">
+                            <field name="NUM">255</field>
+                        </shadow>
+                    </value>
+			 </block>
 		
-		
+			 <block type="pixy2_setLed">
+					<value name="RedLed">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+					<value name="GreenLed">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+					<value name="BlueLed">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+			</block>
+			 <block type="pixy2_setLamp"></block>
+			 
+			 
+			 
+			 
+			 
 		
 			</category>
 		
