@@ -31,19 +31,8 @@ Blockly.Arduino['pixy2_mode'] = function(block) {
 
 Blockly.Arduino['pixy2_setservos'] = function(block) {
 
-  var servoPan = Blockly.JavaScript.valueToCode(block, 'servoPAN', Blockly.JavaScript.ORDER_ATOMIC); 
-  var servoTilt = Blockly.JavaScript.valueToCode(block, 'servoTILT', Blockly.JavaScript.ORDER_ATOMIC); 
-  
-  if (servoPan < 0)
-   servoPan=0;
-  if (servoPan > 1000)
-   servoPan=1000;
-  
- if (servoTilt < 0)
-   servoTilt=0;
-  if (servoTilt > 1000)
-   servoTilt=1000;
-
+  var servoPan = Blockly.Arduino.valueToCode(this, 'servoPAN', Blockly.Arduino.ORDER_ATOMIC) || '0'; 
+  var servoTilt = Blockly.Arduino.valueToCode(this, 'servoTILT', Blockly.Arduino.ORDER_ATOMIC) || '0'; 
    
   var code = 'pixy.setServos('+servoPan+','+servoTilt+');\n';
   return code;
@@ -51,37 +40,19 @@ Blockly.Arduino['pixy2_setservos'] = function(block) {
 
 Blockly.Arduino['pixy2_SetBrightness'] = function(block) {
 
-  var brightness = Blockly.JavaScript.valueToCode(block, 'Brightness', Blockly.JavaScript.ORDER_ATOMIC); 
+  var brightness = Blockly.Arduino.valueToCode(this, 'Brightness', Blockly.Arduino.ORDER_ATOMIC) || '0';
   
-  if (brightness < 0)
-   brightness=0;
-  if (brightness > 255)
-   brightness=255;
-  
+
   var code = 'pixy.setCameraBrightness('+brightness+');\n';
   return code;
 };
 
 Blockly.Arduino['pixy2_setLed'] = function(block) {
 
-  var RedLed = Blockly.JavaScript.valueToCode(block, 'RedLed', Blockly.JavaScript.ORDER_ATOMIC); 
-  var GreenLed = Blockly.JavaScript.valueToCode(block, 'GreenLed', Blockly.JavaScript.ORDER_ATOMIC); 
-  var BlueLed = Blockly.JavaScript.valueToCode(block, 'BlueLed', Blockly.JavaScript.ORDER_ATOMIC); 
+  var RedLed = Blockly.Arduino.valueToCode(this, 'RedLed', Blockly.Arduino.ORDER_ATOMIC) || '0'; 
+  var GreenLed = Blockly.Arduino.valueToCode(this, 'GreenLed', Blockly.Arduino.ORDER_ATOMIC) || '0';  
+  var BlueLed = Blockly.Arduino.valueToCode(this, 'BlueLed', Blockly.Arduino.ORDER_ATOMIC) || '0';  
   
-  if (RedLed < 0)
-   RedLed=0;
-  if (RedLed > 255)
-   RedLed=255;
-  
-  if (GreenLed < 0)
-   GreenLed=0;
-  if (GreenLed > 255)
-   GreenLed=255;
-
-  if (BlueLed < 0)
-   BlueLed=0;
-  if (BlueLed > 255)
-   BlueLed=255;
    
   var code = 'pixy.setLED('+RedLed+','+GreenLed+','+BlueLed+');\n';
   return code;
