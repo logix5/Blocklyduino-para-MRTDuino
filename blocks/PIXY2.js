@@ -126,9 +126,36 @@ Blockly.Blocks['pixy2_setLamp'] = {
   }
 };
 
+Blockly.Blocks['pixy2_properties'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+		.appendField(Blockly.Msg.PIXY2_name)
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.Pixy2_properties)
+        .appendField(new Blockly.FieldDropdown([["Frame Width", "1"], ["Frame Height", "2"],["Num. Color blocks detected", "3"]]), "Property")   
+	this.setOutput(true, 'Number');
+	this.appendDummyInput()
+	this.setInputsInline(true);
+    this.setTooltip('return several properties of the camera and the number of color blocks detected');
+  }
+};
 
-
-
+Blockly.Blocks['pixy2_getFPS'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+		.appendField(Blockly.Msg.PIXY2_name)
+        .appendField(Blockly.Msg.Pixy2_getFPS)
+	this.setInputsInline(true);
+    this.setOutput(true, 'Number');
+    this.setTooltip('return the Fram per Second');
+  }
+};
 
 
 /*
@@ -443,22 +470,7 @@ Blockly.Blocks['st7735_drawtriangle'] = {
   }
 };
 
-Blockly.Blocks['st7735_properties'] = {
-  helpUrl: '',
-  init: function() {
-    this.setColour(140);
-    this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/tft7735.png",35,25))
-		.appendField(Blockly.Msg.ST7735_name)
-	this.appendDummyInput()
-		.appendField(Blockly.Msg.ST7735_properties)
-        .appendField(new Blockly.FieldDropdown([["Width", "1"], ["Height", "2"],["X cursor position", "3"],["Y cursor position", "4"],["Rotatation value", "5"]]), "Property")   
-	this.setOutput(true, 'Number');
-	this.appendDummyInput()
-	this.setInputsInline(true);
-    this.setTooltip('');
-  }
-};
+
 
 Blockly.Blocks['st7735_drawicon'] = {
    init: function() {

@@ -68,7 +68,26 @@ Blockly.Arduino['pixy2_setLamp'] = function(block) {
   return code;
 };
 
+Blockly.Arduino['pixy2_properties'] = function(block) {
+	
+	var property = block.getFieldValue('Property');  
+	
+  if (property==1)	
+	var code = 'pixy.frameWidth';  
+	else if (property==2)
+		var code = 'pixy.frameHeight';		
+		else
+		  var code = 'pixy.ccc.numBlocks';
+			
+				
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
 
+Blockly.Arduino['pixy2_getFPS'] = function(block) {
+         
+  var code = 'pixy.getFPS()';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
 
 
 
@@ -233,23 +252,7 @@ Blockly.Arduino['st7735_drawtriangle'] = function(block) {
   return code;
 };
 
-Blockly.Arduino['st7735_properties'] = function(block) {
-	
-	var property = block.getFieldValue('Property');  
-	
-  if (property==1)	
-	var code = 'tft1.width()';  
-	else if (property==2)
-		var code = 'tft1.height()';		
-		else if (property==3)
-		  var code = 'tft1.getCursorX()';
-			else if (property==4)
-				var code = 'tft1.getCursorY()';
-				 else
-					var code = 'tft1.getRotation()';
-				
-  return [code, Blockly.Arduino.ORDER_ATOMIC];
-};
+
 
 Blockly.Arduino['st7735_drawicon'] = function(block) {
 

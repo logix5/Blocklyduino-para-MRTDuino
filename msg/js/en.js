@@ -995,7 +995,8 @@ Blockly.Msg.PIXY2_BLUE_LED = "Blue(0-255)";
 Blockly.Msg.PIXY2_SetLamp="Set Lamp.";
 Blockly.Msg.LAMP_UP="UP";
 Blockly.Msg.LED_DOWN="DOWN";
-
+Blockly.Msg.Pixy2_properties = "Return :";
+Blockly.Msg.Pixy2_getFPS = "Get frame per second(FPS)";
 
 
 
