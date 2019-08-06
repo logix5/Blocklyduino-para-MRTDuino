@@ -997,9 +997,10 @@ Blockly.Msg.LAMP_UP="UP";
 Blockly.Msg.LED_DOWN="DOWN";
 Blockly.Msg.Pixy2_properties = "Return :";
 Blockly.Msg.Pixy2_getFPS = "Get frame per second(FPS)";
-
-
-
+Blockly.Msg.Pixy2_Wait = "Wait";
+Blockly.Msg.Pixy2_sigmap="Signatures(0-255)";
+Blockly.Msg.Pixy2_Blocks="Max blocks to detected(0-255)";
+Blockly.Msg.Pixy2_getBlocks = "Get Blocks.";
 
 
 //SERVO

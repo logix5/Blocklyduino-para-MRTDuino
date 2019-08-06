@@ -157,6 +157,52 @@ Blockly.Blocks['pixy2_getFPS'] = {
   }
 };
 
+Blockly.Blocks['pixy2_getResolution'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+        .appendField(Blockly.Msg.PIXY2_name)
+		.appendField(Blockly.Msg.Pixy2_getResolution)
+	this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('gets the width and height of the frames used by the current program. After calling this function, the width and height can be found in the frameWidth and frameHeight member variables');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
+  }
+};
+
+Blockly.Blocks['pixy2_getBlocks'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+        .appendField(Blockly.Msg.PIXY2_name)
+		.appendField(Blockly.Msg.Pixy2_getBlocks);
+	this.appendDummyInput()	
+		.appendField(Blockly.Msg.Pixy2_Wait)
+		.appendField(new Blockly.FieldDropdown([["True","true"],["False", "false"]]), "Wait")
+	this.appendValueInput("sigmap")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.Pixy2_sigmap);
+	this.appendValueInput("maxBlock")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.Pixy2_Blocks);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('getBlocks() gets all detected blocks in the most recent frame.');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
+  }
+};
+
+
+
+
+
+
+
+
 
 /*
 

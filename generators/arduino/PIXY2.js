@@ -89,6 +89,23 @@ Blockly.Arduino['pixy2_getFPS'] = function(block) {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino['pixy2_getResolution'] = function(block) {
+
+  var code = 'pixy.getResolution();\n';
+  return code;
+};
+
+Blockly.Arduino['pixy2_getBlocks'] = function(block) {
+
+  var waitmode = block.getFieldValue('Wait');  
+  var Signatures = Blockly.Arduino.valueToCode(this, 'sigmap', Blockly.Arduino.ORDER_ATOMIC) || '0';  
+  var MaxBlocks = Blockly.Arduino.valueToCode(this, 'maxBlock', Blockly.Arduino.ORDER_ATOMIC) || '0';  
+  
+   
+  var code = 'pixy.ccc.getBlocks('+waitmode+','+Signatures+','+MaxBlocks+');\n';
+  return code;
+};
+
 
 
 /*
