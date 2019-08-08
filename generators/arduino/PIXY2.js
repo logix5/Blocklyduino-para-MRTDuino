@@ -106,6 +106,41 @@ Blockly.Arduino['pixy2_getBlocks'] = function(block) {
   return code;
 };
 
+Blockly.Arduino['pixy2_getBlockProperties'] = function(block) {
+	
+	
+  var NumBlock = Blockly.Arduino.valueToCode(this, 'block_number', Blockly.Arduino.ORDER_ATOMIC) || '0';  
+  var property = block.getFieldValue('BlockProperty');  
+  
+  if (property==1)	
+	var code = 'pixy.ccc.blocks['+NumBlock+'].m_signature';  
+	else if (property==2)
+		var code = 'pixy.ccc.blocks['+NumBlock+'].m_x';		
+		else if (property==3)
+			var code = 'pixy.ccc.blocks['+NumBlock+'].m_y';	
+			else if (property==4)
+				var code = 'pixy.ccc.blocks['+NumBlock+'].m_width';	
+				else if (property==5)
+					var code = 'pixy.ccc.blocks['+NumBlock+'].m_height ';	
+					else if (property==6)
+						var code = 'pixy.ccc.blocks['+NumBlock+'].m_angle';	
+						else if (property==7)
+							var code = 'pixy.ccc.blocks['+NumBlock+'].m_index';	
+							else
+							var code = 'pixy.ccc.blocks['+NumBlock+'].m_age';
+			
+				
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+
+
+
+
+
+
+
+
 
 
 /*

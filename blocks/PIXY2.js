@@ -196,6 +196,27 @@ Blockly.Blocks['pixy2_getBlocks'] = {
   }
 };
 
+Blockly.Blocks['pixy2_getBlockProperties'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+        .appendField(Blockly.Msg.PIXY2_name);
+	this.appendDummyInput()	
+		.appendField(Blockly.Msg.Pixy2_get)
+		.appendField(new Blockly.FieldDropdown([["signature","1"],["pos x", "2"],["pos y", "3"],["width", "4"],["height", "5"],["angle", "6"],["index", "7"],["age", "8"]]), "BlockProperty")
+	this.appendValueInput("block_number")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.Pixy2_fromblock);
+    this.setInputsInline(true);
+	this.setOutput(true, 'Number');
+    this.setTooltip('Properties of the selected block');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
+  }
+};
+
+
+
 
 
 
