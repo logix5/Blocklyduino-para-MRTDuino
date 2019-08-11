@@ -74,10 +74,9 @@ Blockly.Arduino['pixy2_properties'] = function(block) {
 	
   if (property==1)	
 	var code = 'pixy.frameWidth';  
-	else if (property==2)
-		var code = 'pixy.frameHeight';		
-		else
-		  var code = 'pixy.ccc.numBlocks';
+	else 
+	 var code = 'pixy.frameHeight';		
+		
 			
 				
   return [code, Blockly.Arduino.ORDER_ATOMIC];
@@ -133,11 +132,63 @@ Blockly.Arduino['pixy2_getBlockProperties'] = function(block) {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino['pixy2_properties2'] = function(block) {
+	
+	var property = block.getFieldValue('Property');  
+	
+  if (property==1)	
+	var code = 'pixy.ccc.numBlocks';  
+	else if (property==2)
+		var code = 'pixy.line.numVectors';		
+		else if (property==3)
+			 var code = 'pixy.line.numIntersections';
+		     else 
+		     var code = 'pixy.line.numBarcodes'; 
+			
+				
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
 
+Blockly.Arduino['pixy2_getVectorsProperties'] = function(block) {
+	
+	
+  var NumBlock = Blockly.Arduino.valueToCode(this, 'vector_number', Blockly.Arduino.ORDER_ATOMIC) || '0';  
+  var property = block.getFieldValue('VectorProperty');  
+  
+  if (property==1)	
+	var code = 'pixy.line.vectors['+NumBlock+'].m_x0';  
+	else if (property==2)
+		var code = 'pixy.line.vectors['+NumBlock+'].m_y0';		
+		else if (property==3)
+			var code = 'pixy.line.vectors['+NumBlock+'].m_x1';	
+			else if (property==4)
+				var code = 'pixy.line.vectors['+NumBlock+'].m_y1';	
+				else if (property==5)
+					var code = 'pixy.line.vectors['+NumBlock+'].m_index';	
+					else 
+					 var code = 'pixy.line.vectors['+NumBlock+'].m_flags';	
+						
+			
+				
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
 
-
-
-
+Blockly.Arduino['pixy2_getIntersectionProperties'] = function(block) {
+	
+	
+  var NumBlock = Blockly.Arduino.valueToCode(this, 'intersection_number', Blockly.Arduino.ORDER_ATOMIC) || '0';  
+  var property = block.getFieldValue('IntersectionProperty');  
+  
+  if (property==1)	
+	var code = 'pixy.line.intersections['+NumBlock+'].m_x';  
+	else if (property==2)
+		var code = 'pixy.line.intersections['+NumBlock+'].m_y';		
+		else 
+		var code = 'pixy.line.intersections['+NumBlock+'].m_n';	
+			
+									
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
 
 
 

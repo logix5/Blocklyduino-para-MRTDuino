@@ -135,7 +135,7 @@ Blockly.Blocks['pixy2_properties'] = {
 		.appendField(Blockly.Msg.PIXY2_name)
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.Pixy2_properties)
-        .appendField(new Blockly.FieldDropdown([["Frame Width", "1"], ["Frame Height", "2"],["Num. Color blocks detected", "3"]]), "Property")   
+        .appendField(new Blockly.FieldDropdown([["Frame Width", "1"], ["Frame Height", "2"]]), "Property")   
 	this.setOutput(true, 'Number');
 	this.appendDummyInput()
 	this.setInputsInline(true);
@@ -214,6 +214,78 @@ Blockly.Blocks['pixy2_getBlockProperties'] = {
     this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
   }
 };
+
+Blockly.Blocks['pixy2_properties2'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+		.appendField(Blockly.Msg.PIXY2_name)
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.Pixy2_properties2)
+        .appendField(new Blockly.FieldDropdown([["Blocks", "1"], ["Vectors", "2"],["Intersections", "3"],["Barcodes", "4"]]), "Property")   
+	this.setOutput(true, 'Number');
+	this.appendDummyInput()
+	this.setInputsInline(true);
+    this.setTooltip('return  the number of color blocks detected, vectors, intersections or barcodes');
+  }
+};
+
+Blockly.Blocks['pixy2_getVectorsProperties'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+        .appendField(Blockly.Msg.PIXY2_name);
+	this.appendDummyInput()	
+		.appendField(Blockly.Msg.Pixy2_get)
+		.appendField(new Blockly.FieldDropdown([["the x location of the tail of the Vector","1"],["the y location of the tail of the Vector", "2"],["the x location of the head (arrow end) of the Vector", "3"],["the y location of the head (arrow end) of the Vector", "4"],["index", "5"],["flags", "6"]]), "VectorProperty")
+	this.appendValueInput("vector_number")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.Pixy2_fromvector);
+    this.setInputsInline(true);
+	this.setOutput(true, 'Number');
+    this.setTooltip('Properties of the selected vector');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
+  }
+};
+
+Blockly.Blocks['pixy2_getIntersectionProperties'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+        .appendField(Blockly.Msg.PIXY2_name);
+	this.appendDummyInput()	
+		.appendField(Blockly.Msg.Pixy2_get)
+		.appendField(new Blockly.FieldDropdown([["the x location","1"],["the y location ", "2"],["number of lines(branches)", "3"]]), "IntersectionProperty")
+	this.appendValueInput("intersection_number")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.Pixy2_fromintersections);
+    this.setInputsInline(true);
+	this.setOutput(true, 'Number');
+    this.setTooltip('Properties of the selected intersection');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

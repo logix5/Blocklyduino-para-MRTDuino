@@ -995,7 +995,8 @@ Blockly.Msg.PIXY2_BLUE_LED = "Blue(0-255)";
 Blockly.Msg.PIXY2_SetLamp="Set Lamp.";
 Blockly.Msg.LAMP_UP="UP";
 Blockly.Msg.LED_DOWN="DOWN";
-Blockly.Msg.Pixy2_properties = "Return :";
+Blockly.Msg.Pixy2_properties = "Return";
+Blockly.Msg.Pixy2_properties2 = "Number of";
 Blockly.Msg.Pixy2_getFPS = "Get frame per second(FPS)";
 Blockly.Msg.Pixy2_Wait = "Wait";
 Blockly.Msg.Pixy2_sigmap="Signatures(0-255)";
@@ -1004,6 +1005,10 @@ Blockly.Msg.Pixy2_getBlocks = "Get Blocks.";
 Blockly.Msg.Pixy2_getResolution= "Get Resolution";
 Blockly.Msg.Pixy2_get= "Get";
 Blockly.Msg.Pixy2_fromblock= "from block";
+Blockly.Msg.Pixy2_fromvector= "from vector";
+Blockly.Msg.Pixy2_fromintersections= "of the intersection";
+Blockly.Msg.Pixy2_fromintersectionsline= "of the intersection line";
+Blockly.Msg.Pixy2_frombarcode= "of the barcode";
 
 //SERVO
 Blockly.Msg.SERVO_Servo="Servo";
