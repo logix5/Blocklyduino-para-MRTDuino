@@ -224,3 +224,49 @@ Blockly.Arduino['pixy2_getBarcodesProperties'] = function(block) {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino['pixy2_getAllFeatures'] = function(block) {
+
+  var waitmode = block.getFieldValue('Wait');  
+  var features = block.getFieldValue('Features');  
+  
+    if (features==1)	
+	var code = 'pixy.line.getAllFeatures((LINE_VECTOR | LINE_INTERSECTION | LINE_BARCODE),'+waitmode+');\n';  
+	else if (features==2)
+		var code = 'pixy.line.getAllFeatures(LINE_VECTOR,'+waitmode+');\n';		
+		else if (features==3)
+			var code = 'pixy.line.getAllFeatures(LINE_INTERSECTION,'+waitmode+');\n';	
+			else if (features==4)
+				var code = 'pixy.line.getAllFeatures(LINE_BARCODE,'+waitmode+');\n';
+				else if (features==5)
+					var code = 'pixy.line.getAllFeatures((LINE_VECTOR | LINE_INTERSECTION),'+waitmode+');\n';	
+					else if (features==6)
+						var code = 'pixy.line.getAllFeatures((LINE_VECTOR | LINE_BARCODE),'+waitmode+');\n';
+						else 
+						var code = 'pixy.line.getAllFeatures((LINE_INTERSECTION | LINE_BARCODE),'+waitmode+');\n';			
+  
+  return code;
+};
+
+Blockly.Arduino['pixy2_getMainFeatures'] = function(block) {
+
+  var waitmode = block.getFieldValue('Wait');  
+  var features = block.getFieldValue('Features');  
+  
+    if (features==1)	
+	var code = 'pixy.line.getMainFeatures((LINE_VECTOR | LINE_INTERSECTION | LINE_BARCODE),'+waitmode+');\n';  
+	else if (features==2)
+		var code = 'pixy.line.getMainFeatures(LINE_VECTOR,'+waitmode+');\n';		
+		else if (features==3)
+			var code = 'pixy.line.getMainFeatures(LINE_INTERSECTION,'+waitmode+');\n';	
+			else if (features==4)
+				var code = 'pixy.line.getMainFeatures(LINE_BARCODE,'+waitmode+');\n';
+				else if (features==5)
+					var code = 'pixy.line.getMainFeatures((LINE_VECTOR | LINE_INTERSECTION),'+waitmode+');\n';	
+					else if (features==6)
+						var code = 'pixy.line.getMainFeatures((LINE_VECTOR | LINE_BARCODE),'+waitmode+');\n';
+						else 
+						var code = 'pixy.line.getMainFeatures((LINE_INTERSECTION | LINE_BARCODE),'+waitmode+');\n';			
+  
+  return code;
+};
+

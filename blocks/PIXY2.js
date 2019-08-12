@@ -312,9 +312,47 @@ Blockly.Blocks['pixy2_getBarcodesProperties'] = {
 };
 
 
+Blockly.Blocks['pixy2_getAllFeatures'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+        .appendField(Blockly.Msg.PIXY2_name)
+		.appendField(Blockly.Msg.Pixy2_getAllFeatures);
+	this.appendDummyInput()	
+		.appendField(Blockly.Msg.Pixy2_Wait)
+		.appendField(new Blockly.FieldDropdown([["True","true"],["False", "false"]]), "Wait")
+	this.appendDummyInput()
+        .appendField(Blockly.Msg.Pixy2_Features)
+		.appendField(new Blockly.FieldDropdown([["All","1"],["Vectors","2"],["Intersections", "3"],["Barcodes", "4"],["Vectors+Intersections", "5"],["Vectors+Barcodes", "6"],["Intersections+Barcodes", "7"]]), "Features")
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('This function returns all lines, intersections and barcodes that the line tracking algorithm detects. The results are returned in the variables vectors, intersections, and barcodes, respectively.');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
+  }
+};
 
-
-
+Blockly.Blocks['pixy2_getMainFeatures'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+        .appendField(Blockly.Msg.PIXY2_name)
+		.appendField(Blockly.Msg.Pixy2_getMainFeatures);
+	this.appendDummyInput()	
+		.appendField(Blockly.Msg.Pixy2_Wait)
+		.appendField(new Blockly.FieldDropdown([["True","true"],["False", "false"]]), "Wait")
+	this.appendDummyInput()
+        .appendField(Blockly.Msg.Pixy2_Features)
+		.appendField(new Blockly.FieldDropdown([["All","1"],["Vectors","2"],["Intersections", "3"],["Barcodes", "4"],["Vectors+Intersections", "5"],["Vectors+Barcodes", "6"],["Intersections+Barcodes", "7"]]), "Features")
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('This function gets the latest features including the Vector, any intersection that connects to the Vector, and barcodes. The results are returned in the variables vectors, intersections, and barcodes, respectively.');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
+  }
+};
 
 
 
