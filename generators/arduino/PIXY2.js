@@ -270,3 +270,50 @@ Blockly.Arduino['pixy2_getMainFeatures'] = function(block) {
   return code;
 };
 
+Blockly.Arduino['pixy2_setNextTurn'] = function(block) {
+
+  var Angle = Blockly.Arduino.valueToCode(this, 'Angle', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  
+
+  var code = 'pixy.line.setNextTurn('+Angle+');\n';
+  return code;
+};
+
+Blockly.Arduino['pixy2_setDefaultTurn'] = function(block) {
+
+  var Angle = Blockly.Arduino.valueToCode(this, 'Angle', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  
+
+  var code = 'pixy.line.setDefaultTurn('+Angle+');\n';
+  return code;
+};
+
+Blockly.Arduino['pixy2_setVector'] = function(block) {
+
+  var Index = Blockly.Arduino.valueToCode(this, 'Index', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  
+
+  var code = 'pixy.line.setVector('+Index+');\n';
+  return code;
+};
+
+Blockly.Arduino['pixy2_reverseVector'] = function(block) {
+
+  var code = 'pixy.line.reverseVector();\n';
+  return code;
+};
+
+Blockly.Arduino['pixy2_setMode'] = function(block) {
+
+  var Mode = Blockly.Arduino.valueToCode(this, 'Mode', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  
+
+  var code = 'pixy.line.setMode('+Mode+');\n';
+  return code;
+};
+
+
+
+
+
+

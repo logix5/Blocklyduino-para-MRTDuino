@@ -1012,6 +1012,11 @@ Blockly.Msg.Pixy2_fromvector= "from vector";
 Blockly.Msg.Pixy2_fromintersections= "of the intersection";
 Blockly.Msg.Pixy2_fromintersectionsline= "line";
 Blockly.Msg.Pixy2_frombarcode= "of the barcode";
+Blockly.Msg.PIXY2_SetAngle = "Set next turn.Angle(-180,180)";
+Blockly.Msg.PIXY2_SetDefaultAngle = "Set default next turn.Angle(-180,180)";
+Blockly.Msg.PIXY2_SetVector = "Set vector.Index";
+Blockly.Msg.PIXY2_ReverseVector = "Select the reverse vector";
+Blockly.Msg.PIXY2_SelectMode = "Select the mode in the line tracking";
 
 //SERVO
 Blockly.Msg.SERVO_Servo="Servo";

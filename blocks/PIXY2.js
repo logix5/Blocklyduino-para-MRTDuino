@@ -247,7 +247,7 @@ Blockly.Blocks['pixy2_getVectorsProperties'] = {
     this.setInputsInline(true);
 	this.setOutput(true, 'Number');
     this.setTooltip('Properties of the selected vector');
-    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:line_api');
   }
 };
 
@@ -266,7 +266,7 @@ Blockly.Blocks['pixy2_getIntersectionProperties'] = {
     this.setInputsInline(true);
 	this.setOutput(true, 'Number');
     this.setTooltip('Properties of the selected intersection');
-    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:line_api');
   }
 };
 
@@ -288,7 +288,7 @@ Blockly.Blocks['pixy2_getIntersectionLineProperties'] = {
     this.setInputsInline(true);
 	this.setOutput(true, 'Number');
     this.setTooltip('Properties of the selected intersection line');
-    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:line_api');
   }
 };
 
@@ -307,7 +307,7 @@ Blockly.Blocks['pixy2_getBarcodesProperties'] = {
     this.setInputsInline(true);
 	this.setOutput(true, 'Number');
     this.setTooltip('Properties of the selected barcode');
-    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:line_api');
   }
 };
 
@@ -329,7 +329,7 @@ Blockly.Blocks['pixy2_getAllFeatures'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('This function returns all lines, intersections and barcodes that the line tracking algorithm detects. The results are returned in the variables vectors, intersections, and barcodes, respectively.');
-    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:line_api');
   }
 };
 
@@ -350,19 +350,94 @@ Blockly.Blocks['pixy2_getMainFeatures'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('This function gets the latest features including the Vector, any intersection that connects to the Vector, and barcodes. The results are returned in the variables vectors, intersections, and barcodes, respectively.');
-    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:general_api');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:line_api');
   }
 };
 
 
+Blockly.Blocks['pixy2_setNextTurn'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+        .appendField(Blockly.Msg.PIXY2_name)
+		.appendField(Blockly.Msg.PIXY2_SetAngle)
+	this.appendValueInput("Angle")
+        .setCheck("Number")
+	this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Turn angles are specified in degrees, with 0 being straight ahead, left being 90 and right being -90 (for example), although any valid angle value can be used. Valid angles are between -180 and 180.');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:line_api');
+  }
+};
+
+Blockly.Blocks['pixy2_setDefaultTurn'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+        .appendField(Blockly.Msg.PIXY2_name)
+		.appendField(Blockly.Msg.PIXY2_SetDefaultAngle)
+	this.appendValueInput("Angle")
+        .setCheck("Number")
+	this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('This function tells the line tracking algorithm which path to choose by default upon encountering an intersection.Turn angles are specified in degrees, with 0 being straight ahead, left being 90 and right being -90 (for example), although any valid angle value can be used. Valid angles are between -180 and 180.');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:line_api');
+  }
+};
 
 
+Blockly.Blocks['pixy2_setVector'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+        .appendField(Blockly.Msg.PIXY2_name)
+		.appendField(Blockly.Msg.PIXY2_SetVector)
+	this.appendValueInput("Index")
+        .setCheck("Number")
+	this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('If the LINE_MODE_MANUAL_SELECT_VECTOR mode bit is set, the line tracking algorithm will no longer choose the Vector automatically. Instead, setVector() will set the Vector by providing the index of the line.');
+   this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:line_api');
+  }
+};
 
 
+Blockly.Blocks['pixy2_reverseVector'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+        .appendField(Blockly.Msg.PIXY2_name)
+		.appendField(Blockly.Msg.PIXY2_ReverseVector)
+	this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('The Vector has a direction. It normally points up, from the bottom of the camera frame to the top of the camera frame for a forward-moving robot. Calling reverseVector() will invert the vector. This will typically cause your robot to back-up and change directions.');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:line_api');
+  }
+};
 
-
-
-
-
+Blockly.Blocks['pixy2_setMode'] = {
+   init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
+        .appendField(Blockly.Msg.PIXY2_name)
+		.appendField(Blockly.Msg.PIXY2_SelectMode)
+	this.appendValueInput("Mode")
+        .setCheck("Number")
+	this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('This function sets various modes in the line tracking algorithm. The mode argument consists of a bitwise-ORing.LINE_MODE_TURN_DELAYED 0x01,LINE_MODE_MANUAL_SELECT_VECTOR 0x02,LINE_MODE_WHITE_LINE 0x80');
+    this.setHelpUrl('https://docs.pixycam.com/wiki/doku.php?id=wiki:v2:line_api');
+  }
+};
 
 

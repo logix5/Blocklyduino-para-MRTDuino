@@ -2050,8 +2050,7 @@
 			</block>
 			<block type="pixy2_getAllFeatures"></block>
 			<block type="pixy2_getMainFeatures"></block>
-			
-			
+					
 			<block type="pixy2_getBlockProperties">
 					<value name="block_number">
                         <shadow type="math_number">
@@ -2100,8 +2099,42 @@
                         </shadow>
                     </value>
 			</block>
+			
+			<block type="pixy2_setMode">
+					<value name="Mode">
+                        <shadow type="math_number">
+                            <field name="NUM">1</field>
+                        </shadow>
+                    </value>
+			 </block>
 					
-		    <block type="pixy2_SetBrightness">
+			<block type="pixy2_setNextTurn">
+					<value name="Angle">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+			 </block>
+			 
+			<block type="pixy2_setDefaultTurn">
+					<value name="Angle">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+			 </block>
+			 
+			 <block type="pixy2_setVector">
+					<value name="Index">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+			 </block>
+			 
+			 <block type="pixy2_reverseVector"> </block>
+			 		 
+			<block type="pixy2_SetBrightness">
 					<value name="Brightness">
                         <shadow type="math_number">
                             <field name="NUM">255</field>
