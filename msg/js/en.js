@@ -489,12 +489,19 @@ Blockly.Msg.TCS3200_config="Frequency escale";
 Blockly.Msg.TCS3200_read="Read color";
 Blockly.Msg.TCS3200_values="Value";
 
+
+Blockly.Msg.TCS34725_name_init="Init TCS34725 color sensor";
+Blockly.Msg.TCS34725_name_init2="SDA Port13 - SCL Port14";
+Blockly.Msg.TCS34725_name="TCS34725 color sensor.";
+Blockly.Msg.TCS34725_read="Read values";
+Blockly.Msg.TCS34725_values="Value";
+Blockly.Msg.TCS34725_color="Is";
+Blockly.Msg.TCS34725_color2="color?";
+
 Blockly.Msg.HMC5883="Init HMC5883 compass sensor";
 Blockly.Msg.HMC5883_2="- SDA Port13 - SCL Port14";
 Blockly.Msg.HMC5883_read="HMC5883 compass sensor.Read values";
 Blockly.Msg.HMC5883_values="value";
-
-
 
 //RTC DS3231
 Blockly.Msg.RTCDS3231_NAME="Init RTC DS3231.SDA-Port13 SCL-Port14";

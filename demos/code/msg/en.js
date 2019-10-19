@@ -43,6 +43,7 @@ var MSG = {
   catds18b20:"DS18B20",
   catADXL345:"ADXL345 Accel",
   catTCS3200:"TCS3200 Color",
+  catTCS34725:"TCS34725 Color",
   catCamera:"Camera VC0706",
   catHMC5883:"HMC5883 Compass",
   catRotaryEncoder:"Rotary Encoder",

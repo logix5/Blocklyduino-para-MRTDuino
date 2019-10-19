@@ -545,7 +545,7 @@ Code.initLanguage = function() {
 
   var categories = ['catInOut','catSerialAll','catSerial','catSerial1','catSoftSerial','catBTAll','catBTSerial1','catBTSoftSerial','catMotors','catMotorMRT','catServo','catSimpleSensorsALL','catSimpleSensors','catSimpleSensors2','catSimpleSensors3','catSimpleActuators','catSerialLCD_I2C','catDisplay','catVision','catADXL345','catHMC5883','catDigital','catAnalog', 
                     'catString','catDivers','catInterruptExt','catStorage','catMAX7219_7D','catMAX7219_LM','catEEprom','catStepper','catStepper28BYJ','catRTCDS3231','catRTCDS1302','catLedStrip','catTM1637','catLogic','catLoops','catTime','catGenericTime', 'catMath', 'catText','catRotaryEncoder','catGPS','catAllVar','catVariables', 'catFunctions','catRemoteIR','catKeypad',
-					'catOtherSensors','catRFID','catRadioTEA5767','catCommunication','catDFPlayerMP3','catmicroSD','catAPDS9960','catWIFISerial1','catWIFISoftSerial','catOtherActuators','catWIFI','catIOT','catMQTTWifi','catRF24L01','catRF','catTCS3200','catCamera','catds18b20','catST7735','catServoRot','catPixy2','catArray'];
+					'catOtherSensors','catRFID','catRadioTEA5767','catCommunication','catDFPlayerMP3','catmicroSD','catAPDS9960','catWIFISerial1','catWIFISoftSerial','catOtherActuators','catWIFI','catIOT','catMQTTWifi','catRF24L01','catRF','catTCS3200','catTCS34725','catCamera','catds18b20','catST7735','catServoRot','catPixy2','catArray'];
   for (var i = 0, cat; cat = categories[i]; i++) {
     document.getElementById(cat).setAttribute('name', MSG[cat]);
   }

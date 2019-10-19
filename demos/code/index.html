@@ -50,6 +50,7 @@
 		<script src="../../blocks/ST7735.js"></script>
 		<script src="../../blocks/PIXY2.js"></script>
 		<script src="../../blocks/TCS3200.js"></script>
+		<script src="../../blocks/TCS34725.js"></script>
 		<script src="../../blocks/HMC5883.js"></script>
 		<script src="../../blocks/APDS9960.js"></script>
 		<script src="../../blocks/RotaryEncoder.js"></script>
@@ -119,6 +120,7 @@
 		<script src="../../generators/arduino/ST7735.js"></script>
 		<script src="../../generators/arduino/PIXY2.js"></script>
 		<script src="../../generators/arduino/TCS3200.js"></script>
+		<script src="../../generators/arduino/TCS34725.js"></script>
 		<script src="../../generators/arduino/HMC5883.js"></script>
 		<script src="../../generators/arduino/APDS9960.js"></script>
 		<script src="../../generators/arduino/RotaryEncoder.js"></script>
@@ -1385,6 +1387,15 @@
 	<block type="tcs3200_values"></block>
 	
 	</category>
+	
+	<category id="catTCS34725" colour="220">
+		<block type="init_tcs34725"></block>
+		<block type="read_tcs34725"></block>
+		<block type="tcs34725_values"></block>
+		<block type="tcs34725_color"></block>
+	</category>
+	
+	
 	<category id="catKeypad" colour="220"> 
 	 <block type="Init_Keypad4x4">
 	  <field name="PIN_R2">15</field>
