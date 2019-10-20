@@ -14,7 +14,7 @@ Blockly.Blocks['init_tcs34725'] = {
    init: function() {
     this.setColour(220);
     this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/tcs3200.png",62,38))
+		.appendField(new Blockly.FieldImage("images/TCS34725.png",62,38))
         .appendField(Blockly.Msg.TCS34725_name_init)
 		.appendField(Blockly.Msg.TCS34725_name_init2)
     this.setInputsInline(true);
@@ -29,7 +29,7 @@ Blockly.Blocks['read_tcs34725'] = {
    init: function() {
     this.setColour(220);
     this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/tcs3200.png",62,38))
+		.appendField(new Blockly.FieldImage("images/TCS34725.png",49,38))
         .appendField(Blockly.Msg.TCS34725_name)
 		.appendField(Blockly.Msg.TCS34725_read)
     this.setInputsInline(true);
@@ -51,7 +51,7 @@ Blockly.Blocks['tcs34725_values'] = {
   init: function() {
     this.setColour(220);
 	 this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/tcs3200.png",49,38))
+		.appendField(new Blockly.FieldImage("images/TCS34725.png",49,38))
 		.appendField(Blockly.Msg.TCS34725_name)
     this.appendDummyInput()
 		.appendField(new Blockly.FieldDropdown([['Red (RGB)','0'],['Green (RGB)','1'],['Blue (RGB)','2'],['Clarity','3'],['Hue (HSV)','4'],['Saturation (HSV)','5'],['Value (HSV)','6']]), "TypeValue")
@@ -67,7 +67,7 @@ Blockly.Blocks['tcs34725_color'] = {
   init: function() {
     this.setColour(220);
 	 this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/tcs3200.png",49,38))
+		.appendField(new Blockly.FieldImage("images/TCS34725.png",49,38))
 		.appendField(Blockly.Msg.TCS34725_name)
     this.appendDummyInput()
 		.appendField(Blockly.Msg.TCS34725_color)
