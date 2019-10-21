@@ -27,17 +27,14 @@ Blockly.Arduino['init_tcs34725'] = function(block) {
 Blockly.Arduino.definitions_['define_tcs34725_capturecolor'] = 'void fnc_tcs34725_capturecolor()\n'+
 '{\n'+
 '	uint16_t tcs_red, tcs_green, tcs_blue;\n'+
-'   tcs34725.setInterrupt(false);\n'+
-'	delay(60); // 50ms to get the color\n'+
 '	tcs34725.getRawData(&tcs_red, &tcs_green, &tcs_blue, &tcs34725_clear);\n'+
-'   tcs34725.setInterrupt(true);\n'+
 '	if (tcs34725_clear == 0) {\n'+
 '		tcs34725_r=tcs34725_g=tcs34725_b=0;\n'+
 '		return;\n'+
 '	}\n'+
-'	tcs34725_r = ((float)tcs_red / (float)(tcs34725_clear)) * 256.0;\n'+
-'	tcs34725_g = ((float)tcs_green / (float)(tcs34725_clear)) * 256.0;\n'+
-'	tcs34725_b = ((float)tcs_blue / (float)(tcs34725_clear)) * 256.0;\n'+
+'	tcs34725_r = ((float)tcs_red / (float)(tcs34725_clear)) * 255.0;\n'+
+'	tcs34725_g = ((float)tcs_green / (float)(tcs34725_clear)) * 255.0;\n'+
+'	tcs34725_b = ((float)tcs_blue / (float)(tcs34725_clear)) * 255.0;\n'+
 '	ColorConverter::RgbToHsv(static_cast<uint8_t>(tcs34725_r), static_cast<uint8_t>(tcs34725_g), static_cast<uint8_t>(tcs34725_b), tcs34725_h, tcs34725_s,tcs34725_v);\n'+
 '	tcs34725_h=tcs34725_h*360;\n'+
 '	tcs34725_s=tcs34725_s*100;\n'+
