@@ -156,7 +156,7 @@ Blockly.Arduino['math_single'] = function(block) {
       code = 'acos((' + arg + '/180.0)*3.14159)';
       break;
     case 'ATAN':
-      code = 'atan(((' + arg + '/180.0)*3.14159)';
+      code = 'atan((' + arg + '/180.0)*3.14159)';
       break;
     default:
       throw 'Unknown math operator: ' + operator;
