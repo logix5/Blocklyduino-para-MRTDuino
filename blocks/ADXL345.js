@@ -85,7 +85,7 @@ Blockly.Blocks['adxl345_values'] = {
     this.setColour(220);
     this.appendDummyInput()
 		.appendField(new Blockly.FieldImage("images/ADXL345.png",50,38))
-		.appendField(new Blockly.FieldDropdown([['Ax','0'],['Ay','1'],['Az','2']]), "TypeAccel")
+		.appendField(new Blockly.FieldDropdown([['Ax m^2/seg','0'],['Ay m^2/seg','1'],['Az m^2/seg','2']]), "TypeAccel")
 	    .appendField(Blockly.Msg.ADXL345_values);
     this.setOutput(true, 'Number');
 	this.setInputsInline(true);

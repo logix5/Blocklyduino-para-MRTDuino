@@ -476,7 +476,7 @@ Blockly.Msg.ADXL345="Init ADXL345 acceleration sensor";
 Blockly.Msg.ADXL345_2="- SDA Port13 - SCL Port14";
 Blockly.Msg.ADXL345_config="Config ADXL345 acceleration.Range";
 Blockly.Msg.ADXL345_read="ADXL345 acceleration sensor.Read values";
-Blockly.Msg.ADXL345_values="raw value";
+Blockly.Msg.ADXL345_values="value";
 
 Blockly.Msg.TCS3200="Init TCS3200 color sensor";
 Blockly.Msg.TCS3200_name="TCS3200 color sensor";
