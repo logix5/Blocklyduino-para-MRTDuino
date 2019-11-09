@@ -27,10 +27,10 @@ Blockly.Arduino['init_tcs34725'] = function(block) {
 
 Blockly.Arduino.definitions_['define_tcs34725_capturecolor'] = 'void fnc_tcs34725_capturecolor()\n'+
 '{\n'+
-'   tcs34725.setInterrupt(false);;\n'+
+'   tcs34725.setInterrupt(false);\n'+
 '   delay(60); // 50msec to capture the color;\n'+
 '	tcs34725.getRawData(&tcs_red, &tcs_green, &tcs_blue, &tcs34725_clear);\n'+
-'   tcs34725.setInterrupt(true);;\n'+
+'   tcs34725.setInterrupt(true);\n'+
 '	if (tcs34725_clear == 0) {\n'+
 '		tcs34725_r=tcs34725_g=tcs34725_b=0;\n'+
 '		return;\n'+
