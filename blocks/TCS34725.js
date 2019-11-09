@@ -17,6 +17,8 @@ Blockly.Blocks['init_tcs34725'] = {
 		.appendField(new Blockly.FieldImage("images/TCS34725.png",62,38))
         .appendField(Blockly.Msg.TCS34725_name_init)
 		.appendField(Blockly.Msg.TCS34725_name_init2)
+	 this.appendDummyInput()
+		.appendField(new Blockly.FieldDropdown([['No Gain configured ','TCS34725_GAIN_1X '],['4x Gain','TCS34725_GAIN_4X '],['16x Gain','TCS34725_GAIN_16X ']]), "Gain")
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);

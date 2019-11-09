@@ -10,11 +10,15 @@ goog.require('Blockly.Blocks');
 
 Blockly.Arduino['init_tcs34725'] = function(block) {
 	
+	
+ var Gain = block.getFieldValue('Gain');  	
+	
+	
  Blockly.Arduino.definitions_['define_wire'] = '#include <Wire.h>\n';
  Blockly.Arduino.definitions_['define_adafruit_tcs34725'] = '#include "Adafruit_TCS34725.h"\n';
  Blockly.Arduino.definitions_['define_colorconverter'] = '#include "ColorConverterLib.h"\n';
  
- Blockly.Arduino.definitions_['define_tcs34725'] = 'Adafruit_TCS34725 tcs34725 = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_1X);\n';
+ Blockly.Arduino.definitions_['define_tcs34725'] = 'Adafruit_TCS34725 tcs34725 = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS,'+Gain+');\n';
   
  Blockly.Arduino.definitions_['define_tcs34725_variables'] = 'double  tcs34725_r=0;\n'+
 'double  tcs34725_g=0;\n'+

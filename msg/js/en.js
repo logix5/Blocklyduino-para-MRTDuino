@@ -491,12 +491,12 @@ Blockly.Msg.TCS3200_values="Value";
 
 
 Blockly.Msg.TCS34725_name_init="Init TCS34725 color sensor";
-Blockly.Msg.TCS34725_name_init2="SDA Port13 - SCL Port14";
+Blockly.Msg.TCS34725_name_init2="SDA Port13 - SCL Port14 Gain";
 Blockly.Msg.TCS34725_name="TCS34725 color sensor.";
-Blockly.Msg.TCS34725_read="Read values";
+Blockly.Msg.TCS34725_read="Read all values";
 Blockly.Msg.TCS34725_values="Value";
 Blockly.Msg.TCS34725_color="Is";
-Blockly.Msg.TCS34725_color2="color?";
+Blockly.Msg.TCS34725_color2="color(No gain configured)?";
 
 Blockly.Msg.HMC5883="Init HMC5883 compass sensor";
 Blockly.Msg.HMC5883_2="- SDA Port13 - SCL Port14";
