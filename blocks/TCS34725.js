@@ -41,11 +41,6 @@ Blockly.Blocks['read_tcs34725'] = {
 };
 
 
-
-
-
-
-
 Blockly.Blocks['tcs34725_values'] = {
   helpUrl: '',
   init: function() {
@@ -54,7 +49,7 @@ Blockly.Blocks['tcs34725_values'] = {
 		.appendField(new Blockly.FieldImage("images/TCS34725.png",49,38))
 		.appendField(Blockly.Msg.TCS34725_name)
     this.appendDummyInput()
-		.appendField(new Blockly.FieldDropdown([['Red (RGB)','0'],['Green (RGB)','1'],['Blue (RGB)','2'],['Clarity','3'],['Hue (HSV)','4'],['Saturation (HSV)','5'],['Value (HSV)','6']]), "TypeValue")
+		.appendField(new Blockly.FieldDropdown([['Red Raw','10'],['Green Raw','11'],['Blue Raw','12'],['Red (RGB)','0'],['Green (RGB)','1'],['Blue (RGB)','2'],['Clarity','3'],['Hue (HSV)','4'],['Saturation (HSV)','5'],['Value (HSV)','6'],['Lux','7'],['Temp ','8']]), "TypeValue")
 		.appendField(Blockly.Msg.TCS34725_values)
     this.setOutput(true, 'Number');
 	this.setInputsInline(true);

@@ -20,18 +20,23 @@ Blockly.Arduino['init_tcs34725'] = function(block) {
 'double  tcs34725_g=0;\n'+
 'double  tcs34725_b=0;\n'+
 'uint16_t  tcs34725_clear=0;\n'+
+'uint16_t  tcs_red, tcs_green, tcs_blue, colorTemp, lux;\n'+
 'double  tcs34725_h=0;\n'+
 'double  tcs34725_s=0;\n'+
 'double  tcs34725_v=0;\n';
 
 Blockly.Arduino.definitions_['define_tcs34725_capturecolor'] = 'void fnc_tcs34725_capturecolor()\n'+
 '{\n'+
-'	uint16_t tcs_red, tcs_green, tcs_blue;\n'+
+'   tcs34725.setInterrupt(false);;\n'+
+'   delay(60); // 50msec to capture the color;\n'+
 '	tcs34725.getRawData(&tcs_red, &tcs_green, &tcs_blue, &tcs34725_clear);\n'+
+'   tcs34725.setInterrupt(true);;\n'+
 '	if (tcs34725_clear == 0) {\n'+
 '		tcs34725_r=tcs34725_g=tcs34725_b=0;\n'+
 '		return;\n'+
 '	}\n'+
+'   colorTemp = tcs34725.calculateColorTemperature_dn40(tcs_red, tcs_green, tcs_blue, tcs34725_clear);\n'+
+'   lux = tcs34725.calculateLux(tcs_red, tcs_green, tcs_blue);\n'+
 '	tcs34725_r = ((float)tcs_red / (float)(tcs34725_clear)) * 256.0;\n'+
 '	tcs34725_g = ((float)tcs_green / (float)(tcs34725_clear)) * 256.0;\n'+
 '	tcs34725_b = ((float)tcs_blue / (float)(tcs34725_clear)) * 256.0;\n'+
@@ -80,6 +85,22 @@ Blockly.Arduino['tcs34725_values'] = function(block) {
 	case '6':
       code = 'tcs34725_v';
       break;
+	case '7':
+      code = 'lux';
+      break;
+	case '8':
+      code = 'colorTemp';
+      break;
+	case '10':
+      code = 'tcs_red';
+      break;
+	case '11':
+      code = 'tcs_green';
+      break;
+	case '12':
+      code = 'tcs_blue';
+    break;
+	    
     default:
 	  code = 'tcs34725_r';
 	  break;
