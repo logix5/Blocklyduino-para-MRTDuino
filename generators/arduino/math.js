@@ -134,13 +134,13 @@ Blockly.Arduino['math_single'] = function(block) {
       code = 'floor(' + arg + ')';
       break;
     case 'SIN':
-      code = 'sin((' + arg + '/180.0)*3.14159)';
+      code = 'sin(' + arg + ')';
       break;
     case 'COS':
-      code = 'cos((' + arg + '/180.0)*3.14159)';
+      code = 'cos(' + arg + ')';
       break;
     case 'TAN':
-      code = 'tan((' + arg + '/180.0)*3.14159)';
+      code = 'tan(' + arg + ')';
       break;
   }
   if (code) {
@@ -150,13 +150,13 @@ Blockly.Arduino['math_single'] = function(block) {
   // wrapping the code.
   switch (operator) {
     case 'ASIN':
-      code = 'asin((' + arg + '/180.0)*3.14159)';
+      code = 'asin(' + arg + ')';
       break;
     case 'ACOS':
-      code = 'acos((' + arg + '/180.0)*3.14159)';
+      code = 'acos(' + arg + ')';
       break;
     case 'ATAN':
-      code = 'atan((' + arg + '/180.0)*3.14159)';
+      code = 'atan(' + arg + ')';
       break;
     default:
       throw 'Unknown math operator: ' + operator;
