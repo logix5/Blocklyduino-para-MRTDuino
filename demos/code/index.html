@@ -213,7 +213,9 @@
 							<button  onClick="parent.open('https://www.logix5.com/roboticaeducativa/producto/beduino/')" class="btn1"><img src='../../media/shop.png' class="icon21"> Buy
 							</button>
 							
-                            <input type="file" id="load" style="display: none;"/>
+							<button id="myBtn"><img src='../../media/arduino.png' class="run icon21"></button>
+													
+							<input type="file" id="load" style="display: none;"/>
                             </td>
                         </tr>
                     </table>
@@ -2174,19 +2176,33 @@
 			<block type="pixy2_properties"></block>
 			<block type="pixy2_getFPS"></block>
 			<block type="pixy2_getResolution"></block>
-			 
-			 
-		
 			</category>
 		
 		</category>
 		
-		
-		
-      
-		
     </xml>
 
+	<div id="myModal" class="modal" >
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Choose one example</h2>
+            </div>
+            <div class="modal-body">
+                <p><button id="model1" onclick="CargarCodigo('model1')">Duck</button>Server in an open network</p>
+                <p><button id="model2" onclick="CargarCodigo('model2')">Model 2</button>Server in an encrypted network</p>
+                <p><button id="model3" onclick="CargarCodigo('model3')">Model 3</button>Client in an open network</p>
+                <p><button id="model4" onclick="CargarCodigo('model4')">Model 4</button>Client in an encrypted network</p>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+
+    </div>
+	
+	
     <div id="badBlockDiv" class="dialogHiddenContent">
         <table>
             <tbody>
@@ -2209,9 +2225,39 @@
         </table>
 
     </div>
+	
 
+	
+	<script type="text/javascript">
 
+        // Get the modal
+        var modal = document.getElementById('myModal');
 
+// Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+// When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+// When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+	
+	
     <script type="text/javascript">  var loadInput = document.getElementById('load');
         loadInput.addEventListener('change', load, false);
         document.getElementById('fakeload').onclick = function () {
