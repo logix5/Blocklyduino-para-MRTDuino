@@ -413,7 +413,7 @@ Code.init = function() {
     // Make the 'Blocks' tab line up with the toolbox.
     if (Code.workspace && Code.workspace.toolbox_.width) {
       document.getElementById('tab_blocks').style.minWidth =
-          (Code.workspace.toolbox_.width - 38) + 'px';
+          (Code.workspace.toolbox_.width -38) + 'px';
           // Account for the 19 pixel margin and on each side.
     }
   };
@@ -538,6 +538,11 @@ Code.initLanguage = function() {
   document.getElementById('linkButton').title = MSG['linkTooltip'];
   document.getElementById('runButton').title = MSG['runTooltip'];
   document.getElementById('trashButton').title = MSG['trashTooltip'];
+  document.getElementById('uploadButton').title = MSG['uploadTooltip'];
+  document.getElementById('myBtn').title = MSG['myBtnTooltip'];
+  document.getElementById('buyBtn').title = MSG['BuyTooltip'];
+  document.getElementById('boardBtn').title = MSG['BoardTooltip'];
+  
   
   document.getElementById('savexmlButton').title = MSG['saveXMLTooltip']; 
   document.getElementById('fakeload').title = MSG['loadXMLTooltip']; 
