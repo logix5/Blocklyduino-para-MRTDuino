@@ -758,15 +758,14 @@ Blockly.Msg.TM1637_PinDIO = "Pin DIO";
 Blockly.Msg.M1637_Brightness = "Set brightness(0-7)";
 Blockly.Msg.M1637_turnOFF_ON = "Turn";
 Blockly.Msg.M1637_Clear = "Clear";
-Blockly.Msg.M1637_Digit = "in digit(0-3)";
-Blockly.Msg.M1637_Segment="Set segments(bin or hex or dec)";
-Blockly.Msg.M1637_number="Set number(0-9)";
-Blockly.Msg.M1637_dpOFF_ON = "Show point";
-Blockly.Msg.M1637_dpOFF_ON_2 = "Show two point";
-Blockly.Msg.M1637_completenumber="Set complete number(0-9999)";
-Blockly.Msg.M1637_Hour="Set hour";
-Blockly.Msg.M1637_Min="Set minute";
-Blockly.Msg.M1637_Second="Set second";
+Blockly.Msg.M1637_number="Set number";
+Blockly.Msg.M1637_Digit = "Position(0-3)";
+Blockly.Msg.M1637_Length = "Number of digits to set";
+Blockly.Msg.M1637_fill = "Leading zeros";
+Blockly.Msg.M1637_digitsegment="Segment of digit(0-3)";
+Blockly.Msg.M1637_value="Value";
+
+
 
 //RADIO TEA5767
 Blockly.Msg.TEA5767_name = "Radio TEA5767.";
