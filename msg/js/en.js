@@ -762,8 +762,10 @@ Blockly.Msg.M1637_number="Set number";
 Blockly.Msg.M1637_Digit = "Position(0-3)";
 Blockly.Msg.M1637_Length = "Number of digits to set";
 Blockly.Msg.M1637_fill = "Leading zeros";
-Blockly.Msg.M1637_digitsegment="Segment of digit(0-3)";
+Blockly.Msg.M1637_digitsegment="Set segment array digit(0-3)";
 Blockly.Msg.M1637_value="Value";
+Blockly.Msg.M1637_arraysegment="Display segment array.";
+
 
 
 

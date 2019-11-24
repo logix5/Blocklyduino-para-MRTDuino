@@ -124,6 +124,7 @@ Blockly.Blocks['DisplayTM1637_segments'] = {
 		.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
         .appendField(Blockly.Msg.TM1637_name)
 		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
+		.appendField(Blockly.Msg.M1637_arraysegment)
 	this.appendValueInput("Digit")
 		.setCheck('Number')
 		.appendField(Blockly.Msg.M1637_Digit)
