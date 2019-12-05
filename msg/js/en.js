@@ -796,6 +796,22 @@ Blockly.Msg.MP3_playsong = "Play song number";
 Blockly.Msg.MP3_playsongdirectory = "in directory number";
 Blockly.Msg.MP3_repeatsong = "Repeat song number";
 
+
+//YK5300 MP3
+Blockly.Msg.MP3YK_name = "Mp3 YK5300";
+Blockly.Msg.MP3YK_init = "Init Mp3 YK5300 using software serial";
+Blockly.Msg.MP3YK_TX="Port TX#";
+Blockly.Msg.MP3YK_RX="Port RX#";
+Blockly.Msg.MP3YK_equalizer = "Set equalizer";
+Blockly.Msg.MP3YK_volumen = "Set volumen(0-30)";
+Blockly.Msg.MP3YK_operation = "Operation:";
+Blockly.Msg.MP3YK_check = "Check mp3.Need to be executed in main loop";
+Blockly.Msg.MP3YK_playsong = "Play track number";
+Blockly.Msg.MP3YK_playsongdirectory = "in folder number";
+Blockly.Msg.MP3YK_folderrepeat = "Play Folder repeat number";
+Blockly.Msg.MP3YK_songrepeat = "Play Track repeat number";
+Blockly.Msg.MP3YK_foldershuffle = "Play Folder Shuffle number";
+
 //GPS
 Blockly.Msg.GPS_name = "GPS NEO-6";
 Blockly.Msg.GPS_init = "Init GPS using software serial";

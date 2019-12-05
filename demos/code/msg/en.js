@@ -39,6 +39,7 @@ var MSG = {
   catOtherActuators:"Other Actuators",
   catRadioTEA5767:"Radio TEA5767",
   catDFPlayerMP3:"DFPlayer MP3",
+  catYK5300MP3:"YK5300 MP3",
   catKeypad:"Keypad",
   catds18b20:"DS18B20",
   catADXL345:"ADXL345 Accel",

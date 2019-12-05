@@ -42,6 +42,7 @@
 		<script src="../../blocks/simpleSensors.js"></script>
 		<script src="../../blocks/RadioTEA5767.js"></script>
 		<script src="../../blocks/DFPlayerMP3.js"></script>
+		<script src="../../blocks/MP3YX5300.js"></script>
 		<script src="../../blocks/keypad.js"></script>
 		<script src="../../blocks/Temp-ds18b20.js"></script>
 		<script src="../../blocks/InterruptExt.js"></script>
@@ -111,6 +112,7 @@
 		<script src="../../generators/arduino/simpleSensors.js"></script>
 		<script src="../../generators/arduino/RadioTEA5767.js"></script>
 		<script src="../../generators/arduino/DFPlayerMP3.js"></script>
+		<script src="../../generators/arduino/MP3YX5300.js"></script>
 		<script src="../../generators/arduino/simpleActuators.js"></script>
 		<script src="../../generators/arduino/keypad.js"></script>
 		<script src="../../generators/arduino/Temp-ds18b20.js"></script>
@@ -1550,6 +1552,71 @@
 			<block type="DFPplayerMp3_repeatoperation"></block>
 			
 		  </category> 
+		  
+		   <category id="catYK5300MP3" colour="220"> 
+			 <block type="YX5300Mp3_init_ss">
+			  <field name="PIN1">9</field>
+			  <field name="PIN2">11</field>
+			 </block>
+			<block type="YX5300Mp3_set_equalizator"></block>
+			<block type="YX5300Mp3_set_volumen">
+				<value name="Volumen">
+                        <shadow type="math_number">
+                            <field name="NUM">20</field>
+                        </shadow>
+                    </value>
+			</block>
+			<block type="YX5300Mp3_running"></block>
+			<block type="YX5300Mp3_operation"></block>
+			
+			<block type="YX5300Mp3_playsong">
+			<value name="Song">
+                        <shadow type="math_number">
+                            <field name="NUM">1</field>
+                        </shadow>
+                    </value>
+			
+			</block>
+			<block type="YX5300Mp3_playsongdirectiry">
+			<value name="Song">
+                        <shadow type="math_number">
+                            <field name="NUM">1</field>
+                        </shadow>
+                    </value>
+			<value name="Directory">
+                        <shadow type="math_number">
+                            <field name="NUM">1</field>
+                        </shadow>
+                    </value>
+			</block>
+								
+			<block type="YX5300Mp3_playTrackRepeat">
+			<value name="Song">
+                        <shadow type="math_number">
+                            <field name="NUM">1</field>
+                        </shadow>
+                    </value>
+			</block>
+			<block type="YX5300Mp3_playfolderrepeat">
+			<value name="Folder">
+                        <shadow type="math_number">
+                            <field name="NUM">1</field>
+                        </shadow>
+                    </value>
+			</block>
+			<block type="YX5300Mp3_playFolderShuffle">
+			<value name="Folder">
+                        <shadow type="math_number">
+                            <field name="NUM">1</field>
+                        </shadow>
+                    </value>
+			</block>
+			
+			
+			
+		  </category> 
+		  
+		  		  
 	</category> 
         <sep></sep>
         <category id="catDisplay" colour="150">

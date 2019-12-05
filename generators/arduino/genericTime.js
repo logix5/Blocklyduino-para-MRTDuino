@@ -17,7 +17,7 @@ Blockly.Arduino['base_delayms'] = function(block) {
 
 Blockly.Arduino['base_delays'] = function(block) {
   var delay_time = Blockly.Arduino.valueToCode(block, 'DELAY_TIME', Blockly.Arduino.ORDER_ATOMIC) || '1000';
-  var code = 'delay(' + delay_time + '*1000);\n';
+  var code = 'delay((long)' + delay_time + '*1000);\n';
   return code;
 };
 
