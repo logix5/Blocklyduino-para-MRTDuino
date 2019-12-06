@@ -108,7 +108,7 @@ Blockly.Blocks['IR_Remote_Key_pindedicated'] = {
     this.appendDummyInput()
 		.appendField(new Blockly.FieldImage("images/remotecontrol.png",65,38))
 	    .appendField(Blockly.Msg.MRT_KEY2)
-		.appendField(new Blockly.FieldDropdown([["UP", "44"], ["DOWN", "62"],["LEFT", "63"],["RIGHT", "61"],["UP and LEFT", "54"],["UP and RIGHT", "57"],["DOWN and LEFT", "51"],["DOWN and RIGHT", "57"],["F1", "50"],["F2", "35"],["F3", "52"],["F4", "37"],["F5", "38"],["F6", "55"],["OFF", "53"]]), "KEY")
+		.appendField(new Blockly.FieldDropdown([["UP", "44"], ["DOWN", "62"],["LEFT", "63"],["RIGHT", "61"],["UP and LEFT", "54"],["UP and RIGHT", "60"],["DOWN and LEFT", "51"],["DOWN and RIGHT", "57"],["F1", "50"],["F2", "35"],["F3", "52"],["F4", "37"],["F5", "38"],["F6", "55"],["OFF", "53"]]), "KEY")
 	this.appendDummyInput()
 		.appendField(Blockly.Msg.MRT_PRESSED)
     this.setOutput(true, 'Boolean');

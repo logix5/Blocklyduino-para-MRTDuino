@@ -14,7 +14,7 @@ Blockly.Blocks['YX5300Mp3_init_ss'] = {
   init: function() {
 	this.setColour(220);
 	this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/dfplayer.png",43,38))
+		.appendField(new Blockly.FieldImage("images/yx5300.png",43,38))
         .appendField(Blockly.Msg.MP3YK_init)
 	 this.appendDummyInput()
 		.appendField(Blockly.Msg.MP3YK_TX)
@@ -162,7 +162,7 @@ Blockly.Blocks['YX5300Mp3_playFolderShuffle'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('Play folder shuffle');
+    this.setTooltip('Play randon all files');
   }
 };
 

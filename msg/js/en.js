@@ -810,7 +810,7 @@ Blockly.Msg.MP3YK_playsong = "Play track number";
 Blockly.Msg.MP3YK_playsongdirectory = "in folder number";
 Blockly.Msg.MP3YK_folderrepeat = "Play Folder repeat number";
 Blockly.Msg.MP3YK_songrepeat = "Play Track repeat number";
-Blockly.Msg.MP3YK_foldershuffle = "Play Folder Shuffle number";
+Blockly.Msg.MP3YK_foldershuffle = "Play all files (1-random 0-none)";
 
 //GPS
 Blockly.Msg.GPS_name = "GPS NEO-6";

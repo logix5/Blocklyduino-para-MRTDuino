@@ -104,9 +104,9 @@ Blockly.Arduino['YX5300Mp3_playfolderrepeat'] = function(block) {
 
 Blockly.Arduino['YX5300Mp3_playFolderShuffle'] = function(block) {
  		
- var folder = Blockly.Arduino.valueToCode(this, 'Folder', Blockly.Arduino.ORDER_ATOMIC); 	
+ var result = Blockly.Arduino.valueToCode(this, 'Folder', Blockly.Arduino.ORDER_ATOMIC); 	
   
-  var code = 'mp3.playFolderShuffle('+folder+');\n';
+  var code = 'mp3.shuffle('+result+');\n';
  
   return code;
 };
