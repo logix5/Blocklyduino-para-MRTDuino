@@ -798,8 +798,8 @@ Blockly.Msg.MP3_repeatsong = "Repeat song number";
 
 
 //YK5300 MP3
-Blockly.Msg.MP3YK_name = "Mp3 YK5300";
-Blockly.Msg.MP3YK_init = "Init Mp3 YK5300 using software serial";
+Blockly.Msg.MP3YK_name = "Mp3 YX5300";
+Blockly.Msg.MP3YK_init = "Init Mp3 YX5300 using software serial";
 Blockly.Msg.MP3YK_TX="Port TX#";
 Blockly.Msg.MP3YK_RX="Port RX#";
 Blockly.Msg.MP3YK_equalizer = "Set equalizer";
