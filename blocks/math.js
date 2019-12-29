@@ -562,6 +562,21 @@ Blockly.Blocks['var_random'] = {
   }
 };
 
+Blockly.Blocks['var_randomseed'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.math.HUE);
+    this.setHelpUrl('');
+    this.appendValueInput("randomseed")
+        .setCheck("Number")
+        .appendField(Blockly.Msg.RandomSeed);
+	this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Ramdom Seed');
+  }
+};
+
+
 Blockly.Blocks['various_constrain'] = {
   init: function() {
     this.setColour(Blockly.Blocks.math.HUE);

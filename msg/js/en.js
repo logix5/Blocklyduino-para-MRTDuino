@@ -950,7 +950,7 @@ Blockly.Msg.MQTT_user = "User:";
 Blockly.Msg.MQTT_APIkey = "API Key:";
 Blockly.Msg.MQTT_client = "ID client:";
 Blockly.Msg.MQTT_topicattend = "Attention to subscribed topics";
-Blockly.Msg.MQTT_topicreset = "Attended topic";
+Blockly.Msg.MQTT_topicreset = "Reset topic";
 Blockly.Msg.MQTT_topicsubscribe = "Subscribe to the";
 Blockly.Msg.MQTT_topicsubscribe2 = "topic";
 Blockly.Msg.MQTT_topicpublish = "Publish the topic";
@@ -962,7 +962,7 @@ Blockly.Msg.MQTT_topicValueString = "String value of the topic";
 
 
 
-//RFID ST7735
+//DISPLAY TFT ST7735
 Blockly.Msg.ST7735_name = "TFT";
 Blockly.Msg.ST7735_init = "Init TFT ST7735 1.8\".";
 Blockly.Msg.ST7735_init2 = "Pins:SCK Port2 SDA Port3.";
@@ -1002,6 +1002,15 @@ Blockly.Msg.ST7735_properties = "Return property:";
 Blockly.Msg.ST7735_IconName = "Icon name(bmp):";
 Blockly.Msg.ST7735_ValueList = "Values(hex array)";
 Blockly.Msg.ST7735_DrawiconName = "Draw Icon(bmp) name";
+
+//DISPLAY TFT NEXTION
+Blockly.Msg.Nextion_Init = "Init TFT Nextion.";
+Blockly.Msg.Nextion_Init2 = "RX# Port15 TX# Port16.Baudios ";
+Blockly.Msg.Nextion_name = "TFT Nextion";
+Blockly.Msg.Nextion_sendcommnad = "Send command ";
+Blockly.Msg.Nextion_value = "with value ";
+Blockly.Msg.Nextion_text = "with text ";
+Blockly.Msg.Nextion_color = "TFT Nextion Color";
 
 //PIXY2 
 Blockly.Msg.PIXY2_name = "Pixy2";
@@ -1135,6 +1144,7 @@ Blockly.Msg.cm="cm";
 Blockly.Msg.inch="inch";
 Blockly.Msg.TRIG="TRIG Trigger";
 Blockly.Msg.Echo="Echo";
+Blockly.Msg.RandomSeed="Random Seed";
 
 //LOOPS
 Blockly.Msg.Break = "Break";
@@ -1180,6 +1190,7 @@ Blockly.Msg.CONV_tofloat="Casting to Float ";
 Blockly.Msg.CONV_toString="Convert to String ";
 Blockly.Msg.CONV_toBinary="Convert to number the binary number";
 Blockly.Msg.CONV_toHex="Convert to number the hex number";
+Blockly.Msg.CONV_decimal="Number of decimals";
     
 //ADVANCED I/O
 

@@ -745,4 +745,17 @@ Blockly.Blocks['conversion_toString'] = {
 };
 
 
-
+Blockly.Blocks['conversion_toString2'] = {
+  init: function() {
+    this.setColour(Blockly.Blocks.texts.HUE);
+	this.appendValueInput("NAME")
+         .appendField(Blockly.Msg.CONV_toString)
+    this.appendValueInput("Decimals")
+		.setCheck('Number')
+        .appendField(Blockly.Msg.CONV_decimal);
+	this.setInputsInline(true);
+    this.setOutput(true, 'String');
+    this.setTooltip('Converts a value to the String data type.');
+    this.setHelpUrl('https://www.arduino.cc/en/Reference/StringConstructor');
+  }
+};

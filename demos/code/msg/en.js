@@ -23,6 +23,7 @@ var MSG = {
   catLedStrip:"Led Strip",
   catPixy2:"Pixy2",
   catST7735:"TFT ST7735",
+  catNEXTION:"TFT Nextion",
   catTM1637:"TM1637 display",
   catRTCDS3231:"RTC DS3231",
   catRTCDS1302:"RTC DS1302",

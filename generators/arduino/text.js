@@ -55,6 +55,15 @@ Blockly.Arduino['conversion_toString'] = function(block) {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino['conversion_toString2'] = function(block) {
+	var value_name = Blockly.Arduino.valueToCode(block, 'NAME', Blockly.Arduino.ORDER_ATOMIC);
+	var decimals = Blockly.Arduino.valueToCode(block, 'Decimals', Blockly.Arduino.ORDER_ATOMIC);
+	
+	var code = 'String('+value_name+','+decimals+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+
 Blockly.Arduino['text_join'] = function(block) {
   var code;
   if (block.itemCount_ == 0) {

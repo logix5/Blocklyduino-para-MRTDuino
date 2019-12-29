@@ -173,6 +173,14 @@ Blockly.Arduino['var_random'] = function(block) {
   return [code, Blockly.Arduino.ORDER_NONE];
 };
 
+Blockly.Arduino['var_randomseed'] = function(block) {
+  var value_rand_seed = Blockly.Arduino.valueToCode(this, 'randomseed', Blockly.Arduino.ORDER_ATOMIC);
+  
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'randomSeed('+value_rand_seed+');\n';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return code;
+};
 
 Blockly.Arduino['various_constrain'] = function(block) {
   var value_x = Blockly.Arduino.valueToCode(this, 'x', Blockly.Arduino.ORDER_ATOMIC);

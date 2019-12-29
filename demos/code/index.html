@@ -49,6 +49,7 @@
 		<script src="../../blocks/RFID.js"></script>
 		<script src="../../blocks/ADXL345.js"></script>
 		<script src="../../blocks/ST7735.js"></script>
+		<script src="../../blocks/Nextion.js"></script>
 		<script src="../../blocks/PIXY2.js"></script>
 		<script src="../../blocks/TCS3200.js"></script>
 		<script src="../../blocks/TCS34725.js"></script>
@@ -120,6 +121,7 @@
 		<script src="../../generators/arduino/RFID.js"></script>
 		<script src="../../generators/arduino/ADXL345.js"></script>
 		<script src="../../generators/arduino/ST7735.js"></script>
+		<script src="../../generators/arduino/Nextion.js"></script>
 		<script src="../../generators/arduino/PIXY2.js"></script>
 		<script src="../../generators/arduino/TCS3200.js"></script>
 		<script src="../../generators/arduino/TCS34725.js"></script>
@@ -170,7 +172,7 @@
 					
 					</td>
 					<td align="right" style="width: 15%;" class="farSide">
-						 <h5 ><select id="languageMenu"></select><b><font color="000080">Ver 2.2 </font></b></h5>
+						 <h5 ><select id="languageMenu"></select><b><font color="000080">Ver 2.3 </font></b></h5>
 					</td>
 				</table>
                 </td>
@@ -325,6 +327,13 @@
                     </shadow>
                 </value>
 			</block>
+			<block type="var_randomseed">
+				<value name="randomseed">
+                    <shadow type="math_number">
+                        <field name="NUM">1000</field>
+                    </shadow>
+                </value>
+			</block>
 			<block type="math_number_property"></block>
 			<block type="math_modulo"></block>
 			<block type="various_constrain"></block>
@@ -347,6 +356,18 @@
             <block type="text_char"></block>
 			<block type="conversion_tochar"></block>
 			<block type="conversion_toString"></block>
+			<block type="conversion_toString2">
+			
+			    <value name="Decimals">
+                    <shadow type="math_number" >
+                        <field name="NUM">5</field>
+                    </shadow>
+                </value>
+			
+			
+			
+			</block>
+			
 			<block type="text_join"></block>
 			
         </category>
@@ -1926,6 +1947,34 @@
 			  </block>
 			   <block type="st7735_properties"></block>
 			  </category>
+			  
+			   <category id="catNEXTION" colour="140">
+					<block type="nextion_init">
+						<field name="PINBAUDIOS">9600</field>
+					</block>
+					
+					<block type="nextion_sendcommand_value">
+					<value name="variable">
+                        <shadow type="math_number">
+                             <field name="NUM">123</field>
+                        </shadow>
+                    </value>
+					
+					</block>
+					
+					<block type="nextion_sendcommand_text">
+					 
+					 <value name="variable">
+                        <shadow type="text">
+                             <field name="TEXT">value as text</field>
+                        </shadow>
+                    </value>				 
+					</block>
+					
+					<block type="nextion_color"></block>
+					
+			  </category>
+			  
 			
 			 <category id="catMAX7219_LM" colour="140">
 			 <block type="Init_MAX7219_ledmatrix">
