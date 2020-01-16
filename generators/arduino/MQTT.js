@@ -67,7 +67,7 @@ Blockly.Arduino.definitions_['define_mqtt_functions'] = 'double mqtt_payload2dou
   
 Blockly.Arduino.functionNamesIOT_['subscriber_vacio']  = '';  
   
-  Blockly.Arduino.setups_['setup_serial'] = 'Serial1.begin(9600);\n'+
+  Blockly.Arduino.setups_['setup_MQTT_serial'] = 'Serial1.begin(9600);\n'+
 '  IOT_MQTT.begin(mqtt_broker,mqtt_port, mqtt_user,mqtt_pass, mqtt_clientid, mqtt_esp8266_wifi, mqtt_wifi_ssid, mqtt_wifi_pass, mqtt_callback, mqtt_subscribe);\n'+
 '  TopicReceived="";\n';
 
