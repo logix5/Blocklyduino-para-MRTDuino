@@ -37,7 +37,7 @@ Blockly.Arduino['RotaryEncoder_Write'] = function(block) {
   var number = this.getFieldValue('RE_NUMBER');
   var writenumber =Blockly.Arduino.valueToCode(this, 'Writecounter', Blockly.Arduino.ORDER_ATOMIC);
   
-  var code = 'encoder_'+number+'.write('+writenumber+');\n'
+  var code = 'encoder_'+number+'.write('+writenumber+'*4);\n'
    
   return code;
 };

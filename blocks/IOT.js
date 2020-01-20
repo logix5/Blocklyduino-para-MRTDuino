@@ -17,6 +17,9 @@ Blockly.Blocks['iot_init_iot'] = {
 		.appendField(new Blockly.FieldImage("images/esp8266.png",62,38))
         .appendField(Blockly.Msg.IOT_name_init)
 		.appendField(Blockly.Msg.IOT_name_init2)
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.IOT_Baudios)
+		.appendField(new Blockly.FieldDropdown([['1200', '1200'],['2400', '2400'],['4800', '4800'],['9600', '9600'],['19200', '19200'],['38400', '38400'],['57600', '57600'],['115200', '115200']]), "PINBAUDIOS");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -197,7 +200,7 @@ Blockly.Blocks['iot_sendthinkspeak_esp8266'] = {
 		.appendField(Blockly.Msg.IOT_sendthinkspeak)
 	this.appendValueInput("field")
 		.appendField(Blockly.Msg.IOT_field)
-        .setCheck('String');
+        .setCheck('Number');
 	this.appendValueInput("value")
 		.appendField(Blockly.Msg.IOT_value)
         .setCheck('Number');	

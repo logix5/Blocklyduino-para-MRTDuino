@@ -10,9 +10,11 @@ goog.require('Blockly.Blocks');
 
 Blockly.Arduino['iot_init_iot'] = function(block) {
 
+  var dropdown_pinbaudios = this.getFieldValue('PINBAUDIOS');
+   
   Blockly.Arduino.definitions_['define_iot'] = '#include <IOT_ts.h>\n';
   Blockly.Arduino.definitions_['define_iot_variable'] = 'Iot_device iot;\n';
-  Blockly.Arduino.setups_['setup_serial'] = 'Serial.begin(115200);\n';
+  Blockly.Arduino.setups_['setup_serial_IOT'] = 'Serial1.begin('+dropdown_pinbaudios+');\n';
   
   var code='';
   return code;
