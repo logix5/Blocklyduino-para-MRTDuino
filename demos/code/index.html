@@ -172,7 +172,7 @@
 					
 					</td>
 					<td align="right" style="width: 15%;" class="farSide">
-						 <h5 ><select id="languageMenu"></select><b><font color="000080">Ver 2.4 </font></b></h5>
+						 <h5 ><select id="languageMenu"></select><b><font color="000080">Ver 2.5</font></b></h5>
 					</td>
 				</table>
                 </td>
@@ -834,13 +834,6 @@
  
 	<category id="catIOT" colour="200"> 
 	<block type="iot_init_iot"></block>
-	<block type="iot_init_ifttt">
-			<value name="APIwrite">
-                    <shadow type="text">
-                        <field name="TEXT">7MWRTNYIWQ3T3E0X</field>
-                    </shadow>
-                </value>
-	</block>
 	<block type="iot_init_thinkspeak">
 		<value name="APIwrite">
                     <shadow type="text">
@@ -894,28 +887,6 @@
                 </value>
 	</block>
 	
-	<block type="iot_sendifttt_esp8266">
-				<value name="event">
-                    <shadow type="text">
-                        <field name="TEXT">my event</field>
-                    </shadow>
-                </value>
-				<value name="value1">
-                    <shadow type="math_number">
-                         <field name="NUM">1</field>
-                    </shadow>
-                </value>
-				<value name="value2">
-                    <shadow type="math_number">
-                         <field name="NUM">2</field>
-                    </shadow>
-                </value>
-				<value name="value3">
-                    <shadow type="math_number">
-                         <field name="NUM">3</field>
-                    </shadow>
-                </value>
-	</block>
 	<block type="iot_sendthinkspeak_esp8266">
 				<value name="field">
                      <shadow type="math_number">
