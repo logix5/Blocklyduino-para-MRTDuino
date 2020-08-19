@@ -17,9 +17,9 @@ var lVsMu = [["MU00", "0"],["MU01", "1"],["MU10", "2"],["MU11", "3"]];
 
 Blockly.Blocks.VisionSensor.HUE = 140;
 Blockly.Blocks.VisionSensor.HUE_SetupMode = 140;
-Blockly.Blocks.VisionSensor.HUE_RunMode = 145;
-Blockly.Blocks.VisionSensor.HUE_LightSensor = 150;
-Blockly.Blocks.VisionSensor.HUE_AT = 160;
+Blockly.Blocks.VisionSensor.HUE_RunMode = 140;
+Blockly.Blocks.VisionSensor.HUE_LightSensor = 160;
+Blockly.Blocks.VisionSensor.HUE_AT = 170;
 
 
 //Este bloque hay que revisarlo porque coge el inicio del puerto serie de otra manera
@@ -27,7 +27,9 @@ Blockly.Blocks.VisionSensor.HUE_AT = 160;
 Blockly.Blocks['Vs2MuInit'] = {
   init: function() {
   var dropdown_list = [["I2C","Wire"],["Serial","Serial1"]];
-    this.setColour(140);
+    this.setColour(Blockly.Blocks.VisionSensor.HUE_SetupMode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput()
         .appendField(Blockly.LKL_VS2_MU)
         .appendField(new Blockly.FieldDropdown(lVsMu), "MU_OBJ")
@@ -35,6 +37,7 @@ Blockly.Blocks['Vs2MuInit'] = {
         .appendField(new Blockly.FieldDropdown(dropdown_list), "SERIAL");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+	this.setInputsInline(true);
     this.setTooltip(Blockly.LKL_VS2_HELP_INIT);
   },
   onchange:function(e) {
@@ -49,23 +52,29 @@ Blockly.Blocks['Vs2MuInit'] = {
 
 Blockly.Blocks['Vs2Setup'] = {
   init: function() {
-    this.setColour(140);
+     this.setColour(Blockly.Blocks.VisionSensor.HUE_SetupMode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput()
         .appendField(Blockly.LKL_VS2_SetupVS)
         .appendField(new Blockly.FieldDropdown(lVsMu), "MU_OBJ");
     this.appendStatementInput('SETUP_BLOCK');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+	this.setInputsInline(true);
   }
 };
 
 Blockly.Blocks['Vs2Reset'] = {
   init: function() {
-     this.setColour(140);
+     this.setColour(Blockly.Blocks.VisionSensor.HUE_SetupMode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput()
         .appendField(Blockly.LKL_VS2_RESET);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+	this.setInputsInline(true);
   },
   onchange: function(e) {
     var surround_parent = this.getSurroundParent();
@@ -85,7 +94,9 @@ Blockly.Blocks['Vs2SetLEDColor'] = {
     var color_undetected = new Blockly.FieldColour('#ff0000');
     color_undetected.setColours(led_color).setColumns(3);
 
-    this.setColour(140);
+     this.setColour(Blockly.Blocks.VisionSensor.HUE_SetupMode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput()
         .appendField('LED')
         .appendField(new Blockly.FieldDropdown([["1", "kLed1"], ["2", "kLed2"], [Blockly.LKL_VS2_ALL, "kLedAll"]]), "LED_ID")
@@ -99,6 +110,7 @@ Blockly.Blocks['Vs2SetLEDColor'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setInputsInline(true);
+	this.setInputsInline(true);
   },
   onchange: function(e) {
     var surround_parent = this.getSurroundParent();
@@ -113,13 +125,16 @@ Blockly.Blocks['Vs2SetLEDColor'] = {
 Blockly.Blocks['Vs2VisionBegin'] = {
   init: function() {
     var lVs2VisionStatus = [[Blockly.LKL_VS2_ENABLE, "Begin"],[Blockly.LKL_VS2_DISABLE, "End"]];
-    this.setColour(140);
+     this.setColour(Blockly.Blocks.VisionSensor.HUE_SetupMode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput()
         .appendField(new Blockly.FieldDropdown(lVs2VisionStatus), "VisionStatus")
         .appendField(Blockly.LKL_VS2_VISION_TYPE)
         .appendField(new Blockly.FieldDropdown(VS_VISION_TYPE), "VisionType");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+	this.setInputsInline(true);
   },
   onchange: function(e) {
     var surround_parent = this.getSurroundParent();
@@ -134,6 +149,8 @@ Blockly.Blocks['Vs2VisionBegin'] = {
 Blockly.Blocks['Vs2SetVisionLevel'] = {
   init: function() {
     this.setColour(Blockly.Blocks.VisionSensor.HUE_SetupMode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput()
         .appendField(Blockly.LKL_VS2_VISION_TYPE)
         .appendField(new Blockly.FieldDropdown(VS_VISION_TYPE), "VisionType")
@@ -146,6 +163,7 @@ Blockly.Blocks['Vs2SetVisionLevel'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip(Blockly.LKL_VS2_HELP_VISION_LEVEL);
+	this.setInputsInline(true);
   },
   onchange: function(e) {
     var surround_parent = this.getSurroundParent();
@@ -159,7 +177,9 @@ Blockly.Blocks['Vs2SetVisionLevel'] = {
 
 Blockly.Blocks['Vs2SetVisionZoom'] = {
   init: function() {
-     this.setColour(140);
+    this.setColour(140);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput()
         .appendField(Blockly.LKL_VS2_SET_VISION_ZOOM)
         .appendField(new Blockly.FieldDropdown([[Blockly.LKL_VS2_AUTO,"kZoomDefault"],[Blockly.LKL_VS2_LEVEL+"1", "kZoom1"],
@@ -169,6 +189,7 @@ Blockly.Blocks['Vs2SetVisionZoom'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
 	 this.setTooltip(Blockly.LKL_VS2_HELP_VISION_ZOOM);
+	 this.setInputsInline(true);
   },
   onchange: function(e) {
     var surround_parent = this.getSurroundParent();
@@ -183,6 +204,8 @@ Blockly.Blocks['Vs2SetVisionZoom'] = {
 Blockly.Blocks['Vs2SetColorRecognitionRegion'] = {
   init: function() {
     this.setColour(Blockly.Blocks.VisionSensor.HUE_SetupMode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput()
         .appendField(Blockly.LKL_VS2_VISION_COLOR_RECOGNITION)
         .appendField(Blockly.LKL_VS2_SET_RECOGNITION_REGION);
@@ -196,6 +219,7 @@ Blockly.Blocks['Vs2SetColorRecognitionRegion'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+	this.setInputsInline(true);
   },
   onchange: function(e) {
     var surround_parent = this.getSurroundParent();
@@ -210,6 +234,8 @@ Blockly.Blocks['Vs2SetColorRecognitionRegion'] = {
 Blockly.Blocks['Vs2SetColorBlockMinBlob'] = {
   init: function() {
     this.setColour(Blockly.Blocks.VisionSensor.HUE_SetupMode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput()
         .appendField(Blockly.LKL_VS2_VISION_COLOR_DETECT)
         .appendField(Blockly.LKL_VS2_SET_MIN_RECOGNITION_SIZE);
@@ -223,6 +249,7 @@ Blockly.Blocks['Vs2SetColorBlockMinBlob'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+	this.setInputsInline(true);
   },
   onchange: function(e) {
     var surround_parent = this.getSurroundParent();
@@ -239,11 +266,14 @@ Blockly.Blocks['Vs2SetUARTBaud'] = {
 		var BAUD = [["9600","kBaud9600"],["19200","kBaud19200"],["38400","kBaud38400"],["57600","kBaud57600"],
     ["115200","kBaud115200"],["230400","kBaud230400"],["460800","kBaud460800"],["921600","kBaud921600"]];
     this.setColour(Blockly.Blocks.VisionSensor.HUE_SetupMode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput()
 				.appendField(Blockly.LKL_VS2_SET_UART_BAUD)
         .appendField(new Blockly.FieldDropdown(BAUD), "BAUD");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+	this.setInputsInline(true);
   },
   onchange: function(e) {
     var surround_parent = this.getSurroundParent();
@@ -258,11 +288,14 @@ Blockly.Blocks['Vs2SetUARTBaud'] = {
 Blockly.Blocks['Vs2SetCameraRotate'] = {
   init: function() {
     this.setColour(Blockly.Blocks.VisionSensor.HUE_SetupMode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput('')
         .appendField(Blockly.LKL_VS2_SET_FRAME_ROTATE)
         .appendField(new Blockly.FieldCheckbox('TRUE'), 'FRAME_ROTATE');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+	this.setInputsInline(true);
   },
   onchange: function(e) {
     var surround_parent = this.getSurroundParent();
@@ -277,11 +310,14 @@ Blockly.Blocks['Vs2SetCameraRotate'] = {
 Blockly.Blocks['Vs2SetCameraHFR'] = {
   init: function() {
     this.setColour(Blockly.Blocks.VisionSensor.HUE_SetupMode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput('')
         .appendField(Blockly.LKL_VS2_SET_CAMERA_HFR)
         .appendField(new Blockly.FieldCheckbox('TRUE'), 'CameraHFR');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+	this.setInputsInline(true);
   },
   onchange: function(e) {
     var surround_parent = this.getSurroundParent();
@@ -298,11 +334,14 @@ Blockly.Blocks['Vs2SetCameraWhiteBalance'] = {
     var lCameraAWB = [[Blockly.LKL_VS2_AUTO, "kAutoWhiteBalance"],[Blockly.LKL_VS2_LOCK_AWB, "kLockWhiteBalance"],
                       [Blockly.LKL_VS2_WHITE_LIGHT, "kWhiteLight"],[Blockly.LKL_VS2_YELLOW_LIGHT, "kYellowLight"]];
     this.setColour(Blockly.Blocks.VisionSensor.HUE_SetupMode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput('')
         .appendField(Blockly.LKL_VS2_SET_CAMERA_AWB)
         .appendField(new Blockly.FieldDropdown(lCameraAWB), 'CameraAWB');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+	this.setInputsInline(true);
   },
   onchange: function(e) {
     var surround_parent = this.getSurroundParent();
@@ -317,17 +356,22 @@ Blockly.Blocks['Vs2SetCameraWhiteBalance'] = {
 Blockly.Blocks['Vs2Detected'] = {
   init: function() {
     this.setColour(Blockly.Blocks.VisionSensor.HUE_RunMode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput()
         .appendField(new Blockly.FieldDropdown(lVsMu), "MU_OBJ")
 				.appendField(Blockly.LKL_VS2_DETECTED)
         .appendField(new Blockly.FieldDropdown(VS_VISION_TYPE), "VISION_TYPE");
     this.setOutput(true, ['Number','Boolean']);
+	this.setInputsInline(true);
   }
 };
 
 Blockly.Blocks['Vs2DetectedRegionColor'] = {
   init: function() {
     this.setColour(Blockly.Blocks.VisionSensor.HUE_RunMode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput()
         .appendField(new Blockly.FieldDropdown(lVsMu), "MU_OBJ")
         .appendField(Blockly.LKL_VS2_RECOGNIZED)
@@ -342,6 +386,7 @@ Blockly.Blocks['Vs2DetectedRegionColor'] = {
         .appendField(Blockly.LKL_VS2_COLOR);
     this.setOutput(true, [Number,Boolean]);
     this.setInputsInline(true);
+	this.setInputsInline(true);
   },
 };
 
@@ -352,6 +397,8 @@ Blockly.Blocks['Vs2DetectedColorDetect'] = {
     color.setColours(led_color).setColumns(3);
 
     this.setColour(Blockly.Blocks.VisionSensor.HUE_RunMode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput()
         .appendField(new Blockly.FieldDropdown(lVsMu), "MU_OBJ")
         .appendField(Blockly.LKL_VS2_DETECTED)
@@ -359,6 +406,7 @@ Blockly.Blocks['Vs2DetectedColorDetect'] = {
         .appendField(Blockly.LKL_VS2_COLOR_BLOCK);
 
     this.setOutput(true, ['Number','Boolean']);
+	this.setInputsInline(true);
   }
 };
 
@@ -369,6 +417,8 @@ Blockly.Blocks['Vs2GetColorLabel'] = {
     color.setColours(led_color).setColumns(3);
 
     this.setColour(Blockly.Blocks.VisionSensor.HUE_RunMode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput()
         .appendField(Blockly.LKL_VS2_GET_DETECTED_MESSAGE)
         .appendField(new Blockly.FieldDropdown(lVsMu), "MU_OBJ")
@@ -398,6 +448,8 @@ Blockly.Blocks['Vs2GetMessage'] = {
     var vision_type = VS_VISION_TYPE.slice();
 
     this.setColour(Blockly.Blocks.VisionSensor.HUE_RunMode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput()
 				.appendField(Blockly.LKL_VS2_GET_DETECTED_MESSAGE)
         .appendField(new Blockly.FieldDropdown(lVsMu), "MU_OBJ")
@@ -488,6 +540,8 @@ Blockly.Blocks['Vs2GetCardType'] = {
                             'VISION_NUM_CARD_DETECT':this.number_card_type_
                             };
     this.setColour(Blockly.Blocks.VisionSensor.HUE_RunMode);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/camera2.png",35,25))
     this.appendDummyInput()
         .appendField(Blockly.LKL_VS2_GET_DETECTED_MESSAGE)
         .appendField(new Blockly.FieldDropdown(lVsMu), "MuObj")
@@ -547,6 +601,7 @@ Blockly.Blocks['Mu3LsBegin'] = {
         .appendField(new Blockly.FieldDropdown(dropdown_ls_type), "LS_TYPE");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+	this.setInputsInline(true);
   },
 };
 
@@ -565,6 +620,7 @@ Blockly.Blocks['Mu3LsSetSensitivity'] = {
         .appendField(new Blockly.FieldDropdown(dropdown_sensitivity), "SENSITIVITY");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
+		this.setInputsInline(true);
   },
 };
 
@@ -577,6 +633,7 @@ Blockly.Blocks['Mu3LsWhiteBalanceEnable'] = {
         .appendField(Blockly.LKL_VS2_WB_CORRECTION);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+	this.setInputsInline(true);
   },
 };
 
@@ -589,6 +646,7 @@ Blockly.Blocks['Mu3LsReadProximity'] = {
         .appendField(Blockly.LKL_VS2_READ)
         .appendField(Blockly.LKL_VS2_PROXIMITY);
     this.setOutput(true, Number);
+	this.setInputsInline(true);
   },
 };
 
@@ -601,6 +659,7 @@ Blockly.Blocks['Mu3LsReadAmbientLight'] = {
         .appendField(Blockly.LKL_VS2_READ)
         .appendField(Blockly.LKL_VS2_ALS);
     this.setOutput(true, Number);
+	this.setInputsInline(true);
   },
 };
 
@@ -613,6 +672,7 @@ Blockly.Blocks['Mu3LsDetectedGesture'] = {
         .appendField(Blockly.LKL_VS2_DETECTED)
         .appendField(Blockly.LKL_VS2_GESTURE);
     this.setOutput(true, Number);
+	this.setInputsInline(true);
   },
 };
 
@@ -631,6 +691,7 @@ Blockly.Blocks['Mu3LsDetectedGestureType'] = {
         .appendField(Blockly.LKL_VS2_GESTURE+' =')
         .appendField(new Blockly.FieldDropdown(dropdown_gesture), "GESTURE");
     this.setOutput(true, Boolean);
+	this.setInputsInline(true);
   },
 };
 
@@ -641,6 +702,8 @@ Blockly.Blocks['Mu3AtWiFiInit'] = {
   init: function() {
     var dropdown_list = profile.default.serial_select;
     this.setColour(Blockly.Blocks.VisionSensor.HUE_AT);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
     this.appendDummyInput()
         .appendField("MU WiFi")
         .appendField(Blockly.LKL_VS2_MU)
@@ -666,6 +729,8 @@ Blockly.Blocks['Mu3AtWiFiSet'] = {
   init: function() {
     var dropdown_mode = [[Blockly.LKL_VS2_CLIENT,'"STA"'],[Blockly.LKL_VS2_HOT_SPOT,'"AP"']];
     this.setColour(Blockly.Blocks.VisionSensor.HUE_AT);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
     this.appendDummyInput()
         .appendField("MU WiFi")
         .appendField(Blockly.LKL_VS2_SET);
@@ -681,33 +746,42 @@ Blockly.Blocks['Mu3AtWiFiSet'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+	this.setInputsInline(true);
   },
 };
 
 Blockly.Blocks['Mu3AtWiFiCon'] = {
   init: function() {
     this.setColour(Blockly.Blocks.VisionSensor.HUE_AT);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
     this.appendDummyInput()
         .appendField("MU WiFi")
         .appendField(Blockly.LKL_VS2_WAIT_CONNECT+"?");
     this.setOutput(true, Boolean);
+	this.setInputsInline(true);
   },
 };
 
 Blockly.Blocks['Mu3AtWiFiDiscon'] = {
   init: function() {
     this.setColour(Blockly.Blocks.VisionSensor.HUE_AT);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
     this.appendDummyInput()
         .appendField("MU WiFi")
         .appendField(Blockly.LKL_VS2_DISCONNECT);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+	this.setInputsInline(true);
   },
 };
 
 Blockly.Blocks['Mu3AtWiFiUDP'] = {
   init: function() {
     this.setColour(Blockly.Blocks.VisionSensor.HUE_AT);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
     this.appendDummyInput()
         .appendField("MU WiFi")
         .appendField(Blockly.LKL_VS2_SET);
@@ -720,49 +794,62 @@ Blockly.Blocks['Mu3AtWiFiUDP'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+	this.setInputsInline(true);
   },
 };
 
 Blockly.Blocks['Mu3AtWiFiCip'] = {
   init: function() {
     this.setColour(Blockly.Blocks.VisionSensor.HUE_AT);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
     this.appendDummyInput()
         .appendField("MU WiFi")
         .appendField(Blockly.LKL_VS2_READ)
         .appendField(Blockly.LKL_VS2_TARGET_IP)
     this.setOutput(true, String);
+	this.setInputsInline(true);
   },
 };
 
 Blockly.Blocks['Mu3AtWiFiSip'] = {
   init: function() {
     this.setColour(Blockly.Blocks.VisionSensor.HUE_AT);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
     this.appendDummyInput()
         .appendField("MU WiFi")
         .appendField(Blockly.LKL_VS2_READ)
         .appendField(Blockly.LKL_VS2_LOCAL_IP);
     this.setOutput(true, String);
+	this.setInputsInline(true);
   },
 };
 
 Blockly.Blocks['Mu3AtWiFiRead'] = {
   init: function() {
     this.setColour(Blockly.Blocks.VisionSensor.HUE_AT);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
     this.appendDummyInput()
         .appendField("MU WiFi")
         .appendField(Blockly.LKL_VS2_READ);
     this.setOutput(true, Number);
+	this.setInputsInline(true);
   },
 };
 
 Blockly.Blocks['Mu3AtWiFiWrite'] = {
   init: function() {
     this.setColour(Blockly.Blocks.VisionSensor.HUE_AT);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/logowifi.png", 24,18 ))
     this.appendValueInput("NUMBER")
         .setCheck(Number)
         .appendField("MU WiFi")
         .appendField(Blockly.LKL_VS2_WRITE);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
+	this.setInputsInline(true);
   },
 };
