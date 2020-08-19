@@ -20,6 +20,7 @@
 		<script src="../../blocks/motorMRT.js"></script>
 		<script src="../../blocks/stepper.js"></script>
 		<script src="../../blocks/stepper28BYJ.js"></script>
+		<script src="../../blocks/mu_vision_sensor2.js"></script>
 		<script src="../../blocks/GPS.js"></script>
 		<script src="../../blocks/CameraSerial.js"></script>
         <script src="../../blocks/servo.js"></script>
@@ -79,6 +80,9 @@
         <script src="../../core/block.js"></script> 
         <script src="../../core/blockly.js"></script> 
         <script src="../../core/workspace.js"></script> 
+		
+		
+		
 
         <script src="../../generators/arduino.js"></script>
         <script src="../../generators/arduino/inout.js"></script>
@@ -88,6 +92,7 @@
 		<script src="../../generators/arduino/motorMRT.js"></script>
 		<script src="../../generators/arduino/stepper.js"></script>
 		<script src="../../generators/arduino/stepper28BYJ.js"></script>
+		<script src="../../generators/arduino/mu_vision_sensor2.js"></script>
 		<script src="../../generators/arduino/GPS.js"></script>
 		<script src="../../generators/arduino/CameraSerial.js"></script>
 		<script src="../../generators/arduino/genericTime.js"></script>
@@ -2251,8 +2256,123 @@
 			<block type="pixy2_getFPS"></block>
 			<block type="pixy2_getResolution"></block>
 			</category>
+			
+		<category id="catMuVision" colour="140">
+	
+	
+		<block type="Vs2MuInit"></block>
+		<block type="Vs2Setup"></block>
+		<block type="Vs2Reset"></block>
+		<block type="Vs2SetLEDColor">
+	        <value name="LEDLevel">
+	            <shadow type="math_number">
+	                <field name="NUM">1</field>
+	            </shadow>
+	        </value>
+	    </block>
+		
+		<block type="Vs2VisionBegin"></block>
+		<block type="Vs2SetVisionLevel"></block>
+		<block type="Vs2SetColorRecognitionRegion">
+	        <value name="Width">
+	            <shadow type="math_number">
+	                <field name="NUM">5</field>
+	            </shadow>
+	        </value>
+	        <value name="Height">
+	            <shadow type="math_number">
+	                <field name="NUM">5</field>
+	            </shadow>
+	        </value>
+	    </block>
+		<block type="Vs2SetColorBlockMinBlob">
+	        <value name="Width">
+	            <shadow type="math_number">
+	                <field name="NUM">5</field>
+	            </shadow>
+	        </value>
+	        <value name="Height">
+	            <shadow type="math_number">
+	                <field name="NUM">5</field>
+	            </shadow>
+	        </value>
+	    </block>
+		<block type="Vs2SetVisionZoom"></block>
+		<block type="Vs2SetUARTBaud"></block>
+		<block type="Vs2SetCameraWhiteBalance"></block>
+		<block type="Vs2SetCameraHFR"></block>
+		
+		
+		<block type="Vs2Detected"></block>
+		<block type="Vs2DetectedRegionColor">
+	        <value name="XValue">
+	            <shadow type="math_number">
+	                <field name="NUM">50</field>
+	            </shadow>
+	        </value>
+	        <value name="YValue">
+	            <shadow type="math_number">
+	                <field name="NUM">50</field>
+	            </shadow>
+	        </value>
+	    </block>
+		<block type="Vs2DetectedColorDetect"></block>
+		<block type="Vs2GetMessage"></block>
+		<block type="Vs2GetCardType"></block>
+		<block type="Vs2GetColorLabel"></block>
+		
+		<block type="Mu3LsBegin"></block>
+		<block type="Mu3LsSetSensitivity"></block>
+		<!-- <block type="Mu3LsWhiteBalanceEnable"></block> -->
+		<block type="Mu3LsReadProximity"></block>
+		<block type="Mu3LsReadAmbientLight"></block>
+		<block type="Mu3LsDetectedGesture"></block>
+		<block type="Mu3LsDetectedGestureType"></block>
+		
+		<block type="Mu3AtWiFiInit">
+	        <value name="BAUD">
+	            <shadow type="math_number">
+	                <field name="NUM">9600</field>
+	            </shadow>
+	        </value>
+		</block>
+		<block type="Mu3AtWiFiSet">
+	        <value name="SSID">
+	            <shadow type="text"></shadow>
+	        </value>
+	        <value name="PASSWORD">
+	            <shadow type="text"></shadow>
+	        </value>
+		</block>
+		<block type="Mu3AtWiFiCon"></block>
+		<block type="Mu3AtWiFiDiscon"></block>
+		<block type="Mu3AtWiFiUDP">
+	        <value name="IP">
+	            <shadow type="text">
+	                <field name="TEXT">192.168.4.2</field>
+				</shadow>
+	        </value>
+	        <value name="PORT">
+	            <shadow type="text">
+	                <field name="TEXT">3333</field>
+				</shadow>
+	        </value>
+		</block>
+		<block type="Mu3AtWiFiCip"></block>
+		<block type="Mu3AtWiFiSip"></block>
+		<block type="Mu3AtWiFiRead"></block>
+		<block type="Mu3AtWiFiWrite">
+	        <value name="NUMBER">
+	            <shadow type="math_number">
+	                <field name="NUM">0</field>
+	            </shadow>
+	        </value>
+		</block>
+		
+		
 		
 		</category>
+	</category>
 		
     </xml>
 

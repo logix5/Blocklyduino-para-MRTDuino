@@ -22,6 +22,7 @@ var MSG = {
   catStorage:"Storage",
   catLedStrip:"Led Strip",
   catPixy2:"Pixy2",
+  catMuVision:"Mu Vision",
   catST7735:"TFT ST7735",
   catNEXTION:"TFT Nextion",
   catTM1637:"TM1637 display",
