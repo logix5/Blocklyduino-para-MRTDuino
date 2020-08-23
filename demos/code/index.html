@@ -60,6 +60,7 @@
 		<script src="../../blocks/simpleActuators.js"></script>
 		<script src="../../blocks/RTC_DS3231.js"></script>
 		<script src="../../blocks/RTC_DS1302.js"></script>
+		<script src="../../blocks/otto.js"></script>
 		<script src="../../blocks/EEPROM.js"></script>
         <script src="../../blocks/logic.js"></script>
         <script src="../../blocks/loops.js"></script>
@@ -115,6 +116,7 @@
 		<script src="../../generators/arduino/MAX7219-ledmatrix.js"></script>
 		<script src="../../generators/arduino/RTC_DS3231.js"></script>
 		<script src="../../generators/arduino/RTC_DS1302.js"></script>
+		<script src="../../generators/arduino/otto.js"></script>
 		<script src="../../generators/arduino/simpleSensors.js"></script>
 		<script src="../../generators/arduino/RadioTEA5767.js"></script>
 		<script src="../../generators/arduino/DFPlayerMP3.js"></script>
@@ -177,7 +179,7 @@
 					
 					</td>
 					<td align="right" style="width: 15%;" class="farSide">
-						 <h5 ><select id="languageMenu"></select><b><font color="000080">Ver 3.0</font></b></h5>
+						 <h5 ><select id="languageMenu"></select><b><font color="000080">Ver 3.1</font></b></h5>
 					</td>
 				</table>
                 </td>
@@ -2373,7 +2375,26 @@
 		
 		</category>
 	</category>
-		
+	
+	<sep></sep>
+        <category id="catOtto" colour="#32D900">
+		<block type="otto9_calibration"></block>
+		<block type="otto9_home"></block>
+		<block type="otto9_move"></block>
+		<block type="otto9_dance"></block>
+		<block type="otto9_do"></block>
+		<block type="otto9_sound"></block>
+		<block type="otto9_tone"></block>
+		<block type="otto9_gesture"></block>
+		<block type="otto9_smooth"></block>
+		<block type="otto9_eeprom"></block>
+		<block type="otto9_obstacle"></block>
+		<block type="otto9_getdistance"></block>
+		<block type="otto9_touchbutton"></block>
+		<block type="otto9_getnoise"></block>
+		<block type="otto9_gyro"></block>
+		<block type="otto9_getg"></block>
+		</category>
     </xml>
 
 	<div id="myModal" class="modal" >

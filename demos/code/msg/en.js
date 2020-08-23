@@ -62,6 +62,7 @@ var MSG = {
   catString:"String", 
   catInterruptExt:"External Interrupts",
   catDivers:"Various",
+  catOtto:"Otto robot",
   title: "Code",
   blocks: "Blocks",
   linkTooltip: "Save and link to blocks.",
