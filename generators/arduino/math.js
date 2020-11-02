@@ -76,6 +76,11 @@ Blockly.Arduino['base_map'] = function(block) {
   return [code, Blockly.Arduino.ORDER_NONE];
 };
 
+Blockly.Arduino["inout_angle_maths"]=function(block){
+    var angle=block.getFieldValue("ANGLE");
+    return [angle, Blockly.Arduino.ORDER_ATOMIC]
+};
+
 /*
 Blockly.Arduino.math_trig = function() {
     var mode = this.getFieldValue('OP');

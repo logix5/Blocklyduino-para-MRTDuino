@@ -546,6 +546,17 @@ Blockly.Blocks['base_map'] = {
   }
 };
 
+Blockly.Blocks["inout_angle_maths"] = {
+    init: function() {
+        this.setColour(Blockly.Blocks.math.HUE);
+        this.setHelpUrl(Blockly.Msg.HELPURL);
+        this.appendDummyInput("").appendField(new Blockly.FieldAngle("90"), "ANGLE");
+        this.setOutput(true, "Number");
+        this.setTooltip("angle°")
+    }
+};
+
+
 Blockly.Blocks['var_random'] = {
   init: function() {
     this.setColour(Blockly.Blocks.math.HUE);
