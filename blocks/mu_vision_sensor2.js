@@ -384,7 +384,7 @@ Blockly.Blocks['Vs2DetectedRegionColor'] = {
         .appendField('y=');
     this.appendDummyInput()
         .appendField(Blockly.LKL_VS2_COLOR);
-    this.setOutput(true, [Number,Boolean]);
+    this.setOutput(true, ['Number','Boolean']);
     this.setInputsInline(true);
 	this.setInputsInline(true);
   },
@@ -427,7 +427,7 @@ Blockly.Blocks['Vs2GetColorLabel'] = {
     this.appendDummyInput()
         .appendField(Blockly.LKL_VS2_COLOR+"=")
         .appendField(color, 'RCGColor');
-    this.setOutput(true, Boolean);
+    this.setOutput(true, 'Boolean');
     this.setInputsInline(true);
   }
 };
@@ -457,7 +457,7 @@ Blockly.Blocks['Vs2GetMessage'] = {
         .appendField(new Blockly.FieldDropdown(vision_type), "VISION_TYPE");
     this.vision_type_ = '';
     this.generateMessageType();
-    this.setOutput(true, Number);
+    this.setOutput(true, 'Number');
     this.setInputsInline(true);
   },
   onchange: function(e) {
@@ -552,7 +552,7 @@ Blockly.Blocks['Vs2GetCardType'] = {
     this.appendDummyInput("CARD_TYPE")
         .appendField(new Blockly.FieldDropdown(this.card_class_dic_[this.vision_type_]), "CardType");
     this.setInputsInline(true);
-    this.setOutput(true, Boolean);
+    this.setOutput(true, 'Boolean');
   },
   onchange: function(e) {
     var vision_type = this.getFieldValue("VisionCardType");
@@ -645,7 +645,7 @@ Blockly.Blocks['Mu3LsReadProximity'] = {
         .appendField(Blockly.LKL_VS2_LIGHT_SENSOR)
         .appendField(Blockly.LKL_VS2_READ)
         .appendField(Blockly.LKL_VS2_PROXIMITY);
-    this.setOutput(true, Number);
+    this.setOutput(true, 'Number');
 	this.setInputsInline(true);
   },
 };
@@ -658,7 +658,7 @@ Blockly.Blocks['Mu3LsReadAmbientLight'] = {
         .appendField(Blockly.LKL_VS2_LIGHT_SENSOR)
         .appendField(Blockly.LKL_VS2_READ)
         .appendField(Blockly.LKL_VS2_ALS);
-    this.setOutput(true, Number);
+    this.setOutput(true, 'Number');
 	this.setInputsInline(true);
   },
 };
@@ -671,7 +671,7 @@ Blockly.Blocks['Mu3LsDetectedGesture'] = {
         .appendField(Blockly.LKL_VS2_LIGHT_SENSOR)
         .appendField(Blockly.LKL_VS2_DETECTED)
         .appendField(Blockly.LKL_VS2_GESTURE);
-    this.setOutput(true, Number);
+    this.setOutput(true, 'Number');
 	this.setInputsInline(true);
   },
 };
@@ -690,7 +690,7 @@ Blockly.Blocks['Mu3LsDetectedGestureType'] = {
         .appendField(Blockly.LKL_VS2_LIGHT_SENSOR)
         .appendField(Blockly.LKL_VS2_GESTURE+' =')
         .appendField(new Blockly.FieldDropdown(dropdown_gesture), "GESTURE");
-    this.setOutput(true, Boolean);
+    this.setOutput(true, 'Boolean');
 	this.setInputsInline(true);
   },
 };
@@ -758,7 +758,7 @@ Blockly.Blocks['Mu3AtWiFiCon'] = {
     this.appendDummyInput()
         .appendField("MU WiFi")
         .appendField(Blockly.LKL_VS2_WAIT_CONNECT+"?");
-    this.setOutput(true, Boolean);
+    this.setOutput(true, 'Boolean');
 	this.setInputsInline(true);
   },
 };
@@ -807,7 +807,7 @@ Blockly.Blocks['Mu3AtWiFiCip'] = {
         .appendField("MU WiFi")
         .appendField(Blockly.LKL_VS2_READ)
         .appendField(Blockly.LKL_VS2_TARGET_IP)
-    this.setOutput(true, String);
+    this.setOutput(true, 'String');
 	this.setInputsInline(true);
   },
 };
@@ -821,7 +821,7 @@ Blockly.Blocks['Mu3AtWiFiSip'] = {
         .appendField("MU WiFi")
         .appendField(Blockly.LKL_VS2_READ)
         .appendField(Blockly.LKL_VS2_LOCAL_IP);
-    this.setOutput(true, String);
+    this.setOutput(true, 'String');
 	this.setInputsInline(true);
   },
 };
@@ -834,7 +834,7 @@ Blockly.Blocks['Mu3AtWiFiRead'] = {
     this.appendDummyInput()
         .appendField("MU WiFi")
         .appendField(Blockly.LKL_VS2_READ);
-    this.setOutput(true, Number);
+    this.setOutput(true, 'Number');
 	this.setInputsInline(true);
   },
 };
