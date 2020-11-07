@@ -38,6 +38,7 @@
         <script src="../../blocks/seriallcdi2c.js"></script>
 		<script src="../../blocks/led-rgb-ws2812b.js"></script>
 		<script src="../../blocks/DisplayTM1637.js"></script>
+		<script src="../../blocks/DisplayTM1638.js"></script>
 		<script src="../../blocks/MAX7219-7digit.js"></script>
 		<script src="../../blocks/MAX7219-ledmatrix.js"></script>
 		<script src="../../blocks/simpleSensors.js"></script>
@@ -112,6 +113,7 @@
         <script src="../../generators/arduino/seriallcdi2c.js"></script>
 		<script src="../../generators/arduino/led-rgb-ws2812b.js"></script>
 		<script src="../../generators/arduino/DisplayTM1637.js"></script>
+		<script src="../../generators/arduino/DisplayTM1638.js"></script>
 		<script src="../../generators/arduino/MAX7219-7digit.js"></script>
 		<script src="../../generators/arduino/MAX7219-ledmatrix.js"></script>
 		<script src="../../generators/arduino/RTC_DS3231.js"></script>
@@ -1736,6 +1738,31 @@
                     </value>
 			 </block>
 			 </category>
+			 
+			 
+			 
+			 <category id="catTM1638" colour="140">
+			 
+			 
+			  <block type="DisplayTM1638_init">
+				<field name="PIN_CLOCK">15</field>
+				<field name="PIN_DATA">16</field>
+			  </block>
+			  <block type="DisplayTM1638_Reset"></block>
+			 
+			  <block type="DisplayTM1638_set_leds">
+					<value name="Position">
+                        <shadow type="math_number">
+                            <field name="NUM">0</field>
+                        </shadow>
+                    </value>
+			  </block>
+			
+			 
+			 
+			  </category>
+			 
+			 
 			 
 			  <category id="catST7735" colour="140">
 			   <block type="st7735_init">

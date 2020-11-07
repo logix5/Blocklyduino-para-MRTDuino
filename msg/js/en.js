@@ -751,7 +751,7 @@ Blockly.Msg.ledstrip_WS2812B_G = "G(0-255)";
 Blockly.Msg.ledstrip_WS2812B_B = "B(0-255)";
 
 //DISPALY 7 SEGMENT TM1637
-Blockly.Msg.TM1637_name = "TM1637 Display 7 segment";
+Blockly.Msg.TM1637_name = "TM1637 Display 7 segment.";
 Blockly.Msg.TM1637_init = "Init TM1637 Display 7 segment";
 Blockly.Msg.TM1637_PinCLK = "Pin CLK";
 Blockly.Msg.TM1637_PinDIO = "Pin DIO";
@@ -765,6 +765,34 @@ Blockly.Msg.M1637_fill = "Leading zeros";
 Blockly.Msg.M1637_digitsegment="Set segment array digit(0-3)";
 Blockly.Msg.M1637_value="Value";
 Blockly.Msg.M1637_arraysegment="Display segment array.";
+
+//PANEL SEGMENT TM1638
+Blockly.Msg.TM1638_name = "TM1638 Panel";
+Blockly.Msg.TM1638_init = "Init TM1638 Panel. Vcc=3.3v";
+Blockly.Msg.TM1638_PinSTROBE = "Pin STROBE";
+Blockly.Msg.TM1638_PinCLOCK = "Pin CLOCK";
+Blockly.Msg.TM1638_PinDATA = "Pin DATA";
+Blockly.Msg.TM1638_reset = "Reset";
+Blockly.Msg.TM1638_Position = "Position(0-7)";
+Blockly.Msg.TM1638_SetLeds = "Set Led";
+Blockly.Msg.TM1638_Led = "Led";
+
+
+/*
+
+Blockly.Msg.M1637_Clear = "Clear";
+Blockly.Msg.M1637_number="Set number";
+Blockly.Msg.M1637_Digit = "Position(0-3)";
+Blockly.Msg.M1637_Length = "Number of digits to set";
+Blockly.Msg.M1637_fill = "Leading zeros";
+Blockly.Msg.M1637_digitsegment="Set segment array digit(0-3)";
+Blockly.Msg.M1637_value="Value";
+Blockly.Msg.M1637_arraysegment="Display segment array.";
+*/
+
+
+
+
 
 
 
