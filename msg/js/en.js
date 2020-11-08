@@ -472,11 +472,19 @@ Blockly.Msg.RE_READ="Read Value";
 Blockly.Msg.RE_WRITE="Write Value";
 Blockly.Msg.RE_Button="Button";
 Blockly.Msg.RE_Pressed="pressed?";
+
 Blockly.Msg.ADXL345="Init ADXL345 acceleration sensor";
 Blockly.Msg.ADXL345_2="- SDA Port13 - SCL Port14";
 Blockly.Msg.ADXL345_config="Config ADXL345 acceleration.Range";
 Blockly.Msg.ADXL345_read="ADXL345 acceleration sensor.Read values";
 Blockly.Msg.ADXL345_values="value";
+
+Blockly.Msg.CCS811="Init CO2(CCS811) sensor";
+Blockly.Msg.CCS811_name="CO2(CCS811) sensor";
+Blockly.Msg.CCS811_2="- SDA Port13 - SCL Port14 - WAK GND";
+Blockly.Msg.CCS811_available="Is the sensor available?";
+Blockly.Msg.CCS811_readed = "Is the measure readed?";
+Blockly.Msg.CCS811_values="value";
 
 Blockly.Msg.TCS3200="Init TCS3200 color sensor";
 Blockly.Msg.TCS3200_name="TCS3200 color sensor";

@@ -50,6 +50,7 @@
 		<script src="../../blocks/InterruptExt.js"></script>
 		<script src="../../blocks/RFID.js"></script>
 		<script src="../../blocks/ADXL345.js"></script>
+		<script src="../../blocks/CCS811.js"></script>
 		<script src="../../blocks/ST7735.js"></script>
 		<script src="../../blocks/Nextion.js"></script>
 		<script src="../../blocks/PIXY2.js"></script>
@@ -129,6 +130,7 @@
 		<script src="../../generators/arduino/InterruptExt.js"></script>
 		<script src="../../generators/arduino/RFID.js"></script>
 		<script src="../../generators/arduino/ADXL345.js"></script>
+		<script src="../../generators/arduino/CCS811.js"></script>
 		<script src="../../generators/arduino/ST7735.js"></script>
 		<script src="../../generators/arduino/Nextion.js"></script>
 		<script src="../../generators/arduino/PIXY2.js"></script>
@@ -181,7 +183,7 @@
 					
 					</td>
 					<td align="right" style="width: 15%;" class="farSide">
-						 <h5 ><select id="languageMenu"></select><b><font color="000080">Ver 3.2</font></b></h5>
+						 <h5 ><select id="languageMenu"></select><b><font color="000080">Ver 3.3</font></b></h5>
 					</td>
 				</table>
                 </td>
@@ -1311,6 +1313,15 @@
 	 <block type="RotaryEncoder_Read"></block>
 	 <block type="rotaryencoder_button_sensor"></block>
 	</category>
+	
+	<category id="catCCS811" colour="220"> 
+		<block type="Init_CCS811"></block>
+		<block type="CCS811_available"></block>
+		<block type="CCS811_readed"></block>
+		<block type="CCS811_values"></block>
+	</category>
+	
+	
 	<category id="catRFID" colour="220"> 
 		 <block type="rfid_init">
 				 <field name="PIN_RST">15</field>
