@@ -14,7 +14,7 @@ Blockly.Blocks['DisplayTM1638_init'] = {
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
+		.appendField(new Blockly.FieldImage("images/TM1638.png",48,38))
         .appendField(Blockly.Msg.TM1638_init)
     this.appendDummyInput()
 		.appendField(Blockly.Msg.TM1638_PinSTROBE)
@@ -37,7 +37,7 @@ Blockly.Blocks['DisplayTM1638_Reset'] = {
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
+		.appendField(new Blockly.FieldImage("images/TM1638.png",48,38))
         .appendField(Blockly.Msg.TM1638_name)
 		.appendField(Blockly.Msg.TM1638_reset)
     this.setInputsInline(true);
@@ -52,7 +52,7 @@ Blockly.Blocks['DisplayTM1638_set_leds'] = {
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
+		.appendField(new Blockly.FieldImage("images/TM1638.png",48,38))
 		.appendField(Blockly.Msg.TM1638_name)
 	this.appendValueInput("Position")
 		.setCheck('Number')
@@ -68,50 +68,55 @@ Blockly.Blocks['DisplayTM1638_set_leds'] = {
   }
 };
 
-
-
-
-/*
-
-
-
-Blockly.Blocks['DisplayTM1637_clear'] = {
+Blockly.Blocks['DisplayTM1638_readbuttons'] = {
   helpUrl: '',
   init: function() {
-	this.setColour(140);
-	this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
-        .appendField(Blockly.Msg.TM1637_name)
-		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
+    this.setColour(140);
     this.appendDummyInput()
-        .appendField(Blockly.Msg.M1637_Clear)
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+		.appendField(new Blockly.FieldImage("images/TM1638.png",48,38))
+		.appendField(Blockly.Msg.TM1638_name)   
+	this.setOutput(true, 'Number');
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.TM1638_Buttons)
+	this.appendDummyInput()
+	this.setInputsInline(true);
     this.setTooltip('');
   }
 };
 
-Blockly.Blocks['DisplayTM1637_set_numberall'] = {
+
+Blockly.Blocks['DisplayTM1638_text'] = {
+  init: function() {
+    this.setColour(140);
+    this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/TM1638.png",48,38))
+		.appendField(Blockly.Msg.TM1638_name)   
+   	this.appendValueInput("texttoprint")
+        .setCheck(null)
+		.appendField(Blockly.Msg.TM1638_Text);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('');
+  }
+};
+
+
+Blockly.Blocks['DisplayTM1638_hex'] = {
   helpUrl: '',
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
-        .appendField(Blockly.Msg.TM1637_name)
-		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
-	this.appendValueInput("valuenumber")
+		.appendField(new Blockly.FieldImage("images/TM1638.png",48,38))
+		.appendField(Blockly.Msg.TM1638_name)
+	this.appendValueInput("Position")
 		.setCheck('Number')
-		.appendField(Blockly.Msg.M1637_number)
-	this.appendValueInput("Digit")
+		.appendField(Blockly.Msg.TM1638_Hex)
+		.appendField(Blockly.Msg.TM1638_Position)
+	this.appendValueInput("Number")
 		.setCheck('Number')
-		.appendField(Blockly.Msg.M1637_Digit)
-	this.appendValueInput("Length")
-		.setCheck('Number')
-		.appendField(Blockly.Msg.M1637_Length)
-	this.appendDummyInput()
-		.appendField(Blockly.Msg.M1637_fill)
-		.appendField(new Blockly.FieldDropdown([['ON','true'],['OFF','false']]), "TM1637_LEADING")	
+		.appendField(Blockly.Msg.TM1638_Number)
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -119,51 +124,26 @@ Blockly.Blocks['DisplayTM1637_set_numberall'] = {
   }
 };
 
-Blockly.Blocks['DisplayTM1637_setsegment'] = {
+
+Blockly.Blocks['DisplayTM1638_digit'] = {
   helpUrl: '',
   init: function() {
 	this.setColour(140);
 	this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
-        .appendField(Blockly.Msg.TM1637_name)
-		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
-	this.appendValueInput("SegmentDigit")
+		.appendField(new Blockly.FieldImage("images/TM1638.png",48,38))
+		.appendField(Blockly.Msg.TM1638_name)
+	this.appendValueInput("Position")
 		.setCheck('Number')
-		.appendField(Blockly.Msg.M1637_digitsegment)
-	this.appendValueInput("SegmentValue")
+		.appendField(Blockly.Msg.TM1638_Digit)
+		.appendField(Blockly.Msg.TM1638_Position)
+	this.appendValueInput("Number2")
 		.setCheck('Number')
-		.appendField(Blockly.Msg.M1637_value)
+		.appendField(Blockly.Msg.TM1638_Value)
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('');
   }
 };
-
-Blockly.Blocks['DisplayTM1637_segments'] = {
-  helpUrl: '',
-  init: function() {
-	this.setColour(140);
-	this.appendDummyInput()
-		.appendField(new Blockly.FieldImage("images/TM1637.png",48,38))
-        .appendField(Blockly.Msg.TM1637_name)
-		.appendField(new Blockly.FieldDropdown([['1','1'],['2','2'],['3','3'],['4','4']]), "TM1637_NUMBER")
-		.appendField(Blockly.Msg.M1637_arraysegment)
-	this.appendValueInput("Digit")
-		.setCheck('Number')
-		.appendField(Blockly.Msg.M1637_Digit)
-	this.appendValueInput("Length")
-		.setCheck('Number')
-		.appendField(Blockly.Msg.M1637_Length)
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setTooltip('');
-  }
-};
-
-
-*/
-
 
 

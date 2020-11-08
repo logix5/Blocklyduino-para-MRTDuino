@@ -776,7 +776,12 @@ Blockly.Msg.TM1638_reset = "Reset";
 Blockly.Msg.TM1638_Position = "Position(0-7)";
 Blockly.Msg.TM1638_SetLeds = "Set Led";
 Blockly.Msg.TM1638_Led = "Led";
-
+Blockly.Msg.TM1638_Buttons = "Read state of buttons ";
+Blockly.Msg.TM1638_Text = "Display an approximation of the text";
+Blockly.Msg.TM1638_Hex = "Display Hex number";
+Blockly.Msg.TM1638_Number = "Hex Number";
+Blockly.Msg.TM1638_Digit = "Display direct access to 7-segment display";
+Blockly.Msg.TM1638_Value = "Bits of value state which segments to turn on";
 
 /*
 
