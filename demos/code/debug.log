@@ -1,2 +1,5 @@
 [1123/194739.677:ERROR:file_io_win.cc(243)] SetEndOfFile: La operación solicitada no se puede realizar en un archivo con una sección asignada a usuario abierta. (0x4C8)
 [1206/135304.814:ERROR:file_io.cc(134)] WriteFile: Se está cerrando la canalización. (0xE8)
+[1113/233236.611:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)
+[1114/102204.152:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)
+[1114/121627.742:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)
