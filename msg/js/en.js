@@ -1414,7 +1414,7 @@ Blockly.LKL_VS2_WRITE = "write";                                    //"写入";
 
 ////////////OTTO DIY Robot////////// ONLY TRANSLATE THE LEFT PART INSIDE ["THIS YES" ,NOT]
 Blockly.Msg.OTTO9_HOME_TEXT = "home";
-Blockly.Msg.OTTO9_HOME_TOOLTIP = "Otto goes to home position straight";
+Blockly.Msg.OTTO9_HOME_TOOLTIP = "Otto goes to home position straight.Reserved pins: 2-leftleg 3-rightleg 4-leftfoot 5-rightfoot 8-Trigger US 9-Echo US and 13-Pasove buzzer"
 Blockly.Msg.OTTO9_DIY_URL = "https://wikifactory.com/+OttoDIY/otto-diy";// do not translate
 Blockly.Msg.OTTO9_HUMANOID_URL = "https://wikifactory.com/+OttoDIY/humanoid";// do not translate
 Blockly.Msg.OTTO9_CALIBRATION='calibrate ';
