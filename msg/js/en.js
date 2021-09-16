@@ -705,6 +705,7 @@ Blockly.Msg.SSerial_WIFI_Print_Format="SoftwareSerial WiFi Print  Format";
 
 //MOTOR MRT
 Blockly.Msg.MOTOR_Connector="Motor";
+Blockly.Msg.MOTOR_Connector2="Motor V2.0";
 Blockly.Msg.MOTOR_Direction="Direction";
 Blockly.Msg.MOTOR_speed="Speed(0-255)";
 Blockly.Msg.MOTOR_Stop="Stop";

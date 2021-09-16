@@ -79,4 +79,42 @@ Blockly.Blocks['motor_stop'] = {
   }
 };
 
+Blockly.Blocks['motor_run2'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(80);
+	this.appendDummyInput()
+	.appendField(new Blockly.FieldImage("images/MotorMRT.png",45,29))
+	this.appendDummyInput()
+	.appendField(Blockly.Msg.MOTOR_Connector2)
+	.appendField(new Blockly.FieldDropdown([['ML1'],['MR1'],['ML2'],['MR2']]), "MOTOR_CON");
+    this.appendDummyInput()
+    .appendField(Blockly.Msg.MOTOR_Direction)
+	.appendField(new Blockly.FieldDropdown([['Forward', 'HIGH'],['Backward', 'LOW']]), "MOTOR_DIR");
+	 this.appendValueInput("CONTENT", 'Number')
+        .setCheck('Number')
+    .appendField(Blockly.Msg.MOTOR_speed)
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Run the motor forward or backward');
+  }
+};
 
+Blockly.Blocks['motor_stop2'] = {
+  helpUrl: '',
+  init: function() {
+    this.setColour(80);
+	this.appendDummyInput()
+		.appendField(new Blockly.FieldImage("images/MotorMRT.png",45,29))
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.MOTOR_Connector2)
+		.appendField(new Blockly.FieldDropdown([['ML1'],['MR1'],['ML2'],['MR2']]), "MOTOR_CON");
+	this.appendDummyInput()
+		.appendField(Blockly.Msg.MOTOR_Stop)
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Run the motor forward or backward');
+  }
+};
